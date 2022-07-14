@@ -1,0 +1,416 @@
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <url value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_QuestionnaireResponse_Free" />
+  <version value="1.0.0" />
+  <name value="KBV_PR_MIO_DIGA_QuestionnaireResponse_Free" />
+  <title value="KBV_PR_MIO_DIGA_QuestionnaireResponse_Free" />
+  <status value="active" />
+  <publisher value="Kassenärztliche Bundesvereinigung (KBV)" />
+  <description value="Dieses Profil bildet einen ausgefüllten Fragebogen ab." />
+  <copyright value="Im folgenden Profil können Codes aus den Codesystemen Snomed, Loinc oder Ucum enthalten sein, die dem folgenden Urheberrecht unterliegen: This material includes SNOMED Clinical Terms® SNOMED CT® which is used by permission of SNOMED International. All rights reserved. SNOMED CT®, was originally created by The College of American Pathologists. SNOMED and SNOMED CT are registered trademarks of SNOMED International. Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license. This material contains content from Loinc http://loinc.org. Loinc is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes Loinc Committee and is available at no cost under the license at http://loinc.org/license. Loinc® is a registered United States trademark of Regenstrief Institute, Inc. This product includes all or a portion of the UCUM table, UCUM codes, and UCUM definitions or is derived from it, subject to a license from Regenstrief Institute, Inc. and The UCUM Organization. Your use of the UCUM table, UCUM codes, UCUM definitions also is subject to this license, a copy of which is available at ​http://unitsofmeasure.org. The current complete UCUM table, UCUM Specification are available for download at ​http://unitsofmeasure.org. The UCUM table and UCUM codes are copyright © 1995-2009, Regenstrief Institute, Inc. and the Unified Codes for Units of Measures UCUM Organization. All rights reserved. THE UCUM TABLE IN ALL FORMATS, UCUM DEFINITIONS, AND SPECIFICATION ARE PROVIDED &quot;AS IS.&quot; ANY EXPRESS OR IMPLIED WARRANTIES ARE DISCLAIMED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE." />
+  <fhirVersion value="4.0.1" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="QuestionnaireResponse" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="QuestionnaireResponse">
+      <path value="QuestionnaireResponse" />
+      <definition value="Dieses Profil bildet einen ausgefüllten Fragebogen ab." />
+    </element>
+    <element id="QuestionnaireResponse.meta">
+      <path value="QuestionnaireResponse.meta" />
+      <min value="1" />
+    </element>
+    <element id="QuestionnaireResponse.meta.versionId">
+      <path value="QuestionnaireResponse.meta.versionId" />
+      <min value="1" />
+    </element>
+    <element id="QuestionnaireResponse.meta.lastUpdated">
+      <path value="QuestionnaireResponse.meta.lastUpdated" />
+      <min value="1" />
+    </element>
+    <element id="QuestionnaireResponse.meta.source">
+      <path value="QuestionnaireResponse.meta.source" />
+      <max value="0" />
+    </element>
+    <element id="QuestionnaireResponse.meta.profile">
+      <path value="QuestionnaireResponse.meta.profile" />
+      <min value="1" />
+      <max value="1" />
+      <patternCanonical value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_QuestionnaireResponse_Free|1.0.0" />
+    </element>
+    <element id="QuestionnaireResponse.meta.security">
+      <path value="QuestionnaireResponse.meta.security" />
+      <max value="0" />
+    </element>
+    <element id="QuestionnaireResponse.meta.tag">
+      <path value="QuestionnaireResponse.meta.tag" />
+      <max value="0" />
+    </element>
+    <element id="QuestionnaireResponse.implicitRules">
+      <path value="QuestionnaireResponse.implicitRules" />
+      <max value="0" />
+    </element>
+    <element id="QuestionnaireResponse.language">
+      <path value="QuestionnaireResponse.language" />
+      <max value="0" />
+    </element>
+    <element id="QuestionnaireResponse.text">
+      <path value="QuestionnaireResponse.text" />
+      <definition value="In diesem Element können die, in der Instanz, enthaltenen Informationen in einer menschenlesbaren Form zusammengefasst werden. Dabei ist zu beachten, dass keine Informationen aufgenommen werden dürfen, die nicht in strukturierter Form an anderer Stelle in der Instanz enthalten sind." />
+    </element>
+    <element id="QuestionnaireResponse.text.status">
+      <path value="QuestionnaireResponse.text.status" />
+      <fixedCode value="extensions" />
+    </element>
+    <element id="QuestionnaireResponse.contained">
+      <path value="QuestionnaireResponse.contained" />
+      <max value="0" />
+    </element>
+    <element id="QuestionnaireResponse.identifier">
+      <path value="QuestionnaireResponse.identifier" />
+      <min value="1" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="QuestionnaireResponse.identifier.use">
+      <path value="QuestionnaireResponse.identifier.use" />
+      <max value="0" />
+    </element>
+    <element id="QuestionnaireResponse.identifier.type">
+      <path value="QuestionnaireResponse.identifier.type" />
+      <min value="1" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://terminology.hl7.org/CodeSystem/v2-0203" />
+          <version value="2.9" />
+          <code value="RI" />
+          <display value="Resource identifier" />
+        </coding>
+      </patternCodeableConcept>
+    </element>
+    <element id="QuestionnaireResponse.identifier.type.coding">
+      <path value="QuestionnaireResponse.identifier.type.coding" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="QuestionnaireResponse.identifier.type.coding.system">
+      <path value="QuestionnaireResponse.identifier.type.coding.system" />
+      <min value="1" />
+    </element>
+    <element id="QuestionnaireResponse.identifier.type.coding.version">
+      <path value="QuestionnaireResponse.identifier.type.coding.version" />
+      <min value="1" />
+    </element>
+    <element id="QuestionnaireResponse.identifier.type.coding.code">
+      <path value="QuestionnaireResponse.identifier.type.coding.code" />
+      <min value="1" />
+    </element>
+    <element id="QuestionnaireResponse.identifier.type.coding.display">
+      <path value="QuestionnaireResponse.identifier.type.coding.display" />
+      <min value="1" />
+    </element>
+    <element id="QuestionnaireResponse.identifier.type.coding.userSelected">
+      <path value="QuestionnaireResponse.identifier.type.coding.userSelected" />
+      <max value="0" />
+    </element>
+    <element id="QuestionnaireResponse.identifier.type.text">
+      <path value="QuestionnaireResponse.identifier.type.text" />
+      <max value="0" />
+    </element>
+    <element id="QuestionnaireResponse.identifier.system">
+      <path value="QuestionnaireResponse.identifier.system" />
+      <min value="1" />
+      <fixedUri value="urn:ietf:rfc:3986" />
+      <mustSupport value="true" />
+    </element>
+    <element id="QuestionnaireResponse.identifier.value">
+      <path value="QuestionnaireResponse.identifier.value" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="QuestionnaireResponse.identifier.period">
+      <path value="QuestionnaireResponse.identifier.period" />
+      <max value="0" />
+    </element>
+    <element id="QuestionnaireResponse.identifier.assigner">
+      <path value="QuestionnaireResponse.identifier.assigner" />
+      <max value="0" />
+    </element>
+    <element id="QuestionnaireResponse.basedOn">
+      <path value="QuestionnaireResponse.basedOn" />
+      <max value="0" />
+    </element>
+    <element id="QuestionnaireResponse.partOf">
+      <path value="QuestionnaireResponse.partOf" />
+      <max value="0" />
+    </element>
+    <element id="QuestionnaireResponse.questionnaire">
+      <path value="QuestionnaireResponse.questionnaire" />
+      <min value="1" />
+      <type>
+        <code value="canonical" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Questionnaire_Free|1.0.0" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="QuestionnaireResponse.status">
+      <path value="QuestionnaireResponse.status" />
+      <patternCode value="completed" />
+    </element>
+    <element id="QuestionnaireResponse.subject">
+      <path value="QuestionnaireResponse.subject" />
+      <min value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Patient|1.0.0" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="QuestionnaireResponse.subject.reference">
+      <path value="QuestionnaireResponse.subject.reference" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="QuestionnaireResponse.subject.type">
+      <path value="QuestionnaireResponse.subject.type" />
+      <max value="0" />
+    </element>
+    <element id="QuestionnaireResponse.subject.identifier">
+      <path value="QuestionnaireResponse.subject.identifier" />
+      <max value="0" />
+    </element>
+    <element id="QuestionnaireResponse.subject.display">
+      <path value="QuestionnaireResponse.subject.display" />
+      <max value="0" />
+    </element>
+    <element id="QuestionnaireResponse.encounter">
+      <path value="QuestionnaireResponse.encounter" />
+      <max value="0" />
+    </element>
+    <element id="QuestionnaireResponse.authored">
+      <path value="QuestionnaireResponse.authored" />
+      <mustSupport value="true" />
+    </element>
+    <element id="QuestionnaireResponse.author">
+      <path value="QuestionnaireResponse.author" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Patient|1.0.0" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Practitioner|1.0.0" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_RelatedPerson|1.0.0" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_PractitionerRole|1.0.0" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="QuestionnaireResponse.author.reference">
+      <path value="QuestionnaireResponse.author.reference" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="QuestionnaireResponse.author.type">
+      <path value="QuestionnaireResponse.author.type" />
+      <max value="0" />
+    </element>
+    <element id="QuestionnaireResponse.author.identifier">
+      <path value="QuestionnaireResponse.author.identifier" />
+      <max value="0" />
+    </element>
+    <element id="QuestionnaireResponse.author.display">
+      <path value="QuestionnaireResponse.author.display" />
+      <max value="0" />
+    </element>
+    <element id="QuestionnaireResponse.source">
+      <path value="QuestionnaireResponse.source" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Patient|1.0.0" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Practitioner|1.0.0" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_RelatedPerson|1.0.0" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_PractitionerRole|1.0.0" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="QuestionnaireResponse.source.reference">
+      <path value="QuestionnaireResponse.source.reference" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="QuestionnaireResponse.source.type">
+      <path value="QuestionnaireResponse.source.type" />
+      <max value="0" />
+    </element>
+    <element id="QuestionnaireResponse.source.identifier">
+      <path value="QuestionnaireResponse.source.identifier" />
+      <max value="0" />
+    </element>
+    <element id="QuestionnaireResponse.source.display">
+      <path value="QuestionnaireResponse.source.display" />
+      <max value="0" />
+    </element>
+    <element id="QuestionnaireResponse.item">
+      <path value="QuestionnaireResponse.item" />
+      <mustSupport value="true" />
+    </element>
+    <element id="QuestionnaireResponse.item.linkId">
+      <path value="QuestionnaireResponse.item.linkId" />
+      <mustSupport value="true" />
+    </element>
+    <element id="QuestionnaireResponse.item.definition">
+      <path value="QuestionnaireResponse.item.definition" />
+      <max value="0" />
+    </element>
+    <element id="QuestionnaireResponse.item.text">
+      <path value="QuestionnaireResponse.item.text" />
+      <mustSupport value="true" />
+    </element>
+    <element id="QuestionnaireResponse.item.answer">
+      <path value="QuestionnaireResponse.item.answer" />
+      <mustSupport value="true" />
+    </element>
+    <element id="QuestionnaireResponse.item.answer.value[x]">
+      <path value="QuestionnaireResponse.item.answer.value[x]" />
+      <slicing>
+        <discriminator>
+          <type value="type" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="closed" />
+      </slicing>
+      <min value="1" />
+      <type>
+        <code value="boolean" />
+      </type>
+      <type>
+        <code value="time" />
+      </type>
+      <type>
+        <code value="string" />
+      </type>
+      <type>
+        <code value="Coding" />
+      </type>
+      <type>
+        <code value="Quantity" />
+      </type>
+      <type>
+        <code value="decimal" />
+      </type>
+      <type>
+        <code value="dateTime" />
+      </type>
+      <type>
+        <code value="integer" />
+      </type>
+    </element>
+    <element id="QuestionnaireResponse.item.answer.value[x]:valueInteger">
+      <path value="QuestionnaireResponse.item.answer.value[x]" />
+      <sliceName value="valueInteger" />
+      <type>
+        <code value="integer" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="QuestionnaireResponse.item.answer.value[x]:valueCoding">
+      <path value="QuestionnaireResponse.item.answer.value[x]" />
+      <sliceName value="valueCoding" />
+      <type>
+        <code value="Coding" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="QuestionnaireResponse.item.answer.value[x]:valueCoding.system">
+      <path value="QuestionnaireResponse.item.answer.value[x].system" />
+      <min value="1" />
+    </element>
+    <element id="QuestionnaireResponse.item.answer.value[x]:valueCoding.version">
+      <path value="QuestionnaireResponse.item.answer.value[x].version" />
+      <min value="1" />
+    </element>
+    <element id="QuestionnaireResponse.item.answer.value[x]:valueCoding.code">
+      <path value="QuestionnaireResponse.item.answer.value[x].code" />
+      <min value="1" />
+    </element>
+    <element id="QuestionnaireResponse.item.answer.value[x]:valueCoding.display">
+      <path value="QuestionnaireResponse.item.answer.value[x].display" />
+      <min value="1" />
+    </element>
+    <element id="QuestionnaireResponse.item.answer.value[x]:valueCoding.userSelected">
+      <path value="QuestionnaireResponse.item.answer.value[x].userSelected" />
+      <max value="0" />
+    </element>
+    <element id="QuestionnaireResponse.item.answer.value[x]:valueDateTime">
+      <path value="QuestionnaireResponse.item.answer.value[x]" />
+      <sliceName value="valueDateTime" />
+      <type>
+        <code value="dateTime" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="QuestionnaireResponse.item.answer.value[x]:valueDecimal">
+      <path value="QuestionnaireResponse.item.answer.value[x]" />
+      <sliceName value="valueDecimal" />
+      <type>
+        <code value="decimal" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="QuestionnaireResponse.item.answer.value[x]:valueString">
+      <path value="QuestionnaireResponse.item.answer.value[x]" />
+      <sliceName value="valueString" />
+      <type>
+        <code value="string" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="QuestionnaireResponse.item.answer.value[x]:valueTime">
+      <path value="QuestionnaireResponse.item.answer.value[x]" />
+      <sliceName value="valueTime" />
+      <type>
+        <code value="time" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="QuestionnaireResponse.item.answer.value[x]:valueBoolean">
+      <path value="QuestionnaireResponse.item.answer.value[x]" />
+      <sliceName value="valueBoolean" />
+      <type>
+        <code value="boolean" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="QuestionnaireResponse.item.answer.value[x]:valueQuantity">
+      <path value="QuestionnaireResponse.item.answer.value[x]" />
+      <sliceName value="valueQuantity" />
+      <type>
+        <code value="Quantity" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="QuestionnaireResponse.item.answer.value[x]:valueQuantity.value">
+      <path value="QuestionnaireResponse.item.answer.value[x].value" />
+      <min value="1" />
+    </element>
+    <element id="QuestionnaireResponse.item.answer.value[x]:valueQuantity.unit">
+      <path value="QuestionnaireResponse.item.answer.value[x].unit" />
+      <min value="1" />
+    </element>
+    <element id="QuestionnaireResponse.item.answer.value[x]:valueQuantity.system">
+      <path value="QuestionnaireResponse.item.answer.value[x].system" />
+      <min value="1" />
+    </element>
+    <element id="QuestionnaireResponse.item.answer.value[x]:valueQuantity.code">
+      <path value="QuestionnaireResponse.item.answer.value[x].code" />
+      <min value="1" />
+    </element>
+    <element id="QuestionnaireResponse.item.answer.item">
+      <path value="QuestionnaireResponse.item.answer.item" />
+      <mustSupport value="true" />
+    </element>
+    <element id="QuestionnaireResponse.item.item">
+      <path value="QuestionnaireResponse.item.item" />
+      <mustSupport value="true" />
+    </element>
+  </differential>
+</StructureDefinition>

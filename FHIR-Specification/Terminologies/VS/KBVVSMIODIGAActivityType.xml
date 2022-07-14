@@ -1,0 +1,143 @@
+<ValueSet xmlns="http://hl7.org/fhir">
+  <url value="https://fhir.kbv.de/ValueSet/KBV_VS_MIO_DIGA_Activity_Type" />
+  <version value="1.0.0" />
+  <name value="KBV_VS_MIO_DIGA_Activity_Type" />
+  <title value="KBV_VS_MIO_DIGA_Activity_Type" />
+  <status value="active" />
+  <experimental value="false" />
+  <publisher value="Kassenärztliche Bundesvereinigung (KBV)" />
+  <contact>
+    <telecom>
+      <system value="url" />
+      <value value="https://mio.kbv.de" />
+    </telecom>
+  </contact>
+  <description value="KBV_VS_MIO_DIGA_Activity_Type" />
+  <immutable value="false" />
+  <copyright value="Im folgenden Profil können Codes aus den Codesystemen Snomed, Loinc oder Ucum enthalten sein, die dem folgenden Urheberrecht unterliegen: This material includes SNOMED Clinical Terms® (SNOMED CT®) which is used by permission of SNOMED International. All rights reserved. SNOMED CT®, was originally created by The College of American Pathologists. SNOMED and SNOMED CT are registered trademarks of SNOMED International. Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license. This material contains content from LOINC (http://loinc.org). LOINC is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc. This product includes all or a portion of the UCUM table, UCUM codes, and UCUM definitions or is derived from it, subject to a license from Regenstrief Institute, Inc. and The UCUM Organization. Your use of the UCUM table, UCUM codes, UCUM definitions also is subject to this license, a copy of which is available at ?http://unitsofmeasure.org. The current complete UCUM table, UCUM Specification are available for download at http://unitsofmeasure.org. The UCUM table and UCUM codes are copyright © 1995-2009, Regenstrief Institute, Inc. and the Unified Codes for Units of Measures (UCUM) Organization. All rights reserved. THE UCUM TABLE (IN ALL FORMATS), UCUM DEFINITIONS, AND SPECIFICATION ARE PROVIDED &quot;AS IS.&quot; ANY EXPRESS OR IMPLIED WARRANTIES ARE DISCLAIMED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE." />
+  <compose>
+    <include>
+      <system value="http://hl7.org/fhir/sid/icf-nl" />
+      <concept>
+        <code value="d4" />
+        <display value="Mobilität" />
+      </concept>
+      <concept>
+        <code value="d410-429" />
+        <display value="Die Körperposition ändern und aufrecht erhalten" />
+      </concept>
+      <concept>
+        <code value="d430-d449" />
+        <display value="Gegenstände tragen, bewegen und handhaben" />
+      </concept>
+      <concept>
+        <code value="d450-d469" />
+        <display value="Gehen und sich fortbewegen" />
+      </concept>
+      <concept>
+        <code value="d470-d489" />
+        <display value="Sich mit Transportmitteln fortbewegen" />
+      </concept>
+      <concept>
+        <code value="d5" />
+        <display value="Selbstversorgung" />
+      </concept>
+      <concept>
+        <code value="d510" />
+        <display value="Sich waschen" />
+      </concept>
+      <concept>
+        <code value="d520" />
+        <display value="Seine Körperteile pflegen" />
+      </concept>
+      <concept>
+        <code value="d530" />
+        <display value="Die Toilette benutzen" />
+      </concept>
+      <concept>
+        <code value="d540" />
+        <display value="Sich kleiden" />
+      </concept>
+      <concept>
+        <code value="d550" />
+        <display value="Essen" />
+      </concept>
+      <concept>
+        <code value="d560" />
+        <display value="Trinken" />
+      </concept>
+      <concept>
+        <code value="d570" />
+        <display value="Auf seine Gesundheit achten" />
+      </concept>
+      <concept>
+        <code value="d6" />
+        <display value="Häusliches Leben" />
+      </concept>
+      <concept>
+        <code value="d610-d629" />
+        <display value="Beschaffung von Lebensnotwendigkeiten" />
+      </concept>
+      <concept>
+        <code value="d630-d649" />
+        <display value="Haushaltsaufgaben" />
+      </concept>
+      <concept>
+        <code value="d650-d669" />
+        <display value="Haushaltsgegenstände pflegen und anderen helfen" />
+      </concept>
+      <concept>
+        <code value="d7" />
+        <display value="Interpersonelle Interaktionen und Beziehungen" />
+      </concept>
+      <concept>
+        <code value="d710-d729" />
+        <display value="Allgemeine interpersonelle Interaktionen" />
+      </concept>
+      <concept>
+        <code value="d730-d779" />
+        <display value="Besondere interpersonelle Beziehungen" />
+      </concept>
+      <concept>
+        <code value="d8" />
+        <display value="Bedeutende Lebensbereiche" />
+      </concept>
+      <concept>
+        <code value="d810-d839" />
+        <display value="Erziehung/Bildung" />
+      </concept>
+      <concept>
+        <code value="d840-d859" />
+        <display value="Arbeit und Beschäftigung" />
+      </concept>
+      <concept>
+        <code value="d860-d879" />
+        <display value="Wirtschaftliches Leben" />
+      </concept>
+      <concept>
+        <code value="d9" />
+        <display value="Gemeinschafts-, soziales und staatsbürgerliches Leben" />
+      </concept>
+      <concept>
+        <code value="d910" />
+        <display value="Gemeinschaftsleben" />
+      </concept>
+      <concept>
+        <code value="d920" />
+        <display value="Erholung und Freizeit" />
+      </concept>
+      <concept>
+        <code value="d930" />
+        <display value="Religion und Spiritualität" />
+      </concept>
+      <concept>
+        <code value="d940" />
+        <display value="Menschenrechte" />
+      </concept>
+      <concept>
+        <code value="d950" />
+        <display value="Politisches Leben und Staatsbürgerschaft" />
+      </concept>
+    </include>
+  </compose>
+</ValueSet>

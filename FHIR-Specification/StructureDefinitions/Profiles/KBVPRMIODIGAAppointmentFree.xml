@@ -1,0 +1,374 @@
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <url value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Appointment_Free" />
+  <version value="1.0.0" />
+  <name value="KBV_PR_MIO_DIGA_Appointment_Free" />
+  <title value="KBV_PR_MIO_DIGA_Appointment_Free" />
+  <status value="active" />
+  <publisher value="Kassenärztliche Bundesvereinigung (KBV)" />
+  <description value="Dieses Profil bildet einen geplanten Termin ab." />
+  <copyright value="Im folgenden Profil können Codes aus den Codesystemen Snomed, Loinc oder Ucum enthalten sein, die dem folgenden Urheberrecht unterliegen: This material includes SNOMED Clinical Terms® SNOMED CT® which is used by permission of SNOMED International. All rights reserved. SNOMED CT®, was originally created by The College of American Pathologists. SNOMED and SNOMED CT are registered trademarks of SNOMED International. Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license. This material contains content from Loinc http://loinc.org. Loinc is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes Loinc Committee and is available at no cost under the license at http://loinc.org/license. Loinc® is a registered United States trademark of Regenstrief Institute, Inc. This product includes all or a portion of the UCUM table, UCUM codes, and UCUM definitions or is derived from it, subject to a license from Regenstrief Institute, Inc. and The UCUM Organization. Your use of the UCUM table, UCUM codes, UCUM definitions also is subject to this license, a copy of which is available at ​http://unitsofmeasure.org. The current complete UCUM table, UCUM Specification are available for download at ​http://unitsofmeasure.org. The UCUM table and UCUM codes are copyright © 1995-2009, Regenstrief Institute, Inc. and the Unified Codes for Units of Measures UCUM Organization. All rights reserved. THE UCUM TABLE IN ALL FORMATS, UCUM DEFINITIONS, AND SPECIFICATION ARE PROVIDED &quot;AS IS.&quot; ANY EXPRESS OR IMPLIED WARRANTIES ARE DISCLAIMED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE." />
+  <fhirVersion value="4.0.1" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Appointment" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Appointment" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Appointment">
+      <path value="Appointment" />
+      <definition value="Dieses Profil bildet einen geplanten Termin ab." />
+    </element>
+    <element id="Appointment.meta">
+      <path value="Appointment.meta" />
+      <min value="1" />
+    </element>
+    <element id="Appointment.meta.versionId">
+      <path value="Appointment.meta.versionId" />
+      <min value="1" />
+    </element>
+    <element id="Appointment.meta.lastUpdated">
+      <path value="Appointment.meta.lastUpdated" />
+      <min value="1" />
+    </element>
+    <element id="Appointment.meta.source">
+      <path value="Appointment.meta.source" />
+      <max value="0" />
+    </element>
+    <element id="Appointment.meta.profile">
+      <path value="Appointment.meta.profile" />
+      <min value="1" />
+      <max value="1" />
+      <patternCanonical value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Appointment_Free|1.0.0" />
+    </element>
+    <element id="Appointment.meta.security">
+      <path value="Appointment.meta.security" />
+      <max value="0" />
+    </element>
+    <element id="Appointment.meta.tag">
+      <path value="Appointment.meta.tag" />
+      <max value="0" />
+    </element>
+    <element id="Appointment.implicitRules">
+      <path value="Appointment.implicitRules" />
+      <max value="0" />
+    </element>
+    <element id="Appointment.language">
+      <path value="Appointment.language" />
+      <max value="0" />
+    </element>
+    <element id="Appointment.text">
+      <path value="Appointment.text" />
+      <definition value="In diesem Element können die, in der Instanz, enthaltenen Informationen in einer menschenlesbaren Form zusammengefasst werden. Dabei ist zu beachten, dass keine Informationen aufgenommen werden dürfen, die nicht in strukturierter Form an anderer Stelle in der Instanz enthalten sind." />
+    </element>
+    <element id="Appointment.text.status">
+      <path value="Appointment.text.status" />
+      <fixedCode value="extensions" />
+    </element>
+    <element id="Appointment.contained">
+      <path value="Appointment.contained" />
+      <max value="0" />
+    </element>
+    <element id="Appointment.extension">
+      <path value="Appointment.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="closed" />
+      </slicing>
+      <min value="0" />
+    </element>
+    <element id="Appointment.extension:abschnitte">
+      <path value="Appointment.extension" />
+      <sliceName value="abschnitte" />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="Extension" />
+        <profile value="https://fhir.kbv.de/StructureDefinition/KBV_EX_MIO_DIGA_Reference" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Appointment.extension:abschnitte.value[x]">
+      <path value="Appointment.extension.value[x]" />
+      <min value="1" />
+    </element>
+    <element id="Appointment.extension:abschnitte.value[x]:valueReference">
+      <path value="Appointment.extension.valueReference" />
+      <sliceName value="valueReference" />
+      <min value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_CarePlan_Free|1.0.0" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Device_Free|1.0.0" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Encounter_Past_Appointment|1.0.0" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Goal_Free|1.0.0" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_MedicationAdministration_Medication_Intake_Free|1.0.0" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_MedicationStatement_Medication_Request_Free|1.0.0" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Questionnaire_Free|1.0.0" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_QuestionnaireResponse_Free|1.0.0" />
+      </type>
+    </element>
+    <element id="Appointment.identifier">
+      <path value="Appointment.identifier" />
+      <min value="1" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Appointment.identifier.use">
+      <path value="Appointment.identifier.use" />
+      <max value="0" />
+    </element>
+    <element id="Appointment.identifier.type">
+      <path value="Appointment.identifier.type" />
+      <min value="1" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://terminology.hl7.org/CodeSystem/v2-0203" />
+          <version value="2.9" />
+          <code value="RI" />
+          <display value="Resource identifier" />
+        </coding>
+      </patternCodeableConcept>
+    </element>
+    <element id="Appointment.identifier.type.coding">
+      <path value="Appointment.identifier.type.coding" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="Appointment.identifier.type.coding.system">
+      <path value="Appointment.identifier.type.coding.system" />
+      <min value="1" />
+    </element>
+    <element id="Appointment.identifier.type.coding.version">
+      <path value="Appointment.identifier.type.coding.version" />
+      <min value="1" />
+    </element>
+    <element id="Appointment.identifier.type.coding.code">
+      <path value="Appointment.identifier.type.coding.code" />
+      <min value="1" />
+    </element>
+    <element id="Appointment.identifier.type.coding.display">
+      <path value="Appointment.identifier.type.coding.display" />
+      <min value="1" />
+    </element>
+    <element id="Appointment.identifier.type.coding.userSelected">
+      <path value="Appointment.identifier.type.coding.userSelected" />
+      <max value="0" />
+    </element>
+    <element id="Appointment.identifier.type.text">
+      <path value="Appointment.identifier.type.text" />
+      <max value="0" />
+    </element>
+    <element id="Appointment.identifier.system">
+      <path value="Appointment.identifier.system" />
+      <min value="1" />
+      <fixedUri value="urn:ietf:rfc:3986" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Appointment.identifier.value">
+      <path value="Appointment.identifier.value" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Appointment.identifier.period">
+      <path value="Appointment.identifier.period" />
+      <max value="0" />
+    </element>
+    <element id="Appointment.identifier.assigner">
+      <path value="Appointment.identifier.assigner" />
+      <max value="0" />
+    </element>
+    <element id="Appointment.status">
+      <path value="Appointment.status" />
+      <patternCode value="booked" />
+    </element>
+    <element id="Appointment.cancelationReason">
+      <path value="Appointment.cancelationReason" />
+      <max value="0" />
+    </element>
+    <element id="Appointment.serviceCategory">
+      <path value="Appointment.serviceCategory" />
+      <max value="0" />
+    </element>
+    <element id="Appointment.serviceType">
+      <path value="Appointment.serviceType" />
+      <max value="0" />
+    </element>
+    <element id="Appointment.specialty">
+      <path value="Appointment.specialty" />
+      <max value="0" />
+    </element>
+    <element id="Appointment.appointmentType">
+      <path value="Appointment.appointmentType" />
+      <max value="0" />
+    </element>
+    <element id="Appointment.reasonCode">
+      <path value="Appointment.reasonCode" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Appointment.reasonCode.coding">
+      <path value="Appointment.reasonCode.coding" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Appointment.reasonCode.coding.system">
+      <path value="Appointment.reasonCode.coding.system" />
+      <min value="1" />
+    </element>
+    <element id="Appointment.reasonCode.coding.version">
+      <path value="Appointment.reasonCode.coding.version" />
+      <min value="1" />
+    </element>
+    <element id="Appointment.reasonCode.coding.code">
+      <path value="Appointment.reasonCode.coding.code" />
+      <min value="1" />
+    </element>
+    <element id="Appointment.reasonCode.coding.display">
+      <path value="Appointment.reasonCode.coding.display" />
+      <min value="1" />
+    </element>
+    <element id="Appointment.reasonCode.coding.userSelected">
+      <path value="Appointment.reasonCode.coding.userSelected" />
+      <max value="0" />
+    </element>
+    <element id="Appointment.reasonCode.text">
+      <path value="Appointment.reasonCode.text" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Appointment.reasonReference">
+      <path value="Appointment.reasonReference" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Observation_Body_Temperature|1.0.0" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Observation_Assessment_Score_Free|1.0.0" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Observation_Blood_Pressure|1.0.0" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Observation_Body_Height|1.0.0" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Observation_Body_Weight|1.0.0" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Observation_Diary_Entry|1.0.0" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Observation_Environmental_Factor_Free|1.0.0" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Observation_Heart_Rate|1.0.0" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Observation_Life_Style_Factor_Free|1.0.0" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Observation_Nutrition_Intake|1.0.0" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Observation_Peripheral_Oxygen_Saturation|1.0.0" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Observation_Free|1.0.0" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Procedure_Activity_Free|1.0.0" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Condition_Problem_Free|1.0.0" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Appointment.reasonReference.reference">
+      <path value="Appointment.reasonReference.reference" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Appointment.reasonReference.type">
+      <path value="Appointment.reasonReference.type" />
+      <max value="0" />
+    </element>
+    <element id="Appointment.reasonReference.identifier">
+      <path value="Appointment.reasonReference.identifier" />
+      <max value="0" />
+    </element>
+    <element id="Appointment.reasonReference.display">
+      <path value="Appointment.reasonReference.display" />
+      <max value="0" />
+    </element>
+    <element id="Appointment.priority">
+      <path value="Appointment.priority" />
+      <max value="0" />
+    </element>
+    <element id="Appointment.description">
+      <path value="Appointment.description" />
+      <max value="0" />
+    </element>
+    <element id="Appointment.supportingInformation">
+      <path value="Appointment.supportingInformation" />
+      <max value="0" />
+    </element>
+    <element id="Appointment.start">
+      <path value="Appointment.start" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Appointment.end">
+      <path value="Appointment.end" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Appointment.minutesDuration">
+      <path value="Appointment.minutesDuration" />
+      <max value="0" />
+    </element>
+    <element id="Appointment.slot">
+      <path value="Appointment.slot" />
+      <max value="0" />
+    </element>
+    <element id="Appointment.created">
+      <path value="Appointment.created" />
+      <max value="0" />
+    </element>
+    <element id="Appointment.comment">
+      <path value="Appointment.comment" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Appointment.patientInstruction">
+      <path value="Appointment.patientInstruction" />
+      <max value="0" />
+    </element>
+    <element id="Appointment.basedOn">
+      <path value="Appointment.basedOn" />
+      <max value="0" />
+    </element>
+    <element id="Appointment.participant">
+      <path value="Appointment.participant" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Appointment.participant.type">
+      <path value="Appointment.participant.type" />
+      <max value="0" />
+    </element>
+    <element id="Appointment.participant.actor">
+      <path value="Appointment.participant.actor" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Patient|1.0.0" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Practitioner|1.0.0" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_RelatedPerson|1.0.0" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_PractitionerRole|1.0.0" />
+      </type>
+    </element>
+    <element id="Appointment.participant.actor.reference">
+      <path value="Appointment.participant.actor.reference" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Appointment.participant.actor.type">
+      <path value="Appointment.participant.actor.type" />
+      <max value="0" />
+    </element>
+    <element id="Appointment.participant.actor.identifier">
+      <path value="Appointment.participant.actor.identifier" />
+      <max value="0" />
+    </element>
+    <element id="Appointment.participant.actor.display">
+      <path value="Appointment.participant.actor.display" />
+      <max value="0" />
+    </element>
+    <element id="Appointment.participant.required">
+      <path value="Appointment.participant.required" />
+      <max value="0" />
+    </element>
+    <element id="Appointment.participant.status">
+      <path value="Appointment.participant.status" />
+      <patternCode value="accepted" />
+    </element>
+    <element id="Appointment.participant.period">
+      <path value="Appointment.participant.period" />
+      <max value="0" />
+    </element>
+    <element id="Appointment.requestedPeriod">
+      <path value="Appointment.requestedPeriod" />
+      <max value="0" />
+    </element>
+  </differential>
+</StructureDefinition>

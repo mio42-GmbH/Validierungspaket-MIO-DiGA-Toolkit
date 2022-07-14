@@ -1,0 +1,171 @@
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <url value="https://fhir.kbv.de/CodeSystem/KBV_CS_MIO_DIGA_Observation_Interpretation_German" />
+  <version value="1.0.0" />
+  <name value="KBV_CS_MIO_DIGA_Observation_Interpretation_German" />
+  <title value="Interpretation" />
+  <status value="active" />
+  <experimental value="false" />
+  <publisher value="Kassenärztliche Bundesvereinigung (KBV)" />
+  <contact>
+    <telecom>
+      <system value="url" />
+      <value value="https://mio.kbv.de" />
+    </telecom>
+  </contact>
+  <description value="Dieses Codesystem enthält die Codes für deutsche Bezeichner für die Interpretation." />
+  <copyright value="Im folgenden Profil können Codes aus den Codesystemen Snomed, Loinc oder Ucum enthalten sein, die dem folgenden Urheberrecht unterliegen: This material includes SNOMED Clinical Terms® (SNOMED CT®) which is used by permission of SNOMED International. All rights reserved. SNOMED CT®, was originally created by The College of American Pathologists. SNOMED and SNOMED CT are registered trademarks of SNOMED International. Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license. This material contains content from LOINC (http://loinc.org). LOINC is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc. This product includes all or a portion of the UCUM table, UCUM codes, and UCUM definitions or is derived from it, subject to a license from Regenstrief Institute, Inc. and The UCUM Organization. Your use of the UCUM table, UCUM codes, UCUM definitions also is subject to this license, a copy of which is available at ?http://unitsofmeasure.org. The current complete UCUM table, UCUM Specification are available for download at http://unitsofmeasure.org. The UCUM table and UCUM codes are copyright © 1995-2009, Regenstrief Institute, Inc. and the Unified Codes for Units of Measures (UCUM) Organization. All rights reserved. THE UCUM TABLE (IN ALL FORMATS), UCUM DEFINITIONS, AND SPECIFICATION ARE PROVIDED &quot;AS IS.&quot; ANY EXPRESS OR IMPLIED WARRANTIES ARE DISCLAIMED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE." />
+  <caseSensitive value="true" />
+  <content value="complete" />
+  <concept>
+    <code value="InterpretationdergenetischenAnalyse" />
+    <display value="Interpretation der genetischen Analyse" />
+  </concept>
+  <concept>
+    <code value="Anlagetraeger" />
+    <display value="Anlageträger" />
+  </concept>
+  <concept>
+    <code value="Aenderungsverlauf" />
+    <display value="Änderungsverlauf" />
+  </concept>
+  <concept>
+    <code value="Besser" />
+    <display value="Besser" />
+  </concept>
+  <concept>
+    <code value="SignifikanterAnstieg" />
+    <display value="Signifikanter Anstieg" />
+  </concept>
+  <concept>
+    <code value="SignifikanterRueckgang" />
+    <display value="Signifikanter Rückgang" />
+  </concept>
+  <concept>
+    <code value="Schlechter" />
+    <display value="Schlechter" />
+  </concept>
+  <concept>
+    <code value="Ausnahmewertinterpretation" />
+    <display value="Ausnahmewertinterpretation" />
+  </concept>
+  <concept>
+    <code value="UnterhalbderanalytischenGrenze" />
+    <display value="Unterhalb der analytischen Grenze" />
+  </concept>
+  <concept>
+    <code value="OberhalbderanalytischenGrenze" />
+    <display value="Oberhalb der analytischen Grenze" />
+  </concept>
+  <concept>
+    <code value="Evidenzunzureichend" />
+    <display value="Evidenz unzureichend" />
+  </concept>
+  <concept>
+    <code value="Normalitaetsinterpretation" />
+    <display value="Normalitätsinterpretation" />
+  </concept>
+  <concept>
+    <code value="Abnormal" />
+    <display value="Abnormal" />
+  </concept>
+  <concept>
+    <code value="Kritischabnormal" />
+    <display value="Kritisch abnormal" />
+  </concept>
+  <concept>
+    <code value="Kritischerhoeht" />
+    <display value="Kritisch erhöht" />
+  </concept>
+  <concept>
+    <code value="Kritischerniedrigt" />
+    <display value="Kritisch erniedrigt" />
+  </concept>
+  <concept>
+    <code value="Erhoeht" />
+    <display value="Erhöht" />
+  </concept>
+  <concept>
+    <code value="Signifikanterhoeht" />
+    <display value="Signifikant erhöht" />
+  </concept>
+  <concept>
+    <code value="Erniedrigt" />
+    <display value="Erniedrigt" />
+  </concept>
+  <concept>
+    <code value="Signifikanterniedrigt" />
+    <display value="Signifikant erniedrigt" />
+  </concept>
+  <concept>
+    <code value="Normal" />
+    <display value="Normal" />
+  </concept>
+  <concept>
+    <code value="InterpretationausserhalbdesGrenzwertes" />
+    <display value="Interpretation außerhalb des Grenzwertes" />
+  </concept>
+  <concept>
+    <code value="OberhalbdesoberenGrenzwert" />
+    <display value="Oberhalb des oberen Grenzwert" />
+  </concept>
+  <concept>
+    <code value="UnterhalbdesunterenGrenzwerts" />
+    <display value="Unterhalb des unteren Grenzwerts" />
+  </concept>
+  <concept>
+    <code value="Feststellungsinterpretation" />
+    <display value="Feststellungsinterpretation" />
+  </concept>
+  <concept>
+    <code value="Unbestimmbar" />
+    <display value="Unbestimmbar" />
+  </concept>
+  <concept>
+    <code value="Uneindeutig" />
+    <display value="Uneindeutig" />
+  </concept>
+  <concept>
+    <code value="Negativ" />
+    <display value="Negativ" />
+  </concept>
+  <concept>
+    <code value="Nichtnachgewiesen" />
+    <display value="Nicht nachgewiesen" />
+  </concept>
+  <concept>
+    <code value="Positiv" />
+    <display value="Positiv" />
+  </concept>
+  <concept>
+    <code value="Nachgewiesen" />
+    <display value="Nachgewiesen" />
+  </concept>
+  <concept>
+    <code value="Erwartungsinterpretation" />
+    <display value="Erwartungsinterpretation" />
+  </concept>
+  <concept>
+    <code value="Erwartet" />
+    <display value="Erwartet" />
+  </concept>
+  <concept>
+    <code value="Unerwartet" />
+    <display value="Unerwartet" />
+  </concept>
+  <concept>
+    <code value="Reaktivitaetsinterpretation" />
+    <display value="Reaktivitätsinterpretation" />
+  </concept>
+  <concept>
+    <code value="Nichtreaktiv" />
+    <display value="Nicht reaktiv" />
+  </concept>
+  <concept>
+    <code value="Reaktiv" />
+    <display value="Reaktiv" />
+  </concept>
+  <concept>
+    <code value="Schwachreaktiv" />
+    <display value="Schwach reaktiv" />
+  </concept>
+</CodeSystem>

@@ -1,0 +1,595 @@
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <url value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Medication_Free" />
+  <version value="1.0.0" />
+  <name value="KBV_PR_MIO_DIGA_Medication_Free" />
+  <title value="KBV_PR_MIO_DIGA_Medication_Free" />
+  <status value="active" />
+  <publisher value="Kassenärztliche Bundesvereinigung (KBV)" />
+  <description value="Dieses Profil bildet ein Arzneimittel ab." />
+  <copyright value="Im folgenden Profil können Codes aus den Codesystemen Snomed, Loinc oder Ucum enthalten sein, die dem folgenden Urheberrecht unterliegen: This material includes SNOMED Clinical Terms® SNOMED CT® which is used by permission of SNOMED International. All rights reserved. SNOMED CT®, was originally created by The College of American Pathologists. SNOMED and SNOMED CT are registered trademarks of SNOMED International. Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license. This material contains content from Loinc http://loinc.org. Loinc is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes Loinc Committee and is available at no cost under the license at http://loinc.org/license. Loinc® is a registered United States trademark of Regenstrief Institute, Inc. This product includes all or a portion of the UCUM table, UCUM codes, and UCUM definitions or is derived from it, subject to a license from Regenstrief Institute, Inc. and The UCUM Organization. Your use of the UCUM table, UCUM codes, UCUM definitions also is subject to this license, a copy of which is available at ​http://unitsofmeasure.org. The current complete UCUM table, UCUM Specification are available for download at ​http://unitsofmeasure.org. The UCUM table and UCUM codes are copyright © 1995-2009, Regenstrief Institute, Inc. and the Unified Codes for Units of Measures UCUM Organization. All rights reserved. THE UCUM TABLE IN ALL FORMATS, UCUM DEFINITIONS, AND SPECIFICATION ARE PROVIDED &quot;AS IS.&quot; ANY EXPRESS OR IMPLIED WARRANTIES ARE DISCLAIMED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE." />
+  <fhirVersion value="4.0.1" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Medication" />
+  <baseDefinition value="https://fhir.kbv.de/StructureDefinition/KBV_PR_Base_Medication|1.2.1" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Medication">
+      <path value="Medication" />
+      <definition value="Dieses Profil bildet ein Arzneimittel ab." />
+    </element>
+    <element id="Medication.meta">
+      <path value="Medication.meta" />
+      <min value="1" />
+    </element>
+    <element id="Medication.meta.versionId">
+      <path value="Medication.meta.versionId" />
+      <min value="1" />
+    </element>
+    <element id="Medication.meta.lastUpdated">
+      <path value="Medication.meta.lastUpdated" />
+      <min value="1" />
+    </element>
+    <element id="Medication.meta.source">
+      <path value="Medication.meta.source" />
+      <max value="0" />
+    </element>
+    <element id="Medication.meta.profile">
+      <path value="Medication.meta.profile" />
+      <min value="1" />
+      <max value="1" />
+      <patternCanonical value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Medication_Free|1.0.0" />
+    </element>
+    <element id="Medication.meta.security">
+      <path value="Medication.meta.security" />
+      <max value="0" />
+    </element>
+    <element id="Medication.meta.tag">
+      <path value="Medication.meta.tag" />
+      <max value="0" />
+    </element>
+    <element id="Medication.implicitRules">
+      <path value="Medication.implicitRules" />
+      <max value="0" />
+    </element>
+    <element id="Medication.language">
+      <path value="Medication.language" />
+      <max value="0" />
+    </element>
+    <element id="Medication.text">
+      <path value="Medication.text" />
+      <definition value="In diesem Element können die, in der Instanz, enthaltenen Informationen in einer menschenlesbaren Form zusammengefasst werden. Dabei ist zu beachten, dass keine Informationen aufgenommen werden dürfen, die nicht in strukturierter Form an anderer Stelle in der Instanz enthalten sind." />
+    </element>
+    <element id="Medication.text.status">
+      <path value="Medication.text.status" />
+      <fixedCode value="extensions" />
+    </element>
+    <element id="Medication.contained">
+      <path value="Medication.contained" />
+      <max value="0" />
+    </element>
+    <element id="Medication.extension">
+      <path value="Medication.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="closed" />
+      </slicing>
+      <mustSupport value="true" />
+    </element>
+    <element id="Medication.extension:Kategorie">
+      <path value="Medication.extension" />
+      <sliceName value="Kategorie" />
+      <type>
+        <code value="Extension" />
+        <profile value="https://fhir.kbv.de/StructureDefinition/KBV_EX_Base_Medication_Type" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Medication.extension:Kategorie.value[x]">
+      <path value="Medication.extension.value[x]" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Medication.extension:Kategorie.value[x]:valueCodeableConcept">
+      <path value="Medication.extension.value[x]" />
+      <sliceName value="valueCodeableConcept" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Medication.extension:Kategorie.value[x]:valueCodeableConcept.coding">
+      <path value="Medication.extension.value[x].coding" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Medication.extension:Kategorie.value[x]:valueCodeableConcept.coding.display.extension">
+      <path value="Medication.extension.value[x].coding.display.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <mustSupport value="true" />
+    </element>
+    <element id="Medication.extension:Kategorie.value[x]:valueCodeableConcept.coding.display.extension:anzeigenameFachterminusGerman">
+      <path value="Medication.extension.value[x].coding.display.extension" />
+      <sliceName value="anzeigenameFachterminusGerman" />
+      <type>
+        <code value="Extension" />
+        <profile value="https://fhir.kbv.de/StructureDefinition/KBV_EX_Base_Terminology_German" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Medication.extension:Kategorie.value[x]:valueCodeableConcept.coding.display.extension:anzeigenameFachterminusGerman.extension">
+      <path value="Medication.extension.value[x].coding.display.extension.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Medication.extension:Kategorie.value[x]:valueCodeableConcept.coding.display.extension:anzeigenameFachterminusGerman.extension:content">
+      <path value="Medication.extension.value[x].coding.display.extension.extension" />
+      <sliceName value="content" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Medication.extension:Kategorie.value[x]:valueCodeableConcept.coding.display.extension:anzeigenameFachterminusGerman.extension:content.value[x]">
+      <path value="Medication.extension.value[x].coding.display.extension.extension.value[x]" />
+      <slicing>
+        <discriminator>
+          <type value="type" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="closed" />
+      </slicing>
+      <mustSupport value="true" />
+    </element>
+    <element id="Medication.extension:Kategorie.value[x]:valueCodeableConcept.coding.display.extension:anzeigenameFachterminusGerman.extension:content.value[x]:valueString">
+      <path value="Medication.extension.value[x].coding.display.extension.extension.valueString" />
+      <sliceName value="valueString" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Medication.extension:Kategorie.value[x]:valueCodeableConcept.coding.userSelected">
+      <path value="Medication.extension.value[x].coding.userSelected" />
+      <max value="0" />
+    </element>
+    <element id="Medication.extension:Kategorie.value[x]:valueCodeableConcept.text">
+      <path value="Medication.extension.value[x].text" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Medication.identifier">
+      <path value="Medication.identifier" />
+      <min value="1" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Medication.identifier.use">
+      <path value="Medication.identifier.use" />
+      <max value="0" />
+    </element>
+    <element id="Medication.identifier.type">
+      <path value="Medication.identifier.type" />
+      <min value="1" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://terminology.hl7.org/CodeSystem/v2-0203" />
+          <version value="2.9" />
+          <code value="RI" />
+          <display value="Resource identifier" />
+        </coding>
+      </patternCodeableConcept>
+    </element>
+    <element id="Medication.identifier.type.coding">
+      <path value="Medication.identifier.type.coding" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="Medication.identifier.type.coding.system">
+      <path value="Medication.identifier.type.coding.system" />
+      <min value="1" />
+    </element>
+    <element id="Medication.identifier.type.coding.version">
+      <path value="Medication.identifier.type.coding.version" />
+      <min value="1" />
+    </element>
+    <element id="Medication.identifier.type.coding.code">
+      <path value="Medication.identifier.type.coding.code" />
+      <min value="1" />
+    </element>
+    <element id="Medication.identifier.type.coding.display">
+      <path value="Medication.identifier.type.coding.display" />
+      <min value="1" />
+    </element>
+    <element id="Medication.identifier.type.coding.userSelected">
+      <path value="Medication.identifier.type.coding.userSelected" />
+      <max value="0" />
+    </element>
+    <element id="Medication.identifier.type.text">
+      <path value="Medication.identifier.type.text" />
+      <max value="0" />
+    </element>
+    <element id="Medication.identifier.system">
+      <path value="Medication.identifier.system" />
+      <min value="1" />
+      <fixedUri value="urn:ietf:rfc:3986" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Medication.identifier.value">
+      <path value="Medication.identifier.value" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Medication.identifier.period">
+      <path value="Medication.identifier.period" />
+      <max value="0" />
+    </element>
+    <element id="Medication.identifier.assigner">
+      <path value="Medication.identifier.assigner" />
+      <max value="0" />
+    </element>
+    <element id="Medication.code">
+      <path value="Medication.code" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Medication.code.coding">
+      <path value="Medication.code.coding" />
+      <slicing>
+        <discriminator>
+          <type value="pattern" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <mustSupport value="true" />
+    </element>
+    <element id="Medication.code.coding:pznCode">
+      <path value="Medication.code.coding" />
+      <sliceName value="pznCode" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Medication.code.coding:pznCode.version">
+      <path value="Medication.code.coding.version" />
+      <min value="1" />
+    </element>
+    <element id="Medication.code.coding:pznCode.display">
+      <path value="Medication.code.coding.display" />
+      <min value="1" />
+    </element>
+    <element id="Medication.code.coding:pznCode.userSelected">
+      <path value="Medication.code.coding.userSelected" />
+      <max value="0" />
+    </element>
+    <element id="Medication.code.coding:snomedCode">
+      <path value="Medication.code.coding" />
+      <sliceName value="snomedCode" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Medication.code.coding:snomedCode.version">
+      <path value="Medication.code.coding.version" />
+      <min value="1" />
+    </element>
+    <element id="Medication.code.coding:snomedCode.display">
+      <path value="Medication.code.coding.display" />
+      <min value="1" />
+    </element>
+    <element id="Medication.code.coding:snomedCode.userSelected">
+      <path value="Medication.code.coding.userSelected" />
+      <max value="0" />
+    </element>
+    <element id="Medication.code.coding:atcCode">
+      <path value="Medication.code.coding" />
+      <sliceName value="atcCode" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Medication.code.coding:atcCode.version">
+      <path value="Medication.code.coding.version" />
+      <min value="1" />
+    </element>
+    <element id="Medication.code.coding:atcCode.display">
+      <path value="Medication.code.coding.display" />
+      <min value="1" />
+    </element>
+    <element id="Medication.code.coding:atcCode.userSelected">
+      <path value="Medication.code.coding.userSelected" />
+      <max value="0" />
+    </element>
+    <element id="Medication.code.text">
+      <path value="Medication.code.text" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Medication.status">
+      <path value="Medication.status" />
+      <max value="0" />
+    </element>
+    <element id="Medication.manufacturer">
+      <path value="Medication.manufacturer" />
+      <max value="0" />
+    </element>
+    <element id="Medication.form">
+      <path value="Medication.form" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Medication.form.coding">
+      <path value="Medication.form.coding" />
+      <slicing>
+        <discriminator>
+          <type value="pattern" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <mustSupport value="true" />
+    </element>
+    <element id="Medication.form.coding:snomedCode">
+      <path value="Medication.form.coding" />
+      <sliceName value="snomedCode" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Medication.form.coding:snomedCode.version">
+      <path value="Medication.form.coding.version" />
+      <min value="1" />
+    </element>
+    <element id="Medication.form.coding:snomedCode.display">
+      <path value="Medication.form.coding.display" />
+      <min value="1" />
+    </element>
+    <element id="Medication.form.coding:snomedCode.userSelected">
+      <path value="Medication.form.coding.userSelected" />
+      <max value="0" />
+    </element>
+    <element id="Medication.form.coding:edqmCode">
+      <path value="Medication.form.coding" />
+      <sliceName value="edqmCode" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Medication.form.coding:edqmCode.version">
+      <path value="Medication.form.coding.version" />
+      <min value="1" />
+    </element>
+    <element id="Medication.form.coding:edqmCode.display">
+      <path value="Medication.form.coding.display" />
+      <min value="1" />
+    </element>
+    <element id="Medication.form.coding:edqmCode.userSelected">
+      <path value="Medication.form.coding.userSelected" />
+      <max value="0" />
+    </element>
+    <element id="Medication.form.coding:kbvDarreichungsform">
+      <path value="Medication.form.coding" />
+      <sliceName value="kbvDarreichungsform" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Medication.form.coding:kbvDarreichungsform.version">
+      <path value="Medication.form.coding.version" />
+      <min value="1" />
+    </element>
+    <element id="Medication.form.coding:kbvDarreichungsform.display">
+      <path value="Medication.form.coding.display" />
+      <min value="1" />
+    </element>
+    <element id="Medication.form.coding:kbvDarreichungsform.userSelected">
+      <path value="Medication.form.coding.userSelected" />
+      <max value="0" />
+    </element>
+    <element id="Medication.form.text">
+      <path value="Medication.form.text" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Medication.amount">
+      <path value="Medication.amount" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Medication.amount.numerator">
+      <path value="Medication.amount.numerator" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Medication.amount.numerator.value">
+      <path value="Medication.amount.numerator.value" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Medication.amount.numerator.comparator">
+      <path value="Medication.amount.numerator.comparator" />
+      <max value="0" />
+    </element>
+    <element id="Medication.amount.numerator.unit">
+      <path value="Medication.amount.numerator.unit" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Medication.amount.numerator.code">
+      <path value="Medication.amount.numerator.code" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Medication.amount.denominator">
+      <path value="Medication.amount.denominator" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Medication.amount.denominator.value">
+      <path value="Medication.amount.denominator.value" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Medication.amount.denominator.comparator">
+      <path value="Medication.amount.denominator.comparator" />
+      <max value="0" />
+    </element>
+    <element id="Medication.amount.denominator.unit">
+      <path value="Medication.amount.denominator.unit" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Medication.amount.denominator.code">
+      <path value="Medication.amount.denominator.code" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Medication.ingredient">
+      <path value="Medication.ingredient" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Medication.ingredient.item[x]">
+      <path value="Medication.ingredient.item[x]" />
+      <slicing>
+        <discriminator>
+          <type value="type" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="closed" />
+      </slicing>
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Medication_Free|1.0.0" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Medication.ingredient.item[x]:itemCodeableConcept">
+      <path value="Medication.ingredient.item[x]" />
+      <sliceName value="itemCodeableConcept" />
+      <max value="1" />
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Medication.ingredient.item[x]:itemCodeableConcept.coding">
+      <path value="Medication.ingredient.item[x].coding" />
+      <slicing>
+        <discriminator>
+          <type value="pattern" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <mustSupport value="true" />
+    </element>
+    <element id="Medication.ingredient.item[x]:itemCodeableConcept.coding:askCode">
+      <path value="Medication.ingredient.item[x].coding" />
+      <sliceName value="askCode" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Medication.ingredient.item[x]:itemCodeableConcept.coding:askCode.version">
+      <path value="Medication.ingredient.item[x].coding.version" />
+      <min value="1" />
+    </element>
+    <element id="Medication.ingredient.item[x]:itemCodeableConcept.coding:askCode.display">
+      <path value="Medication.ingredient.item[x].coding.display" />
+      <min value="1" />
+    </element>
+    <element id="Medication.ingredient.item[x]:itemCodeableConcept.coding:askCode.userSelected">
+      <path value="Medication.ingredient.item[x].coding.userSelected" />
+      <max value="0" />
+    </element>
+    <element id="Medication.ingredient.item[x]:itemCodeableConcept.coding:snomedCode">
+      <path value="Medication.ingredient.item[x].coding" />
+      <sliceName value="snomedCode" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Medication.ingredient.item[x]:itemCodeableConcept.coding:snomedCode.version">
+      <path value="Medication.ingredient.item[x].coding.version" />
+      <min value="1" />
+    </element>
+    <element id="Medication.ingredient.item[x]:itemCodeableConcept.coding:snomedCode.display">
+      <path value="Medication.ingredient.item[x].coding.display" />
+      <min value="1" />
+    </element>
+    <element id="Medication.ingredient.item[x]:itemCodeableConcept.coding:snomedCode.userSelected">
+      <path value="Medication.ingredient.item[x].coding.userSelected" />
+      <max value="0" />
+    </element>
+    <element id="Medication.ingredient.item[x]:itemCodeableConcept.text">
+      <path value="Medication.ingredient.item[x].text" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Medication.ingredient.item[x]:itemReference">
+      <path value="Medication.ingredient.item[x]" />
+      <sliceName value="itemReference" />
+      <max value="1" />
+      <type>
+        <code value="Reference" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Medication.ingredient.item[x]:itemReference.reference">
+      <path value="Medication.ingredient.item[x].reference" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Medication.ingredient.item[x]:itemReference.type">
+      <path value="Medication.ingredient.item[x].type" />
+      <max value="0" />
+    </element>
+    <element id="Medication.ingredient.item[x]:itemReference.identifier">
+      <path value="Medication.ingredient.item[x].identifier" />
+      <max value="0" />
+    </element>
+    <element id="Medication.ingredient.item[x]:itemReference.display">
+      <path value="Medication.ingredient.item[x].display" />
+      <max value="0" />
+    </element>
+    <element id="Medication.ingredient.isActive">
+      <path value="Medication.ingredient.isActive" />
+      <max value="0" />
+    </element>
+    <element id="Medication.ingredient.strength">
+      <path value="Medication.ingredient.strength" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Medication.ingredient.strength.numerator">
+      <path value="Medication.ingredient.strength.numerator" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Medication.ingredient.strength.numerator.value">
+      <path value="Medication.ingredient.strength.numerator.value" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Medication.ingredient.strength.numerator.comparator">
+      <path value="Medication.ingredient.strength.numerator.comparator" />
+      <max value="0" />
+    </element>
+    <element id="Medication.ingredient.strength.numerator.unit">
+      <path value="Medication.ingredient.strength.numerator.unit" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Medication.ingredient.strength.numerator.code">
+      <path value="Medication.ingredient.strength.numerator.code" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Medication.ingredient.strength.denominator">
+      <path value="Medication.ingredient.strength.denominator" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Medication.ingredient.strength.denominator.value">
+      <path value="Medication.ingredient.strength.denominator.value" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Medication.ingredient.strength.denominator.comparator">
+      <path value="Medication.ingredient.strength.denominator.comparator" />
+      <max value="0" />
+    </element>
+    <element id="Medication.ingredient.strength.denominator.unit">
+      <path value="Medication.ingredient.strength.denominator.unit" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Medication.ingredient.strength.denominator.code">
+      <path value="Medication.ingredient.strength.denominator.code" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Medication.batch">
+      <path value="Medication.batch" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Medication.batch.lotNumber">
+      <path value="Medication.batch.lotNumber" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Medication.batch.expirationDate">
+      <path value="Medication.batch.expirationDate" />
+      <mustSupport value="true" />
+    </element>
+  </differential>
+</StructureDefinition>

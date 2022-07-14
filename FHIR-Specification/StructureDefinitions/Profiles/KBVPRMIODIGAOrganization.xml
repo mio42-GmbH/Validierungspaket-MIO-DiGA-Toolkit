@@ -1,0 +1,554 @@
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <url value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Organization" />
+  <version value="1.0.0" />
+  <name value="KBV_PR_MIO_DIGA_Organization" />
+  <title value="KBV_PR_MIO_DIGA_Organization" />
+  <status value="active" />
+  <publisher value="Kassenärztliche Bundesvereinigung (KBV)" />
+  <description value="Dieses Profil bildet eine Einrichtung bspw. einen Ort, an dem ein Kontakt zwischen der zu behandelnden Person und der leistungserbringenden Person stattfindet (z.B. Praxis), ab." />
+  <copyright value="Im folgenden Profil können Codes aus den Codesystemen Snomed, Loinc oder Ucum enthalten sein, die dem folgenden Urheberrecht unterliegen: This material includes SNOMED Clinical Terms® SNOMED CT® which is used by permission of SNOMED International. All rights reserved. SNOMED CT®, was originally created by The College of American Pathologists. SNOMED and SNOMED CT are registered trademarks of SNOMED International. Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license. This material contains content from Loinc http://loinc.org. Loinc is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes Loinc Committee and is available at no cost under the license at http://loinc.org/license. Loinc® is a registered United States trademark of Regenstrief Institute, Inc. This product includes all or a portion of the UCUM table, UCUM codes, and UCUM definitions or is derived from it, subject to a license from Regenstrief Institute, Inc. and The UCUM Organization. Your use of the UCUM table, UCUM codes, UCUM definitions also is subject to this license, a copy of which is available at ​http://unitsofmeasure.org. The current complete UCUM table, UCUM Specification are available for download at ​http://unitsofmeasure.org. The UCUM table and UCUM codes are copyright © 1995-2009, Regenstrief Institute, Inc. and the Unified Codes for Units of Measures UCUM Organization. All rights reserved. THE UCUM TABLE IN ALL FORMATS, UCUM DEFINITIONS, AND SPECIFICATION ARE PROVIDED &quot;AS IS.&quot; ANY EXPRESS OR IMPLIED WARRANTIES ARE DISCLAIMED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE." />
+  <fhirVersion value="4.0.1" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Organization" />
+  <baseDefinition value="https://fhir.kbv.de/StructureDefinition/KBV_PR_Base_Organization|1.2.1" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Organization">
+      <path value="Organization" />
+      <definition value="Dieses Profil bildet eine Einrichtung bspw. einen Ort, an dem ein Kontakt zwischen der zu behandelnden Person und der leistungserbringenden Person stattfindet (z.B. Praxis), ab." />
+    </element>
+    <element id="Organization.meta">
+      <path value="Organization.meta" />
+      <min value="1" />
+    </element>
+    <element id="Organization.meta.versionId">
+      <path value="Organization.meta.versionId" />
+      <min value="1" />
+    </element>
+    <element id="Organization.meta.lastUpdated">
+      <path value="Organization.meta.lastUpdated" />
+      <min value="1" />
+    </element>
+    <element id="Organization.meta.source">
+      <path value="Organization.meta.source" />
+      <max value="0" />
+    </element>
+    <element id="Organization.meta.profile">
+      <path value="Organization.meta.profile" />
+      <min value="1" />
+      <max value="1" />
+      <patternCanonical value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Organization|1.0.0" />
+    </element>
+    <element id="Organization.meta.security">
+      <path value="Organization.meta.security" />
+      <max value="0" />
+    </element>
+    <element id="Organization.meta.tag">
+      <path value="Organization.meta.tag" />
+      <max value="0" />
+    </element>
+    <element id="Organization.implicitRules">
+      <path value="Organization.implicitRules" />
+      <max value="0" />
+    </element>
+    <element id="Organization.language">
+      <path value="Organization.language" />
+      <max value="0" />
+    </element>
+    <element id="Organization.text">
+      <path value="Organization.text" />
+      <definition value="In diesem Element können die, in der Instanz, enthaltenen Informationen in einer menschenlesbaren Form zusammengefasst werden. Dabei ist zu beachten, dass keine Informationen aufgenommen werden dürfen, die nicht in strukturierter Form an anderer Stelle in der Instanz enthalten sind." />
+    </element>
+    <element id="Organization.text.status">
+      <path value="Organization.text.status" />
+      <fixedCode value="extensions" />
+    </element>
+    <element id="Organization.contained">
+      <path value="Organization.contained" />
+      <max value="0" />
+    </element>
+    <element id="Organization.extension">
+      <path value="Organization.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="0" />
+    </element>
+    <element id="Organization.extension:ergaenzende_Angaben">
+      <path value="Organization.extension" />
+      <sliceName value="ergaenzende_Angaben" />
+      <min value="0" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Organization.extension:ergaenzende_Angaben.value[x]">
+      <path value="Organization.extension.value[x]" />
+      <slicing>
+        <discriminator>
+          <type value="type" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="closed" />
+      </slicing>
+      <mustSupport value="true" />
+    </element>
+    <element id="Organization.extension:ergaenzende_Angaben.value[x]:valueString">
+      <path value="Organization.extension.value[x]" />
+      <sliceName value="valueString" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Organization.identifier">
+      <path value="Organization.identifier" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="type.coding.code" />
+        </discriminator>
+        <rules value="closed" />
+      </slicing>
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Organization.identifier:Institutionskennzeichen">
+      <path value="Organization.identifier" />
+      <sliceName value="Institutionskennzeichen" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Organization.identifier:Betriebsstaettennummer">
+      <path value="Organization.identifier" />
+      <sliceName value="Betriebsstaettennummer" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Organization.identifier:VKNR">
+      <path value="Organization.identifier" />
+      <sliceName value="VKNR" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Organization.identifier:KZV-Abrechnungsnummer">
+      <path value="Organization.identifier" />
+      <sliceName value="KZV-Abrechnungsnummer" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Organization.identifier:uuid">
+      <path value="Organization.identifier" />
+      <sliceName value="uuid" />
+      <min value="1" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Organization.identifier:uuid.type">
+      <path value="Organization.identifier.type" />
+      <min value="1" />
+    </element>
+    <element id="Organization.identifier:uuid.type.coding">
+      <path value="Organization.identifier.type.coding" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="Organization.identifier:uuid.type.coding.system">
+      <path value="Organization.identifier.type.coding.system" />
+      <min value="1" />
+      <fixedUri value="http://terminology.hl7.org/CodeSystem/v2-0203" />
+    </element>
+    <element id="Organization.identifier:uuid.type.coding.version">
+      <path value="Organization.identifier.type.coding.version" />
+      <min value="1" />
+      <fixedString value="2.9" />
+    </element>
+    <element id="Organization.identifier:uuid.type.coding.code">
+      <path value="Organization.identifier.type.coding.code" />
+      <min value="1" />
+      <fixedCode value="RI" />
+    </element>
+    <element id="Organization.identifier:uuid.type.coding.display">
+      <path value="Organization.identifier.type.coding.display" />
+      <min value="1" />
+      <fixedString value="Resource identifier" />
+    </element>
+    <element id="Organization.identifier:uuid.type.coding.userSelected">
+      <path value="Organization.identifier.type.coding.userSelected" />
+      <max value="0" />
+    </element>
+    <element id="Organization.identifier:uuid.type.text">
+      <path value="Organization.identifier.type.text" />
+      <max value="0" />
+    </element>
+    <element id="Organization.identifier:uuid.system">
+      <path value="Organization.identifier.system" />
+      <min value="1" />
+      <fixedUri value="urn:ietf:rfc:3986" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Organization.identifier:uuid.value">
+      <path value="Organization.identifier.value" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Organization.identifier:uuid.period">
+      <path value="Organization.identifier.period" />
+      <max value="0" />
+    </element>
+    <element id="Organization.identifier:uuid.assigner">
+      <path value="Organization.identifier.assigner" />
+      <max value="0" />
+    </element>
+    <element id="Organization.active">
+      <path value="Organization.active" />
+      <max value="0" />
+    </element>
+    <element id="Organization.type">
+      <path value="Organization.type" />
+      <max value="0" />
+    </element>
+    <element id="Organization.name">
+      <path value="Organization.name" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Organization.alias">
+      <path value="Organization.alias" />
+      <max value="0" />
+    </element>
+    <element id="Organization.telecom">
+      <path value="Organization.telecom" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Organization.telecom.system">
+      <path value="Organization.telecom.system" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Organization.telecom.system.extension">
+      <path value="Organization.telecom.system.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="1" />
+    </element>
+    <element id="Organization.telecom.system.extension:anzeigenameCode">
+      <path value="Organization.telecom.system.extension" />
+      <sliceName value="anzeigenameCode" />
+      <min value="1" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Organization.telecom.system.extension:anzeigenameCode.extension">
+      <path value="Organization.telecom.system.extension.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="1" />
+    </element>
+    <element id="Organization.telecom.system.extension:anzeigenameCode.extension:content">
+      <path value="Organization.telecom.system.extension.extension" />
+      <sliceName value="content" />
+      <min value="1" />
+    </element>
+    <element id="Organization.telecom.system.extension:anzeigenameCode.extension:content.value[x]">
+      <path value="Organization.telecom.system.extension.extension.value[x]" />
+      <slicing>
+        <discriminator>
+          <type value="type" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="closed" />
+      </slicing>
+      <mustSupport value="true" />
+    </element>
+    <element id="Organization.telecom.system.extension:anzeigenameCode.extension:content.value[x]:valueString">
+      <path value="Organization.telecom.system.extension.extension.valueString" />
+      <sliceName value="valueString" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Organization.telecom.value">
+      <path value="Organization.telecom.value" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Organization.telecom.use">
+      <path value="Organization.telecom.use" />
+      <max value="0" />
+    </element>
+    <element id="Organization.telecom.rank">
+      <path value="Organization.telecom.rank" />
+      <max value="0" />
+    </element>
+    <element id="Organization.telecom.period">
+      <path value="Organization.telecom.period" />
+      <max value="0" />
+    </element>
+    <element id="Organization.address">
+      <path value="Organization.address" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="type" />
+        </discriminator>
+        <rules value="closed" />
+      </slicing>
+      <max value="2" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Organization.address:Strassenanschrift">
+      <path value="Organization.address" />
+      <sliceName value="Strassenanschrift" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Organization.address:Strassenanschrift.extension">
+      <path value="Organization.address.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="0" />
+    </element>
+    <element id="Organization.address:Strassenanschrift.extension:Stadtteil">
+      <path value="Organization.address.extension" />
+      <sliceName value="Stadtteil" />
+      <min value="0" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Organization.address:Strassenanschrift.extension:Stadtteil.value[x]">
+      <path value="Organization.address.extension.value[x]" />
+      <slicing>
+        <discriminator>
+          <type value="type" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="closed" />
+      </slicing>
+      <mustSupport value="true" />
+    </element>
+    <element id="Organization.address:Strassenanschrift.extension:Stadtteil.value[x]:valueString">
+      <path value="Organization.address.extension.value[x]" />
+      <sliceName value="valueString" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Organization.address:Strassenanschrift.line">
+      <path value="Organization.address.line" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Organization.address:Strassenanschrift.line.extension">
+      <path value="Organization.address.line.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="0" />
+    </element>
+    <element id="Organization.address:Strassenanschrift.line.extension:Strasse">
+      <path value="Organization.address.line.extension" />
+      <sliceName value="Strasse" />
+      <min value="0" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Organization.address:Strassenanschrift.line.extension:Strasse.value[x]">
+      <path value="Organization.address.line.extension.value[x]" />
+      <slicing>
+        <discriminator>
+          <type value="type" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="closed" />
+      </slicing>
+      <mustSupport value="true" />
+    </element>
+    <element id="Organization.address:Strassenanschrift.line.extension:Strasse.value[x]:valueString">
+      <path value="Organization.address.line.extension.value[x]" />
+      <sliceName value="valueString" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Organization.address:Strassenanschrift.line.extension:Hausnummer">
+      <path value="Organization.address.line.extension" />
+      <sliceName value="Hausnummer" />
+      <min value="0" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Organization.address:Strassenanschrift.line.extension:Hausnummer.value[x]">
+      <path value="Organization.address.line.extension.value[x]" />
+      <slicing>
+        <discriminator>
+          <type value="type" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="closed" />
+      </slicing>
+      <mustSupport value="true" />
+    </element>
+    <element id="Organization.address:Strassenanschrift.line.extension:Hausnummer.value[x]:valueString">
+      <path value="Organization.address.line.extension.value[x]" />
+      <sliceName value="valueString" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Organization.address:Strassenanschrift.line.extension:Adresszusatz">
+      <path value="Organization.address.line.extension" />
+      <sliceName value="Adresszusatz" />
+      <min value="0" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Organization.address:Strassenanschrift.line.extension:Adresszusatz.value[x]">
+      <path value="Organization.address.line.extension.value[x]" />
+      <slicing>
+        <discriminator>
+          <type value="type" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="closed" />
+      </slicing>
+      <mustSupport value="true" />
+    </element>
+    <element id="Organization.address:Strassenanschrift.line.extension:Adresszusatz.value[x]:valueString">
+      <path value="Organization.address.line.extension.value[x]" />
+      <sliceName value="valueString" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Organization.address:Strassenanschrift.city">
+      <path value="Organization.address.city" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Organization.address:Strassenanschrift.state">
+      <path value="Organization.address.state" />
+      <max value="0" />
+    </element>
+    <element id="Organization.address:Strassenanschrift.postalCode">
+      <path value="Organization.address.postalCode" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Organization.address:Strassenanschrift.country">
+      <path value="Organization.address.country" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Organization.address:Strassenanschrift.period">
+      <path value="Organization.address.period" />
+      <max value="0" />
+    </element>
+    <element id="Organization.address:Postfach">
+      <path value="Organization.address" />
+      <sliceName value="Postfach" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Organization.address:Postfach.extension">
+      <path value="Organization.address.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="0" />
+    </element>
+    <element id="Organization.address:Postfach.extension:Stadtteil">
+      <path value="Organization.address.extension" />
+      <sliceName value="Stadtteil" />
+      <min value="0" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Organization.address:Postfach.extension:Stadtteil.value[x]">
+      <path value="Organization.address.extension.value[x]" />
+      <slicing>
+        <discriminator>
+          <type value="type" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="closed" />
+      </slicing>
+      <mustSupport value="true" />
+    </element>
+    <element id="Organization.address:Postfach.extension:Stadtteil.value[x]:valueString">
+      <path value="Organization.address.extension.value[x]" />
+      <sliceName value="valueString" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Organization.address:Postfach.line">
+      <path value="Organization.address.line" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Organization.address:Postfach.line.extension">
+      <path value="Organization.address.line.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="1" />
+    </element>
+    <element id="Organization.address:Postfach.line.extension:Postfach">
+      <path value="Organization.address.line.extension" />
+      <sliceName value="Postfach" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Organization.address:Postfach.line.extension:Postfach.value[x]">
+      <path value="Organization.address.line.extension.value[x]" />
+      <slicing>
+        <discriminator>
+          <type value="type" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="closed" />
+      </slicing>
+      <mustSupport value="true" />
+    </element>
+    <element id="Organization.address:Postfach.line.extension:Postfach.value[x]:valueString">
+      <path value="Organization.address.line.extension.value[x]" />
+      <sliceName value="valueString" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Organization.address:Postfach.city">
+      <path value="Organization.address.city" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Organization.address:Postfach.state">
+      <path value="Organization.address.state" />
+      <max value="0" />
+    </element>
+    <element id="Organization.address:Postfach.postalCode">
+      <path value="Organization.address.postalCode" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Organization.address:Postfach.country">
+      <path value="Organization.address.country" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Organization.address:Postfach.period">
+      <path value="Organization.address.period" />
+      <max value="0" />
+    </element>
+    <element id="Organization.partOf">
+      <path value="Organization.partOf" />
+      <max value="0" />
+    </element>
+    <element id="Organization.contact">
+      <path value="Organization.contact" />
+      <max value="0" />
+    </element>
+    <element id="Organization.endpoint">
+      <path value="Organization.endpoint" />
+      <max value="0" />
+    </element>
+  </differential>
+</StructureDefinition>

@@ -1,0 +1,303 @@
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <url value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Provenance" />
+  <version value="1.0.0" />
+  <name value="KBV_PR_MIO_DIGA_Provenance" />
+  <title value="KBV_PR_MIO_DIGA_Provenance" />
+  <status value="active" />
+  <publisher value="Kassenärztliche Bundesvereinigung (KBV)" />
+  <description value="Dieses Profil bildet die Herkunftsdaten ab." />
+  <copyright value="Im folgenden Profil können Codes aus den Codesystemen Snomed, Loinc oder Ucum enthalten sein, die dem folgenden Urheberrecht unterliegen: This material includes SNOMED Clinical Terms® SNOMED CT® which is used by permission of SNOMED International. All rights reserved. SNOMED CT®, was originally created by The College of American Pathologists. SNOMED and SNOMED CT are registered trademarks of SNOMED International. Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license. This material contains content from Loinc http://loinc.org. Loinc is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes Loinc Committee and is available at no cost under the license at http://loinc.org/license. Loinc® is a registered United States trademark of Regenstrief Institute, Inc. This product includes all or a portion of the UCUM table, UCUM codes, and UCUM definitions or is derived from it, subject to a license from Regenstrief Institute, Inc. and The UCUM Organization. Your use of the UCUM table, UCUM codes, UCUM definitions also is subject to this license, a copy of which is available at ​http://unitsofmeasure.org. The current complete UCUM table, UCUM Specification are available for download at ​http://unitsofmeasure.org. The UCUM table and UCUM codes are copyright © 1995-2009, Regenstrief Institute, Inc. and the Unified Codes for Units of Measures UCUM Organization. All rights reserved. THE UCUM TABLE IN ALL FORMATS, UCUM DEFINITIONS, AND SPECIFICATION ARE PROVIDED &quot;AS IS.&quot; ANY EXPRESS OR IMPLIED WARRANTIES ARE DISCLAIMED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE." />
+  <fhirVersion value="4.0.1" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Provenance" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Provenance" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Provenance">
+      <path value="Provenance" />
+      <definition value="Dieses Profil bildet die Herkunftsdaten ab." />
+    </element>
+    <element id="Provenance.meta">
+      <path value="Provenance.meta" />
+      <min value="1" />
+    </element>
+    <element id="Provenance.meta.versionId">
+      <path value="Provenance.meta.versionId" />
+      <min value="1" />
+    </element>
+    <element id="Provenance.meta.lastUpdated">
+      <path value="Provenance.meta.lastUpdated" />
+      <min value="1" />
+    </element>
+    <element id="Provenance.meta.source">
+      <path value="Provenance.meta.source" />
+      <max value="0" />
+    </element>
+    <element id="Provenance.meta.profile">
+      <path value="Provenance.meta.profile" />
+      <min value="1" />
+      <max value="1" />
+      <patternCanonical value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Provenance|1.0.0" />
+    </element>
+    <element id="Provenance.meta.security">
+      <path value="Provenance.meta.security" />
+      <max value="0" />
+    </element>
+    <element id="Provenance.meta.tag">
+      <path value="Provenance.meta.tag" />
+      <max value="0" />
+    </element>
+    <element id="Provenance.implicitRules">
+      <path value="Provenance.implicitRules" />
+      <max value="0" />
+    </element>
+    <element id="Provenance.language">
+      <path value="Provenance.language" />
+      <max value="0" />
+    </element>
+    <element id="Provenance.text">
+      <path value="Provenance.text" />
+      <definition value="In diesem Element können die, in der Instanz, enthaltenen Informationen in einer menschenlesbaren Form zusammengefasst werden. Dabei ist zu beachten, dass keine Informationen aufgenommen werden dürfen, die nicht in strukturierter Form an anderer Stelle in der Instanz enthalten sind." />
+    </element>
+    <element id="Provenance.text.status">
+      <path value="Provenance.text.status" />
+      <fixedCode value="extensions" />
+    </element>
+    <element id="Provenance.contained">
+      <path value="Provenance.contained" />
+      <max value="0" />
+    </element>
+    <element id="Provenance.target">
+      <path value="Provenance.target" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_AllergyIntolerance_Free|1.0.0" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Appointment_Free|1.0.0" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_CarePlan_Free|1.0.0" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Condition_Problem_Free|1.0.0" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_DeviceDefinition_DIGA|1.0.0" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_DeviceDefinition_Free|1.0.0" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Device_DIGA|1.0.0" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Device_Free|1.0.0" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Encounter_Past_Appointment|1.0.0" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Goal_Free|1.0.0" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_MedicationAdministration_Medication_Intake_Free|1.0.0" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Medication_Free|1.0.0" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_MedicationStatement_Medication_Request_Free|1.0.0" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Observation_Assessment_Scale|1.0.0" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Observation_Assessment_Score_Free|1.0.0" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Observation_Blood_Pressure|1.0.0" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Observation_Body_Height|1.0.0" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Observation_Body_Temperature|1.0.0" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Observation_Body_Weight|1.0.0" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Observation_Diary_Entry|1.0.0" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Observation_Environmental_Factor_Free|1.0.0" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Observation_Functional_Assessment_Free|1.0.0" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Observation_Glucose_Concentration|1.0.0" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Observation_Head_Circumference|1.0.0" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Observation_Heart_Rate|1.0.0" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Observation_Life_Style_Factor_Free|1.0.0" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Observation_Nutrition_Intake_Food_Composition_Types|1.0.0" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Observation_Nutrition_Intake|1.0.0" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Observation_Peripheral_Oxygen_Saturation|1.0.0" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Observation_Respiratory_Rate|1.0.0" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Observation_Free|1.0.0" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Organization_Manufacturer|1.0.0" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Organization|1.0.0" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Patient|1.0.0" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_PractitionerRole|1.0.0" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Practitioner|1.0.0" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Procedure_Activity_Free|1.0.0" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Questionnaire_Free|1.0.0" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_QuestionnaireResponse_Free|1.0.0" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_RelatedPerson|1.0.0" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Provenance.target.reference">
+      <path value="Provenance.target.reference" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Provenance.target.type">
+      <path value="Provenance.target.type" />
+      <max value="0" />
+    </element>
+    <element id="Provenance.target.identifier">
+      <path value="Provenance.target.identifier" />
+      <max value="0" />
+    </element>
+    <element id="Provenance.target.display">
+      <path value="Provenance.target.display" />
+      <max value="0" />
+    </element>
+    <element id="Provenance.occurred[x]">
+      <path value="Provenance.occurred[x]" />
+      <max value="0" />
+    </element>
+    <element id="Provenance.recorded">
+      <path value="Provenance.recorded" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Provenance.policy">
+      <path value="Provenance.policy" />
+      <max value="0" />
+    </element>
+    <element id="Provenance.location">
+      <path value="Provenance.location" />
+      <max value="0" />
+    </element>
+    <element id="Provenance.reason">
+      <path value="Provenance.reason" />
+      <max value="0" />
+    </element>
+    <element id="Provenance.activity">
+      <path value="Provenance.activity" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Provenance.activity.coding">
+      <path value="Provenance.activity.coding" />
+      <min value="1" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Provenance.activity.coding.system">
+      <path value="Provenance.activity.coding.system" />
+      <min value="1" />
+    </element>
+    <element id="Provenance.activity.coding.version">
+      <path value="Provenance.activity.coding.version" />
+      <min value="1" />
+    </element>
+    <element id="Provenance.activity.coding.code">
+      <path value="Provenance.activity.coding.code" />
+      <min value="1" />
+    </element>
+    <element id="Provenance.activity.coding.display">
+      <path value="Provenance.activity.coding.display" />
+      <min value="1" />
+    </element>
+    <element id="Provenance.activity.coding.userSelected">
+      <path value="Provenance.activity.coding.userSelected" />
+      <max value="0" />
+    </element>
+    <element id="Provenance.activity.text">
+      <path value="Provenance.activity.text" />
+      <max value="0" />
+    </element>
+    <element id="Provenance.agent">
+      <path value="Provenance.agent" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Provenance.agent.type">
+      <path value="Provenance.agent.type" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Provenance.agent.role">
+      <path value="Provenance.agent.role" />
+      <min value="1" />
+      <max value="1" />
+      <mustSupport value="true" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="https://fhir.kbv.de/ValueSet/KBV_VS_MIO_DIGA_Source_Of_Information|1.0.0" />
+      </binding>
+    </element>
+    <element id="Provenance.agent.role.coding">
+      <path value="Provenance.agent.role.coding" />
+      <min value="1" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Provenance.agent.role.coding.system">
+      <path value="Provenance.agent.role.coding.system" />
+      <min value="1" />
+    </element>
+    <element id="Provenance.agent.role.coding.version">
+      <path value="Provenance.agent.role.coding.version" />
+      <min value="1" />
+    </element>
+    <element id="Provenance.agent.role.coding.code">
+      <path value="Provenance.agent.role.coding.code" />
+      <min value="1" />
+    </element>
+    <element id="Provenance.agent.role.coding.display">
+      <path value="Provenance.agent.role.coding.display" />
+      <min value="1" />
+    </element>
+    <element id="Provenance.agent.role.coding.userSelected">
+      <path value="Provenance.agent.role.coding.userSelected" />
+      <max value="0" />
+    </element>
+    <element id="Provenance.agent.role.text">
+      <path value="Provenance.agent.role.text" />
+      <max value="0" />
+    </element>
+    <element id="Provenance.agent.who">
+      <path value="Provenance.agent.who" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Practitioner|1.0.0" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Organization|1.0.0" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_RelatedPerson|1.0.0" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_PractitionerRole|1.0.0" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Patient|1.0.0" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Device_Free|1.0.0" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Device_DIGA|1.0.0" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Provenance.agent.who.reference">
+      <path value="Provenance.agent.who.reference" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Provenance.agent.who.type">
+      <path value="Provenance.agent.who.type" />
+      <max value="0" />
+    </element>
+    <element id="Provenance.agent.who.identifier">
+      <path value="Provenance.agent.who.identifier" />
+      <max value="0" />
+    </element>
+    <element id="Provenance.agent.who.display">
+      <path value="Provenance.agent.who.display" />
+      <max value="0" />
+    </element>
+    <element id="Provenance.agent.onBehalfOf">
+      <path value="Provenance.agent.onBehalfOf" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Patient|1.0.0" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Provenance.agent.onBehalfOf.reference">
+      <path value="Provenance.agent.onBehalfOf.reference" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Provenance.agent.onBehalfOf.type">
+      <path value="Provenance.agent.onBehalfOf.type" />
+      <max value="0" />
+    </element>
+    <element id="Provenance.agent.onBehalfOf.identifier">
+      <path value="Provenance.agent.onBehalfOf.identifier" />
+      <max value="0" />
+    </element>
+    <element id="Provenance.agent.onBehalfOf.display">
+      <path value="Provenance.agent.onBehalfOf.display" />
+      <max value="0" />
+    </element>
+    <element id="Provenance.entity">
+      <path value="Provenance.entity" />
+      <max value="0" />
+    </element>
+    <element id="Provenance.signature">
+      <path value="Provenance.signature" />
+      <max value="0" />
+    </element>
+  </differential>
+</StructureDefinition>

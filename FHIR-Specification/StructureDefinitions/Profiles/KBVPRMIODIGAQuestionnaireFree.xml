@@ -1,0 +1,299 @@
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <url value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Questionnaire_Free" />
+  <version value="1.0.0" />
+  <name value="KBV_PR_MIO_DIGA_Questionnaire_Free" />
+  <title value="KBV_PR_MIO_DIGA_Questionnaire_Free" />
+  <status value="active" />
+  <publisher value="Kassenärztliche Bundesvereinigung (KBV)" />
+  <description value="Dieses Profil bildet einen Fragebogen ab." />
+  <copyright value="Im folgenden Profil können Codes aus den Codesystemen Snomed, Loinc oder Ucum enthalten sein, die dem folgenden Urheberrecht unterliegen: This material includes SNOMED Clinical Terms® SNOMED CT® which is used by permission of SNOMED International. All rights reserved. SNOMED CT®, was originally created by The College of American Pathologists. SNOMED and SNOMED CT are registered trademarks of SNOMED International. Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license. This material contains content from Loinc http://loinc.org. Loinc is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes Loinc Committee and is available at no cost under the license at http://loinc.org/license. Loinc® is a registered United States trademark of Regenstrief Institute, Inc. This product includes all or a portion of the UCUM table, UCUM codes, and UCUM definitions or is derived from it, subject to a license from Regenstrief Institute, Inc. and The UCUM Organization. Your use of the UCUM table, UCUM codes, UCUM definitions also is subject to this license, a copy of which is available at ​http://unitsofmeasure.org. The current complete UCUM table, UCUM Specification are available for download at ​http://unitsofmeasure.org. The UCUM table and UCUM codes are copyright © 1995-2009, Regenstrief Institute, Inc. and the Unified Codes for Units of Measures UCUM Organization. All rights reserved. THE UCUM TABLE IN ALL FORMATS, UCUM DEFINITIONS, AND SPECIFICATION ARE PROVIDED &quot;AS IS.&quot; ANY EXPRESS OR IMPLIED WARRANTIES ARE DISCLAIMED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE." />
+  <fhirVersion value="4.0.1" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Questionnaire" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Questionnaire" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Questionnaire">
+      <path value="Questionnaire" />
+      <definition value="Dieses Profil bildet einen Fragebogen ab." />
+      <constraint>
+        <key value="ques-1" />
+        <severity value="error" />
+        <human value="Either Title or code need to be present" />
+        <expression value="Questionnaire.title.exists() xor Questionnaire.code.exists()" />
+        <source value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Questionnaire_Free" />
+      </constraint>
+    </element>
+    <element id="Questionnaire.meta">
+      <path value="Questionnaire.meta" />
+      <min value="1" />
+    </element>
+    <element id="Questionnaire.meta.versionId">
+      <path value="Questionnaire.meta.versionId" />
+      <min value="1" />
+    </element>
+    <element id="Questionnaire.meta.lastUpdated">
+      <path value="Questionnaire.meta.lastUpdated" />
+      <min value="1" />
+    </element>
+    <element id="Questionnaire.meta.source">
+      <path value="Questionnaire.meta.source" />
+      <max value="0" />
+    </element>
+    <element id="Questionnaire.meta.profile">
+      <path value="Questionnaire.meta.profile" />
+      <min value="1" />
+      <max value="1" />
+      <patternCanonical value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Questionnaire_Free|1.0.0" />
+    </element>
+    <element id="Questionnaire.meta.security">
+      <path value="Questionnaire.meta.security" />
+      <max value="0" />
+    </element>
+    <element id="Questionnaire.meta.tag">
+      <path value="Questionnaire.meta.tag" />
+      <max value="0" />
+    </element>
+    <element id="Questionnaire.implicitRules">
+      <path value="Questionnaire.implicitRules" />
+      <max value="0" />
+    </element>
+    <element id="Questionnaire.language">
+      <path value="Questionnaire.language" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Questionnaire.text">
+      <path value="Questionnaire.text" />
+      <definition value="In diesem Element können die, in der Instanz, enthaltenen Informationen in einer menschenlesbaren Form zusammengefasst werden. Dabei ist zu beachten, dass keine Informationen aufgenommen werden dürfen, die nicht in strukturierter Form an anderer Stelle in der Instanz enthalten sind." />
+    </element>
+    <element id="Questionnaire.text.status">
+      <path value="Questionnaire.text.status" />
+      <fixedCode value="extensions" />
+    </element>
+    <element id="Questionnaire.contained">
+      <path value="Questionnaire.contained" />
+      <max value="0" />
+    </element>
+    <element id="Questionnaire.url">
+      <path value="Questionnaire.url" />
+      <min value="0" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Questionnaire.identifier">
+      <path value="Questionnaire.identifier" />
+      <min value="1" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Questionnaire.identifier.use">
+      <path value="Questionnaire.identifier.use" />
+      <max value="0" />
+    </element>
+    <element id="Questionnaire.identifier.type">
+      <path value="Questionnaire.identifier.type" />
+      <min value="1" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://terminology.hl7.org/CodeSystem/v2-0203" />
+          <version value="2.9" />
+          <code value="RI" />
+          <display value="Resource identifier" />
+        </coding>
+      </patternCodeableConcept>
+    </element>
+    <element id="Questionnaire.identifier.type.coding">
+      <path value="Questionnaire.identifier.type.coding" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="Questionnaire.identifier.type.coding.system">
+      <path value="Questionnaire.identifier.type.coding.system" />
+      <min value="1" />
+    </element>
+    <element id="Questionnaire.identifier.type.coding.version">
+      <path value="Questionnaire.identifier.type.coding.version" />
+      <min value="1" />
+    </element>
+    <element id="Questionnaire.identifier.type.coding.code">
+      <path value="Questionnaire.identifier.type.coding.code" />
+      <min value="1" />
+    </element>
+    <element id="Questionnaire.identifier.type.coding.display">
+      <path value="Questionnaire.identifier.type.coding.display" />
+      <min value="1" />
+    </element>
+    <element id="Questionnaire.identifier.type.coding.userSelected">
+      <path value="Questionnaire.identifier.type.coding.userSelected" />
+      <max value="0" />
+    </element>
+    <element id="Questionnaire.identifier.type.text">
+      <path value="Questionnaire.identifier.type.text" />
+      <max value="0" />
+    </element>
+    <element id="Questionnaire.identifier.system">
+      <path value="Questionnaire.identifier.system" />
+      <min value="1" />
+      <fixedUri value="urn:ietf:rfc:3986" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Questionnaire.identifier.value">
+      <path value="Questionnaire.identifier.value" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Questionnaire.identifier.period">
+      <path value="Questionnaire.identifier.period" />
+      <max value="0" />
+    </element>
+    <element id="Questionnaire.identifier.assigner">
+      <path value="Questionnaire.identifier.assigner" />
+      <max value="0" />
+    </element>
+    <element id="Questionnaire.title">
+      <path value="Questionnaire.title" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Questionnaire.derivedFrom">
+      <path value="Questionnaire.derivedFrom" />
+    </element>
+    <element id="Questionnaire.status">
+      <path value="Questionnaire.status" />
+      <patternCode value="active" />
+    </element>
+    <element id="Questionnaire.subjectType">
+      <path value="Questionnaire.subjectType" />
+    </element>
+    <element id="Questionnaire.date">
+      <path value="Questionnaire.date" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Questionnaire.code">
+      <path value="Questionnaire.code" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Questionnaire.code.system">
+      <path value="Questionnaire.code.system" />
+      <min value="1" />
+    </element>
+    <element id="Questionnaire.code.version">
+      <path value="Questionnaire.code.version" />
+      <min value="1" />
+    </element>
+    <element id="Questionnaire.code.code">
+      <path value="Questionnaire.code.code" />
+      <min value="1" />
+    </element>
+    <element id="Questionnaire.code.display">
+      <path value="Questionnaire.code.display" />
+      <min value="1" />
+    </element>
+    <element id="Questionnaire.code.userSelected">
+      <path value="Questionnaire.code.userSelected" />
+      <max value="0" />
+    </element>
+    <element id="Questionnaire.item">
+      <path value="Questionnaire.item" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Questionnaire.item.linkId">
+      <path value="Questionnaire.item.linkId" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Questionnaire.item.code">
+      <path value="Questionnaire.item.code" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Questionnaire.item.code.system">
+      <path value="Questionnaire.item.code.system" />
+      <min value="1" />
+    </element>
+    <element id="Questionnaire.item.code.version">
+      <path value="Questionnaire.item.code.version" />
+      <min value="1" />
+    </element>
+    <element id="Questionnaire.item.code.code">
+      <path value="Questionnaire.item.code.code" />
+      <min value="1" />
+    </element>
+    <element id="Questionnaire.item.code.display">
+      <path value="Questionnaire.item.code.display" />
+      <min value="1" />
+    </element>
+    <element id="Questionnaire.item.code.userSelected">
+      <path value="Questionnaire.item.code.userSelected" />
+      <max value="0" />
+    </element>
+    <element id="Questionnaire.item.prefix">
+      <path value="Questionnaire.item.prefix" />
+      <max value="0" />
+    </element>
+    <element id="Questionnaire.item.text">
+      <path value="Questionnaire.item.text" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Questionnaire.item.type">
+      <path value="Questionnaire.item.type" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Questionnaire.item.type.extension">
+      <path value="Questionnaire.item.type.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="1" />
+    </element>
+    <element id="Questionnaire.item.type.extension:anzeigenameType">
+      <path value="Questionnaire.item.type.extension" />
+      <sliceName value="anzeigenameType" />
+      <min value="1" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="https://fhir.kbv.de/StructureDefinition/KBV_EX_Base_Terminology_German" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Questionnaire.item.type.extension:anzeigenameType.extension">
+      <path value="Questionnaire.item.type.extension.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="1" />
+    </element>
+    <element id="Questionnaire.item.type.extension:anzeigenameType.extension:content">
+      <path value="Questionnaire.item.type.extension.extension" />
+      <sliceName value="content" />
+      <min value="1" />
+    </element>
+    <element id="Questionnaire.item.type.extension:anzeigenameType.extension:content.value[x]">
+      <path value="Questionnaire.item.type.extension.extension.value[x]" />
+      <slicing>
+        <discriminator>
+          <type value="type" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="closed" />
+      </slicing>
+      <mustSupport value="true" />
+    </element>
+    <element id="Questionnaire.item.type.extension:anzeigenameType.extension:content.value[x]:valueString">
+      <path value="Questionnaire.item.type.extension.extension.valueString" />
+      <sliceName value="valueString" />
+      <definition value="In diesem Attribut sollen die entsprechende deutsche Bezeichnung des Loinc oder Snomed-Codes aus der Conceptmap eingetragen werden, also in diesem Fall den Displaynamen des Targetsystems aus https://fhir.kbv.de/ConceptMap/KBV_CM_MIO_DIGA_Questionnaire_Item_Type_German|1.0.0" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+  </differential>
+</StructureDefinition>
