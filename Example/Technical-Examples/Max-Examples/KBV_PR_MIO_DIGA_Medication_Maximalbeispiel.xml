@@ -1,0 +1,121 @@
+<Medication xmlns="http://hl7.org/fhir">
+	<id value="dca58334-3179-11ec-8d3d-0242ac130003" />
+	<meta>
+		<versionId value="1" />
+		<lastUpdated value="2015-02-07T13:28:17.239+02:00" />
+		<profile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Medication|1.1.0" />
+	</meta>
+	<extension url="https://fhir.kbv.de/StructureDefinition/KBV_EX_Base_Medication_Type">
+		<valueCodeableConcept>
+			<coding>
+				<system value="http://snomed.info/sct" />
+				<version value="http://snomed.info/sct/900000000000207008/version/20220331" />
+				<code value="763158003" />
+				<display value="Medicinal product (product)" />
+			</coding>
+		</valueCodeableConcept>
+	</extension>
+	<identifier>
+		<type>
+			<coding>
+				<system value="http://terminology.hl7.org/CodeSystem/v2-0203" />
+				<version value="2.9" />
+				<code value="RI" />
+				<display value="Resource identifier" />
+			</coding>
+		</type>
+		<system value="urn:ietf:rfc:3986" />
+		<value value="urn:uuid:dca579fc-3179-11ec-8d3d-0242ac130003" />
+	</identifier>
+	<code>
+		<coding>
+			<system value="http://fhir.de/CodeSystem/ifa/pzn" />
+			<version value="0.2" />
+			<code value="12410111" />
+			<display value="ZYTIGA® 500 mg Tabletten" />
+		</coding>
+		<coding>
+			<system value="http://snomed.info/sct"/>
+      		<version value="http://snomed.info/sct/900000000000207008/version/20220331"/>
+			<code value="46992007" />
+			<display value="Pill (basic dose form)" />
+		</coding>
+		<coding>
+			<system value="http://fhir.de/CodeSystem/bfarm/atc" />
+			<version value="1.3.2" />
+			<code value="N06AA09" />
+			<display value="amitriptyline" />
+		</coding>
+		<text value="Test" />
+	</code>
+	<form>
+		<coding>
+			<system value="http://snomed.info/sct"/>
+      		<version value="http://snomed.info/sct/900000000000207008/version/20220331"/>
+			<code value="46992007" />
+			<display value="Pill (basic dose form)" />
+		</coding>
+		<coding>
+			<system value="http://standardterms.edqm.eu"/>
+      		<version value="2017-08-21"/>
+			<code value="10114000" />
+			<display value="Powder and solvent for oral solution" />
+		</coding>
+		<coding>
+			<system value="https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_DARREICHUNGSFORM" />
+			<version value="1.10" />
+			<code value="AMP" />
+			<display value="Ampullen" />
+		</coding>
+		<text value="Ampullen" />
+	</form>
+	<amount>
+		<numerator>
+			<value value="1" />
+			<unit value="1" />
+			<system value="http://unitsofmeasure.org" />
+			<code value="1" />
+		</numerator>
+		<denominator>
+			<value value="1" />
+			<unit value="1" />
+			<system value="http://unitsofmeasure.org" />
+			<code value="1" />
+		</denominator>
+	</amount>
+	<ingredient>
+		<itemCodeableConcept>
+			<coding>
+				<system value="http://fhir.de/CodeSystem/ask" />
+				<version value="1.3.2" />
+				<code value="37290" />
+				<display value="Abirateronacetat" />
+			</coding>
+			<coding>
+				<system value="http://snomed.info/sct"/>
+				<version value="http://snomed.info/sct/900000000000207008/version/20220331"/>
+				<code value="46992007" />
+				<display value="Pill (basic dose form)" />
+			</coding>
+			<text value="Abirateronacetat" />
+		</itemCodeableConcept>
+		<strength>
+			<numerator>
+				<value value="250" />
+				<unit value="mg" />
+				<system value="http://unitsofmeasure.org" />
+				<code value="mg" />
+			</numerator>
+			<denominator>
+				<value value="1" />
+				<unit value="Tbl" />
+				<system value="http://unitsofmeasure.org" />
+				<code value="{Tbl}" />
+			</denominator>
+		</strength>
+	</ingredient>
+	<batch>
+		<lotNumber value="12684654" />
+		<expirationDate value="2020-02-02" />
+	</batch>
+</Medication>

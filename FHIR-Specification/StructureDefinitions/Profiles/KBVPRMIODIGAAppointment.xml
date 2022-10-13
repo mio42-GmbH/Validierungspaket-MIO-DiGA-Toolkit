@@ -1,0 +1,550 @@
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="KBV-PR-MIO-DIGA-Appointment" />
+  <url value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Appointment" />
+  <version value="1.1.0" />
+  <name value="KBV_PR_MIO_DIGA_Appointment" />
+  <title value="KBV_PR_MIO_DIGA_Appointment" />
+  <status value="draft" />
+  <publisher value="Kassenärztliche Bundesvereinigung (KBV)" />
+  <description value="Dieses Profil bildet einen Termin ab." />
+  <copyright value="Im folgenden Profil können Codes aus den Codesystemen Snomed, Loinc oder Ucum enthalten sein, die dem folgenden Urheberrecht unterliegen: This material includes SNOMED Clinical Terms® SNOMED CT® which is used by permission of SNOMED International. All rights reserved. SNOMED CT®, was originally created by The College of American Pathologists. SNOMED and SNOMED CT are registered trademarks of SNOMED International. Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license. This material contains content from Loinc http://loinc.org. Loinc is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes Loinc Committee and is available at no cost under the license at http://loinc.org/license. Loinc® is a registered United States trademark of Regenstrief Institute, Inc. This product includes all or a portion of the UCUM table, UCUM codes, and UCUM definitions or is derived from it, subject to a license from Regenstrief Institute, Inc. and The UCUM Organization. Your use of the UCUM table, UCUM codes, UCUM definitions also is subject to this license, a copy of which is available at ​http://unitsofmeasure.org. The current complete UCUM table, UCUM Specification are available for download at ​http://unitsofmeasure.org. The UCUM table and UCUM codes are copyright © 1995-2009, Regenstrief Institute, Inc. and the Unified Codes for Units of Measures UCUM Organization. All rights reserved. THE UCUM TABLE IN ALL FORMATS, UCUM DEFINITIONS, AND SPECIFICATION ARE PROVIDED &quot;AS IS.&quot; ANY EXPRESS OR IMPLIED WARRANTIES ARE DISCLAIMED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE." />
+  <fhirVersion value="4.0.1" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Appointment" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Appointment" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Appointment">
+      <path value="Appointment" />
+      <definition value="Dieses Profil bildet einen Termin ab." />
+    </element>
+    <element id="Appointment.meta">
+      <path value="Appointment.meta" />
+      <min value="1" />
+    </element>
+    <element id="Appointment.meta.versionId">
+      <path value="Appointment.meta.versionId" />
+      <min value="1" />
+    </element>
+    <element id="Appointment.meta.lastUpdated">
+      <path value="Appointment.meta.lastUpdated" />
+      <min value="1" />
+    </element>
+    <element id="Appointment.meta.source">
+      <path value="Appointment.meta.source" />
+      <max value="0" />
+    </element>
+    <element id="Appointment.meta.profile">
+      <path value="Appointment.meta.profile" />
+      <min value="1" />
+      <max value="1" />
+      <patternCanonical value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Appointment|1.1.0" />
+    </element>
+    <element id="Appointment.meta.security">
+      <path value="Appointment.meta.security" />
+      <max value="0" />
+    </element>
+    <element id="Appointment.meta.tag">
+      <path value="Appointment.meta.tag" />
+      <max value="0" />
+    </element>
+    <element id="Appointment.implicitRules">
+      <path value="Appointment.implicitRules" />
+      <max value="0" />
+    </element>
+    <element id="Appointment.language">
+      <path value="Appointment.language" />
+      <max value="0" />
+    </element>
+    <element id="Appointment.text">
+      <path value="Appointment.text" />
+      <definition value="In diesem Element können die, in der Instanz, enthaltenen Informationen in einer menschenlesbaren Form zusammengefasst werden. Dabei ist zu beachten, dass keine Informationen aufgenommen werden dürfen, die nicht in strukturierter Form an anderer Stelle in der Instanz enthalten sind." />
+    </element>
+    <element id="Appointment.text.status">
+      <path value="Appointment.text.status" />
+      <fixedCode value="extensions" />
+    </element>
+    <element id="Appointment.contained">
+      <path value="Appointment.contained" />
+      <max value="0" />
+    </element>
+    <element id="Appointment.identifier">
+      <path value="Appointment.identifier" />
+      <min value="1" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Appointment.identifier.use">
+      <path value="Appointment.identifier.use" />
+      <max value="0" />
+    </element>
+    <element id="Appointment.identifier.type">
+      <path value="Appointment.identifier.type" />
+      <min value="1" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://terminology.hl7.org/CodeSystem/v2-0203" />
+          <version value="2.9" />
+          <code value="RI" />
+          <display value="Resource identifier" />
+        </coding>
+      </patternCodeableConcept>
+    </element>
+    <element id="Appointment.identifier.type.coding">
+      <path value="Appointment.identifier.type.coding" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="Appointment.identifier.type.coding.system">
+      <path value="Appointment.identifier.type.coding.system" />
+      <min value="1" />
+    </element>
+    <element id="Appointment.identifier.type.coding.version">
+      <path value="Appointment.identifier.type.coding.version" />
+      <min value="1" />
+    </element>
+    <element id="Appointment.identifier.type.coding.code">
+      <path value="Appointment.identifier.type.coding.code" />
+      <min value="1" />
+    </element>
+    <element id="Appointment.identifier.type.coding.display">
+      <path value="Appointment.identifier.type.coding.display" />
+      <min value="1" />
+    </element>
+    <element id="Appointment.identifier.type.coding.userSelected">
+      <path value="Appointment.identifier.type.coding.userSelected" />
+      <max value="0" />
+    </element>
+    <element id="Appointment.identifier.type.text">
+      <path value="Appointment.identifier.type.text" />
+      <max value="0" />
+    </element>
+    <element id="Appointment.identifier.system">
+      <path value="Appointment.identifier.system" />
+      <min value="1" />
+      <fixedUri value="urn:ietf:rfc:3986" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Appointment.identifier.value">
+      <path value="Appointment.identifier.value" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Appointment.identifier.period">
+      <path value="Appointment.identifier.period" />
+      <max value="0" />
+    </element>
+    <element id="Appointment.identifier.assigner">
+      <path value="Appointment.identifier.assigner" />
+      <max value="0" />
+    </element>
+    <element id="Appointment.status">
+      <path value="Appointment.status" />
+      <mustSupport value="true" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="https://fhir.kbv.de/ValueSet/KBV_VS_MIO_DIGA_Appointment_Status|1.1.0" />
+      </binding>
+    </element>
+    <element id="Appointment.cancelationReason">
+      <path value="Appointment.cancelationReason" />
+      <max value="0" />
+    </element>
+    <element id="Appointment.serviceCategory">
+      <path value="Appointment.serviceCategory" />
+      <max value="1" />
+      <mustSupport value="true" />
+      <binding>
+        <strength value="extensible" />
+        <valueSet value="http://fhir.de/ValueSet/EncounterClassDE" />
+      </binding>
+    </element>
+    <element id="Appointment.serviceCategory.coding">
+      <path value="Appointment.serviceCategory.coding" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Appointment.serviceCategory.coding.system">
+      <path value="Appointment.serviceCategory.coding.system" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Appointment.serviceCategory.coding.version">
+      <path value="Appointment.serviceCategory.coding.version" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Appointment.serviceCategory.coding.code">
+      <path value="Appointment.serviceCategory.coding.code" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Appointment.serviceCategory.coding.display">
+      <path value="Appointment.serviceCategory.coding.display" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Appointment.serviceCategory.coding.userSelected">
+      <path value="Appointment.serviceCategory.coding.userSelected" />
+      <max value="0" />
+    </element>
+    <element id="Appointment.serviceCategory.text">
+      <path value="Appointment.serviceCategory.text" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Appointment.serviceType">
+      <path value="Appointment.serviceType" />
+      <definition value="Hier wird die medizinische Fachrichtung bzw. die Fachabteilung einer Einrichtung angegeben." />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Appointment.serviceType.coding">
+      <path value="Appointment.serviceType.coding" />
+      <slicing>
+        <discriminator>
+          <type value="pattern" />
+          <path value="$this" />
+        </discriminator>
+        <description value="Hier werden Codes angegeben." />
+        <rules value="open" />
+      </slicing>
+      <mustSupport value="true" />
+    </element>
+    <element id="Appointment.serviceType.coding:KBV-Fachgruppencodierung">
+      <path value="Appointment.serviceType.coding" />
+      <sliceName value="KBV-Fachgruppencodierung" />
+      <definition value="Hier wird die Fachrichtung/Fachabteilung anhand der KBV-Schl&#252;sseltabelle S_BAR2_ARZTNRFACHGRUPPE wiedergegeben.\nDiese enth&#228;lt die zweistellige Fachgruppencodierung f&#252;r die 8.+9. Stelle der LANR (nach BAR-Schl&#252;sselverzeichnis, Anlage 35)." />
+      <patternCoding>
+        <system value="https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_BAR2_ARZTNRFACHGRUPPE" />
+      </patternCoding>
+    </element>
+    <element id="Appointment.serviceType.coding:KBV-Fachgruppencodierung.system">
+      <path value="Appointment.serviceType.coding.system" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Appointment.serviceType.coding:KBV-Fachgruppencodierung.version">
+      <path value="Appointment.serviceType.coding.version" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Appointment.serviceType.coding:KBV-Fachgruppencodierung.code">
+      <path value="Appointment.serviceType.coding.code" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Appointment.serviceType.coding:KBV-Fachgruppencodierung.display">
+      <path value="Appointment.serviceType.coding.display" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Appointment.serviceType.coding:KBV-Fachgruppencodierung.userSelected">
+      <path value="Appointment.serviceType.coding.userSelected" />
+      <max value="0" />
+    </element>
+    <element id="Appointment.serviceType.coding:HL7-Fachabteilungsschluessel">
+      <path value="Appointment.serviceType.coding" />
+      <sliceName value="HL7-Fachabteilungsschluessel" />
+      <definition value="Hier wird die Fachrichtung/Fachabteilung anhand eines Codes aus dem Codesystem &quot;Fachabteilungsschl&#252;ssel&quot; der HL7 Basis Deutschland angegeben." />
+      <patternCoding>
+        <system value="http://fhir.de/CodeSystem/dkgev/Fachabteilungsschluessel" />
+      </patternCoding>
+    </element>
+    <element id="Appointment.serviceType.coding:HL7-Fachabteilungsschluessel.system">
+      <path value="Appointment.serviceType.coding.system" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Appointment.serviceType.coding:HL7-Fachabteilungsschluessel.version">
+      <path value="Appointment.serviceType.coding.version" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Appointment.serviceType.coding:HL7-Fachabteilungsschluessel.code">
+      <path value="Appointment.serviceType.coding.code" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Appointment.serviceType.coding:HL7-Fachabteilungsschluessel.display">
+      <path value="Appointment.serviceType.coding.display" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Appointment.serviceType.coding:HL7-Fachabteilungsschluessel.userSelected">
+      <path value="Appointment.serviceType.coding.userSelected" />
+      <max value="0" />
+    </element>
+    <element id="Appointment.serviceType.coding:HL7-Fachabteilungsschluessel-erweitert">
+      <path value="Appointment.serviceType.coding" />
+      <sliceName value="HL7-Fachabteilungsschluessel-erweitert" />
+      <definition value="Hier wird die Fachrichtung/Fachabteilung anhand eines Codes aus dem Codesystem &quot;Fachabteilungsschl&#252;sselErweitert&quot; der HL7 Basis Deutschland angegeben." />
+      <patternCoding>
+        <system value="http://fhir.de/CodeSystem/dkgev/Fachabteilungsschluessel-erweitert" />
+      </patternCoding>
+    </element>
+    <element id="Appointment.serviceType.coding:HL7-Fachabteilungsschluessel-erweitert.system">
+      <path value="Appointment.serviceType.coding.system" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Appointment.serviceType.coding:HL7-Fachabteilungsschluessel-erweitert.version">
+      <path value="Appointment.serviceType.coding.version" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Appointment.serviceType.coding:HL7-Fachabteilungsschluessel-erweitert.code">
+      <path value="Appointment.serviceType.coding.code" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Appointment.serviceType.coding:HL7-Fachabteilungsschluessel-erweitert.display">
+      <path value="Appointment.serviceType.coding.display" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Appointment.serviceType.coding:HL7-Fachabteilungsschluessel-erweitert.userSelected">
+      <path value="Appointment.serviceType.coding.userSelected" />
+      <max value="0" />
+    </element>
+    <element id="Appointment.serviceType.text">
+      <path value="Appointment.serviceType.text" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Appointment.specialty">
+      <path value="Appointment.specialty" />
+      <max value="0" />
+    </element>
+    <element id="Appointment.appointmentType">
+      <path value="Appointment.appointmentType" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Appointment.appointmentType.coding">
+      <path value="Appointment.appointmentType.coding" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Appointment.appointmentType.coding.system">
+      <path value="Appointment.appointmentType.coding.system" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Appointment.appointmentType.coding.version">
+      <path value="Appointment.appointmentType.coding.version" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Appointment.appointmentType.coding.code">
+      <path value="Appointment.appointmentType.coding.code" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Appointment.appointmentType.coding.display">
+      <path value="Appointment.appointmentType.coding.display" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Appointment.appointmentType.coding.userSelected">
+      <path value="Appointment.appointmentType.coding.userSelected" />
+      <max value="0" />
+    </element>
+    <element id="Appointment.appointmentType.text">
+      <path value="Appointment.appointmentType.text" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Appointment.reasonCode">
+      <path value="Appointment.reasonCode" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Appointment.reasonCode.coding">
+      <path value="Appointment.reasonCode.coding" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Appointment.reasonCode.coding.system">
+      <path value="Appointment.reasonCode.coding.system" />
+      <min value="1" />
+    </element>
+    <element id="Appointment.reasonCode.coding.version">
+      <path value="Appointment.reasonCode.coding.version" />
+      <min value="1" />
+    </element>
+    <element id="Appointment.reasonCode.coding.code">
+      <path value="Appointment.reasonCode.coding.code" />
+      <min value="1" />
+    </element>
+    <element id="Appointment.reasonCode.coding.display">
+      <path value="Appointment.reasonCode.coding.display" />
+      <min value="1" />
+    </element>
+    <element id="Appointment.reasonCode.coding.userSelected">
+      <path value="Appointment.reasonCode.coding.userSelected" />
+      <max value="0" />
+    </element>
+    <element id="Appointment.reasonCode.text">
+      <path value="Appointment.reasonCode.text" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Appointment.reasonReference">
+      <path value="Appointment.reasonReference" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Procedure_Activity|1.1.0" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Condition_Problem|1.1.0" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Observation_Free|1.1.0" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Observation_Body_Height|1.1.0" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Observation_Peripheral_Oxygen_Saturation|1.1.0" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Observation_Body_Temperature|1.1.0" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Observation_Body_Weight|1.1.0" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Observation_Heart_Rate|1.1.0" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Observation_Blood_Pressure|1.1.0" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Observation_Head_Circumference|1.1.0" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Observation_Respiratory_Rate|1.1.0" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Observation_Glucose_Concentration|1.1.0" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Appointment.reasonReference.reference">
+      <path value="Appointment.reasonReference.reference" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Appointment.reasonReference.type">
+      <path value="Appointment.reasonReference.type" />
+      <max value="0" />
+    </element>
+    <element id="Appointment.reasonReference.identifier">
+      <path value="Appointment.reasonReference.identifier" />
+      <max value="0" />
+    </element>
+    <element id="Appointment.reasonReference.display">
+      <path value="Appointment.reasonReference.display" />
+      <max value="0" />
+    </element>
+    <element id="Appointment.priority">
+      <path value="Appointment.priority" />
+      <max value="0" />
+    </element>
+    <element id="Appointment.description">
+      <path value="Appointment.description" />
+      <max value="0" />
+    </element>
+    <element id="Appointment.supportingInformation">
+      <path value="Appointment.supportingInformation" />
+      <max value="0" />
+    </element>
+    <element id="Appointment.start">
+      <path value="Appointment.start" />
+      <comment value="Für die Abbildung eines Zeitpunktes, sind Appointment.start sowie Appointment.end auf den gleichen Wert zu setzen." />
+      <mustSupport value="true" />
+    </element>
+    <element id="Appointment.end">
+      <path value="Appointment.end" />
+      <comment value="Für die Abbildung eines Zeitpunktes, sind Appointment.start sowie Appointment.end auf den gleichen Wert zu setzen." />
+      <mustSupport value="true" />
+    </element>
+    <element id="Appointment.minutesDuration">
+      <path value="Appointment.minutesDuration" />
+      <max value="0" />
+    </element>
+    <element id="Appointment.slot">
+      <path value="Appointment.slot" />
+      <max value="0" />
+    </element>
+    <element id="Appointment.created">
+      <path value="Appointment.created" />
+      <max value="0" />
+    </element>
+    <element id="Appointment.comment">
+      <path value="Appointment.comment" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Appointment.patientInstruction">
+      <path value="Appointment.patientInstruction" />
+      <max value="0" />
+    </element>
+    <element id="Appointment.basedOn">
+      <path value="Appointment.basedOn" />
+      <max value="0" />
+    </element>
+    <element id="Appointment.participant">
+      <path value="Appointment.participant" />
+      <comment value="Hier ist mindestens ." />
+      <mustSupport value="true" />
+    </element>
+    <element id="Appointment.participant.type">
+      <path value="Appointment.participant.type" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Appointment.participant.type.coding">
+      <path value="Appointment.participant.type.coding" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Appointment.participant.type.coding.system">
+      <path value="Appointment.participant.type.coding.system" />
+      <min value="1" />
+    </element>
+    <element id="Appointment.participant.type.coding.version">
+      <path value="Appointment.participant.type.coding.version" />
+      <min value="1" />
+    </element>
+    <element id="Appointment.participant.type.coding.code">
+      <path value="Appointment.participant.type.coding.code" />
+      <min value="1" />
+    </element>
+    <element id="Appointment.participant.type.coding.display">
+      <path value="Appointment.participant.type.coding.display" />
+      <min value="1" />
+    </element>
+    <element id="Appointment.participant.type.coding.userSelected">
+      <path value="Appointment.participant.type.coding.userSelected" />
+      <max value="0" />
+    </element>
+    <element id="Appointment.participant.type.text">
+      <path value="Appointment.participant.type.text" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Appointment.participant.actor">
+      <path value="Appointment.participant.actor" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Patient|1.1.0" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Practitioner|1.1.0" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_RelatedPerson|1.1.0" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_PractitionerRole|1.1.0" />
+      </type>
+    </element>
+    <element id="Appointment.participant.actor.reference">
+      <path value="Appointment.participant.actor.reference" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Appointment.participant.actor.type">
+      <path value="Appointment.participant.actor.type" />
+      <max value="0" />
+    </element>
+    <element id="Appointment.participant.actor.identifier">
+      <path value="Appointment.participant.actor.identifier" />
+      <max value="0" />
+    </element>
+    <element id="Appointment.participant.actor.display">
+      <path value="Appointment.participant.actor.display" />
+      <max value="0" />
+    </element>
+    <element id="Appointment.participant.required">
+      <path value="Appointment.participant.required" />
+      <max value="0" />
+    </element>
+    <element id="Appointment.participant.status">
+      <path value="Appointment.participant.status" />
+      <patternCode value="accepted" />
+    </element>
+    <element id="Appointment.participant.period">
+      <path value="Appointment.participant.period" />
+      <max value="0" />
+    </element>
+    <element id="Appointment.requestedPeriod">
+      <path value="Appointment.requestedPeriod" />
+      <max value="0" />
+    </element>
+  </differential>
+</StructureDefinition>

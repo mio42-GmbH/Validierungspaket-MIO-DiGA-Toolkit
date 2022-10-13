@@ -1,0 +1,285 @@
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="KBV-PR-MIO-DIGA-DocumentReference" />
+  <url value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_DocumentReference" />
+  <version value="1.1.0" />
+  <name value="KBV_PR_MIO_DIGA_DocumentReference" />
+  <title value="KBV_PR_MIO_DIGA_DocumentReference" />
+  <status value="draft" />
+  <publisher value="Kassenärztliche Bundesvereinigung (KBV)" />
+  <description value="Dieses Profil bildet den Dokumentenverweis/Anhang ab." />
+  <copyright value="Im folgenden Profil können Codes aus den Codesystemen Snomed, Loinc oder Ucum enthalten sein, die dem folgenden Urheberrecht unterliegen: This material includes SNOMED Clinical Terms® SNOMED CT® which is used by permission of SNOMED International. All rights reserved. SNOMED CT®, was originally created by The College of American Pathologists. SNOMED and SNOMED CT are registered trademarks of SNOMED International. Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license. This material contains content from Loinc http://loinc.org. Loinc is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical DocumentReference Identifiers Names and Codes Loinc Committee and is available at no cost under the license at http://loinc.org/license. Loinc® is a registered United States trademark of Regenstrief Institute, Inc. This product includes all or a portion of the UCUM table, UCUM codes, and UCUM definitions or is derived from it, subject to a license from Regenstrief Institute, Inc. and The UCUM Organization. Your use of the UCUM table, UCUM codes, UCUM definitions also is subject to this license, a copy of which is available at ​http://unitsofmeasure.org. The current complete UCUM table, UCUM Specification are available for download at ​http://unitsofmeasure.org. The UCUM table and UCUM codes are copyright © 1995-2009, Regenstrief Institute, Inc. and the Unified Codes for Units of Measures UCUM Organization. All rights reserved. THE UCUM TABLE IN ALL FORMATS, UCUM DEFINITIONS, AND SPECIFICATION ARE PROVIDED &quot;AS IS.&quot; ANY EXPRESS OR IMPLIED WARRANTIES ARE DISCLAIMED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE." />
+  <fhirVersion value="4.0.1" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="DocumentReference" />
+  <baseDefinition value="https://fhir.kbv.de/StructureDefinition/KBV_PR_Base_DocumentReference|1.3.0" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="DocumentReference">
+      <path value="DocumentReference" />
+      <definition value="Dieses Profil bildet den Dokumentenverweis/Anhang ab." />
+    </element>
+    <element id="DocumentReference.meta">
+      <path value="DocumentReference.meta" />
+      <min value="1" />
+    </element>
+    <element id="DocumentReference.meta.versionId">
+      <path value="DocumentReference.meta.versionId" />
+      <min value="1" />
+    </element>
+    <element id="DocumentReference.meta.lastUpdated">
+      <path value="DocumentReference.meta.lastUpdated" />
+      <min value="1" />
+    </element>
+    <element id="DocumentReference.meta.source">
+      <path value="DocumentReference.meta.source" />
+      <max value="0" />
+    </element>
+    <element id="DocumentReference.meta.profile">
+      <path value="DocumentReference.meta.profile" />
+      <min value="1" />
+      <max value="1" />
+      <patternCanonical value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_DocumentReference|1.1.0" />
+    </element>
+    <element id="DocumentReference.meta.security">
+      <path value="DocumentReference.meta.security" />
+      <max value="0" />
+    </element>
+    <element id="DocumentReference.meta.tag">
+      <path value="DocumentReference.meta.tag" />
+      <max value="0" />
+    </element>
+    <element id="DocumentReference.implicitRules">
+      <path value="DocumentReference.implicitRules" />
+      <max value="0" />
+    </element>
+    <element id="DocumentReference.language">
+      <path value="DocumentReference.language" />
+      <max value="0" />
+    </element>
+    <element id="DocumentReference.text">
+      <path value="DocumentReference.text" />
+      <definition value="In diesem Element können die, in der Instanz, enthaltenen Informationen in einer menschenlesbaren Form zusammengefasst werden. Dabei ist zu beachten, dass keine Informationen aufgenommen werden dürfen, die nicht in strukturierter Form an anderer Stelle in der Instanz enthalten sind." />
+    </element>
+    <element id="DocumentReference.text.status">
+      <path value="DocumentReference.text.status" />
+      <fixedCode value="extensions" />
+    </element>
+    <element id="DocumentReference.contained">
+      <path value="DocumentReference.contained" />
+      <max value="0" />
+    </element>
+    <element id="DocumentReference.masterIdentifier">
+      <path value="DocumentReference.masterIdentifier" />
+      <max value="0" />
+    </element>
+    <element id="DocumentReference.identifier">
+      <path value="DocumentReference.identifier" />
+      <min value="1" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="DocumentReference.identifier.use">
+      <path value="DocumentReference.identifier.use" />
+      <max value="0" />
+    </element>
+    <element id="DocumentReference.identifier.type">
+      <path value="DocumentReference.identifier.type" />
+      <min value="1" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://terminology.hl7.org/CodeSystem/v2-0203" />
+          <version value="2.9" />
+          <code value="RI" />
+          <display value="Resource identifier" />
+        </coding>
+      </patternCodeableConcept>
+    </element>
+    <element id="DocumentReference.identifier.type.coding">
+      <path value="DocumentReference.identifier.type.coding" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="DocumentReference.identifier.type.coding.system">
+      <path value="DocumentReference.identifier.type.coding.system" />
+      <min value="1" />
+    </element>
+    <element id="DocumentReference.identifier.type.coding.version">
+      <path value="DocumentReference.identifier.type.coding.version" />
+      <min value="1" />
+    </element>
+    <element id="DocumentReference.identifier.type.coding.code">
+      <path value="DocumentReference.identifier.type.coding.code" />
+      <min value="1" />
+    </element>
+    <element id="DocumentReference.identifier.type.coding.display">
+      <path value="DocumentReference.identifier.type.coding.display" />
+      <min value="1" />
+    </element>
+    <element id="DocumentReference.identifier.type.coding.userSelected">
+      <path value="DocumentReference.identifier.type.coding.userSelected" />
+      <max value="0" />
+    </element>
+    <element id="DocumentReference.identifier.type.text">
+      <path value="DocumentReference.identifier.type.text" />
+      <max value="0" />
+    </element>
+    <element id="DocumentReference.identifier.system">
+      <path value="DocumentReference.identifier.system" />
+      <min value="1" />
+      <fixedUri value="urn:ietf:rfc:3986" />
+      <mustSupport value="true" />
+    </element>
+    <element id="DocumentReference.identifier.value">
+      <path value="DocumentReference.identifier.value" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="DocumentReference.identifier.period">
+      <path value="DocumentReference.identifier.period" />
+      <max value="0" />
+    </element>
+    <element id="DocumentReference.identifier.assigner">
+      <path value="DocumentReference.identifier.assigner" />
+      <max value="0" />
+    </element>
+    <element id="DocumentReference.docStatus">
+      <path value="DocumentReference.docStatus" />
+      <max value="0" />
+    </element>
+    <element id="DocumentReference.type">
+      <path value="DocumentReference.type" />
+      <max value="0" />
+    </element>
+    <element id="DocumentReference.category">
+      <path value="DocumentReference.category" />
+      <max value="0" />
+    </element>
+    <element id="DocumentReference.subject">
+      <path value="DocumentReference.subject" />
+      <min value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Patient" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="DocumentReference.subject.reference">
+      <path value="DocumentReference.subject.reference" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="DocumentReference.subject.type">
+      <path value="DocumentReference.subject.type" />
+      <max value="0" />
+    </element>
+    <element id="DocumentReference.subject.identifier">
+      <path value="DocumentReference.subject.identifier" />
+      <max value="0" />
+    </element>
+    <element id="DocumentReference.subject.display">
+      <path value="DocumentReference.subject.display" />
+      <max value="0" />
+    </element>
+    <element id="DocumentReference.author">
+      <path value="DocumentReference.author" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Patient" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Practitioner" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_PractitionerRole" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Organization" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_RelatedPerson" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Device" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Device_DIGA" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="DocumentReference.author.reference">
+      <path value="DocumentReference.author.reference" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="DocumentReference.author.type">
+      <path value="DocumentReference.author.type" />
+      <max value="0" />
+    </element>
+    <element id="DocumentReference.author.identifier">
+      <path value="DocumentReference.author.identifier" />
+      <max value="0" />
+    </element>
+    <element id="DocumentReference.author.display">
+      <path value="DocumentReference.author.display" />
+      <max value="0" />
+    </element>
+    <element id="DocumentReference.authenticator">
+      <path value="DocumentReference.authenticator" />
+      <max value="0" />
+    </element>
+    <element id="DocumentReference.custodian">
+      <path value="DocumentReference.custodian" />
+      <max value="0" />
+    </element>
+    <element id="DocumentReference.relatesTo">
+      <path value="DocumentReference.relatesTo" />
+      <max value="0" />
+    </element>
+    <element id="DocumentReference.description">
+      <path value="DocumentReference.description" />
+      <mustSupport value="true" />
+    </element>
+    <element id="DocumentReference.securityLabel">
+      <path value="DocumentReference.securityLabel" />
+      <max value="0" />
+    </element>
+    <element id="DocumentReference.content">
+      <path value="DocumentReference.content" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="DocumentReference.content.attachment">
+      <path value="DocumentReference.content.attachment" />
+      <mustSupport value="true" />
+    </element>
+    <element id="DocumentReference.content.attachment.contentType">
+      <path value="DocumentReference.content.attachment.contentType" />
+      <mustSupport value="true" />
+    </element>
+    <element id="DocumentReference.content.attachment.language">
+      <path value="DocumentReference.content.attachment.language" />
+      <max value="0" />
+    </element>
+    <element id="DocumentReference.content.attachment.data">
+      <path value="DocumentReference.content.attachment.data" />
+      <mustSupport value="true" />
+    </element>
+    <element id="DocumentReference.content.attachment.url">
+      <path value="DocumentReference.content.attachment.url" />
+      <mustSupport value="true" />
+    </element>
+    <element id="DocumentReference.content.attachment.size">
+      <path value="DocumentReference.content.attachment.size" />
+      <max value="0" />
+    </element>
+    <element id="DocumentReference.content.attachment.hash">
+      <path value="DocumentReference.content.attachment.hash" />
+      <max value="0" />
+    </element>
+    <element id="DocumentReference.content.attachment.title">
+      <path value="DocumentReference.content.attachment.title" />
+      <mustSupport value="true" />
+    </element>
+    <element id="DocumentReference.content.attachment.creation">
+      <path value="DocumentReference.content.attachment.creation" />
+      <mustSupport value="true" />
+    </element>
+    <element id="DocumentReference.content.format">
+      <path value="DocumentReference.content.format" />
+      <max value="0" />
+    </element>
+    <element id="DocumentReference.context">
+      <path value="DocumentReference.context" />
+      <max value="0" />
+    </element>
+  </differential>
+</StructureDefinition>

@@ -1,0 +1,541 @@
+<StructureDefinition xmlns="http://hl7.org/fhir">
+	<id value="KBV-PR-MIO-DIGA-MedicationAdministration-Medication-Intake" />
+	<url value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_MedicationAdministration_Medication_Intake"/>
+	<version value="1.1.0"/>
+	<name value="KBV_PR_MIO_DIGA_MedicationAdministration_Medication_Intake"/>
+	<title value="KBV_PR_MIO_DIGA_MedicationAdministration_Medication_Intake"/>
+	<status value="draft"/>
+	<publisher value="Kassenärztliche Bundesvereinigung (KBV)"/>
+	<description value="Dieses Profil bildet die Medikamenteneinnahme ab."/>
+	<copyright value="Im folgenden Profil können Codes aus den Codesystemen Snomed, Loinc oder Ucum enthalten sein, die dem folgenden Urheberrecht unterliegen: This material includes SNOMED Clinical Terms® SNOMED CT® which is used by permission of SNOMED International. All rights reserved. SNOMED CT®, was originally created by The College of American Pathologists. SNOMED and SNOMED CT are registered trademarks of SNOMED International. Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license. This material contains content from Loinc http://loinc.org. Loinc is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes Loinc Committee and is available at no cost under the license at http://loinc.org/license. Loinc® is a registered United States trademark of Regenstrief Institute, Inc. This product includes all or a portion of the UCUM table, UCUM codes, and UCUM definitions or is derived from it, subject to a license from Regenstrief Institute, Inc. and The UCUM Organization. Your use of the UCUM table, UCUM codes, UCUM definitions also is subject to this license, a copy of which is available at ​http://unitsofmeasure.org. The current complete UCUM table, UCUM Specification are available for download at ​http://unitsofmeasure.org. The UCUM table and UCUM codes are copyright © 1995-2009, Regenstrief Institute, Inc. and the Unified Codes for Units of Measures UCUM Organization. All rights reserved. THE UCUM TABLE IN ALL FORMATS, UCUM DEFINITIONS, AND SPECIFICATION ARE PROVIDED &quot;AS IS.&quot; ANY EXPRESS OR IMPLIED WARRANTIES ARE DISCLAIMED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE."/>
+	<fhirVersion value="4.0.1"/>
+	<kind value="resource"/>
+	<abstract value="false"/>
+	<type value="MedicationAdministration"/>
+	<baseDefinition value="http://hl7.org/fhir/StructureDefinition/MedicationAdministration"/>
+	<derivation value="constraint"/>
+	<differential>
+		<element id="MedicationAdministration">
+			<path value="MedicationAdministration"/>
+			<definition value="Dieses Profil bildet die Medikamenteneinnahme ab."/>
+		</element>
+		<element id="MedicationAdministration.meta">
+			<path value="MedicationAdministration.meta"/>
+			<min value="1"/>
+		</element>
+		<element id="MedicationAdministration.meta.versionId">
+			<path value="MedicationAdministration.meta.versionId"/>
+			<min value="1"/>
+		</element>
+		<element id="MedicationAdministration.meta.lastUpdated">
+			<path value="MedicationAdministration.meta.lastUpdated"/>
+			<min value="1"/>
+		</element>
+		<element id="MedicationAdministration.meta.source">
+			<path value="MedicationAdministration.meta.source"/>
+			<max value="0"/>
+		</element>
+		<element id="MedicationAdministration.meta.profile">
+			<path value="MedicationAdministration.meta.profile"/>
+			<min value="1"/>
+			<max value="1"/>
+			<patternCanonical value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_MedicationAdministration_Medication_Intake|1.1.0"/>
+		</element>
+		<element id="MedicationAdministration.meta.security">
+			<path value="MedicationAdministration.meta.security"/>
+			<max value="0"/>
+		</element>
+		<element id="MedicationAdministration.meta.tag">
+			<path value="MedicationAdministration.meta.tag"/>
+			<max value="0"/>
+		</element>
+		<element id="MedicationAdministration.implicitRules">
+			<path value="MedicationAdministration.implicitRules"/>
+			<max value="0"/>
+		</element>
+		<element id="MedicationAdministration.language">
+			<path value="MedicationAdministration.language"/>
+			<max value="0"/>
+		</element>
+		<element id="MedicationAdministration.text">
+			<path value="MedicationAdministration.text"/>
+			<definition value="In diesem Element können die, in der Instanz, enthaltenen Informationen in einer menschenlesbaren Form zusammengefasst werden. Dabei ist zu beachten, dass keine Informationen aufgenommen werden dürfen, die nicht in strukturierter Form an anderer Stelle in der Instanz enthalten sind."/>
+		</element>
+		<element id="MedicationAdministration.text.status">
+			<path value="MedicationAdministration.text.status"/>
+			<fixedCode value="extensions"/>
+		</element>
+		<element id="MedicationAdministration.contained">
+			<path value="MedicationAdministration.contained"/>
+			<max value="0"/>
+		</element>
+		<element id="MedicationAdministration.extension">
+			<path value="MedicationAdministration.extension"/>
+			<slicing>
+				<discriminator>
+					<type value="value"/>
+					<path value="url"/>
+				</discriminator>
+				<rules value="closed"/>
+			</slicing>
+			<mustSupport value="true"/>
+		</element>
+		<element id="MedicationAdministration.extension:medikationsInformation">
+			<path value="MedicationAdministration.extension"/>
+			<sliceName value="medikationsInformation"/>
+			<min value="0"/>
+			<max value="1"/>
+			<type>
+				<code value="Extension"/>
+				<profile value="https://fhir.kbv.de/StructureDefinition/KBV_EX_MIO_DIGA_Reference"/>
+			</type>
+			<mustSupport value="true"/>
+		</element>
+		<element id="MedicationAdministration.extension:medikationsInformation.value[x]">
+			<path value="MedicationAdministration.extension.value[x]"/>
+			<min value="1"/>
+		</element>
+		<element id="MedicationAdministration.extension:medikationsInformation.value[x]:valueReference">
+			<path value="MedicationAdministration.extension.value[x]"/>
+			<sliceName value="valueReference"/>
+			<min value="1"/>
+			<type>
+				<code value="Reference"/>
+				<targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_MedicationStatement_Medication_Information|1.1.0"/>
+			</type>
+		</element>
+		<element id="MedicationAdministration.identifier">
+			<path value="MedicationAdministration.identifier"/>
+			<min value="1"/>
+			<max value="1"/>
+			<mustSupport value="true"/>
+		</element>
+		<element id="MedicationAdministration.identifier.use">
+			<path value="MedicationAdministration.identifier.use"/>
+			<max value="0"/>
+		</element>
+		<element id="MedicationAdministration.identifier.type">
+			<path value="MedicationAdministration.identifier.type"/>
+			<min value="1"/>
+			<patternCodeableConcept>
+				<coding>
+					<system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+					<version value="2.9"/>
+					<code value="RI"/>
+					<display value="Resource identifier"/>
+				</coding>
+			</patternCodeableConcept>
+		</element>
+		<element id="MedicationAdministration.identifier.type.coding">
+			<path value="MedicationAdministration.identifier.type.coding"/>
+			<min value="1"/>
+			<max value="1"/>
+		</element>
+		<element id="MedicationAdministration.identifier.type.coding.system">
+			<path value="MedicationAdministration.identifier.type.coding.system"/>
+			<min value="1"/>
+		</element>
+		<element id="MedicationAdministration.identifier.type.coding.version">
+			<path value="MedicationAdministration.identifier.type.coding.version"/>
+			<min value="1"/>
+		</element>
+		<element id="MedicationAdministration.identifier.type.coding.code">
+			<path value="MedicationAdministration.identifier.type.coding.code"/>
+			<min value="1"/>
+		</element>
+		<element id="MedicationAdministration.identifier.type.coding.display">
+			<path value="MedicationAdministration.identifier.type.coding.display"/>
+			<min value="1"/>
+		</element>
+		<element id="MedicationAdministration.identifier.type.coding.userSelected">
+			<path value="MedicationAdministration.identifier.type.coding.userSelected"/>
+			<max value="0"/>
+		</element>
+		<element id="MedicationAdministration.identifier.type.text">
+			<path value="MedicationAdministration.identifier.type.text"/>
+			<max value="0"/>
+		</element>
+		<element id="MedicationAdministration.identifier.system">
+			<path value="MedicationAdministration.identifier.system"/>
+			<min value="1"/>
+			<fixedUri value="urn:ietf:rfc:3986"/>
+			<mustSupport value="true"/>
+		</element>
+		<element id="MedicationAdministration.identifier.value">
+			<path value="MedicationAdministration.identifier.value"/>
+			<min value="1"/>
+			<mustSupport value="true"/>
+		</element>
+		<element id="MedicationAdministration.identifier.period">
+			<path value="MedicationAdministration.identifier.period"/>
+			<max value="0"/>
+		</element>
+		<element id="MedicationAdministration.identifier.assigner">
+			<path value="MedicationAdministration.identifier.assigner"/>
+			<max value="0"/>
+		</element>
+		<element id="MedicationAdministration.instantiates">
+			<path value="MedicationAdministration.instantiates"/>
+			<max value="0"/>
+		</element>
+		<element id="MedicationAdministration.partOf">
+			<path value="MedicationAdministration.partOf"/>
+			<max value="0"/>
+		</element>
+		<element id="MedicationAdministration.status">
+			<path value="MedicationAdministration.status"/>
+			<patternCode value="completed"/>
+		</element>
+		<element id="MedicationAdministration.statusReason">
+			<path value="MedicationAdministration.statusReason"/>
+			<max value="0"/>
+		</element>
+		<element id="MedicationAdministration.category">
+			<path value="MedicationAdministration.category"/>
+			<max value="0"/>
+		</element>
+		<element id="MedicationAdministration.medication[x]">
+			<path value="MedicationAdministration.medication[x]"/>
+			<slicing>
+				<discriminator>
+					<type value="type"/>
+					<path value="$this"/>
+				</discriminator>
+				<rules value="closed"/>
+			</slicing>
+			<type>
+				<code value="Reference"/>
+			</type>
+			<mustSupport value="true"/>
+		</element>
+		<element id="MedicationAdministration.medication[x]:medicationReference">
+			<path value="MedicationAdministration.medication[x]"/>
+			<sliceName value="medicationReference"/>
+			<min value="1" />
+			<type>
+				<code value="Reference"/>
+				<targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Medication|1.1.0"/>
+			</type>
+			<mustSupport value="true"/>
+		</element>
+		<element id="MedicationAdministration.medication[x]:medicationReference.reference">
+			<path value="MedicationAdministration.medication[x].reference"/>
+			<min value="1"/>
+			<mustSupport value="true"/>
+		</element>
+		<element id="MedicationAdministration.medication[x]:medicationReference.type">
+			<path value="MedicationAdministration.medication[x].type"/>
+			<max value="0"/>
+		</element>
+		<element id="MedicationAdministration.medication[x]:medicationReference.identifier">
+			<path value="MedicationAdministration.medication[x].identifier"/>
+			<max value="0"/>
+		</element>
+		<element id="MedicationAdministration.medication[x]:medicationReference.display">
+			<path value="MedicationAdministration.medication[x].display"/>
+			<max value="0"/>
+		</element>
+		<element id="MedicationAdministration.subject">
+			<path value="MedicationAdministration.subject"/>
+			<type>
+				<code value="Reference"/>
+				<targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Patient|1.1.0"/>
+			</type>
+			<mustSupport value="true"/>
+		</element>
+		<element id="MedicationAdministration.subject.reference">
+			<path value="MedicationAdministration.subject.reference"/>
+			<min value="1"/>
+			<mustSupport value="true"/>
+		</element>
+		<element id="MedicationAdministration.subject.type">
+			<path value="MedicationAdministration.subject.type"/>
+			<max value="0"/>
+		</element>
+		<element id="MedicationAdministration.subject.identifier">
+			<path value="MedicationAdministration.subject.identifier"/>
+			<max value="0"/>
+		</element>
+		<element id="MedicationAdministration.subject.display">
+			<path value="MedicationAdministration.subject.display"/>
+			<max value="0"/>
+		</element>
+		<element id="MedicationAdministration.context">
+			<path value="MedicationAdministration.context"/>
+			<max value="0"/>
+		</element>
+		<element id="MedicationAdministration.supportingInformation">
+			<path value="MedicationAdministration.supportingInformation"/>
+			<max value="0"/>
+		</element>
+		<element id="MedicationAdministration.effective[x]">
+			<path value="MedicationAdministration.effective[x]"/>
+			<slicing>
+				<discriminator>
+					<type value="type"/>
+					<path value="$this"/>
+				</discriminator>
+				<rules value="closed"/>
+			</slicing>
+			<min value="1" />
+			<max value="1" />
+			<type>
+				<code value="dateTime"/>
+			</type>
+			<type>
+				<code value="Period"/>
+			</type>
+			<mustSupport value="true"/>
+		</element>
+		<element id="MedicationAdministration.effective[x]:effectiveDateTime">
+			<path value="MedicationAdministration.effective[x]"/>
+			<sliceName value="effectiveDateTime"/>
+			<min value="0" />
+			<max value="1" />
+			<type>
+				<code value="dateTime"/>
+			</type>
+			<mustSupport value="true"/>
+		</element>
+		<element id="MedicationAdministration.effective[x]:effectivePeriod">
+			<path value="MedicationAdministration.effective[x]"/>
+			<sliceName value="effectivePeriod"/>
+			<min value="0" />
+			<max value="1" />
+			<type>
+				<code value="Period"/>
+			</type>
+			<mustSupport value="true"/>
+		</element>
+		<element id="MedicationAdministration.effective[x]:effectivePeriod.start">
+			<path value="MedicationAdministration.effective[x].start"/>
+			<mustSupport value="true"/>
+		</element>
+		<element id="MedicationAdministration.effective[x]:effectivePeriod.end">
+			<path value="MedicationAdministration.effective[x].end"/>
+			<mustSupport value="true"/>
+		</element>
+		<element id="MedicationAdministration.performer">
+			<path value="MedicationAdministration.performer"/>
+			<max value="1"/>
+			<mustSupport value="true"/>
+		</element>
+		<element id="MedicationAdministration.performer.function">
+			<path value="MedicationAdministration.performer.function"/>
+			<max value="0"/>
+		</element>
+		<element id="MedicationAdministration.performer.actor">
+			<path value="MedicationAdministration.performer.actor"/>
+			<type>
+				<code value="Reference"/>
+				<targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Patient|1.1.0"/>
+				<targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Practitioner|1.1.0"/>
+				<targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_RelatedPerson|1.1.0"/>
+				<targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_PractitionerRole|1.1.0"/>
+			</type>
+			<mustSupport value="true"/>
+		</element>
+		<element id="MedicationAdministration.performer.actor.reference">
+			<path value="MedicationAdministration.performer.actor.reference"/>
+			<min value="1"/>
+			<mustSupport value="true"/>
+		</element>
+		<element id="MedicationAdministration.performer.actor.type">
+			<path value="MedicationAdministration.performer.actor.type"/>
+			<max value="0"/>
+		</element>
+		<element id="MedicationAdministration.performer.actor.identifier">
+			<path value="MedicationAdministration.performer.actor.identifier"/>
+			<max value="0"/>
+		</element>
+		<element id="MedicationAdministration.performer.actor.display">
+			<path value="MedicationAdministration.performer.actor.display"/>
+			<max value="0"/>
+		</element>
+		<element id="MedicationAdministration.reasonCode">
+			<path value="MedicationAdministration.reasonCode"/>
+			<mustSupport value="true"/>
+		</element>
+		<element id="MedicationAdministration.reasonCode.coding">
+			<path value="MedicationAdministration.reasonCode.coding"/>
+			<mustSupport value="true"/>
+		</element>
+		<element id="MedicationAdministration.reasonCode.coding.system">
+			<path value="MedicationAdministration.reasonCode.coding.system"/>
+			<min value="1"/>
+		</element>
+		<element id="MedicationAdministration.reasonCode.coding.version">
+			<path value="MedicationAdministration.reasonCode.coding.version"/>
+			<min value="1"/>
+		</element>
+		<element id="MedicationAdministration.reasonCode.coding.code">
+			<path value="MedicationAdministration.reasonCode.coding.code"/>
+			<min value="1"/>
+		</element>
+		<element id="MedicationAdministration.reasonCode.coding.display">
+			<path value="MedicationAdministration.reasonCode.coding.display"/>
+			<min value="1"/>
+		</element>
+		<element id="MedicationAdministration.reasonCode.coding.userSelected">
+			<path value="MedicationAdministration.reasonCode.coding.userSelected"/>
+			<max value="0"/>
+		</element>
+		<element id="MedicationAdministration.reasonCode.text">
+			<path value="MedicationAdministration.reasonCode.text"/>
+			<mustSupport value="true"/>
+		</element>
+		<element id="MedicationAdministration.reasonReference">
+			<path value="MedicationAdministration.reasonReference"/>
+			<type>
+				<code value="Reference" />
+				<targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Condition_Problem|1.1.0" />
+				<targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Observation_Free|1.1.0" />
+				<targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Observation_Blood_Pressure|1.1.0" />
+				<targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Observation_Glucose_Concentration|1.1.0" />
+			</type>
+			<mustSupport value="true" />
+		</element>
+		<element id="MedicationAdministration.reasonReference.reference">
+			<path value="MedicationAdministration.reasonReference.reference" />
+			<min value="1" />
+			<mustSupport value="true" />
+		</element>
+		<element id="MedicationAdministration.reasonReference.type">
+			<path value="MedicationAdministration.reasonReference.type" />
+			<max value="0" />
+		</element>
+		<element id="MedicationAdministration.reasonReference.identifier">
+			<path value="MedicationAdministration.reasonReference.identifier" />
+			<max value="0" />
+		</element>
+		<element id="MedicationAdministration.reasonReference.display">
+			<path value="MedicationAdministration.reasonReference.display" />
+			<max value="0" />
+		</element>
+		<element id="MedicationAdministration.request">
+			<path value="MedicationAdministration.request"/>
+			<max value="0"/>
+		</element>
+		<element id="MedicationAdministration.request.reference">
+			<path value="MedicationAdministration.request.reference"/>
+			<min value="1"/>
+			<mustSupport value="true"/>
+		</element>
+		<element id="MedicationAdministration.request.type">
+			<path value="MedicationAdministration.request.type"/>
+			<max value="0"/>
+		</element>
+		<element id="MedicationAdministration.request.identifier">
+			<path value="MedicationAdministration.request.identifier"/>
+			<max value="0"/>
+		</element>
+		<element id="MedicationAdministration.request.display">
+			<path value="MedicationAdministration.request.display"/>
+			<max value="0"/>
+		</element>
+		<element id="MedicationAdministration.device">
+			<path value="MedicationAdministration.device"/>
+			<max value="0"/>
+		</element>
+		<element id="MedicationAdministration.note">
+			<path value="MedicationAdministration.note"/>
+			<mustSupport value="true"/>
+		</element>
+		<element id="MedicationAdministration.note.author[x]">
+			<path value="MedicationAdministration.note.author[x]"/>
+			<max value="0"/>
+		</element>
+		<element id="MedicationAdministration.note.time">
+			<path value="MedicationAdministration.note.time"/>
+			<max value="0"/>
+		</element>
+		<element id="MedicationAdministration.note.text">
+			<path value="MedicationAdministration.note.text"/>
+			<mustSupport value="true"/>
+		</element>
+		<element id="MedicationAdministration.dosage">
+			<path value="MedicationAdministration.dosage"/>
+			<min value="1"/>
+			<mustSupport value="true"/>
+		</element>
+		<element id="MedicationAdministration.dosage.text">
+			<path value="MedicationAdministration.dosage.text"/>
+			<max value="0"/>
+		</element>
+		<element id="MedicationAdministration.dosage.site">
+			<path value="MedicationAdministration.dosage.site"/>
+			<max value="0"/>
+		</element>
+		<element id="MedicationAdministration.dosage.route">
+			<path value="MedicationAdministration.dosage.route"/>
+			<mustSupport value="true"/>
+		</element>
+		<element id="MedicationAdministration.dosage.route.coding">
+			<path value="MedicationAdministration.dosage.route.coding"/>
+			<slicing>
+				<discriminator>
+					<type value="value"/>
+					<path value="$this"/>
+				</discriminator>
+				<rules value="open"/>
+			</slicing>
+			<mustSupport value="true"/>
+		</element>
+		<element id="MedicationAdministration.dosage.route.coding:verabreichungsweg">
+			<path value="MedicationAdministration.dosage.route.coding"/>
+			<sliceName value="verabreichungsweg"/>
+			<max value="1"/>
+			<mustSupport value="true"/>
+			<binding>
+				<strength value="required"/>
+				<valueSet value="https://fhir.kbv.de/ValueSet/KBV_VS_Base_Medicine_Route_Of_Administration|1.3.0"/>
+			</binding>
+		</element>
+		<element id="MedicationAdministration.dosage.route.coding:verabreichungsweg.display">
+			<path value="MedicationAdministration.dosage.route.coding.display"/>
+			<min value="1"/>
+		</element>
+		<element id="MedicationAdministration.dosage.route.coding:verabreichungsweg.userSelected">
+			<path value="MedicationAdministration.dosage.route.coding.userSelected"/>
+			<max value="0"/>
+		</element>
+		<element id="MedicationAdministration.dosage.route.text">
+			<path value="MedicationAdministration.dosage.route.text"/>
+			<mustSupport value="true"/>
+		</element>
+		<element id="MedicationAdministration.dosage.method">
+			<path value="MedicationAdministration.dosage.method"/>
+			<max value="0"/>
+		</element>
+		<element id="MedicationAdministration.dosage.dose">
+			<path value="MedicationAdministration.dosage.dose"/>
+			<min value="1"/>
+			<mustSupport value="true"/>
+		</element>
+		<element id="MedicationAdministration.dosage.dose.value">
+			<path value="MedicationAdministration.dosage.dose.value"/>
+			<min value="1"/>
+			<mustSupport value="true"/>
+		</element>
+		<element id="MedicationAdministration.dosage.dose.unit">
+			<path value="MedicationAdministration.dosage.dose.unit"/>
+			<mustSupport value="true"/>
+		</element>
+		<element id="MedicationAdministration.dosage.dose.system">
+			<path value="MedicationAdministration.dosage.dose.system"/>
+			<mustSupport value="true"/>
+		</element>
+		<element id="MedicationAdministration.dosage.dose.code">
+			<path value="MedicationAdministration.dosage.dose.code"/>
+			<mustSupport value="true"/>
+		</element>
+		<element id="MedicationAdministration.dosage.rate[x]">
+			<path value="MedicationAdministration.dosage.rate[x]"/>
+			<max value="0"/>
+		</element>
+		<element id="MedicationAdministration.eventHistory">
+			<path value="MedicationAdministration.eventHistory"/>
+			<max value="0"/>
+		</element>
+	</differential>
+</StructureDefinition>

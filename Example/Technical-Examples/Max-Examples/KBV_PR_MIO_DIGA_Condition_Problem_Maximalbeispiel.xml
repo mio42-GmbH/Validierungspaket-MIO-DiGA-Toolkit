@@ -1,0 +1,84 @@
+<Condition xmlns="http://hl7.org/fhir">
+  <id value="d00ab21d-5d9f-4055-9c54-7055aad5bee0"/>
+  <meta>
+    <versionId value="1"/>
+    <lastUpdated value="2015-02-07T13:28:17.239+02:00"/>
+    <profile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Condition_Problem|1.1.0"/>
+  </meta>
+  <identifier>
+    <type>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+        <version value="2.9"/>
+        <code value="RI"/>
+        <display value="Resource identifier"/>
+      </coding>
+    </type>
+    <system value="urn:ietf:rfc:3986"/>
+    <value value="urn:uuid:dca57bc8-3179-11ec-8d3d-0242ac130003"/>
+  </identifier>
+  <clinicalStatus>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/condition-clinical"/>
+      <version value="4.0.1"/>
+      <code value="inactive"/>
+      <display value="Inactive"/>
+    </coding>
+  </clinicalStatus>
+  <verificationStatus>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/condition-ver-status"/>
+      <version value="4.0.1"/>
+      <code value="unconfirmed"/>
+      <display value="Unconfirmed"/>
+    </coding>
+  </verificationStatus>
+  <category>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <version value="http://snomed.info/sct/900000000000207008/version/20220331"/>
+      <code value="64572001"/>
+      <display value="Disease (disorder)"/>
+    </coding>
+  </category>
+  <severity>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="255604002"/>
+      <display value="Mild"/>
+    </coding>
+  </severity>
+  <code>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <version value="http://snomed.info/sct/900000000000207008/version/20220331"/>
+      <code value="737542000"/>
+      <display value="Trisomy 21 (morphologic abnormality)"/>
+    </coding>
+    <text value="Trisomie 21"/>
+  </code>
+  <bodySite>
+    <coding>
+      <system value="https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_ICD_SEITENLOKALISATION"/>
+      <version value="1.00"/>
+      <code value="B"/>
+      <display value="beiderseits"/>
+    </coding>
+  </bodySite>
+  <subject>
+    <reference value="urn:uuid:e8610a8a-85dc-4a49-88be-ee8d3ab69f73"/>
+  </subject>
+  <onsetDateTime value="2020-05-24"/>
+  <abatementDateTime value="2020-05-24"/>
+  <recorder>
+    <reference value="urn:uuid:e8610a8a-85dc-4a49-88be-ee8d3ab69f73"/>
+  </recorder>
+  <evidence>
+    <detail>
+      <reference value="urn:uuid:e8610a8a-85dc-4a49-88be-ee8d3ab69f73"/>
+    </detail>
+  </evidence>
+  <note>
+    <text value="test"/>
+  </note>
+</Condition>

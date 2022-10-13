@@ -1,0 +1,44 @@
+<DeviceDefinition xmlns="http://hl7.org/fhir">
+  <id value="dca5a990-3179-11ec-8d3d-0242ac130003"/>
+  <meta>
+    <versionId value="1"/>
+    <lastUpdated value="2015-02-07T13:28:17.239+02:00"/>
+    <profile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_DeviceDefinition|1.1.0"/>
+  </meta>
+  <identifier>
+    <type>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+        <version value="2.9"/>
+        <code value="RI"/>
+        <display value="Resource identifier"/>
+      </coding>
+    </type>
+    <system value="urn:ietf:rfc:3986"/>
+    <value value="urn:uuid:dca57d4e-3179-11ec-8d3d-0242ac130003"/>
+  </identifier>
+  <udiDeviceIdentifier>
+    <deviceIdentifier value="test1234" />
+    <issuer value="http://hl7.org/fhir/NamingSystem/gs1-di" />
+    <jurisdiction value="http://hl7.org/fhir/NamingSystem/fda-udi" />
+  </udiDeviceIdentifier>
+  <manufacturerReference>
+    <reference value="urn:uuid:dca5b5d4-3179-11ec-8d3d-0242ac130003"/>
+  </manufacturerReference>
+  <deviceName>
+    <name value="Implantat"/>
+    <type value="model-name"/>
+  </deviceName>
+  <modelNumber value="test1234" />
+  <type>
+    <coding>
+      <system value="http://snomed.info/sct" />
+      <version value="http://snomed.info/sct/900000000000207008/version/20220331" />
+      <code value="49062001" />
+      <display value="Device (physical object)" />
+    </coding>
+    <text value="Device"/>
+  </type>
+  <version value="1.0.0" />
+  <version value="1.2.0" />
+</DeviceDefinition>

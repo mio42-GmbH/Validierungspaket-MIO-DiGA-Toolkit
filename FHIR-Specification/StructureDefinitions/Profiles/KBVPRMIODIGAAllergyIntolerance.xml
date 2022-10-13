@@ -1,0 +1,601 @@
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="KBV-PR-MIO-DIGA-AllergyIntolerance" />
+  <url value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_AllergyIntolerance" />
+  <version value="1.1.0" />
+  <name value="KBV_PR_MIO_DIGA_AllergyIntolerance" />
+  <title value="KBV_PR_MIO_DIGA_AllergyIntolerance" />
+  <status value="draft" />
+  <publisher value="Kassenärztliche Bundesvereinigung (KBV)" />
+  <description value="Dieses Profil bildet eine Allergie oder Intoleranz ab." />
+  <copyright value="Im folgenden Profil können Codes aus den Codesystemen Snomed, Loinc oder Ucum enthalten sein, die dem folgenden Urheberrecht unterliegen: This material includes SNOMED Clinical Terms® SNOMED CT® which is used by permission of SNOMED International. All rights reserved. SNOMED CT®, was originally created by The College of American Pathologists. SNOMED and SNOMED CT are registered trademarks of SNOMED International. Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license. This material contains content from Loinc http://loinc.org. Loinc is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes Loinc Committee and is available at no cost under the license at http://loinc.org/license. Loinc® is a registered United States trademark of Regenstrief Institute, Inc. This product includes all or a portion of the UCUM table, UCUM codes, and UCUM definitions or is derived from it, subject to a license from Regenstrief Institute, Inc. and The UCUM Organization. Your use of the UCUM table, UCUM codes, UCUM definitions also is subject to this license, a copy of which is available at ​http://unitsofmeasure.org. The current complete UCUM table, UCUM Specification are available for download at ​http://unitsofmeasure.org. The UCUM table and UCUM codes are copyright © 1995-2009, Regenstrief Institute, Inc. and the Unified Codes for Units of Measures UCUM Organization. All rights reserved. THE UCUM TABLE IN ALL FORMATS, UCUM DEFINITIONS, AND SPECIFICATION ARE PROVIDED &quot;AS IS.&quot; ANY EXPRESS OR IMPLIED WARRANTIES ARE DISCLAIMED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE." />
+  <fhirVersion value="4.0.1" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="AllergyIntolerance" />
+  <baseDefinition value="https://fhir.kbv.de/StructureDefinition/KBV_PR_Base_Allergy_Intolerance|1.3.0" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="AllergyIntolerance">
+      <path value="AllergyIntolerance" />
+      <definition value="Dieses Profil bildet eine Allergie oder Intoleranz ab." />
+    </element>
+    <element id="AllergyIntolerance.meta">
+      <path value="AllergyIntolerance.meta" />
+      <min value="1" />
+    </element>
+    <element id="AllergyIntolerance.meta.versionId">
+      <path value="AllergyIntolerance.meta.versionId" />
+      <min value="1" />
+    </element>
+    <element id="AllergyIntolerance.meta.lastUpdated">
+      <path value="AllergyIntolerance.meta.lastUpdated" />
+      <min value="1" />
+    </element>
+    <element id="AllergyIntolerance.meta.source">
+      <path value="AllergyIntolerance.meta.source" />
+      <max value="0" />
+    </element>
+    <element id="AllergyIntolerance.meta.profile">
+      <path value="AllergyIntolerance.meta.profile" />
+      <min value="1" />
+      <max value="1" />
+      <patternCanonical value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_AllergyIntolerance|1.1.0" />
+    </element>
+    <element id="AllergyIntolerance.meta.security">
+      <path value="AllergyIntolerance.meta.security" />
+      <max value="0" />
+    </element>
+    <element id="AllergyIntolerance.meta.tag">
+      <path value="AllergyIntolerance.meta.tag" />
+      <max value="0" />
+    </element>
+    <element id="AllergyIntolerance.implicitRules">
+      <path value="AllergyIntolerance.implicitRules" />
+      <max value="0" />
+    </element>
+    <element id="AllergyIntolerance.language">
+      <path value="AllergyIntolerance.language" />
+      <max value="0" />
+    </element>
+    <element id="AllergyIntolerance.text">
+      <path value="AllergyIntolerance.text" />
+      <definition value="In diesem Element können die, in der Instanz, enthaltenen Informationen in einer menschenlesbaren Form zusammengefasst werden. Dabei ist zu beachten, dass keine Informationen aufgenommen werden dürfen, die nicht in strukturierter Form an anderer Stelle in der Instanz enthalten sind." />
+    </element>
+    <element id="AllergyIntolerance.text.status">
+      <path value="AllergyIntolerance.text.status" />
+      <fixedCode value="extensions" />
+    </element>
+    <element id="AllergyIntolerance.contained">
+      <path value="AllergyIntolerance.contained" />
+      <max value="0" />
+    </element>
+    <element id="AllergyIntolerance.extension">
+      <path value="AllergyIntolerance.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="closed" />
+      </slicing>
+      <mustSupport value="true" />
+    </element>
+    <element id="AllergyIntolerance.extension:abatement">
+      <path value="AllergyIntolerance.extension" />
+      <sliceName value="abatement" />
+      <mustSupport value="true" />
+    </element>
+    <element id="AllergyIntolerance.extension:abatement.value[x]">
+      <path value="AllergyIntolerance.extension.value[x]" />
+      <slicing>
+        <discriminator>
+          <type value="type" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="closed" />
+      </slicing>
+      <mustSupport value="true" />
+    </element>
+    <element id="AllergyIntolerance.extension:abatement.value[x]:valueDateTime">
+      <path value="AllergyIntolerance.extension.valueDateTime" />
+      <sliceName value="valueDateTime" />
+      <mustSupport value="true" />
+    </element>
+    <element id="AllergyIntolerance.extension:abatement-lebensphase-bis">
+      <path value="AllergyIntolerance.extension" />
+      <sliceName value="abatement-lebensphase-bis" />
+      <mustSupport value="true" />
+    </element>
+    <element id="AllergyIntolerance.extension:abatement-lebensphase-bis.value[x]">
+      <path value="AllergyIntolerance.extension.value[x]" />
+      <slicing>
+        <discriminator>
+          <type value="type" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="closed" />
+      </slicing>
+      <mustSupport value="true" />
+    </element>
+    <element id="AllergyIntolerance.extension:abatement-lebensphase-bis.value[x]:valueCodeableConcept">
+      <path value="AllergyIntolerance.extension.valueCodeableConcept" />
+      <sliceName value="valueCodeableConcept" />
+      <mustSupport value="true" />
+    </element>
+    <element id="AllergyIntolerance.extension:abatement-lebensphase-bis.value[x]:valueCodeableConcept.coding">
+      <path value="AllergyIntolerance.extension.valueCodeableConcept.coding" />
+      <mustSupport value="true" />
+    </element>
+    <element id="AllergyIntolerance.extension:abatement-lebensphase-bis.value[x]:valueCodeableConcept.coding.system">
+      <path value="AllergyIntolerance.extension.valueCodeableConcept.coding.system" />
+      <mustSupport value="true" />
+    </element>
+    <element id="AllergyIntolerance.extension:abatement-lebensphase-bis.value[x]:valueCodeableConcept.coding.version">
+      <path value="AllergyIntolerance.extension.valueCodeableConcept.coding.version" />
+      <mustSupport value="true" />
+    </element>
+    <element id="AllergyIntolerance.extension:abatement-lebensphase-bis.value[x]:valueCodeableConcept.coding.code">
+      <path value="AllergyIntolerance.extension.valueCodeableConcept.coding.code" />
+      <mustSupport value="true" />
+    </element>
+    <element id="AllergyIntolerance.extension:abatement-lebensphase-bis.value[x]:valueCodeableConcept.coding.display">
+      <path value="AllergyIntolerance.extension.valueCodeableConcept.coding.display" />
+      <mustSupport value="true" />
+    </element>
+    <element id="AllergyIntolerance.extension:abatement-lebensphase-bis.value[x]:valueCodeableConcept.coding.userSelected">
+      <path value="AllergyIntolerance.extension.valueCodeableConcept.coding.userSelected" />
+      <max value="0" />
+    </element>
+    <element id="AllergyIntolerance.identifier">
+      <path value="AllergyIntolerance.identifier" />
+      <min value="1" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="AllergyIntolerance.identifier.use">
+      <path value="AllergyIntolerance.identifier.use" />
+      <max value="0" />
+    </element>
+    <element id="AllergyIntolerance.identifier.type">
+      <path value="AllergyIntolerance.identifier.type" />
+      <min value="1" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://terminology.hl7.org/CodeSystem/v2-0203" />
+          <version value="2.9" />
+          <code value="RI" />
+          <display value="Resource identifier" />
+        </coding>
+      </patternCodeableConcept>
+    </element>
+    <element id="AllergyIntolerance.identifier.type.coding">
+      <path value="AllergyIntolerance.identifier.type.coding" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="AllergyIntolerance.identifier.type.coding.system">
+      <path value="AllergyIntolerance.identifier.type.coding.system" />
+      <min value="1" />
+    </element>
+    <element id="AllergyIntolerance.identifier.type.coding.version">
+      <path value="AllergyIntolerance.identifier.type.coding.version" />
+      <min value="1" />
+    </element>
+    <element id="AllergyIntolerance.identifier.type.coding.code">
+      <path value="AllergyIntolerance.identifier.type.coding.code" />
+      <min value="1" />
+    </element>
+    <element id="AllergyIntolerance.identifier.type.coding.display">
+      <path value="AllergyIntolerance.identifier.type.coding.display" />
+      <min value="1" />
+    </element>
+    <element id="AllergyIntolerance.identifier.type.coding.userSelected">
+      <path value="AllergyIntolerance.identifier.type.coding.userSelected" />
+      <max value="0" />
+    </element>
+    <element id="AllergyIntolerance.identifier.type.text">
+      <path value="AllergyIntolerance.identifier.type.text" />
+      <max value="0" />
+    </element>
+    <element id="AllergyIntolerance.identifier.system">
+      <path value="AllergyIntolerance.identifier.system" />
+      <min value="1" />
+      <fixedUri value="urn:ietf:rfc:3986" />
+      <mustSupport value="true" />
+    </element>
+    <element id="AllergyIntolerance.identifier.value">
+      <path value="AllergyIntolerance.identifier.value" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="AllergyIntolerance.identifier.period">
+      <path value="AllergyIntolerance.identifier.period" />
+      <max value="0" />
+    </element>
+    <element id="AllergyIntolerance.identifier.assigner">
+      <path value="AllergyIntolerance.identifier.assigner" />
+      <max value="0" />
+    </element>
+    <element id="AllergyIntolerance.clinicalStatus">
+      <path value="AllergyIntolerance.clinicalStatus" />
+      <mustSupport value="true" />
+    </element>
+    <element id="AllergyIntolerance.clinicalStatus.coding">
+      <path value="AllergyIntolerance.clinicalStatus.coding" />
+      <mustSupport value="true" />
+    </element>
+    <element id="AllergyIntolerance.clinicalStatus.coding.userSelected">
+      <path value="AllergyIntolerance.clinicalStatus.coding.userSelected" />
+      <max value="0" />
+    </element>
+    <element id="AllergyIntolerance.clinicalStatus.text">
+      <path value="AllergyIntolerance.clinicalStatus.text" />
+      <max value="0" />
+    </element>
+    <element id="AllergyIntolerance.verificationStatus">
+      <path value="AllergyIntolerance.verificationStatus" />
+      <mustSupport value="true" />
+    </element>
+    <element id="AllergyIntolerance.verificationStatus.coding">
+      <path value="AllergyIntolerance.verificationStatus.coding" />
+      <mustSupport value="true" />
+    </element>
+    <element id="AllergyIntolerance.verificationStatus.coding.display">
+      <path value="AllergyIntolerance.verificationStatus.coding.display" />
+      <mustSupport value="true" />
+    </element>
+    <element id="AllergyIntolerance.verificationStatus.coding.userSelected">
+      <path value="AllergyIntolerance.verificationStatus.coding.userSelected" />
+      <max value="0" />
+    </element>
+    <element id="AllergyIntolerance.verificationStatus.text">
+      <path value="AllergyIntolerance.verificationStatus.text" />
+      <max value="0" />
+    </element>
+    <element id="AllergyIntolerance.type">
+      <path value="AllergyIntolerance.type" />
+      <mustSupport value="true" />
+    </element>
+    <element id="AllergyIntolerance.category">
+      <path value="AllergyIntolerance.category" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="AllergyIntolerance.criticality">
+      <path value="AllergyIntolerance.criticality" />
+      <mustSupport value="true" />
+    </element>
+    <element id="AllergyIntolerance.code">
+      <path value="AllergyIntolerance.code" />
+      <mustSupport value="true" />
+    </element>
+    <element id="AllergyIntolerance.code.coding">
+      <path value="AllergyIntolerance.code.coding" />
+      <mustSupport value="true" />
+    </element>
+    <element id="AllergyIntolerance.code.coding:codeSnomed">
+      <path value="AllergyIntolerance.code.coding" />
+      <sliceName value="codeSnomed" />
+      <mustSupport value="true" />
+    </element>
+    <element id="AllergyIntolerance.code.coding:codeSnomed.version">
+      <path value="AllergyIntolerance.code.coding.version" />
+      <min value="1" />
+    </element>
+    <element id="AllergyIntolerance.code.coding:codeSnomed.display">
+      <path value="AllergyIntolerance.code.coding.display" />
+      <min value="1" />
+    </element>
+    <element id="AllergyIntolerance.code.coding:codeSnomed.userSelected">
+      <path value="AllergyIntolerance.code.coding.userSelected" />
+      <max value="0" />
+    </element>
+    <element id="AllergyIntolerance.code.coding:codeASK">
+      <path value="AllergyIntolerance.code.coding" />
+      <sliceName value="codeASK" />
+      <mustSupport value="true" />
+    </element>
+    <element id="AllergyIntolerance.code.coding:codeASK.version">
+      <path value="AllergyIntolerance.code.coding.version" />
+      <min value="1" />
+    </element>
+    <element id="AllergyIntolerance.code.coding:codeASK.display">
+      <path value="AllergyIntolerance.code.coding.display" />
+      <min value="1" />
+    </element>
+    <element id="AllergyIntolerance.code.coding:codeASK.userSelected">
+      <path value="AllergyIntolerance.code.coding.userSelected" />
+      <max value="0" />
+    </element>
+    <element id="AllergyIntolerance.code.text">
+      <path value="AllergyIntolerance.code.text" />
+      <mustSupport value="true" />
+    </element>
+    <element id="AllergyIntolerance.patient">
+      <path value="AllergyIntolerance.patient" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Patient|1.1.0" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="AllergyIntolerance.patient.reference">
+      <path value="AllergyIntolerance.patient.reference" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="AllergyIntolerance.patient.type">
+      <path value="AllergyIntolerance.patient.type" />
+      <max value="0" />
+    </element>
+    <element id="AllergyIntolerance.patient.identifier">
+      <path value="AllergyIntolerance.patient.identifier" />
+      <max value="0" />
+    </element>
+    <element id="AllergyIntolerance.patient.display">
+      <path value="AllergyIntolerance.patient.display" />
+      <max value="0" />
+    </element>
+    <element id="AllergyIntolerance.encounter">
+      <path value="AllergyIntolerance.encounter" />
+      <max value="0" />
+    </element>
+    <element id="AllergyIntolerance.onset[x]">
+      <path value="AllergyIntolerance.onset[x]" />
+      <slicing>
+        <discriminator>
+          <type value="type" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="closed" />
+      </slicing>
+      <type>
+        <code value="dateTime" />
+      </type>
+      <type>
+        <code value="Age" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="AllergyIntolerance.onset[x]:onsetDateTime">
+      <path value="AllergyIntolerance.onsetDateTime" />
+      <sliceName value="onsetDateTime" />
+      <mustSupport value="true" />
+    </element>
+    <element id="AllergyIntolerance.onset[x]:onsetAge">
+      <path value="AllergyIntolerance.onsetAge" />
+      <sliceName value="onsetAge" />
+      <mustSupport value="true" />
+    </element>
+    <element id="AllergyIntolerance.onset[x]:onsetAge.extension">
+      <path value="AllergyIntolerance.onsetAge.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="closed" />
+      </slicing>
+      <mustSupport value="true" />
+    </element>
+    <element id="AllergyIntolerance.onset[x]:onsetAge.extension:lebensphase-von">
+      <path value="AllergyIntolerance.onsetAge.extension" />
+      <sliceName value="lebensphase-von" />
+      <mustSupport value="true" />
+    </element>
+    <!-- <element id="AllergyIntolerance.onset[x]:onsetAge.extension:lebensphase-von.value[x]">
+      <path value="AllergyIntolerance.onset[x].extension.value[x]" />
+      <slicing>
+        <discriminator>
+          <type value="type" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="closed" />
+      </slicing>
+      <mustSupport value="true" />
+    </element>
+    <element id="AllergyIntolerance.onset[x]:onsetAge.extension:lebensphase-von.value[x]:valueCodeableConcept">
+      <path value="AllergyIntolerance.onset[x].extension.value[x]" />
+      <sliceName value="valueCodeableConcept" />
+      <mustSupport value="true" />
+    </element>
+    <element id="AllergyIntolerance.onset[x]:onsetAge.extension:lebensphase-von.value[x]:valueCodeableConcept.coding">
+      <path value="AllergyIntolerance.onset[x].extension.value[x].coding" />
+      <mustSupport value="true" />
+    </element>
+    <element id="AllergyIntolerance.onset[x]:onsetAge.extension:lebensphase-von.value[x]:valueCodeableConcept.coding.system">
+      <path value="AllergyIntolerance.onset[x].extension.value[x].coding.system" />
+      <mustSupport value="true" />
+    </element>
+    <element id="AllergyIntolerance.onset[x]:onsetAge.extension:lebensphase-von.value[x]:valueCodeableConcept.coding.version">
+      <path value="AllergyIntolerance.onset[x].extension.value[x].coding.version" />
+      <mustSupport value="true" />
+    </element>
+    <element id="AllergyIntolerance.onset[x]:onsetAge.extension:lebensphase-von.value[x]:valueCodeableConcept.coding.code">
+      <path value="AllergyIntolerance.onset[x].extension.value[x].coding.code" />
+      <mustSupport value="true" />
+    </element>
+    <element id="AllergyIntolerance.onset[x]:onsetAge.extension:lebensphase-von.value[x]:valueCodeableConcept.coding.display">
+      <path value="AllergyIntolerance.onset[x].extension.value[x].coding.display" />
+      <mustSupport value="true" />
+    </element>
+    <element id="AllergyIntolerance.onset[x]:onsetAge.extension:lebensphase-von.value[x]:valueCodeableConcept.coding.userSelected">
+      <path value="AllergyIntolerance.onset[x].extension.value[x].coding.userSelected" />
+      <max value="0" />
+    </element> -->
+    <element id="AllergyIntolerance.onset[x]:onsetAge.value">
+      <path value="AllergyIntolerance.onsetAge.value" />
+      <max value="0" />
+    </element>
+    <element id="AllergyIntolerance.onset[x]:onsetAge.comparator">
+      <path value="AllergyIntolerance.onsetAge.comparator" />
+      <max value="0" />
+    </element>
+    <element id="AllergyIntolerance.onset[x]:onsetAge.unit">
+      <path value="AllergyIntolerance.onsetAge.unit" />
+      <max value="0" />
+    </element>
+    <element id="AllergyIntolerance.onset[x]:onsetAge.system">
+      <path value="AllergyIntolerance.onsetAge.system" />
+      <max value="0" />
+    </element>
+    <element id="AllergyIntolerance.onset[x]:onsetAge.code">
+      <path value="AllergyIntolerance.onsetAge.code" />
+      <max value="0" />
+    </element>
+    <element id="AllergyIntolerance.recordedDate">
+      <path value="AllergyIntolerance.recordedDate" />
+      <max value="0" />
+    </element>
+    <element id="AllergyIntolerance.recorder">
+      <path value="AllergyIntolerance.recorder" />
+      <min value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Patient|1.1.0" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Practitioner|1.1.0" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_RelatedPerson|1.1.0" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_PractitionerRole|1.1.0" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="AllergyIntolerance.recorder.reference">
+      <path value="AllergyIntolerance.recorder.reference" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="AllergyIntolerance.recorder.type">
+      <path value="AllergyIntolerance.recorder.type" />
+      <max value="0" />
+    </element>
+    <element id="AllergyIntolerance.recorder.identifier">
+      <path value="AllergyIntolerance.recorder.identifier" />
+      <max value="0" />
+    </element>
+    <element id="AllergyIntolerance.recorder.display">
+      <path value="AllergyIntolerance.recorder.display" />
+      <max value="0" />
+    </element>
+    <element id="AllergyIntolerance.asserter">
+      <path value="AllergyIntolerance.asserter" />
+      <max value="0" />
+    </element>
+    <element id="AllergyIntolerance.lastOccurrence">
+      <path value="AllergyIntolerance.lastOccurrence" />
+      <max value="0" />
+    </element>
+    <element id="AllergyIntolerance.note">
+      <path value="AllergyIntolerance.note" />
+      <mustSupport value="true" />
+    </element>
+    <element id="AllergyIntolerance.note.author[x]">
+      <path value="AllergyIntolerance.note.author[x]" />
+      <max value="0" />
+    </element>
+    <element id="AllergyIntolerance.note.time">
+      <path value="AllergyIntolerance.note.time" />
+      <max value="0" />
+    </element>
+    <element id="AllergyIntolerance.note.text">
+      <path value="AllergyIntolerance.note.text" />
+      <mustSupport value="true" />
+    </element>
+    <element id="AllergyIntolerance.reaction">
+      <path value="AllergyIntolerance.reaction" />
+      <mustSupport value="true" />
+    </element>
+    <element id="AllergyIntolerance.reaction.substance">
+      <path value="AllergyIntolerance.reaction.substance" />
+      <max value="0" />
+    </element>
+    <element id="AllergyIntolerance.reaction.manifestation">
+      <path value="AllergyIntolerance.reaction.manifestation" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="AllergyIntolerance.reaction.manifestation.coding">
+      <path value="AllergyIntolerance.reaction.manifestation.coding" />
+      <mustSupport value="true" />
+    </element>
+    <element id="AllergyIntolerance.reaction.manifestation.coding:codeSnomed">
+      <path value="AllergyIntolerance.reaction.manifestation.coding" />
+      <sliceName value="codeSnomed" />
+      <mustSupport value="true" />
+    </element>
+    <element id="AllergyIntolerance.reaction.manifestation.coding:codeSnomed.version">
+      <path value="AllergyIntolerance.reaction.manifestation.coding.version" />
+      <min value="1" />
+    </element>
+    <element id="AllergyIntolerance.reaction.manifestation.coding:codeSnomed.display">
+      <path value="AllergyIntolerance.reaction.manifestation.coding.display" />
+      <min value="1" />
+    </element>
+    <element id="AllergyIntolerance.reaction.manifestation.coding:codeSnomed.userSelected">
+      <path value="AllergyIntolerance.reaction.manifestation.coding.userSelected" />
+      <max value="0" />
+    </element>
+    <element id="AllergyIntolerance.reaction.manifestation.text">
+      <path value="AllergyIntolerance.reaction.manifestation.text" />
+      <mustSupport value="true" />
+    </element>
+    <element id="AllergyIntolerance.reaction.description">
+      <path value="AllergyIntolerance.reaction.description" />
+      <max value="0" />
+    </element>
+    <element id="AllergyIntolerance.reaction.onset">
+      <path value="AllergyIntolerance.reaction.onset" />
+      <mustSupport value="true" />
+    </element>
+    <element id="AllergyIntolerance.reaction.severity">
+      <path value="AllergyIntolerance.reaction.severity" />
+      <mustSupport value="true" />
+    </element>
+    <element id="AllergyIntolerance.reaction.exposureRoute">
+      <path value="AllergyIntolerance.reaction.exposureRoute" />
+      <mustSupport value="true" />
+    </element>
+    <element id="AllergyIntolerance.reaction.exposureRoute.coding">
+      <path value="AllergyIntolerance.reaction.exposureRoute.coding" />
+      <slicing>
+        <discriminator>
+          <type value="pattern" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <mustSupport value="true" />
+    </element>
+    <element id="AllergyIntolerance.reaction.exposureRoute.coding:codeSnomed">
+      <path value="AllergyIntolerance.reaction.exposureRoute.coding" />
+      <sliceName value="codeSnomed" />
+      <patternCoding>
+        <system value="http://snomed.info/sct" />
+      </patternCoding>
+      <mustSupport value="true" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="https://fhir.kbv.de/ValueSet/KBV_VS_Base_Route_of_Administration_SNOMED_CT|1.3.0" />
+      </binding>
+    </element>
+    <element id="AllergyIntolerance.reaction.exposureRoute.coding:codeSnomed.version">
+      <path value="AllergyIntolerance.reaction.exposureRoute.coding.version" />
+      <min value="1" />
+    </element>
+    <element id="AllergyIntolerance.reaction.exposureRoute.coding:codeSnomed.display">
+      <path value="AllergyIntolerance.reaction.exposureRoute.coding.display" />
+      <min value="1" />
+    </element>
+    <element id="AllergyIntolerance.reaction.exposureRoute.coding:codeSnomed.userSelected">
+      <path value="AllergyIntolerance.reaction.exposureRoute.coding.userSelected" />
+      <max value="0" />
+    </element>
+    <element id="AllergyIntolerance.reaction.exposureRoute.text">
+      <path value="AllergyIntolerance.reaction.exposureRoute.text" />
+      <mustSupport value="true" />
+    </element>
+    <element id="AllergyIntolerance.reaction.note">
+      <path value="AllergyIntolerance.reaction.note" />
+      <max value="0" />
+    </element>
+  </differential>
+</StructureDefinition>

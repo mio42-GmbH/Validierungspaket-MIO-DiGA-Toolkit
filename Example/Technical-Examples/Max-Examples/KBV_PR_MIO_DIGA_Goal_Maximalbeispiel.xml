@@ -1,0 +1,95 @@
+<Goal xmlns="http://hl7.org/fhir">
+	<id value="dca581cc-3179-11ec-8d3d-0242ac130003" />
+	<meta>
+		<versionId value="1" />
+		<lastUpdated value="2015-02-07T13:28:17.239+02:00" />
+		<profile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Goal|1.1.0" />
+	</meta>
+	<extension url="https://fhir.kbv.de/StructureDefinition/KBV_EX_Base_Treatment_Goal_End">
+		<valueDate value="2022-02-07" />
+	</extension>
+	<identifier>
+		<type>
+			<coding>
+				<system value="http://terminology.hl7.org/CodeSystem/v2-0203" />
+				<version value="2.9" />
+				<code value="RI" />
+				<display value="Resource identifier" />
+			</coding>
+		</type>
+		<system value="urn:ietf:rfc:3986" />
+		<value value="urn:uuid:dca579fc-3179-11ec-8d3d-0242ac130003" />
+	</identifier>
+	<lifecycleStatus value="planned" />
+	<achievementStatus>
+		<coding>
+			<system value="http://terminology.hl7.org/CodeSystem/goal-achievement" />
+			<version value="4.0.1" />
+			<code value="in-progress" />
+			<display value="In Progress" />
+		</coding>
+	</achievementStatus>
+	<priority>
+		<coding>
+			<system value="http://terminology.hl7.org/CodeSystem/goal-priority" />
+			<version value="4.0.1" />
+			<code value="high-priority" />
+			<display value="High Priority" />
+		</coding>
+	</priority>
+	<description>
+		<coding>
+			<system value="http://snomed.info/sct"/>
+      		<version value="http://snomed.info/sct/900000000000207008/version/20220331"/>
+			<code value="404684003" />
+			<display value="Clinical finding (finding)" />
+		</coding>
+		<text value="Test" />
+	</description>
+	<subject>
+		<reference value="urn:uuid:7d261218-8678-11eb-8dcd-0242ac130003" />
+	</subject>
+	<startDate value="2020-02-02" />
+	<target>
+		<measure>
+			<coding>
+				<system value="http://snomed.info/sct"/>
+				<version value="http://snomed.info/sct/900000000000207008/version/20220331"/>
+				<code value="404684003" />
+				<display value="Clinical finding (finding)" />
+			</coding>
+			<coding>
+				<system value="http://snomed.info/sct"/>
+				<version value="http://snomed.info/sct/900000000000207008/version/20220331"/>
+				<code value="404684003" />
+				<display value="Clinical finding (finding)" />
+			</coding>
+			<text value="Test" />
+		</measure>
+		<detailQuantity>
+			<value value="6" />
+			<unit value="1" />
+			<system value="http://unitsofmeasure.org" />
+			<code value="1" />
+		</detailQuantity>
+		<dueDate value="2020-02-02" />
+	</target>
+	<expressedBy>
+		<reference value="urn:uuid:7d261218-8678-11eb-8dcd-0242ac130003" />
+	</expressedBy>
+	<note>
+		<text value="Test" />
+	</note>
+	<outcomeCode>
+		<coding>
+			<system value="http://terminology.hl7.org/CodeSystem/goal-priority" />
+			<version value="4.0.1" />
+			<code value="high-priority" />
+			<display value="High Priority"></display>
+		</coding>
+		<text value="Test" />
+	</outcomeCode>
+	<outcomeReference>
+		<reference value="urn:uuid:7d261218-8678-11eb-8dcd-0242ac130003" />
+	</outcomeReference>
+</Goal>

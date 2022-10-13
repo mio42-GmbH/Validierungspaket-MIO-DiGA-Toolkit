@@ -1,0 +1,84 @@
+<Observation xmlns="http://hl7.org/fhir">
+  <id value="dca58dde-3179-11ec-8d3d-0242ac130003" />
+  <meta>
+    <versionId value="1"/>
+    <lastUpdated value="2015-02-07T13:28:17.239+02:00"/>
+    <profile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Observation_Body_Temperature|1.1.0" />
+  </meta>
+  <extension url="https://fhir.kbv.de/StructureDefinition/KBV_EX_MIO_DIGA_Reference">
+    <valueReference>
+      <reference value="urn:uuid:dca59d88-3179-11ec-8d3d-0242ac130003" />
+    </valueReference>
+  </extension>
+  <identifier>
+    <type>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/v2-0203" />
+        <version value="2.9" />
+        <code value="RI" />
+        <display value="Resource identifier" />
+      </coding>
+    </type>
+    <system value="urn:ietf:rfc:3986" />
+    <value value="urn:uuid:dca579fc-3179-11ec-8d3d-0242ac130003" />
+  </identifier>
+  <status value="final" />
+  <category>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/observation-category" />
+      <code value="vital-signs" />
+    </coding>
+  </category>
+  <code>
+    <coding>
+      <system value="http://snomed.info/sct" />
+      <version value="http://snomed.info/sct/900000000000207008/version/20220331" />
+      <code value="386725007" />
+      <display value="Body temperature (observable entity)" />
+    </coding>
+    <coding>
+      <system value="http://loinc.org" />
+      <version value="2.72" />
+      <code value="8310-5" />
+      <display value="Body temperature" />
+    </coding>
+  </code>
+  <subject>
+    <reference value="urn:uuid:6a15cff6-3cc1-4bf2-ab66-1cc6316e6777" />
+  </subject>
+  <effectiveDateTime value="2020-01-02" />
+  <performer>
+    <reference value="urn:uuid:8ad1ee6c-6164-493a-be52-c43cf49e9916" />
+  </performer>
+  <valueQuantity>
+    <value value="40" />
+    <unit value="Celsius">
+    </unit>
+    <system value="http://unitsofmeasure.org" />
+    <code value="Cel"></code>
+  </valueQuantity>
+  <note>
+    <text value="Test" />
+  </note>
+  <bodySite>
+    <coding>
+      <system value="https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_ICD_SEITENLOKALISATION"/>
+      <version value="1.00"/>
+      <code value="B"/>
+      <display value="beiderseits"/>
+    </coding>
+    <text value="Test" />
+  </bodySite>
+  <method>
+		<coding>
+			<system value="http://snomed.info/sct" />
+			<version value="http://snomed.info/sct/900000000000207008/version/20220331" />
+			<code value="446661009" />
+			<display value="Visual analog scale score (observable entity)" />
+		</coding>
+    <text value="Test" />
+	</method>
+  <device>
+    <reference value="urn:uuid:8ad1ee6c-6164-493a-be52-c43cf49e9916" />
+  </device>
+</Observation>

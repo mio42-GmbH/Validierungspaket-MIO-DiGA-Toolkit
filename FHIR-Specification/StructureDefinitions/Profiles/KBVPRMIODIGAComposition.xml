@@ -1,9 +1,10 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="KBV-PR-MIO-DIGA-Composition" />
   <url value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Composition" />
-  <version value="1.0.0" />
+  <version value="1.1.0" />
   <name value="KBV_PR_MIO_DIGA_Composition" />
   <title value="KBV_PR_MIO_DIGA_Composition" />
-  <status value="active" />
+  <status value="draft" />
   <publisher value="Kassenärztliche Bundesvereinigung (KBV)" />
   <description value="Dieses Profil bildet das aus dem DiGA-Export resultierende Dokument ab." />
   <copyright value="Im folgenden Profil können Codes aus den Codesystemen Snomed, Loinc oder Ucum enthalten sein, die dem folgenden Urheberrecht unterliegen: This material includes SNOMED Clinical Terms® SNOMED CT® which is used by permission of SNOMED International. All rights reserved. SNOMED CT®, was originally created by The College of American Pathologists. SNOMED and SNOMED CT are registered trademarks of SNOMED International. Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license. This material contains content from Loinc http://loinc.org. Loinc is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes Loinc Committee and is available at no cost under the license at http://loinc.org/license. Loinc® is a registered United States trademark of Regenstrief Institute, Inc. This product includes all or a portion of the UCUM table, UCUM codes, and UCUM definitions or is derived from it, subject to a license from Regenstrief Institute, Inc. and The UCUM Organization. Your use of the UCUM table, UCUM codes, UCUM definitions also is subject to this license, a copy of which is available at ​http://unitsofmeasure.org. The current complete UCUM table, UCUM Specification are available for download at ​http://unitsofmeasure.org. The UCUM table and UCUM codes are copyright © 1995-2009, Regenstrief Institute, Inc. and the Unified Codes for Units of Measures UCUM Organization. All rights reserved. THE UCUM TABLE IN ALL FORMATS, UCUM DEFINITIONS, AND SPECIFICATION ARE PROVIDED &quot;AS IS.&quot; ANY EXPRESS OR IMPLIED WARRANTIES ARE DISCLAIMED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE." />
@@ -45,7 +46,7 @@
       <path value="Composition.meta.profile" />
       <min value="1" />
       <max value="1" />
-      <patternCanonical value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Composition|1.0.0" />
+      <patternCanonical value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Composition|1.1.0" />
     </element>
     <element id="Composition.meta.security">
       <path value="Composition.meta.security" />
@@ -99,6 +100,30 @@
       </type>
       <mustSupport value="true" />
     </element>
+    <element id="Composition.extension:betrachtungszeitraum.value[x]">
+      <path value="Composition.extension.value[x]" />
+      <slicing>
+        <discriminator>
+          <type value="type" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="closed" />
+      </slicing>
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.extension:betrachtungszeitraum.value[x]:valuePeriod">
+      <path value="Composition.extension.value[x]" />
+      <sliceName value="valuePeriod" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.extension:betrachtungszeitraum.value[x]:valuePeriod.start">
+      <path value="Composition.extension.value[x].start" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.extension:betrachtungszeitraum.value[x]:valuePeriod.end">
+      <path value="Composition.extension.value[x].end" />
+      <mustSupport value="true" />
+    </element>
     <element id="Composition.identifier">
       <path value="Composition.identifier" />
       <max value="0" />
@@ -117,7 +142,7 @@
       <max value="1" />
       <patternCoding>
         <system value="http://loinc.org" />
-        <version value="2.71" />
+        <version value="2.72" />
         <code value="53576-5" />
         <display value="Personal health monitoring report Document" />
       </patternCoding>
@@ -156,7 +181,7 @@
       <min value="1" />
       <type>
         <code value="Reference" />
-        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Patient|1.0.0" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Patient|1.1.0" />
       </type>
       <mustSupport value="true" />
     </element>
@@ -190,7 +215,7 @@
       <max value="1" />
       <type>
         <code value="Reference" />
-        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Device_DIGA|1.0.0" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Device_DIGA|1.1.0" />
       </type>
       <mustSupport value="true" />
     </element>
@@ -262,10 +287,10 @@
       <min value="1" />
       <patternCodeableConcept>
         <coding>
-          <system value="http://loinc.org" />
-          <version value="2.71" />
-          <code value="74468-0" />
-          <display value="Questionnaire form definition Document" />
+          <system value="https://fhir.kbv.de/CodeSystem/KBV_CS_MIO_DIGA_Section_Codes" />
+          <version value="1.1.0" />
+          <code value="SectionFrageboegen" />
+          <display value="Bereich Fragebögen" />
         </coding>
       </patternCodeableConcept>
       <mustSupport value="true" />
@@ -324,8 +349,8 @@
       <path value="Composition.section.entry" />
       <type>
         <code value="Reference" />
-        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Questionnaire_Free|1.0.0" />
-        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_QuestionnaireResponse_Free|1.0.0" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Questionnaire|1.1.0" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_QuestionnaireResponse|1.1.0" />
       </type>
       <mustSupport value="true" />
     </element>
@@ -372,7 +397,7 @@
       <patternCodeableConcept>
         <coding>
           <system value="http://snomed.info/sct" />
-          <version value="http://snomed.info/sct/900000000000207008/version/20220131" />
+          <version value="http://snomed.info/sct/900000000000207008/version/20220331" />
           <code value="423100009" />
           <display value="Results section (record artifact)" />
         </coding>
@@ -433,7 +458,7 @@
       <path value="Composition.section.entry" />
       <type>
         <code value="Reference" />
-        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Observation_Free|1.0.0" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Observation_Free|1.1.0" />
       </type>
       <mustSupport value="true" />
     </element>
@@ -470,10 +495,10 @@
       <min value="1" />
       <patternCodeableConcept>
         <coding>
-          <system value="http://loinc.org" />
-          <version value="2.71" />
-          <code value="8716-3" />
-          <display value="Vital signs" />
+          <system value="http://snomed.info/sct"/>
+			    <version value="http://snomed.info/sct/900000000000207008/version/20220331"/>
+          <code value="1184593002" />
+          <display value="Vital sign document section (record artifact)" />
         </coding>
       </patternCodeableConcept>
       <mustSupport value="true" />
@@ -532,15 +557,15 @@
       <path value="Composition.section.section.entry" />
       <type>
         <code value="Reference" />
-        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Observation_Blood_Pressure|1.0.0" />
-        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Observation_Body_Height|1.0.0" />
-        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Observation_Body_Temperature|1.0.0" />
-        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Observation_Body_Weight|1.0.0" />
-        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Observation_Glucose_Concentration|1.0.0" />
-        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Observation_Head_Circumference|1.0.0" />
-        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Observation_Heart_Rate|1.0.0" />
-        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Observation_Peripheral_Oxygen_Saturation|1.0.0" />
-        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Observation_Respiratory_Rate|1.0.0" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Observation_Blood_Pressure|1.1.0" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Observation_Body_Height|1.1.0" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Observation_Body_Temperature|1.1.0" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Observation_Body_Weight|1.1.0" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Observation_Glucose_Concentration|1.1.0" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Observation_Head_Circumference|1.1.0" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Observation_Heart_Rate|1.1.0" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Observation_Peripheral_Oxygen_Saturation|1.1.0" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Observation_Respiratory_Rate|1.1.0" />
       </type>
       <mustSupport value="true" />
     </element>
@@ -586,10 +611,10 @@
       <min value="1" />
       <patternCodeableConcept>
         <coding>
-          <system value="http://snomed.info/sct" />
-          <version value="http://snomed.info/sct/900000000000207008/version/20220131" />
-          <code value="257733005" />
-          <display value="Activity (observable entity)" />
+          <system value="https://fhir.kbv.de/CodeSystem/KBV_CS_MIO_DIGA_Section_Codes" />
+          <version value="1.1.0" />
+          <code value="SectionAktivitaeten" />
+          <display value="Bereich Aktivitäten" />
         </coding>
       </patternCodeableConcept>
       <mustSupport value="true" />
@@ -648,7 +673,7 @@
       <path value="Composition.section.entry" />
       <type>
         <code value="Reference" />
-        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Procedure_Activity_Free|1.0.0" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Procedure_Activity|1.1.0" />
       </type>
       <mustSupport value="true" />
     </element>
@@ -694,10 +719,10 @@
       <min value="1" />
       <patternCodeableConcept>
         <coding>
-          <system value="http://snomed.info/sct" />
-          <version value="http://snomed.info/sct/900000000000207008/version/20220131" />
-          <code value="895547009" />
-          <display value="Enteral nutrition intake (observable entity)" />
+          <system value="https://fhir.kbv.de/CodeSystem/KBV_CS_MIO_DIGA_Section_Codes" />
+          <version value="1.1.0" />
+          <code value="SectionNahrung" />
+          <display value="Bereich Nahrung" />
         </coding>
       </patternCodeableConcept>
       <mustSupport value="true" />
@@ -756,7 +781,7 @@
       <path value="Composition.section.entry" />
       <type>
         <code value="Reference" />
-        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Observation_Nutrition_Intake|1.0.0" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Observation_Nutrition_Intake|1.1.0" />
       </type>
       <mustSupport value="true" />
     </element>
@@ -802,10 +827,10 @@
       <min value="1" />
       <patternCodeableConcept>
         <coding>
-          <system value="http://snomed.info/sct" />
-          <version value="http://snomed.info/sct/900000000000207008/version/20220131" />
-          <code value="228272008" />
-          <display value="Health-related behavior (observable entity)" />
+          <system value="https://fhir.kbv.de/CodeSystem/KBV_CS_MIO_DIGA_Section_Codes" />
+          <version value="1.1.0" />
+          <code value="SectionLebensstilfaktoren" />
+          <display value="Bereich Lebensstilfaktoren" />
         </coding>
       </patternCodeableConcept>
       <mustSupport value="true" />
@@ -864,7 +889,7 @@
       <path value="Composition.section.entry" />
       <type>
         <code value="Reference" />
-        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Observation_Life_Style_Factor_Free|1.0.0" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Observation_Life_Style_Factor|1.1.0" />
       </type>
       <mustSupport value="true" />
     </element>
@@ -911,7 +936,7 @@
       <patternCodeableConcept>
         <coding>
           <system value="http://loinc.org" />
-          <version value="2.71" />
+          <version value="2.72" />
           <code value="11450-4" />
           <display value="Problem list - Reported" />
         </coding>
@@ -972,8 +997,8 @@
       <path value="Composition.section.entry" />
       <type>
         <code value="Reference" />
-        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Condition_Problem_Free|1.0.0" />
-        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_AllergyIntolerance_Free|1.0.0" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Condition_Problem|1.1.0" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_AllergyIntolerance|1.1.0" />
       </type>
       <mustSupport value="true" />
     </element>
@@ -1019,10 +1044,10 @@
       <min value="1" />
       <patternCodeableConcept>
         <coding>
-          <system value="http://snomed.info/sct" />
-          <version value="http://snomed.info/sct/900000000000207008/version/20220131" />
-          <code value="102487004" />
-          <display value="Environmental risk factor (observable entity)" />
+          <system value="https://fhir.kbv.de/CodeSystem/KBV_CS_MIO_DIGA_Section_Codes" />
+          <version value="1.1.0" />
+          <code value="SectionUmweltfaktoren" />
+          <display value="Bereich Umweltfaktoren" />
         </coding>
       </patternCodeableConcept>
       <mustSupport value="true" />
@@ -1081,7 +1106,7 @@
       <path value="Composition.section.entry" />
       <type>
         <code value="Reference" />
-        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Observation_Environmental_Factor_Free|1.0.0" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Observation_Environmental_Factor|1.1.0" />
       </type>
       <mustSupport value="true" />
     </element>
@@ -1125,22 +1150,20 @@
     <element id="Composition.section:medikation.code">
       <path value="Composition.section.code" />
       <min value="1" />
-      <patternCodeableConcept>
-        <coding>
-          <system value="http://snomed.info/sct" />
-          <version value="http://snomed.info/sct/900000000000207008/version/20220131" />
-          <code value="1003606003" />
-          <display value="Medication history section (record artifact)" />
-        </coding>
-      </patternCodeableConcept>
       <mustSupport value="true" />
     </element>
     <element id="Composition.section:medikation.code.coding">
       <path value="Composition.section.code.coding" />
       <min value="1" />
       <max value="1" />
-      <mustSupport value="true" />
-    </element>
+      <patternCoding>
+				<system value="http://snomed.info/sct"/>
+			  <version value="http://snomed.info/sct/900000000000207008/version/20220331"/>
+				<code value="721912009" />
+				<display value="Medication summary document (record artifact)" />
+			</patternCoding>
+			<mustSupport value="true" />
+		</element>
     <element id="Composition.section:medikation.code.coding.system">
       <path value="Composition.section.code.coding.system" />
       <min value="1" />
@@ -1189,8 +1212,8 @@
       <path value="Composition.section.entry" />
       <type>
         <code value="Reference" />
-        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_MedicationStatement_Medication_Request_Free|1.0.0" />
-        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_MedicationAdministration_Medication_Intake_Free|1.0.0" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_MedicationStatement_Medication_Information|1.1.0" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_MedicationAdministration_Medication_Intake|1.1.0" />
       </type>
       <mustSupport value="true" />
     </element>
@@ -1237,7 +1260,7 @@
       <patternCodeableConcept>
         <coding>
           <system value="http://snomed.info/sct" />
-          <version value="http://snomed.info/sct/900000000000207008/version/20220131" />
+          <version value="http://snomed.info/sct/900000000000207008/version/20220331" />
           <code value="424836000" />
           <display value="Assessment section (record artifact)" />
         </coding>
@@ -1298,8 +1321,8 @@
       <path value="Composition.section.entry" />
       <type>
         <code value="Reference" />
-        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Observation_Functional_Assessment_Free|1.0.0" />
-        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Observation_Assessment_Score_Free|1.0.0" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Observation_Functional_Assessment|1.1.0" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Observation_Assessment_Score|1.1.0" />
       </type>
       <mustSupport value="true" />
     </element>
@@ -1345,10 +1368,10 @@
       <min value="1" />
       <patternCodeableConcept>
         <coding>
-          <system value="http://snomed.info/sct" />
-          <version value="http://snomed.info/sct/900000000000207008/version/20220131" />
-          <code value="1055210001" />
-          <display value="Target parameter (observable entity)" />
+          <system value="https://fhir.kbv.de/CodeSystem/KBV_CS_MIO_DIGA_Section_Codes" />
+          <version value="1.1.0" />
+          <code value="SectionZiele" />
+          <display value="Bereich Ziele" />
         </coding>
       </patternCodeableConcept>
       <mustSupport value="true" />
@@ -1407,8 +1430,8 @@
       <path value="Composition.section.entry" />
       <type>
         <code value="Reference" />
-        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Goal_Free|1.0.0" />
-        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_CarePlan_Free|1.0.0" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Goal|1.1.0" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_CarePlan|1.1.0" />
       </type>
       <mustSupport value="true" />
     </element>
@@ -1437,112 +1460,112 @@
       <path value="Composition.section.section" />
       <max value="0" />
     </element>
-    <element id="Composition.section:termine">
+    <element id="Composition.section:termineBegegnungen">
       <path value="Composition.section" />
-      <sliceName value="termine" />
+      <sliceName value="termineBegegnungen" />
       <max value="1" />
       <mustSupport value="true" />
     </element>
-    <element id="Composition.section:termine.title">
+    <element id="Composition.section:termineBegegnungen.title">
       <path value="Composition.section.title" />
       <min value="1" />
-      <fixedString value="Termine" />
+      <fixedString value="Termine/Begegnungen" />
       <mustSupport value="true" />
     </element>
-    <element id="Composition.section:termine.code">
+    <element id="Composition.section:termineBegegnungen.code">
       <path value="Composition.section.code" />
       <min value="1" />
       <patternCodeableConcept>
         <coding>
-          <system value="http://loinc.org" />
-          <version value="2.71" />
-          <code value="56446-8" />
-          <display value="Appointment summary Document" />
+          <system value="https://fhir.kbv.de/CodeSystem/KBV_CS_MIO_DIGA_Section_Codes" />
+          <version value="1.1.0" />
+          <code value="SectionTermineBegegnungen" />
+          <display value="Bereich Termine und Begegnungen" />
         </coding>
       </patternCodeableConcept>
       <mustSupport value="true" />
     </element>
-    <element id="Composition.section:termine.code.coding">
+    <element id="Composition.section:termineBegegnungen.code.coding">
       <path value="Composition.section.code.coding" />
       <min value="1" />
       <max value="1" />
       <mustSupport value="true" />
     </element>
-    <element id="Composition.section:termine.code.coding.system">
+    <element id="Composition.section:termineBegegnungen.code.coding.system">
       <path value="Composition.section.code.coding.system" />
       <min value="1" />
     </element>
-    <element id="Composition.section:termine.code.coding.version">
+    <element id="Composition.section:termineBegegnungen.code.coding.version">
       <path value="Composition.section.code.coding.version" />
       <min value="1" />
     </element>
-    <element id="Composition.section:termine.code.coding.code">
+    <element id="Composition.section:termineBegegnungen.code.coding.code">
       <path value="Composition.section.code.coding.code" />
       <min value="1" />
     </element>
-    <element id="Composition.section:termine.code.coding.display">
+    <element id="Composition.section:termineBegegnungen.code.coding.display">
       <path value="Composition.section.code.coding.display" />
       <min value="1" />
     </element>
-    <element id="Composition.section:termine.code.coding.userSelected">
+    <element id="Composition.section:termineBegegnungen.code.coding.userSelected">
       <path value="Composition.section.code.coding.userSelected" />
       <max value="0" />
     </element>
-    <element id="Composition.section:termine.code.text">
+    <element id="Composition.section:termineBegegnungen.code.text">
       <path value="Composition.section.code.text" />
       <max value="0" />
     </element>
-    <element id="Composition.section:termine.author">
+    <element id="Composition.section:termineBegegnungen.author">
       <path value="Composition.section.author" />
       <max value="0" />
     </element>
-    <element id="Composition.section:termine.focus">
+    <element id="Composition.section:termineBegegnungen.focus">
       <path value="Composition.section.focus" />
       <max value="0" />
     </element>
-    <element id="Composition.section:termine.text">
+    <element id="Composition.section:termineBegegnungen.text">
       <path value="Composition.section.text" />
       <max value="0" />
     </element>
-    <element id="Composition.section:termine.mode">
+    <element id="Composition.section:termineBegegnungen.mode">
       <path value="Composition.section.mode" />
       <max value="0" />
     </element>
-    <element id="Composition.section:termine.orderedBy">
+    <element id="Composition.section:termineBegegnungen.orderedBy">
       <path value="Composition.section.orderedBy" />
       <max value="0" />
     </element>
-    <element id="Composition.section:termine.entry">
+    <element id="Composition.section:termineBegegnungen.entry">
       <path value="Composition.section.entry" />
       <type>
         <code value="Reference" />
-        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Appointment_Free|1.0.0" />
-        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Encounter_Past_Appointment|1.0.0" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Appointment|1.1.0" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Encounter|1.1.0" />
       </type>
       <mustSupport value="true" />
     </element>
-    <element id="Composition.section:termine.entry.reference">
+    <element id="Composition.section:termineBegegnungen.entry.reference">
       <path value="Composition.section.entry.reference" />
       <min value="1" />
       <mustSupport value="true" />
     </element>
-    <element id="Composition.section:termine.entry.type">
+    <element id="Composition.section:termineBegegnungen.entry.type">
       <path value="Composition.section.entry.type" />
       <max value="0" />
     </element>
-    <element id="Composition.section:termine.entry.identifier">
+    <element id="Composition.section:termineBegegnungen.entry.identifier">
       <path value="Composition.section.entry.identifier" />
       <max value="0" />
     </element>
-    <element id="Composition.section:termine.entry.display">
+    <element id="Composition.section:termineBegegnungen.entry.display">
       <path value="Composition.section.entry.display" />
       <max value="0" />
     </element>
-    <element id="Composition.section:termine.emptyReason">
+    <element id="Composition.section:termineBegegnungen.emptyReason">
       <path value="Composition.section.emptyReason" />
       <max value="0" />
     </element>
-    <element id="Composition.section:termine.section">
+    <element id="Composition.section:termineBegegnungen.section">
       <path value="Composition.section.section" />
       <max value="0" />
     </element>
@@ -1563,10 +1586,10 @@
       <min value="1" />
       <patternCodeableConcept>
         <coding>
-          <system value="http://snomed.info/sct" />
-          <version value="http://snomed.info/sct/900000000000207008/version/20220131" />
-          <code value="408403008" />
-          <display value="Patient held record (record artifact)" />
+          <system value="https://fhir.kbv.de/CodeSystem/KBV_CS_MIO_DIGA_Section_Codes" />
+          <version value="1.1.0" />
+          <code value="SectionPatientenberichte" />
+          <display value="Bereich Patientenberichte" />
         </coding>
       </patternCodeableConcept>
       <mustSupport value="true" />
@@ -1625,7 +1648,7 @@
       <path value="Composition.section.entry" />
       <type>
         <code value="Reference" />
-        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Observation_Diary_Entry|1.0.0" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Observation_Diary_Entry|1.1.0" />
       </type>
       <mustSupport value="true" />
     </element>
@@ -1654,6 +1677,114 @@
       <path value="Composition.section.section" />
       <max value="0" />
     </element>
+    <element id="Composition.section:anhaenge">
+      <path value="Composition.section" />
+      <sliceName value="anhaenge" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:anhaenge.title">
+      <path value="Composition.section.title" />
+      <min value="1" />
+      <fixedString value="Anhaenge" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:anhaenge.code">
+      <path value="Composition.section.code" />
+      <min value="1" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="https://fhir.kbv.de/CodeSystem/KBV_CS_MIO_DIGA_Section_Codes" />
+          <version value="1.1.0" />
+          <code value="SectionAnhhaenge" />
+          <display value="Bereich Anhänge" />
+        </coding>
+      </patternCodeableConcept>
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:anhaenge.code.coding">
+      <path value="Composition.section.code.coding" />
+      <min value="1" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:anhaenge.code.coding.system">
+      <path value="Composition.section.code.coding.system" />
+      <min value="1" />
+    </element>
+    <element id="Composition.section:anhaenge.code.coding.version">
+      <path value="Composition.section.code.coding.version" />
+      <min value="1" />
+    </element>
+    <element id="Composition.section:anhaenge.code.coding.code">
+      <path value="Composition.section.code.coding.code" />
+      <min value="1" />
+    </element>
+    <element id="Composition.section:anhaenge.code.coding.display">
+      <path value="Composition.section.code.coding.display" />
+      <min value="1" />
+    </element>
+    <element id="Composition.section:anhaenge.code.coding.userSelected">
+      <path value="Composition.section.code.coding.userSelected" />
+      <max value="0" />
+    </element>
+    <element id="Composition.section:anhaenge.code.text">
+      <path value="Composition.section.code.text" />
+      <max value="0" />
+    </element>
+    <element id="Composition.section:anhaenge.author">
+      <path value="Composition.section.author" />
+      <max value="0" />
+    </element>
+    <element id="Composition.section:anhaenge.focus">
+      <path value="Composition.section.focus" />
+      <max value="0" />
+    </element>
+    <element id="Composition.section:anhaenge.text">
+      <path value="Composition.section.text" />
+      <max value="0" />
+    </element>
+    <element id="Composition.section:anhaenge.mode">
+      <path value="Composition.section.mode" />
+      <max value="0" />
+    </element>
+    <element id="Composition.section:anhaenge.orderedBy">
+      <path value="Composition.section.orderedBy" />
+      <max value="0" />
+    </element>
+    <element id="Composition.section:anhaenge.entry">
+      <path value="Composition.section.entry" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_DocumentReference|1.1.0" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:anhaenge.entry.reference">
+      <path value="Composition.section.entry.reference" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:anhaenge.entry.type">
+      <path value="Composition.section.entry.type" />
+      <max value="0" />
+    </element>
+    <element id="Composition.section:anhaenge.entry.identifier">
+      <path value="Composition.section.entry.identifier" />
+      <max value="0" />
+    </element>
+    <element id="Composition.section:anhaenge.entry.display">
+      <path value="Composition.section.entry.display" />
+      <max value="0" />
+    </element>
+    <element id="Composition.section:anhaenge.emptyReason">
+      <path value="Composition.section.emptyReason" />
+      <max value="0" />
+    </element>
+    <element id="Composition.section:anhaenge.section">
+      <path value="Composition.section.section" />
+      <max value="0" />
+    </element>
     <element id="Composition.section:kontakte">
       <path value="Composition.section" />
       <sliceName value="kontakte" />
@@ -1671,10 +1802,10 @@
       <min value="1" />
       <patternCodeableConcept>
         <coding>
-          <system value="http://snomed.info/sct" />
-          <version value="http://snomed.info/sct/900000000000207008/version/20220131" />
-          <code value="70862002" />
-          <display value="Contact person (person)" />
+          <system value="https://fhir.kbv.de/CodeSystem/KBV_CS_MIO_DIGA_Section_Codes" />
+          <version value="1.1.0" />
+          <code value="SectionKontakte" />
+          <display value="Bereich Kontakte" />
         </coding>
       </patternCodeableConcept>
       <mustSupport value="true" />
@@ -1733,10 +1864,10 @@
       <path value="Composition.section.entry" />
       <type>
         <code value="Reference" />
-        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_PractitionerRole|1.0.0" />
-        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_RelatedPerson|1.0.0" />
-        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Organization|1.0.0" />
-        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Practitioner|1.0.0" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_PractitionerRole|1.1.0" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_RelatedPerson|1.1.0" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Organization|1.1.0" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Practitioner|1.1.0" />
       </type>
       <mustSupport value="true" />
     </element>

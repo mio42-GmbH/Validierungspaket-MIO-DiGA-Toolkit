@@ -1,0 +1,70 @@
+<MedicationAdministration xmlns="http://hl7.org/fhir">
+	<id value="dca58280-3179-11ec-8d3d-0242ac130003" />
+	<meta>
+		<versionId value="1"/>
+		<lastUpdated value="2015-02-07T13:28:17.239+02:00"/>
+		<profile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_MedicationAdministration_Medication_Intake|1.1.0" />
+	</meta>
+	<extension url="https://fhir.kbv.de/StructureDefinition/KBV_EX_MIO_DIGA_Reference">
+		<valueReference>
+			<reference value="urn:uuid:dca579fc-3179-11ec-8d3d-0242ac130003" />
+		</valueReference>
+	</extension>
+	<identifier>
+		<type>
+			<coding>
+				<system value="http://terminology.hl7.org/CodeSystem/v2-0203" />
+				<version value="2.9" />
+				<code value="RI" />
+				<display value="Resource identifier" />
+			</coding>
+		</type>
+		<system value="urn:ietf:rfc:3986" />
+		<value value="urn:uuid:dca579fc-3179-11ec-8d3d-0242ac130003" />
+	</identifier>
+	<status value="completed" />
+	<medicationReference>
+		<reference value="urn:uuid:7d261218-8678-11eb-8dcd-0242ac130003" />
+	</medicationReference>
+	<subject>
+		<reference value="urn:uuid:7d261218-8678-11eb-8dcd-0242ac130003" />
+	</subject>
+	<effectiveDateTime value="2020-02-02" />
+	<performer>
+		<actor>
+			<reference value="urn:uuid:7d261218-8678-11eb-8dcd-0242ac130003" />
+		</actor>
+	</performer>
+	<reasonCode>
+		<coding>
+			<system value="http://snomed.info/sct" />
+			<version value="http://snomed.info/sct/900000000000207008/version/20220331" />
+			<code value="249366005"/>
+			<display value="Bleeding from nose (finding)"/>
+		</coding>
+		<text value="Nasenbluten"/>
+	</reasonCode>
+	<reasonReference>
+		<reference value="dca5efa4-3179-11ec-8d3d-0242ac130003"/>
+	</reasonReference>
+	<note>
+		<text value="Test" />
+	</note>
+	<dosage>
+		<route>
+			<coding>
+				<system value="http://standardterms.edqm.eu" />
+				<version value="2017-08-21" />
+				<code value="20001000" />
+				<display value="Auricular use" />
+			</coding>
+			<text value="artikulär" />
+		</route>
+		<dose>
+			<value value="1" />
+			<unit value="1" />
+			<system value="http://unitsofmeasure.org" />
+			<code value="1" />
+		</dose>
+	</dosage>
+</MedicationAdministration>

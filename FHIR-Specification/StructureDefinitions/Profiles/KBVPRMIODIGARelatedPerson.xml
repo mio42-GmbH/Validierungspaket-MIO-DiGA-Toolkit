@@ -1,11 +1,12 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="KBV-PR-MIO-DIGA-RelatedPerson" />
   <url value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_RelatedPerson" />
-  <version value="1.0.0" />
+  <version value="1.1.0" />
   <name value="KBV_PR_MIO_DIGA_RelatedPerson" />
   <title value="KBV_PR_MIO_DIGA_RelatedPerson" />
-  <status value="active" />
+  <status value="draft" />
   <publisher value="Kassenärztliche Bundesvereinigung (KBV)" />
-  <description value="Dieses Profil bildet eine Kontaktperson ab." />
+  <description value="Dieses Profil bildet eine nicht behandelnde Kontaktperson ab." />
   <copyright value="Im folgenden Profil können Codes aus den Codesystemen Snomed, Loinc oder Ucum enthalten sein, die dem folgenden Urheberrecht unterliegen: This material includes SNOMED Clinical Terms® SNOMED CT® which is used by permission of SNOMED International. All rights reserved. SNOMED CT®, was originally created by The College of American Pathologists. SNOMED and SNOMED CT are registered trademarks of SNOMED International. Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license. This material contains content from Loinc http://loinc.org. Loinc is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes Loinc Committee and is available at no cost under the license at http://loinc.org/license. Loinc® is a registered United States trademark of Regenstrief Institute, Inc. This product includes all or a portion of the UCUM table, UCUM codes, and UCUM definitions or is derived from it, subject to a license from Regenstrief Institute, Inc. and The UCUM Organization. Your use of the UCUM table, UCUM codes, UCUM definitions also is subject to this license, a copy of which is available at ​http://unitsofmeasure.org. The current complete UCUM table, UCUM Specification are available for download at ​http://unitsofmeasure.org. The UCUM table and UCUM codes are copyright © 1995-2009, Regenstrief Institute, Inc. and the Unified Codes for Units of Measures UCUM Organization. All rights reserved. THE UCUM TABLE IN ALL FORMATS, UCUM DEFINITIONS, AND SPECIFICATION ARE PROVIDED &quot;AS IS.&quot; ANY EXPRESS OR IMPLIED WARRANTIES ARE DISCLAIMED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE." />
   <fhirVersion value="4.0.1" />
   <mapping>
@@ -26,12 +27,12 @@
   <kind value="resource" />
   <abstract value="false" />
   <type value="RelatedPerson" />
-  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/RelatedPerson" />
+  <baseDefinition value="https://fhir.kbv.de/StructureDefinition/KBV_PR_Base_RelatedPerson|1.3.0" />
   <derivation value="constraint" />
   <differential>
     <element id="RelatedPerson">
       <path value="RelatedPerson" />
-      <definition value="Dieses Profil bildet eine Kontaktperson ab." />
+      <definition value="Dieses Profil bildet eine nicht behandelnde Kontaktperson ab." />
     </element>
     <element id="RelatedPerson.meta">
       <path value="RelatedPerson.meta" />
@@ -53,7 +54,7 @@
       <path value="RelatedPerson.meta.profile" />
       <min value="1" />
       <max value="1" />
-      <patternCanonical value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_RelatedPerson|1.0.0" />
+      <patternCanonical value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_RelatedPerson|1.1.0" />
     </element>
     <element id="RelatedPerson.meta.security">
       <path value="RelatedPerson.meta.security" />
@@ -82,6 +83,22 @@
     <element id="RelatedPerson.contained">
       <path value="RelatedPerson.contained" />
       <max value="0" />
+    </element>
+    <element id="RelatedPerson.extension">
+      <path value="RelatedPerson.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="closed" />
+      </slicing>
+      <mustSupport value="true" />
+    </element>
+    <element id="RelatedPerson.extension:Hinweis">
+      <path value="RelatedPerson.extension" />
+      <sliceName value="Hinweis" />
+      <mustSupport value="true" />
     </element>
     <element id="RelatedPerson.identifier">
       <path value="RelatedPerson.identifier" />
@@ -161,7 +178,7 @@
       <path value="RelatedPerson.patient" />
       <type>
         <code value="Reference" />
-        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Patient|1.0.0" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Patient|1.1.0" />
       </type>
       <mustSupport value="true" />
     </element>
@@ -184,7 +201,6 @@
     </element>
     <element id="RelatedPerson.relationship">
       <path value="RelatedPerson.relationship" />
-      <max value="1" />
       <mustSupport value="true" />
     </element>
     <element id="RelatedPerson.relationship.coding">
@@ -217,20 +233,14 @@
     </element>
     <element id="RelatedPerson.name">
       <path value="RelatedPerson.name" />
-      <max value="1" />
-      <type>
-        <code value="HumanName" />
-        <profile value="http://fhir.de/StructureDefinition/humanname-de-basis|0.9.3" />
-      </type>
       <mustSupport value="true" />
     </element>
-    <element id="RelatedPerson.name.use">
-      <path value="RelatedPerson.name.use" />
-      <max value="0" />
+    <element id="RelatedPerson.name.text">
+      <path value="RelatedPerson.name.text" />
+      <mustSupport value="true" />
     </element>
     <element id="RelatedPerson.name.family">
       <path value="RelatedPerson.name.family" />
-      <min value="1" />
       <mustSupport value="true" />
     </element>
     <element id="RelatedPerson.name.family.extension">
@@ -240,9 +250,8 @@
           <type value="value" />
           <path value="url" />
         </discriminator>
-        <rules value="open" />
+        <rules value="closed" />
       </slicing>
-      <min value="1" />
     </element>
     <element id="RelatedPerson.name.family.extension:namenszusatz">
       <path value="RelatedPerson.name.family.extension" />
@@ -271,7 +280,6 @@
     <element id="RelatedPerson.name.family.extension:nachname">
       <path value="RelatedPerson.name.family.extension" />
       <sliceName value="nachname" />
-      <min value="1" />
       <mustSupport value="true" />
     </element>
     <element id="RelatedPerson.name.family.extension:nachname.value[x]">
@@ -281,7 +289,7 @@
           <type value="type" />
           <path value="$this" />
         </discriminator>
-        <rules value="open" />
+        <rules value="closed" />
       </slicing>
       <mustSupport value="true" />
     </element>
@@ -315,18 +323,38 @@
     </element>
     <element id="RelatedPerson.name.given">
       <path value="RelatedPerson.name.given" />
-      <min value="1" />
-      <max value="1" />
       <mustSupport value="true" />
     </element>
     <element id="RelatedPerson.name.prefix">
       <path value="RelatedPerson.name.prefix" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="RelatedPerson.name:name.prefix.extension">
+      <path value="RelatedPerson.name.prefix.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="closed" />
+      </slicing>
       <mustSupport value="true" />
     </element>
     <element id="RelatedPerson.name:name.prefix.extension:prefix-qualifier">
       <path value="RelatedPerson.name.prefix.extension" />
       <sliceName value="prefix-qualifier" />
-      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="RelatedPerson.name:name.prefix.extension:prefix-qualifier.value[x]">
+      <path value="RelatedPerson.name.prefix.extension.value[x]" />
+      <slicing>
+        <discriminator>
+          <type value="type" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="closed" />
+      </slicing>
       <mustSupport value="true" />
     </element>
     <element id="RelatedPerson.name:name.prefix.extension:prefix-qualifier.value[x]:valueCode">
@@ -349,66 +377,10 @@
     </element>
     <element id="RelatedPerson.telecom.system">
       <path value="RelatedPerson.telecom.system" />
-      <min value="1" />
-      <mustSupport value="true" />
-    </element>
-    <element id="RelatedPerson.telecom.system.extension">
-      <path value="RelatedPerson.telecom.system.extension" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="url" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-      <min value="1" />
-    </element>
-    <element id="RelatedPerson.telecom.system.extension:anzeigenameSystem">
-      <path value="RelatedPerson.telecom.system.extension" />
-      <sliceName value="anzeigenameSystem" />
-      <min value="1" />
-      <max value="1" />
-      <type>
-        <code value="Extension" />
-        <profile value="https://fhir.kbv.de/StructureDefinition/KBV_EX_Base_Terminology_German" />
-      </type>
-      <mustSupport value="true" />
-    </element>
-    <element id="RelatedPerson.telecom.system.extension:anzeigenameSystem.extension">
-      <path value="RelatedPerson.telecom.system.extension.extension" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="url" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-      <min value="1" />
-    </element>
-    <element id="RelatedPerson.telecom.system.extension:anzeigenameSystem.extension:content">
-      <path value="RelatedPerson.telecom.system.extension.extension" />
-      <sliceName value="content" />
-      <min value="1" />
-    </element>
-    <element id="RelatedPerson.telecom.system.extension:anzeigenameSystem.extension:content.value[x]">
-      <path value="RelatedPerson.telecom.system.extension.extension.value[x]" />
-      <slicing>
-        <discriminator>
-          <type value="type" />
-          <path value="$this" />
-        </discriminator>
-        <rules value="closed" />
-      </slicing>
-      <mustSupport value="true" />
-    </element>
-    <element id="RelatedPerson.telecom.system.extension:anzeigenameSystem.extension:content.value[x]:valueString">
-      <path value="RelatedPerson.telecom.system.extension.extension.value[x]" />
-      <sliceName value="valueString" />
       <mustSupport value="true" />
     </element>
     <element id="RelatedPerson.telecom.value">
       <path value="RelatedPerson.telecom.value" />
-      <min value="1" />
       <mustSupport value="true" />
     </element>
     <element id="RelatedPerson.telecom.use">
@@ -425,7 +397,25 @@
     </element>
     <element id="RelatedPerson.gender">
       <path value="RelatedPerson.gender" />
-      <max value="0" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="RelatedPerson.gender.extension">
+      <path value="RelatedPerson.gender.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="closed" />
+      </slicing>
+      <min value="0" />
+    </element>
+    <element id="RelatedPerson.gender.extension:other-amtlich">
+      <path value="RelatedPerson.gender.extension" />
+      <sliceName value="other-amtlich" />
+      <min value="0" />
+      <mustSupport value="true" />
     </element>
     <element id="RelatedPerson.birthDate">
       <path value="RelatedPerson.birthDate" />
@@ -442,142 +432,9 @@
       </slicing>
       <mustSupport value="true" />
     </element>
-    <element id="RelatedPerson.address:Postfach">
-      <path value="RelatedPerson.address" />
-      <sliceName value="Postfach" />
-      <max value="1" />
-      <type>
-        <code value="Address" />
-        <profile value="http://fhir.de/StructureDefinition/address-de-basis|0.9.2" />
-      </type>
-      <mustSupport value="true" />
-    </element>
-    <element id="RelatedPerson.address:Postfach.extension">
-      <path value="RelatedPerson.address.extension" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="url" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-      <min value="0" />
-    </element>
-    <element id="RelatedPerson.address:Postfach.extension:Stadtteil">
-      <path value="RelatedPerson.address.extension" />
-      <sliceName value="Stadtteil" />
-      <min value="0" />
-      <mustSupport value="true" />
-    </element>
-    <element id="RelatedPerson.address:Postfach.extension:Stadtteil.value[x]">
-      <path value="RelatedPerson.address.extension.value[x]" />
-      <slicing>
-        <discriminator>
-          <type value="type" />
-          <path value="$this" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-      <mustSupport value="true" />
-    </element>
-    <element id="RelatedPerson.address:Postfach.extension:Stadtteil.value[x]:valueString">
-      <path value="RelatedPerson.address.extension.value[x]" />
-      <sliceName value="valueString" />
-      <mustSupport value="true" />
-    </element>
-    <element id="RelatedPerson.address:Postfach.use">
-      <path value="RelatedPerson.address.use" />
-      <max value="0" />
-    </element>
-    <element id="RelatedPerson.address:Postfach.type">
-      <path value="RelatedPerson.address.type" />
-      <min value="1" />
-      <patternCode value="postal" />
-    </element>
-    <element id="RelatedPerson.address:Postfach.line">
-      <path value="RelatedPerson.address.line" />
-      <max value="2" />
-      <mustSupport value="true" />
-    </element>
-    <element id="RelatedPerson.address:Postfach.line.extension">
-      <path value="RelatedPerson.address.line.extension" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="url" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-      <min value="1" />
-    </element>
-    <element id="RelatedPerson.address:Postfach.line.extension:Strasse">
-      <path value="RelatedPerson.address.line.extension" />
-      <sliceName value="Strasse" />
-      <min value="0" />
-      <max value="0" />
-    </element>
-    <element id="RelatedPerson.address:Postfach.line.extension:Hausnummer">
-      <path value="RelatedPerson.address.line.extension" />
-      <sliceName value="Hausnummer" />
-      <min value="0" />
-      <max value="0" />
-    </element>
-    <element id="RelatedPerson.address:Postfach.line.extension:Adresszusatz">
-      <path value="RelatedPerson.address.line.extension" />
-      <sliceName value="Adresszusatz" />
-      <min value="0" />
-      <max value="0" />
-    </element>
-    <element id="RelatedPerson.address:Postfach.line.extension:Postfach">
-      <path value="RelatedPerson.address.line.extension" />
-      <sliceName value="Postfach" />
-      <min value="1" />
-      <mustSupport value="true" />
-    </element>
-    <element id="RelatedPerson.address:Postfach.line.extension:Postfach.value[x]">
-      <path value="RelatedPerson.address.line.extension.value[x]" />
-      <slicing>
-        <discriminator>
-          <type value="type" />
-          <path value="$this" />
-        </discriminator>
-        <rules value="closed" />
-      </slicing>
-      <mustSupport value="true" />
-    </element>
-    <element id="RelatedPerson.address:Postfach.line.extension:Postfach.value[x]:valueString">
-      <path value="RelatedPerson.address.line.extension.value[x]" />
-      <sliceName value="valueString" />
-      <mustSupport value="true" />
-    </element>
-    <element id="RelatedPerson.address:Postfach.city">
-      <path value="RelatedPerson.address.city" />
-      <mustSupport value="true" />
-    </element>
-    <element id="RelatedPerson.address:Postfach.state">
-      <path value="RelatedPerson.address.state" />
-      <max value="0" />
-    </element>
-    <element id="RelatedPerson.address:Postfach.postalCode">
-      <path value="RelatedPerson.address.postalCode" />
-      <mustSupport value="true" />
-    </element>
-    <element id="RelatedPerson.address:Postfach.country">
-      <path value="RelatedPerson.address.country" />
-      <mustSupport value="true" />
-    </element>
-    <element id="RelatedPerson.address:Postfach.period">
-      <path value="RelatedPerson.address.period" />
-      <max value="0" />
-    </element>
     <element id="RelatedPerson.address:Strassenanschrift">
       <path value="RelatedPerson.address" />
       <sliceName value="Strassenanschrift" />
-      <max value="1" />
-      <type>
-        <code value="Address" />
-        <profile value="http://fhir.de/StructureDefinition/address-de-basis|0.9.2" />
-      </type>
       <mustSupport value="true" />
     </element>
     <element id="RelatedPerson.address:Strassenanschrift.extension">
@@ -587,8 +444,9 @@
           <type value="value" />
           <path value="url" />
         </discriminator>
-        <rules value="open" />
+        <rules value="closed" />
       </slicing>
+      <mustSupport value="true" />
     </element>
     <element id="RelatedPerson.address:Strassenanschrift.extension:Stadtteil">
       <path value="RelatedPerson.address.extension" />
@@ -615,14 +473,12 @@
       <path value="RelatedPerson.address.use" />
       <max value="0" />
     </element>
-    <element id="RelatedPerson.address:Strassenanschrift.type">
-      <path value="RelatedPerson.address.type" />
-      <min value="1" />
-      <patternCode value="both" />
+    <element id="RelatedPerson.address:Strassenanschrift.text">
+      <path value="RelatedPerson.address.text" />
+      <max value="0" />
     </element>
     <element id="RelatedPerson.address:Strassenanschrift.line">
       <path value="RelatedPerson.address.line" />
-      <max value="2" />
       <mustSupport value="true" />
     </element>
     <element id="RelatedPerson.address:Strassenanschrift.line.extension">
@@ -632,7 +488,7 @@
           <type value="value" />
           <path value="url" />
         </discriminator>
-        <rules value="open" />
+        <rules value="closed" />
       </slicing>
     </element>
     <element id="RelatedPerson.address:Strassenanschrift.line.extension:Strasse">
@@ -694,7 +550,7 @@
           <type value="type" />
           <path value="$this" />
         </discriminator>
-        <rules value="open" />
+        <rules value="closed" />
       </slicing>
       <mustSupport value="true" />
     </element>
@@ -712,7 +568,6 @@
     </element>
     <element id="RelatedPerson.address:Strassenanschrift.city">
       <path value="RelatedPerson.address.city" />
-      <min value="1" />
       <mustSupport value="true" />
     </element>
     <element id="RelatedPerson.address:Strassenanschrift.state">
@@ -721,7 +576,6 @@
     </element>
     <element id="RelatedPerson.address:Strassenanschrift.postalCode">
       <path value="RelatedPerson.address.postalCode" />
-      <min value="1" />
       <mustSupport value="true" />
     </element>
     <element id="RelatedPerson.address:Strassenanschrift.country">
@@ -729,6 +583,127 @@
       <mustSupport value="true" />
     </element>
     <element id="RelatedPerson.address:Strassenanschrift.period">
+      <path value="RelatedPerson.address.period" />
+      <max value="0" />
+    </element>
+    <element id="RelatedPerson.address:Postfach">
+      <path value="RelatedPerson.address" />
+      <sliceName value="Postfach" />
+      <mustSupport value="true" />
+    </element>
+    <element id="RelatedPerson.address:Postfach.extension">
+      <path value="RelatedPerson.address.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="closed" />
+      </slicing>
+      <mustSupport value="true" />
+    </element>
+    <element id="RelatedPerson.address:Postfach.extension:Stadtteil">
+      <path value="RelatedPerson.address.extension" />
+      <sliceName value="Stadtteil" />
+      <mustSupport value="true" />
+    </element>
+    <element id="RelatedPerson.address:Postfach.extension:Stadtteil.value[x]">
+      <path value="RelatedPerson.address.extension.value[x]" />
+      <slicing>
+        <discriminator>
+          <type value="type" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="closed" />
+      </slicing>
+      <mustSupport value="true" />
+    </element>
+    <element id="RelatedPerson.address:Postfach.extension:Stadtteil.value[x]:valueString">
+      <path value="RelatedPerson.address.extension.value[x]" />
+      <sliceName value="valueString" />
+      <mustSupport value="true" />
+    </element>
+    <element id="RelatedPerson.address:Postfach.use">
+      <path value="RelatedPerson.address.use" />
+      <max value="0" />
+    </element>
+    <element id="RelatedPerson.address:Postfach.text">
+      <path value="RelatedPerson.address.text" />
+      <max value="0" />
+    </element>
+    <element id="RelatedPerson.address:Postfach.line">
+      <path value="RelatedPerson.address.line" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="RelatedPerson.address:Postfach.line.extension">
+      <path value="RelatedPerson.address.line.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="closed" />
+      </slicing>
+      <min value="1" />
+    </element>
+    <element id="RelatedPerson.address:Postfach.line.extension:Strasse">
+      <path value="RelatedPerson.address.line.extension" />
+      <sliceName value="Strasse" />
+      <min value="0" />
+      <max value="0" />
+    </element>
+    <element id="RelatedPerson.address:Postfach.line.extension:Hausnummer">
+      <path value="RelatedPerson.address.line.extension" />
+      <sliceName value="Hausnummer" />
+      <min value="0" />
+      <max value="0" />
+    </element>
+    <element id="RelatedPerson.address:Postfach.line.extension:Adresszusatz">
+      <path value="RelatedPerson.address.line.extension" />
+      <sliceName value="Adresszusatz" />
+      <min value="0" />
+      <max value="0" />
+    </element>
+    <element id="RelatedPerson.address:Postfach.line.extension:Postfach">
+      <path value="RelatedPerson.address.line.extension" />
+      <sliceName value="Postfach" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="RelatedPerson.address:Postfach.line.extension:Postfach.value[x]">
+      <path value="RelatedPerson.address.line.extension.value[x]" />
+      <slicing>
+        <discriminator>
+          <type value="type" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="closed" />
+      </slicing>
+      <mustSupport value="true" />
+    </element>
+    <element id="RelatedPerson.address:Postfach.line.extension:Postfach.value[x]:valueString">
+      <path value="RelatedPerson.address.line.extension.value[x]" />
+      <sliceName value="valueString" />
+      <mustSupport value="true" />
+    </element>
+    <element id="RelatedPerson.address:Postfach.city">
+      <path value="RelatedPerson.address.city" />
+      <mustSupport value="true" />
+    </element>
+    <element id="RelatedPerson.address:Postfach.state">
+      <path value="RelatedPerson.address.state" />
+      <max value="0" />
+    </element>
+    <element id="RelatedPerson.address:Postfach.postalCode">
+      <path value="RelatedPerson.address.postalCode" />
+      <mustSupport value="true" />
+    </element>
+    <element id="RelatedPerson.address:Postfach.country">
+      <path value="RelatedPerson.address.country" />
+      <mustSupport value="true" />
+    </element>
+    <element id="RelatedPerson.address:Postfach.period">
       <path value="RelatedPerson.address.period" />
       <max value="0" />
     </element>

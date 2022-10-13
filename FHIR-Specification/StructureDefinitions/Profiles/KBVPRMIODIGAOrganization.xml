@@ -1,9 +1,10 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="KBV-PR-MIO-DIGA-Organization" />
   <url value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Organization" />
-  <version value="1.0.0" />
+  <version value="1.1.0" />
   <name value="KBV_PR_MIO_DIGA_Organization" />
   <title value="KBV_PR_MIO_DIGA_Organization" />
-  <status value="active" />
+  <status value="draft" />
   <publisher value="Kassenärztliche Bundesvereinigung (KBV)" />
   <description value="Dieses Profil bildet eine Einrichtung bspw. einen Ort, an dem ein Kontakt zwischen der zu behandelnden Person und der leistungserbringenden Person stattfindet (z.B. Praxis), ab." />
   <copyright value="Im folgenden Profil können Codes aus den Codesystemen Snomed, Loinc oder Ucum enthalten sein, die dem folgenden Urheberrecht unterliegen: This material includes SNOMED Clinical Terms® SNOMED CT® which is used by permission of SNOMED International. All rights reserved. SNOMED CT®, was originally created by The College of American Pathologists. SNOMED and SNOMED CT are registered trademarks of SNOMED International. Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license. This material contains content from Loinc http://loinc.org. Loinc is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes Loinc Committee and is available at no cost under the license at http://loinc.org/license. Loinc® is a registered United States trademark of Regenstrief Institute, Inc. This product includes all or a portion of the UCUM table, UCUM codes, and UCUM definitions or is derived from it, subject to a license from Regenstrief Institute, Inc. and The UCUM Organization. Your use of the UCUM table, UCUM codes, UCUM definitions also is subject to this license, a copy of which is available at ​http://unitsofmeasure.org. The current complete UCUM table, UCUM Specification are available for download at ​http://unitsofmeasure.org. The UCUM table and UCUM codes are copyright © 1995-2009, Regenstrief Institute, Inc. and the Unified Codes for Units of Measures UCUM Organization. All rights reserved. THE UCUM TABLE IN ALL FORMATS, UCUM DEFINITIONS, AND SPECIFICATION ARE PROVIDED &quot;AS IS.&quot; ANY EXPRESS OR IMPLIED WARRANTIES ARE DISCLAIMED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE." />
@@ -11,7 +12,7 @@
   <kind value="resource" />
   <abstract value="false" />
   <type value="Organization" />
-  <baseDefinition value="https://fhir.kbv.de/StructureDefinition/KBV_PR_Base_Organization|1.2.1" />
+  <baseDefinition value="https://fhir.kbv.de/StructureDefinition/KBV_PR_Base_Organization|1.3.0" />
   <derivation value="constraint" />
   <differential>
     <element id="Organization">
@@ -38,7 +39,7 @@
       <path value="Organization.meta.profile" />
       <min value="1" />
       <max value="1" />
-      <patternCanonical value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Organization|1.0.0" />
+      <patternCanonical value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Organization|1.1.0" />
     </element>
     <element id="Organization.meta.security">
       <path value="Organization.meta.security" />
@@ -75,7 +76,7 @@
           <type value="value" />
           <path value="url" />
         </discriminator>
-        <rules value="open" />
+        <rules value="closed" />
       </slicing>
       <min value="0" />
     </element>
@@ -105,8 +106,8 @@
       <path value="Organization.identifier" />
       <slicing>
         <discriminator>
-          <type value="value" />
-          <path value="type.coding.code" />
+          <type value="pattern" />
+          <path value="type" />
         </discriminator>
         <rules value="closed" />
       </slicing>
@@ -116,24 +117,26 @@
     <element id="Organization.identifier:Institutionskennzeichen">
       <path value="Organization.identifier" />
       <sliceName value="Institutionskennzeichen" />
-      <max value="1" />
       <mustSupport value="true" />
     </element>
     <element id="Organization.identifier:Betriebsstaettennummer">
       <path value="Organization.identifier" />
       <sliceName value="Betriebsstaettennummer" />
-      <max value="1" />
       <mustSupport value="true" />
     </element>
     <element id="Organization.identifier:VKNR">
       <path value="Organization.identifier" />
       <sliceName value="VKNR" />
-      <max value="1" />
       <mustSupport value="true" />
     </element>
     <element id="Organization.identifier:KZV-Abrechnungsnummer">
       <path value="Organization.identifier" />
       <sliceName value="KZV-Abrechnungsnummer" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Organization.identifier:Telematik-ID">
+      <path value="Organization.identifier" />
+      <sliceName value="Telematik-ID" />
       <mustSupport value="true" />
     </element>
     <element id="Organization.identifier:uuid">
@@ -146,6 +149,14 @@
     <element id="Organization.identifier:uuid.type">
       <path value="Organization.identifier.type" />
       <min value="1" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://terminology.hl7.org/CodeSystem/v2-0203" />
+          <version value="2.9" />
+          <code value="RI" />
+          <display value="Resource identifier" />
+        </coding>
+      </patternCodeableConcept>
     </element>
     <element id="Organization.identifier:uuid.type.coding">
       <path value="Organization.identifier.type.coding" />
@@ -155,22 +166,18 @@
     <element id="Organization.identifier:uuid.type.coding.system">
       <path value="Organization.identifier.type.coding.system" />
       <min value="1" />
-      <fixedUri value="http://terminology.hl7.org/CodeSystem/v2-0203" />
     </element>
     <element id="Organization.identifier:uuid.type.coding.version">
       <path value="Organization.identifier.type.coding.version" />
       <min value="1" />
-      <fixedString value="2.9" />
     </element>
     <element id="Organization.identifier:uuid.type.coding.code">
       <path value="Organization.identifier.type.coding.code" />
       <min value="1" />
-      <fixedCode value="RI" />
     </element>
     <element id="Organization.identifier:uuid.type.coding.display">
       <path value="Organization.identifier.type.coding.display" />
       <min value="1" />
-      <fixedString value="Resource identifier" />
     </element>
     <element id="Organization.identifier:uuid.type.coding.userSelected">
       <path value="Organization.identifier.type.coding.userSelected" />
@@ -209,7 +216,6 @@
     </element>
     <element id="Organization.name">
       <path value="Organization.name" />
-      <min value="1" />
       <mustSupport value="true" />
     </element>
     <element id="Organization.alias">
@@ -222,57 +228,6 @@
     </element>
     <element id="Organization.telecom.system">
       <path value="Organization.telecom.system" />
-      <mustSupport value="true" />
-    </element>
-    <element id="Organization.telecom.system.extension">
-      <path value="Organization.telecom.system.extension" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="url" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-      <min value="1" />
-    </element>
-    <element id="Organization.telecom.system.extension:anzeigenameCode">
-      <path value="Organization.telecom.system.extension" />
-      <sliceName value="anzeigenameCode" />
-      <min value="1" />
-      <max value="1" />
-      <mustSupport value="true" />
-    </element>
-    <element id="Organization.telecom.system.extension:anzeigenameCode.extension">
-      <path value="Organization.telecom.system.extension.extension" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="url" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-      <min value="1" />
-    </element>
-    <element id="Organization.telecom.system.extension:anzeigenameCode.extension:content">
-      <path value="Organization.telecom.system.extension.extension" />
-      <sliceName value="content" />
-      <min value="1" />
-    </element>
-    <element id="Organization.telecom.system.extension:anzeigenameCode.extension:content.value[x]">
-      <path value="Organization.telecom.system.extension.extension.value[x]" />
-      <slicing>
-        <discriminator>
-          <type value="type" />
-          <path value="$this" />
-        </discriminator>
-        <rules value="closed" />
-      </slicing>
-      <mustSupport value="true" />
-    </element>
-    <element id="Organization.telecom.system.extension:anzeigenameCode.extension:content.value[x]:valueString">
-      <path value="Organization.telecom.system.extension.extension.valueString" />
-      <sliceName value="valueString" />
-      <min value="1" />
       <mustSupport value="true" />
     </element>
     <element id="Organization.telecom.value">
@@ -300,7 +255,6 @@
         </discriminator>
         <rules value="closed" />
       </slicing>
-      <max value="2" />
       <mustSupport value="true" />
     </element>
     <element id="Organization.address:Strassenanschrift">
@@ -315,7 +269,7 @@
           <type value="value" />
           <path value="url" />
         </discriminator>
-        <rules value="open" />
+        <rules value="closed" />
       </slicing>
       <min value="0" />
     </element>
@@ -341,6 +295,14 @@
       <sliceName value="valueString" />
       <mustSupport value="true" />
     </element>
+    <element id="Organization.address:Strassenanschrift.use">
+      <path value="Organization.address.use" />
+      <max value="0" />
+    </element>
+    <element id="Organization.address:Strassenanschrift.text">
+      <path value="Organization.address.text" />
+      <max value="0" />
+    </element>
     <element id="Organization.address:Strassenanschrift.line">
       <path value="Organization.address.line" />
       <mustSupport value="true" />
@@ -352,7 +314,7 @@
           <type value="value" />
           <path value="url" />
         </discriminator>
-        <rules value="open" />
+        <rules value="closed" />
       </slicing>
       <min value="0" />
     </element>
@@ -454,7 +416,7 @@
           <type value="value" />
           <path value="url" />
         </discriminator>
-        <rules value="open" />
+        <rules value="closed" />
       </slicing>
       <min value="0" />
     </element>
@@ -480,6 +442,14 @@
       <sliceName value="valueString" />
       <mustSupport value="true" />
     </element>
+    <element id="Organization.address:Postfach.use">
+      <path value="Organization.address.use" />
+      <max value="0" />
+    </element>
+    <element id="Organization.address:Postfach.text">
+      <path value="Organization.address.text" />
+      <max value="0" />
+    </element>
     <element id="Organization.address:Postfach.line">
       <path value="Organization.address.line" />
       <max value="1" />
@@ -492,7 +462,7 @@
           <type value="value" />
           <path value="url" />
         </discriminator>
-        <rules value="open" />
+        <rules value="closed" />
       </slicing>
       <min value="1" />
     </element>

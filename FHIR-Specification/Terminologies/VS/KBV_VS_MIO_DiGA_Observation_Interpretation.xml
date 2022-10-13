@@ -1,0 +1,411 @@
+<ValueSet xmlns="http://hl7.org/fhir">
+    <id value="KBV-VS-MIO-DiGA-Observation-Interpretation"/>
+    <url value="https://fhir.kbv.de/ValueSet/KBV_VS_MIO_DIGA_Observation_Interpretation"/>
+    <version value="1.1.0"/>
+    <name value="KBV_VS_MIO_DIGA_Observation_Interpretation"/>
+    <title value="ObservationInterpretationCodes"/>
+    <status value="draft"/>
+    <experimental value="false"/>
+    <publisher value="Kassenärztliche Bundesvereinigung (KBV)"/>
+    <contact>
+        <telecom>
+            <system value="url"/>
+            <value value="https://mio.kbv.de"/>
+        </telecom>
+    </contact>
+    <description value="Dieses Valueset enthält die Codes zur Beschreibung von ObservationInterpretationCodes."/>
+    <immutable value="false"/>
+    <copyright value="Im folgenden Profil können Codes aus den Codesystemen Snomed, Loinc oder Ucum enthalten sein, die dem folgenden Urheberrecht unterliegen: This material includes SNOMED Clinical Terms® (SNOMED CT®) which is used by permission of SNOMED International. All rights reserved. SNOMED CT®, was originally created by The College of American Pathologists. SNOMED and SNOMED CT are registered trademarks of SNOMED International. Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license. This material contains content from LOINC (http://loinc.org). LOINC is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc. This product includes all or a portion of the UCUM table, UCUM codes, and UCUM definitions or is derived from it, subject to a license from Regenstrief Institute, Inc. and The UCUM Organization. Your use of the UCUM table, UCUM codes, UCUM definitions also is subject to this license, a copy of which is available at ​http://unitsofmeasure.org. The current complete UCUM table, UCUM Specification are available for download at http://unitsofmeasure.org. The UCUM table and UCUM codes are copyright © 1995-2009, Regenstrief Institute, Inc. and the Unified Codes for Units of Measures (UCUM) Organization. All rights reserved. THE UCUM TABLE (IN ALL FORMATS), UCUM DEFINITIONS, AND SPECIFICATION ARE PROVIDED &quot;AS IS.&quot; ANY EXPRESS OR IMPLIED WARRANTIES ARE DISCLAIMED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE."/>
+    <compose>
+        <include>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"/>
+            <version value="2018-08-12"/>
+            <concept>
+                <code value="_GeneticObservationInterpretation"/>
+                <display value="GeneticObservationInterpretation"/>
+            </concept>
+            <concept>
+                <code value="CAR"/>
+                <display value="Carrier"/>
+            </concept>
+            <concept>
+                <code value="_ObservationInterpretationChange"/>
+                <display value="ObservationInterpretationChange"/>
+            </concept>
+            <concept>
+                <code value="B"/>
+                <display value="Better"/>
+            </concept>
+            <concept>
+                <code value="D"/>
+                <display value="Significant change down"/>
+            </concept>
+            <concept>
+                <code value="U"/>
+                <display value="Significant change up"/>
+            </concept>
+            <concept>
+                <code value="W"/>
+                <display value="Worse"/>
+            </concept>
+            <concept>
+                <code value="_ObservationInterpretationExceptions"/>
+                <display value="ObservationInterpretationExceptions"/>
+            </concept>
+            <concept>
+                <code value="&lt;"/>
+                <display value="Off scale low"/>
+            </concept>
+            <concept>
+                <code value="&gt;"/>
+                <display value="Off scale high"/>
+            </concept>
+            <concept>
+                <code value="IE"/>
+                <display value="Insufficient evidence"/>
+            </concept>
+            <concept>
+                <code value="_ObservationInterpretationNormality"/>
+                <display value="ObservationInterpretationNormality"/>
+            </concept>
+            <concept>
+                <code value="A"/>
+                <display value="Abnormal"/>
+            </concept>
+            <concept>
+                <code value="AA"/>
+                <display value="Critical abnormal"/>
+            </concept>
+            <concept>
+                <code value="HH"/>
+                <display value="Critical high"/>
+            </concept>
+            <concept>
+                <code value="LL"/>
+                <display value="Critical low"/>
+            </concept>
+            <concept>
+                <code value="H"/>
+                <display value="High"/>
+            </concept>
+            <concept>
+                <code value="HU"/>
+                <display value="Significantly high"/>
+            </concept>
+            <concept>
+                <code value="L"/>
+                <display value="Low"/>
+            </concept>
+            <concept>
+                <code value="LU"/>
+                <display value="Significantly low"/>
+            </concept>
+            <concept>
+                <code value="N"/>
+                <display value="Normal"/>
+            </concept>
+            <concept>
+                <code value="EX"/>
+                <display value="outside threshold"/>
+            </concept>
+            <concept>
+                <code value="HX"/>
+                <display value="above high threshold"/>
+            </concept>
+            <concept>
+                <code value="LX"/>
+                <display value="below low threshold"/>
+            </concept>
+            <concept>
+                <code value="ObservationInterpretationDetection"/>
+                <display value="ObservationInterpretationDetection"/>
+            </concept>
+            <concept>
+                <code value="IND"/>
+                <display value="Indeterminate"/>
+            </concept>
+            <concept>
+                <code value="E"/>
+                <display value="Equivocal"/>
+            </concept>
+            <concept>
+                <code value="NEG"/>
+                <display value="Negative"/>
+            </concept>
+            <concept>
+                <code value="ND"/>
+                <display value="Not detected"/>
+            </concept>
+            <concept>
+                <code value="POS"/>
+                <display value="Positive"/>
+            </concept>
+            <concept>
+                <code value="DET"/>
+                <display value="Detected"/>
+            </concept>
+            <concept>
+                <code value="ObservationInterpretationExpectation"/>
+                <display value="ObservationInterpretationExpectation"/>
+            </concept>
+            <concept>
+                <code value="EXP"/>
+                <display value="Expected"/>
+            </concept>
+            <concept>
+                <code value="UNE"/>
+                <display value="Unexpected"/>
+            </concept>
+            <concept>
+                <code value="ReactivityObservationInterpretation"/>
+                <display value="ReactivityObservationInterpretation"/>
+            </concept>
+            <concept>
+                <code value="NR"/>
+                <display value="Non-reactive"/>
+            </concept>
+            <concept>
+                <code value="RR"/>
+                <display value="Reactive"/>
+            </concept>
+            <concept>
+                <code value="WR"/>
+                <display value="Weakly reactive"/>
+            </concept>
+        </include>
+    </compose>
+    <expansion>
+        <identifier value="a5f83835-2df7-11ed-93b1-005056adc104"/>
+        <timestamp value="2022-09-06T17:21:58+02:00"/>
+        <total value="38"/>
+        <offset value="0"/>
+        <contains>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"/>
+            <version value="2018-08-12"/>
+            <code value="_GeneticObservationInterpretation"/>
+            <display value="GeneticObservationInterpretation"/>
+        </contains>
+        <contains>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"/>
+            <version value="2018-08-12"/>
+            <code value="CAR"/>
+            <display value="Carrier"/>
+        </contains>
+        <contains>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"/>
+            <version value="2018-08-12"/>
+            <code value="_ObservationInterpretationChange"/>
+            <display value="ObservationInterpretationChange"/>
+        </contains>
+        <contains>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"/>
+            <version value="2018-08-12"/>
+            <code value="B"/>
+            <display value="Better"/>
+        </contains>
+        <contains>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"/>
+            <version value="2018-08-12"/>
+            <code value="D"/>
+            <display value="Significant change down"/>
+        </contains>
+        <contains>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"/>
+            <version value="2018-08-12"/>
+            <code value="U"/>
+            <display value="Significant change up"/>
+        </contains>
+        <contains>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"/>
+            <version value="2018-08-12"/>
+            <code value="W"/>
+            <display value="Worse"/>
+        </contains>
+        <contains>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"/>
+            <version value="2018-08-12"/>
+            <code value="_ObservationInterpretationExceptions"/>
+            <display value="ObservationInterpretationExceptions"/>
+        </contains>
+        <contains>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"/>
+            <version value="2018-08-12"/>
+            <code value="&lt;"/>
+            <display value="Off scale low"/>
+        </contains>
+        <contains>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"/>
+            <version value="2018-08-12"/>
+            <code value="&gt;"/>
+            <display value="Off scale high"/>
+        </contains>
+        <contains>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"/>
+            <version value="2018-08-12"/>
+            <code value="IE"/>
+            <display value="Insufficient evidence"/>
+        </contains>
+        <contains>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"/>
+            <version value="2018-08-12"/>
+            <code value="_ObservationInterpretationNormality"/>
+            <display value="ObservationInterpretationNormality"/>
+        </contains>
+        <contains>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"/>
+            <version value="2018-08-12"/>
+            <code value="A"/>
+            <display value="Abnormal"/>
+        </contains>
+        <contains>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"/>
+            <version value="2018-08-12"/>
+            <code value="AA"/>
+            <display value="Critical abnormal"/>
+        </contains>
+        <contains>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"/>
+            <version value="2018-08-12"/>
+            <code value="HH"/>
+            <display value="Critical high"/>
+        </contains>
+        <contains>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"/>
+            <version value="2018-08-12"/>
+            <code value="LL"/>
+            <display value="Critical low"/>
+        </contains>
+        <contains>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"/>
+            <version value="2018-08-12"/>
+            <code value="H"/>
+            <display value="High"/>
+        </contains>
+        <contains>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"/>
+            <version value="2018-08-12"/>
+            <code value="HU"/>
+            <display value="Significantly high"/>
+        </contains>
+        <contains>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"/>
+            <version value="2018-08-12"/>
+            <code value="L"/>
+            <display value="Low"/>
+        </contains>
+        <contains>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"/>
+            <version value="2018-08-12"/>
+            <code value="LU"/>
+            <display value="Significantly low"/>
+        </contains>
+        <contains>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"/>
+            <version value="2018-08-12"/>
+            <code value="N"/>
+            <display value="Normal"/>
+        </contains>
+        <contains>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"/>
+            <version value="2018-08-12"/>
+            <code value="EX"/>
+            <display value="outside threshold"/>
+        </contains>
+        <contains>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"/>
+            <version value="2018-08-12"/>
+            <code value="HX"/>
+            <display value="above high threshold"/>
+        </contains>
+        <contains>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"/>
+            <version value="2018-08-12"/>
+            <code value="LX"/>
+            <display value="below low threshold"/>
+        </contains>
+        <contains>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"/>
+            <version value="2018-08-12"/>
+            <code value="ObservationInterpretationDetection"/>
+            <display value="ObservationInterpretationDetection"/>
+        </contains>
+        <contains>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"/>
+            <version value="2018-08-12"/>
+            <code value="IND"/>
+            <display value="Indeterminate"/>
+        </contains>
+        <contains>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"/>
+            <version value="2018-08-12"/>
+            <code value="E"/>
+            <display value="Equivocal"/>
+        </contains>
+        <contains>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"/>
+            <version value="2018-08-12"/>
+            <code value="NEG"/>
+            <display value="Negative"/>
+        </contains>
+        <contains>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"/>
+            <version value="2018-08-12"/>
+            <code value="ND"/>
+            <display value="Not detected"/>
+        </contains>
+        <contains>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"/>
+            <version value="2018-08-12"/>
+            <code value="POS"/>
+            <display value="Positive"/>
+        </contains>
+        <contains>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"/>
+            <version value="2018-08-12"/>
+            <code value="DET"/>
+            <display value="Detected"/>
+        </contains>
+        <contains>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"/>
+            <version value="2018-08-12"/>
+            <code value="ObservationInterpretationExpectation"/>
+            <display value="ObservationInterpretationExpectation"/>
+        </contains>
+        <contains>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"/>
+            <version value="2018-08-12"/>
+            <code value="EXP"/>
+            <display value="Expected"/>
+        </contains>
+        <contains>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"/>
+            <version value="2018-08-12"/>
+            <code value="UNE"/>
+            <display value="Unexpected"/>
+        </contains>
+        <contains>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"/>
+            <version value="2018-08-12"/>
+            <code value="ReactivityObservationInterpretation"/>
+            <display value="ReactivityObservationInterpretation"/>
+        </contains>
+        <contains>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"/>
+            <version value="2018-08-12"/>
+            <code value="NR"/>
+            <display value="Non-reactive"/>
+        </contains>
+        <contains>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"/>
+            <version value="2018-08-12"/>
+            <code value="RR"/>
+            <display value="Reactive"/>
+        </contains>
+        <contains>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"/>
+            <version value="2018-08-12"/>
+            <code value="WR"/>
+            <display value="Weakly reactive"/>
+        </contains>
+    </expansion>
+</ValueSet>

@@ -1,0 +1,793 @@
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="KBV-PR-MIO-DIGA-Condition-Problem" />
+  <url value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Condition_Problem" />
+  <version value="1.1.0" />
+  <name value="KBV_PR_MIO_DIGA_Condition_Problem" />
+  <title value="KBV_PR_MIO_DIGA_Condition_Problem" />
+  <status value="draft" />
+  <publisher value="Kassenärztliche Bundesvereinigung (KBV)" />
+  <description value="Dieses Profil bildet ein Problem ab." />
+  <copyright value="Im folgenden Profil können Codes aus den Codesystemen Snomed, Loinc oder Ucum enthalten sein, die dem folgenden Urheberrecht unterliegen: This material includes SNOMED Clinical Terms® SNOMED CT® which is used by permission of SNOMED International. All rights reserved. SNOMED CT®, was originally created by The College of American Pathologists. SNOMED and SNOMED CT are registered trademarks of SNOMED International. Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license. This material contains content from Loinc http://loinc.org. Loinc is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes Loinc Committee and is available at no cost under the license at http://loinc.org/license. Loinc® is a registered United States trademark of Regenstrief Institute, Inc. This product includes all or a portion of the UCUM table, UCUM codes, and UCUM definitions or is derived from it, subject to a license from Regenstrief Institute, Inc. and The UCUM Organization. Your use of the UCUM table, UCUM codes, UCUM definitions also is subject to this license, a copy of which is available at ​http://unitsofmeasure.org. The current complete UCUM table, UCUM Specification are available for download at ​http://unitsofmeasure.org. The UCUM table and UCUM codes are copyright © 1995-2009, Regenstrief Institute, Inc. and the Unified Codes for Units of Measures UCUM Organization. All rights reserved. THE UCUM TABLE IN ALL FORMATS, UCUM DEFINITIONS, AND SPECIFICATION ARE PROVIDED &quot;AS IS.&quot; ANY EXPRESS OR IMPLIED WARRANTIES ARE DISCLAIMED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE." />
+  <fhirVersion value="4.0.1" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Condition" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Condition" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Condition">
+      <path value="Condition" />
+      <definition value="Dieses Profil bildet ein Problem ab." />
+      <constraint>
+        <key value="con-1" />
+        <severity value="error" />
+        <human value="At least onset or abatement need to be present" />
+        <expression value="Condition.onset.exists() | Condition.abatement.exists()" />
+        <source value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Condition_Problem" />
+      </constraint>
+    </element>
+    <element id="Condition.meta">
+      <path value="Condition.meta" />
+      <min value="1" />
+    </element>
+    <element id="Condition.meta.versionId">
+      <path value="Condition.meta.versionId" />
+      <min value="1" />
+    </element>
+    <element id="Condition.meta.lastUpdated">
+      <path value="Condition.meta.lastUpdated" />
+      <min value="1" />
+    </element>
+    <element id="Condition.meta.source">
+      <path value="Condition.meta.source" />
+      <max value="0" />
+    </element>
+    <element id="Condition.meta.profile">
+      <path value="Condition.meta.profile" />
+      <min value="1" />
+      <max value="1" />
+      <patternCanonical value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Condition_Problem|1.1.0" />
+    </element>
+    <element id="Condition.meta.security">
+      <path value="Condition.meta.security" />
+      <max value="0" />
+    </element>
+    <element id="Condition.meta.tag">
+      <path value="Condition.meta.tag" />
+      <max value="0" />
+    </element>
+    <element id="Condition.implicitRules">
+      <path value="Condition.implicitRules" />
+      <max value="0" />
+    </element>
+    <element id="Condition.language">
+      <path value="Condition.language" />
+      <max value="0" />
+    </element>
+    <element id="Condition.text">
+      <path value="Condition.text" />
+      <definition value="In diesem Element können die, in der Instanz, enthaltenen Informationen in einer menschenlesbaren Form zusammengefasst werden. Dabei ist zu beachten, dass keine Informationen aufgenommen werden dürfen, die nicht in strukturierter Form an anderer Stelle in der Instanz enthalten sind." />
+    </element>
+    <element id="Condition.text.status">
+      <path value="Condition.text.status" />
+      <fixedCode value="extensions" />
+    </element>
+    <element id="Condition.contained">
+      <path value="Condition.contained" />
+      <max value="0" />
+    </element>
+    <element id="Condition.identifier">
+      <path value="Condition.identifier" />
+      <min value="1" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.identifier.use">
+      <path value="Condition.identifier.use" />
+      <max value="0" />
+    </element>
+    <element id="Condition.identifier.type">
+      <path value="Condition.identifier.type" />
+      <min value="1" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://terminology.hl7.org/CodeSystem/v2-0203" />
+          <version value="2.9" />
+          <code value="RI" />
+          <display value="Resource identifier" />
+        </coding>
+      </patternCodeableConcept>
+    </element>
+    <element id="Condition.identifier.type.coding">
+      <path value="Condition.identifier.type.coding" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="Condition.identifier.type.coding.system">
+      <path value="Condition.identifier.type.coding.system" />
+      <min value="1" />
+    </element>
+    <element id="Condition.identifier.type.coding.version">
+      <path value="Condition.identifier.type.coding.version" />
+      <min value="1" />
+    </element>
+    <element id="Condition.identifier.type.coding.code">
+      <path value="Condition.identifier.type.coding.code" />
+      <min value="1" />
+    </element>
+    <element id="Condition.identifier.type.coding.display">
+      <path value="Condition.identifier.type.coding.display" />
+      <min value="1" />
+    </element>
+    <element id="Condition.identifier.type.coding.userSelected">
+      <path value="Condition.identifier.type.coding.userSelected" />
+      <max value="0" />
+    </element>
+    <element id="Condition.identifier.type.text">
+      <path value="Condition.identifier.type.text" />
+      <max value="0" />
+    </element>
+    <element id="Condition.identifier.system">
+      <path value="Condition.identifier.system" />
+      <min value="1" />
+      <fixedUri value="urn:ietf:rfc:3986" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.identifier.value">
+      <path value="Condition.identifier.value" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.identifier.period">
+      <path value="Condition.identifier.period" />
+      <max value="0" />
+    </element>
+    <element id="Condition.identifier.assigner">
+      <path value="Condition.identifier.assigner" />
+      <max value="0" />
+    </element>
+    <element id="Condition.clinicalStatus">
+      <path value="Condition.clinicalStatus" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.clinicalStatus.coding">
+      <path value="Condition.clinicalStatus.coding" />
+      <min value="1" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.clinicalStatus.coding.system">
+      <path value="Condition.clinicalStatus.coding.system" />
+      <min value="1" />
+    </element>
+    <element id="Condition.clinicalStatus.coding.version">
+      <path value="Condition.clinicalStatus.coding.version" />
+      <min value="1" />
+    </element>
+    <element id="Condition.clinicalStatus.coding.code">
+      <path value="Condition.clinicalStatus.coding.code" />
+      <min value="1" />
+    </element>
+    <element id="Condition.clinicalStatus.coding.display">
+      <path value="Condition.clinicalStatus.coding.display" />
+      <min value="1" />
+    </element>
+    <element id="Condition.clinicalStatus.coding.userSelected">
+      <path value="Condition.clinicalStatus.coding.userSelected" />
+      <max value="0" />
+    </element>
+    <element id="Condition.clinicalStatus.text">
+      <path value="Condition.clinicalStatus.text" />
+      <max value="0" />
+    </element>
+    <element id="Condition.verificationStatus">
+      <path value="Condition.verificationStatus" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.verificationStatus.coding">
+      <path value="Condition.verificationStatus.coding" />
+      <min value="1" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.verificationStatus.coding.system">
+      <path value="Condition.verificationStatus.coding.system" />
+      <min value="1" />
+    </element>
+    <element id="Condition.verificationStatus.coding.version">
+      <path value="Condition.verificationStatus.coding.version" />
+      <min value="1" />
+    </element>
+    <element id="Condition.verificationStatus.coding.code">
+      <path value="Condition.verificationStatus.coding.code" />
+      <min value="1" />
+    </element>
+    <element id="Condition.verificationStatus.coding.display">
+      <path value="Condition.verificationStatus.coding.display" />
+      <min value="1" />
+    </element>
+    <element id="Condition.verificationStatus.coding.userSelected">
+      <path value="Condition.verificationStatus.coding.userSelected" />
+      <max value="0" />
+    </element>
+    <element id="Condition.verificationStatus.text">
+      <path value="Condition.verificationStatus.text" />
+      <max value="0" />
+    </element>
+    <element id="Condition.category">
+      <path value="Condition.category" />
+      <min value="1" />
+      <max value="1" />
+      <mustSupport value="true" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="https://fhir.kbv.de/ValueSet/KBV_VS_MIO_DIGA_Problem_Type|1.1.0" />
+      </binding>
+    </element>
+    <element id="Condition.category.coding">
+      <path value="Condition.category.coding" />
+      <min value="1" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.category.coding.system">
+      <path value="Condition.category.coding.system" />
+      <min value="1" />
+    </element>
+    <element id="Condition.category.coding.version">
+      <path value="Condition.category.coding.version" />
+      <min value="1" />
+    </element>
+    <element id="Condition.category.coding.code">
+      <path value="Condition.category.coding.code" />
+      <min value="1" />
+    </element>
+    <element id="Condition.category.coding.display">
+      <path value="Condition.category.coding.display" />
+      <min value="1" />
+    </element>
+    <element id="Condition.category.coding.userSelected">
+      <path value="Condition.category.coding.userSelected" />
+      <max value="0" />
+    </element>
+    <element id="Condition.category.text">
+      <path value="Condition.category.text" />
+      <max value="0" />
+    </element>
+    <element id="Condition.severity">
+      <path value="Condition.severity" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.severity.coding">
+      <path value="Condition.severity.coding" />
+      <min value="1" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.severity.coding.system">
+      <path value="Condition.severity.coding.system" />
+      <min value="1" />
+    </element>
+    <element id="Condition.severity.coding.code">
+      <path value="Condition.severity.coding.code" />
+      <min value="1" />
+    </element>
+    <element id="Condition.severity.coding.display">
+      <path value="Condition.severity.coding.display" />
+      <min value="1" />
+    </element>
+    <element id="Condition.severity.coding.userSelected">
+      <path value="Condition.severity.coding.userSelected" />
+      <max value="0" />
+    </element>
+    <element id="Condition.severity.text">
+      <path value="Condition.severity.text" />
+      <max value="0" />
+    </element>
+    <element id="Condition.code">
+      <path value="Condition.code" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.code.coding">
+      <path value="Condition.code.coding" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.code.coding.system">
+      <path value="Condition.code.coding.system" />
+      <min value="1" />
+    </element>
+    <element id="Condition.code.coding.version">
+      <path value="Condition.code.coding.version" />
+      <min value="1" />
+    </element>
+    <element id="Condition.code.coding.code">
+      <path value="Condition.code.coding.code" />
+      <min value="1" />
+    </element>
+    <element id="Condition.code.coding.display">
+      <path value="Condition.code.coding.display" />
+      <min value="1" />
+    </element>
+    <element id="Condition.code.coding.userSelected">
+      <path value="Condition.code.coding.userSelected" />
+      <max value="0" />
+    </element>
+    <element id="Condition.code.text">
+      <path value="Condition.code.text" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.bodySite">
+      <path value="Condition.bodySite" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.bodySite.coding">
+      <path value="Condition.bodySite.coding" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.bodySite.coding.system">
+      <path value="Condition.bodySite.coding.system" />
+      <min value="1" />
+    </element>
+    <element id="Condition.bodySite.coding.version">
+      <path value="Condition.bodySite.coding.version" />
+      <min value="1" />
+    </element>
+    <element id="Condition.bodySite.coding.code">
+      <path value="Condition.bodySite.coding.code" />
+      <min value="1" />
+    </element>
+    <element id="Condition.bodySite.coding.display">
+      <path value="Condition.bodySite.coding.display" />
+      <min value="1" />
+    </element>
+    <element id="Condition.bodySite.coding.userSelected">
+      <path value="Condition.bodySite.coding.userSelected" />
+      <max value="0" />
+    </element>
+    <element id="Condition.bodySite.text">
+      <path value="Condition.bodySite.text" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.subject">
+      <path value="Condition.subject" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Patient|1.1.0" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.subject.reference">
+      <path value="Condition.subject.reference" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.subject.type">
+      <path value="Condition.subject.type" />
+      <max value="0" />
+    </element>
+    <element id="Condition.subject.identifier">
+      <path value="Condition.subject.identifier" />
+      <max value="0" />
+    </element>
+    <element id="Condition.subject.display">
+      <path value="Condition.subject.display" />
+      <max value="0" />
+    </element>
+    <element id="Condition.encounter">
+      <path value="Condition.encounter" />
+      <max value="0" />
+    </element>
+    <element id="Condition.onset[x]">
+      <path value="Condition.onset[x]" />
+      <slicing>
+        <discriminator>
+          <type value="type" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="closed" />
+      </slicing>
+      <type>
+        <code value="dateTime" />
+      </type>
+      <type>
+        <code value="Age" />
+      </type>
+      <type>
+        <code value="Period" />
+      </type>
+      <type>
+        <code value="Range" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.onset[x]:onsetDateTime">
+      <path value="Condition.onset[x]" />
+      <sliceName value="onsetDateTime" />
+      <type>
+        <code value="dateTime" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.onset[x]:onsetAge">
+      <path value="Condition.onset[x]" />
+      <sliceName value="onsetAge" />
+      <type>
+        <code value="Age" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.onset[x]:onsetAge.extension">
+      <path value="Condition.onset[x].extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="closed" />
+      </slicing>
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.onset[x]:onsetAge.extension:lebensphase-von">
+      <path value="Condition.onset[x].extension" />
+      <sliceName value="lebensphase-von" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="https://fhir.kbv.de/StructureDefinition/KBV_EX_Base_Stage_Life|1.3.0" />
+      </type>
+      <mustSupport value="true" />
+      <isModifier value="false" />
+    </element>
+    <element id="Condition.onset[x]:onsetAge.extension:lebensphase-von.value[x]">
+      <path value="Condition.onset[x].extension.value[x]" />
+      <slicing>
+        <discriminator>
+          <type value="type" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="closed" />
+      </slicing>
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.onset[x]:onsetAge.extension:lebensphase-von.value[x]:valueCodeableConcept">
+      <path value="Condition.onset[x].extension.value[x]" />
+      <sliceName value="valueCodeableConcept" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.onset[x]:onsetAge.extension:lebensphase-von.value[x]:valueCodeableConcept.coding">
+      <path value="Condition.onset[x].extension.value[x].coding" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.onset[x]:onsetAge.extension:lebensphase-von.value[x]:valueCodeableConcept.coding.system">
+      <path value="Condition.onset[x].extension.value[x].coding.system" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.onset[x]:onsetAge.extension:lebensphase-von.value[x]:valueCodeableConcept.coding.version">
+      <path value="Condition.onset[x].extension.value[x].coding.version" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.onset[x]:onsetAge.extension:lebensphase-von.value[x]:valueCodeableConcept.coding.code">
+      <path value="Condition.onset[x].extension.value[x].coding.code" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.onset[x]:onsetAge.extension:lebensphase-von.value[x]:valueCodeableConcept.coding.display">
+      <path value="Condition.onset[x].extension.value[x].coding.display" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.onset[x]:onsetAge.extension:lebensphase-von.value[x]:valueCodeableConcept.coding.userSelected">
+      <path value="Condition.onset[x].extension.value[x].coding.userSelected" />
+      <max value="0" />
+    </element>
+    <element id="Condition.onset[x]:onsetAge.value">
+      <path value="Condition.onset[x].value" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.onset[x]:onsetAge.comparator">
+      <path value="Condition.onset[x].comparator" />
+      <max value="0" />
+    </element>
+    <element id="Condition.onset[x]:onsetAge.unit">
+      <path value="Condition.onset[x].unit" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.onset[x]:onsetAge.system">
+      <path value="Condition.onset[x].system" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.onset[x]:onsetAge.code">
+      <path value="Condition.onset[x].code" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.onset[x]:onsetPeriod">
+      <path value="Condition.onset[x]" />
+      <sliceName value="onsetPeriod" />
+      <type>
+        <code value="Period" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.onset[x]:onsetPeriod.start">
+      <path value="Condition.onset[x].start" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.onset[x]:onsetPeriod.end">
+      <path value="Condition.onset[x].end" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.onset[x]:onsetRange">
+      <path value="Condition.onset[x]" />
+      <sliceName value="onsetRange" />
+      <type>
+        <code value="Range" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.onset[x]:onsetRange.low">
+      <path value="Condition.onset[x].low" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.onset[x]:onsetRange.high">
+      <path value="Condition.onset[x].high" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.abatement[x]">
+      <path value="Condition.abatement[x]" />
+      <slicing>
+        <discriminator>
+          <type value="type" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="closed" />
+      </slicing>
+      <type>
+        <code value="dateTime" />
+      </type>
+      <type>
+        <code value="Age" />
+      </type>
+      <type>
+        <code value="Period" />
+      </type>
+      <type>
+        <code value="Range" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.abatement[x]:abatementDateTime">
+      <path value="Condition.abatement[x]" />
+      <sliceName value="abatementDateTime" />
+      <type>
+        <code value="dateTime" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.abatement[x]:abatementAge">
+      <path value="Condition.abatement[x]" />
+      <sliceName value="abatementAge" />
+      <type>
+        <code value="Age" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.abatement[x]:abatementAge.extension">
+      <path value="Condition.abatement[x].extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="closed" />
+      </slicing>
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.abatement[x]:abatementAge.extension:lebensphase-bis">
+      <path value="Condition.abatement[x].extension" />
+      <sliceName value="lebensphase-bis" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="https://fhir.kbv.de/StructureDefinition/KBV_EX_Base_Stage_Life|1.3.0" />
+      </type>
+      <mustSupport value="true" />
+      <isModifier value="false" />
+    </element>
+    <element id="Condition.abatement[x]:abatementAge.extension:lebensphase-bis.value[x]">
+      <path value="Condition.abatement[x].extension.value[x]" />
+      <slicing>
+        <discriminator>
+          <type value="type" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="closed" />
+      </slicing>
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.abatement[x]:abatementAge.extension:lebensphase-bis.value[x]:valueCodeableConcept">
+      <path value="Condition.abatement[x].extension.value[x]" />
+      <sliceName value="valueCodeableConcept" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.abatement[x]:abatementAge.extension:lebensphase-bis.value[x]:valueCodeableConcept.coding">
+      <path value="Condition.abatement[x].extension.value[x].coding" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.abatement[x]:abatementAge.extension:lebensphase-bis.value[x]:valueCodeableConcept.coding.system">
+      <path value="Condition.abatement[x].extension.value[x].coding.system" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.abatement[x]:abatementAge.extension:lebensphase-bis.value[x]:valueCodeableConcept.coding.version">
+      <path value="Condition.abatement[x].extension.value[x].coding.version" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.abatement[x]:abatementAge.extension:lebensphase-bis.value[x]:valueCodeableConcept.coding.code">
+      <path value="Condition.abatement[x].extension.value[x].coding.code" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.abatement[x]:abatementAge.extension:lebensphase-bis.value[x]:valueCodeableConcept.coding.display">
+      <path value="Condition.abatement[x].extension.value[x].coding.display" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.abatement[x]:abatementAge.extension:lebensphase-bis.value[x]:valueCodeableConcept.coding.userSelected">
+      <path value="Condition.abatement[x].extension.value[x].coding.userSelected" />
+      <max value="0" />
+    </element>
+    <element id="Condition.abatement[x]:abatementAge.value">
+      <path value="Condition.abatement[x].value" />
+      <max value="0" />
+    </element>
+    <element id="Condition.abatement[x]:abatementAge.comparator">
+      <path value="Condition.abatement[x].comparator" />
+      <max value="0" />
+    </element>
+    <element id="Condition.abatement[x]:abatementAge.unit">
+      <path value="Condition.abatement[x].unit" />
+      <max value="0" />
+    </element>
+    <element id="Condition.abatement[x]:abatementAge.system">
+      <path value="Condition.abatement[x].system" />
+      <max value="0" />
+    </element>
+    <element id="Condition.abatement[x]:abatementAge.code">
+      <path value="Condition.abatement[x].code" />
+      <max value="0" />
+    </element>
+    <element id="Condition.abatement[x]:abatementPeriod">
+      <path value="Condition.abatement[x]" />
+      <sliceName value="abatementPeriod" />
+      <type>
+        <code value="Period" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.abatement[x]:abatementPeriod.start">
+      <path value="Condition.abatement[x].start" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.abatement[x]:abatementPeriod.end">
+      <path value="Condition.abatement[x].end" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.abatement[x]:abatementRange">
+      <path value="Condition.abatement[x]" />
+      <sliceName value="abatementRange" />
+      <type>
+        <code value="Range" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.abatement[x]:abatementRange.low">
+      <path value="Condition.abatement[x].low" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.abatement[x]:abatementRange.high">
+      <path value="Condition.abatement[x].high" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.recordedDate">
+      <path value="Condition.recordedDate" />
+      <max value="0" />
+    </element>
+    <element id="Condition.recorder">
+      <path value="Condition.recorder" />
+      <min value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Patient|1.1.0" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_PractitionerRole|1.1.0" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Practitioner|1.1.0" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.recorder.reference">
+      <path value="Condition.recorder.reference" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.recorder.type">
+      <path value="Condition.recorder.type" />
+      <max value="0" />
+    </element>
+    <element id="Condition.recorder.identifier">
+      <path value="Condition.recorder.identifier" />
+      <max value="0" />
+    </element>
+    <element id="Condition.recorder.display">
+      <path value="Condition.recorder.display" />
+      <max value="0" />
+    </element>
+    <element id="Condition.asserter">
+      <path value="Condition.asserter" />
+      <max value="0" />
+    </element>
+    <element id="Condition.stage">
+      <path value="Condition.stage" />
+      <max value="0" />
+    </element>
+    <element id="Condition.evidence">
+      <path value="Condition.evidence" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.evidence.code">
+      <path value="Condition.evidence.code" />
+      <max value="0" />
+    </element>
+    <element id="Condition.evidence.detail">
+      <path value="Condition.evidence.detail" />
+      <min value="1" />
+      <max value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Observation_Assessment_Scale|1.1.0" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Observation_Free|1.1.0" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Observation_Body_Height|1.1.0" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Observation_Peripheral_Oxygen_Saturation|1.1.0" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Observation_Body_Temperature|1.1.0" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Observation_Body_Weight|1.1.0" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Observation_Heart_Rate|1.1.0" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Observation_Blood_Pressure|1.1.0" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Observation_Head_Circumference|1.1.0" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Observation_Respiratory_Rate|1.1.0" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Observation_Glucose_Concentration|1.1.0" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.evidence.detail.reference">
+      <path value="Condition.evidence.detail.reference" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.evidence.detail.type">
+      <path value="Condition.evidence.detail.type" />
+      <max value="0" />
+    </element>
+    <element id="Condition.evidence.detail.identifier">
+      <path value="Condition.evidence.detail.identifier" />
+      <max value="0" />
+    </element>
+    <element id="Condition.evidence.detail.display">
+      <path value="Condition.evidence.detail.display" />
+      <max value="0" />
+    </element>
+    <element id="Condition.note">
+      <path value="Condition.note" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.note.author[x]">
+      <path value="Condition.note.author[x]" />
+      <max value="0" />
+    </element>
+    <element id="Condition.note.time">
+      <path value="Condition.note.time" />
+      <max value="0" />
+    </element>
+    <element id="Condition.note.text">
+      <path value="Condition.note.text" />
+      <mustSupport value="true" />
+    </element>
+  </differential>
+</StructureDefinition>

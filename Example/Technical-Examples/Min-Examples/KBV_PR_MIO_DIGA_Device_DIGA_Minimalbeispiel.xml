@@ -1,0 +1,27 @@
+<Device xmlns="http://hl7.org/fhir">
+	<id value="7d261218-8678-11eb-8dcd-0242ac130003"/>
+	<meta>
+		<versionId value="1"/>
+		<lastUpdated value="2015-02-07T13:28:17.239+02:00"/>
+		<profile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Device_DIGA|1.1.0"/>
+	</meta>
+	<identifier>
+		<type>
+			<text value="DiGA-VE-ID" />
+		</type>
+		<value value="12345678" />
+	</identifier>
+	<definition>
+		<reference value="7d261218-8678-11eb-8dcd-0242ac130003" />
+	</definition>
+	<deviceName>
+		<name value="Super DiGA" />
+		<type value="user-friendly-name" />
+	</deviceName>
+	<type>
+		<coding>
+			<system value="http://fhir.de/CodeSystem/ifa/pzn" />
+			<code value="12345" />
+		</coding>
+	</type>
+</Device>

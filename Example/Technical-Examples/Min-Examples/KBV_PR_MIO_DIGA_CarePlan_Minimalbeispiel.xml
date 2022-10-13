@@ -1,0 +1,25 @@
+<CarePlan xmlns="http://hl7.org/fhir">
+	<id value="dca5a8dc-3179-11ec-8d3d-0242ac130003" />
+	<meta>
+		<versionId value="1"/>
+		<lastUpdated value="2015-02-07T13:28:17.239+02:00"/>
+		<profile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_CarePlan|1.1.0" />
+	</meta>
+	<identifier>
+		<type>
+			<coding>
+				<system value="http://terminology.hl7.org/CodeSystem/v2-0203" />
+				<version value="2.9" />
+				<code value="RI" />
+				<display value="Resource identifier" />
+			</coding>
+		</type>
+		<system value="urn:ietf:rfc:3986" />
+		<value value="urn:uuid:dca57b00-3179-11ec-8d3d-0242ac130003" />
+	</identifier>
+	<status value="unknown" />
+	<intent value="plan" />
+	<subject>
+		<reference value="urn:uuid:e8610a8a-85dc-4a49-88be-ee8d3ab69f73" />
+	</subject>
+</CarePlan>

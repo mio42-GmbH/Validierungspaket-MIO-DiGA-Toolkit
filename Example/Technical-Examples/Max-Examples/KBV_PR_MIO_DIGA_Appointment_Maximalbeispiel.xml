@@ -1,0 +1,114 @@
+<Appointment xmlns="http://hl7.org/fhir">
+  <id value="846a5feb-840f-4232-8750-6f4cd40f3174"/>
+  <meta>
+    <versionId value="1"/>
+    <lastUpdated value="2015-02-07T13:28:17.239+02:00"/>
+    <profile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Appointment|1.1.0"/>
+  </meta>
+  <identifier>
+    <type>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+        <version value="2.9"/>
+        <code value="RI"/>
+        <display value="Resource identifier"/>
+      </coding>
+    </type>
+    <system value="urn:ietf:rfc:3986"/>
+    <value value="urn:uuid:dca579fc-3179-11ec-8d3d-0242ac130003"/>
+  </identifier>
+  <status value="booked"/>
+  <serviceCategory>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ActCode"/>
+      <version value="2018-08-12"/>
+      <code value="AMB"/>
+      <display value="ambulatory"/>
+    </coding>
+    <text value="ambulant"/>
+  </serviceCategory>
+  <serviceType>
+    <coding>
+      <system value="https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_BAR2_ARZTNRFACHGRUPPE"/>
+      <version value="1.03"/>
+      <code value="01"/>
+      <display value="Allgemeinmedizin"/>
+    </coding>
+    <coding>
+      <system value="http://fhir.de/CodeSystem/dkgev/Fachabteilungsschluessel"/>
+      <version value="1.3.2"/>
+      <code value="0100"/>
+      <display value="Innere Medizin"/>
+    </coding>
+    <coding>
+      <system value="http://fhir.de/CodeSystem/dkgev/Fachabteilungsschluessel-erweitert"/>
+      <version value="1.3.2"/>
+      <code value="0100"/>
+      <display value="Innere Medizin"/>
+    </coding>
+    <text value="Allgemeinmedizin"/>
+  </serviceType>
+  <appointmentType>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/v2-0276"/>
+      <version value="2.9"/>
+      <code value="CHECKUP"/>
+      <display value="A routine check-up, such as an annual physical"/>
+    </coding>
+    <text value="Jährliche Kontrolluntersuchung"/>
+  </appointmentType>
+  <reasonCode>
+    <coding>
+      <system value="http://snomed.info/sct" />
+			<version value="http://snomed.info/sct/900000000000207008/version/20220331" />
+      <code value="249366005"/>
+      <display value="Bleeding from nose (finding)"/>
+    </coding>
+    <text value="Nasenbluten"/>
+  </reasonCode>
+  <reasonReference>
+    <reference value="dca5efa4-3179-11ec-8d3d-0242ac130003"/>
+  </reasonReference>
+  <start value="2015-02-07T13:28:17.239+02:00"/>
+  <end value="2015-02-07T13:28:17.239+02:00"/>
+  <comment value="Test"/>
+  <participant>
+    <type>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/v3-ParticipationType" />
+        <version value="2018-08-12" />
+        <code value="SPRF"/>
+        <display value="secondary performer"/>
+      </coding>
+      <text value="Sekundäre ausführende Person"/>
+    </type>
+    <type>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/v3-ParticipationType" />
+        <version value="2018-08-12" />
+        <code value="CON"/>
+        <display value="consultant"/>
+      </coding>
+      <text value="Beratend für primäre ausführende Person"/>
+    </type>
+    <actor>
+      <reference value="dca5efa4-3179-11ec-8d3d-0242ac130003"/>
+    </actor>
+    <status value="accepted"/>
+  </participant>
+  <participant>
+    <type>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/v3-ParticipationType" />
+        <version value="2018-08-12" />
+        <code value="PPRF"/>
+        <display value="primary performer"/>
+      </coding>
+      <text value="Primäre ausführende Person"/>
+    </type>
+    <actor>
+      <reference value="dca5efa4-3179-11ec-8d3d-0242ac130003"/>
+    </actor>
+    <status value="accepted"/>
+  </participant>
+</Appointment>

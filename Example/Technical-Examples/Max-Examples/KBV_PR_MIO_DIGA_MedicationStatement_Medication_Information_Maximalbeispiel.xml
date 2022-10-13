@@ -1,0 +1,149 @@
+<MedicationStatement xmlns="http://hl7.org/fhir">
+	<id value="dca586cc-3179-11ec-8d3d-0242ac130003" />
+	<meta>
+		<versionId value="1" />
+		<lastUpdated value="2015-02-07T13:28:17.239+02:00" />
+		<profile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_MedicationStatement_Medication_Information|1.1.0" />
+	</meta>
+	<extension url="https://fhir.kbv.de/StructureDefinition/KBV_EX_MIO_DIGA_Reference">
+		<valueReference>
+			<reference value="urn:uuid:dca579fc-3179-11ec-8d3d-0242ac130003" />
+		</valueReference>
+	</extension>
+	<identifier>
+		<type>
+			<coding>
+				<system value="http://terminology.hl7.org/CodeSystem/v2-0203" />
+				<version value="2.9" />
+				<code value="RI" />
+				<display value="Resource identifier" />
+			</coding>
+		</type>
+		<system value="urn:ietf:rfc:3986" />
+		<value value="urn:uuid:dca579fc-3179-11ec-8d3d-0242ac130003" />
+	</identifier>
+	<status value="intended" />
+	<statusReason>
+		<coding>
+			<system value="http://snomed.info/sct"/>
+			<version value="http://snomed.info/sct/900000000000207008/version/20220331" />
+			<code value="182878004"/>
+			<display value="Medication increased (finding)"/>
+		</coding>
+		<text value="Test" />
+	</statusReason>
+	<medicationReference>
+		<reference value="urn:uuid:846a5feb-840f-4232-8750-6f4cd40f3174" />
+	</medicationReference>
+	<subject>
+		<reference value="urn:uuid:e8610a8a-85dc-4a49-88be-ee8d3ab69f73" />
+	</subject>
+	<effectivePeriod>
+		<start value="2020-05-07" />
+		<end value="2020-05-07" />
+	</effectivePeriod>
+	<dateAsserted value="2020-05-07" />
+	<informationSource>
+		<reference value="urn:uuid:e8610a8a-85dc-4a49-88be-ee8d3ab69f73" />
+	</informationSource>
+	<reasonCode>
+		<coding>
+			<system value="http://snomed.info/sct" />
+			<version value="http://snomed.info/sct/900000000000207008/version/20220331" />
+			<code value="249366005"/>
+			<display value="Bleeding from nose (finding)"/>
+		</coding>
+		<text value="Nasenbluten"/>
+	</reasonCode>
+	<reasonReference>
+		<reference value="dca5efa4-3179-11ec-8d3d-0242ac130003"/>
+	</reasonReference>
+	<note>
+		<text value="Test" />
+	</note>
+	<dosage>
+		<text value="Nach Bedarf morgens, sonst abens 20 min vor dem Essen." />
+		<patientInstruction value="Während der Einnahme kein Alkoholkonsum." />
+		<timing>
+			<repeat>
+				<duration value="7" />
+				<durationUnit value="d" />
+				<frequency value="1" />
+				<frequencyMax value="2" />
+				<period value="7" />
+				<periodMax value="14" />
+				<periodUnit value="d" />
+				<dayOfWeek value="mon" />
+				<timeOfDay value="17:00:00" />
+			</repeat>
+		</timing>
+		<asNeededBoolean value="true" />
+		<site>
+			<coding>
+				<system value="http://snomed.info/sct" />
+				<version value="http://snomed.info/sct/900000000000207008/version/20220331" />
+				<code value="10547007" />
+				<display value="Otic route (qualifier value)" />
+			</coding>
+			<text value="artikulär" />
+		</site>
+		<route>
+			<coding>
+				<system value="http://snomed.info/sct" />
+				<version value="http://snomed.info/sct/900000000000207008/version/20220331" />
+				<code value="10547007" />
+				<display value="Otic route (qualifier value)" />
+			</coding>
+			<coding>
+				<system value="http://standardterms.edqm.eu" />
+				<version value="2017-08-21" />
+				<code value="20001000" />
+				<display value="Auricular use" />
+			</coding>
+			<text value="artikulär" />
+		</route>
+		<doseAndRate>
+			<doseQuantity>
+				<value value="1" />
+				<unit value="Augenbadewanne" />
+				<system value="https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_BMP_DOSIEREINHEIT" />
+				<code value="c" />
+			</doseQuantity>
+			<rateRatio>
+				<numerator>
+					<value value="1" />
+					<unit value="Messbecher" />
+					<system value="https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_BMP_DOSIEREINHEIT" />
+					<code value="0" />
+				</numerator>
+				<denominator>
+					<value value="1" />
+					<unit value="day" />
+					<system value="http://unitsofmeasure.org" />
+					<code value="d" />
+				</denominator>
+			</rateRatio>
+		</doseAndRate>
+		<maxDosePerPeriod>
+			<numerator>
+				<value value="1" />
+				<unit value="Messbecher" />
+				<system value="https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_BMP_DOSIEREINHEIT" />
+				<code value="0" />
+			</numerator>
+			<denominator>
+				<value value="1" />
+				<unit value="day" />
+				<system value="http://unitsofmeasure.org" />
+				<code value="d" />
+			</denominator>
+		</maxDosePerPeriod>
+		<maxDosePerAdministration>
+			<value value="2" />
+			<unit value="Messbecher" />
+			<system value="https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_BMP_DOSIEREINHEIT" />
+			<code value="0" />
+		</maxDosePerAdministration>
+	</dosage>
+
+</MedicationStatement>

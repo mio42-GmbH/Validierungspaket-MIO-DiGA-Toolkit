@@ -1,9 +1,10 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="KBV-PR-MIO-DIGA-Patient" />
   <url value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Patient" />
-  <version value="1.0.0" />
+  <version value="1.1.0" />
   <name value="KBV_PR_MIO_DIGA_Patient" />
   <title value="KBV_PR_MIO_DIGA_Patient" />
-  <status value="active" />
+  <status value="draft" />
   <publisher value="Kassenärztliche Bundesvereinigung (KBV)" />
   <description value="Dieses Profil bildet die versicherte Person ab." />
   <copyright value="Im folgenden Profil können Codes aus den Codesystemen Snomed, Loinc oder Ucum enthalten sein, die dem folgenden Urheberrecht unterliegen: This material includes SNOMED Clinical Terms® SNOMED CT® which is used by permission of SNOMED International. All rights reserved. SNOMED CT®, was originally created by The College of American Pathologists. SNOMED and SNOMED CT are registered trademarks of SNOMED International. Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license. This material contains content from Loinc http://loinc.org. Loinc is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes Loinc Committee and is available at no cost under the license at http://loinc.org/license. Loinc® is a registered United States trademark of Regenstrief Institute, Inc. This product includes all or a portion of the UCUM table, UCUM codes, and UCUM definitions or is derived from it, subject to a license from Regenstrief Institute, Inc. and The UCUM Patient. Your use of the UCUM table, UCUM codes, UCUM definitions also is subject to this license, a copy of which is available at ​http://unitsofmeasure.org. The current complete UCUM table, UCUM Specification are available for download at ​http://unitsofmeasure.org. The UCUM table and UCUM codes are copyright © 1995-2009, Regenstrief Institute, Inc. and the Unified Codes for Units of Measures UCUM Patient. All rights reserved. THE UCUM TABLE IN ALL FORMATS, UCUM DEFINITIONS, AND SPECIFICATION ARE PROVIDED &quot;AS IS.&quot; ANY EXPRESS OR IMPLIED WARRANTIES ARE DISCLAIMED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE." />
@@ -70,7 +71,7 @@
       <path value="Patient.meta.profile" />
       <min value="1" />
       <max value="1" />
-      <patternCanonical value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Patient|1.0.0" />
+      <patternCanonical value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Patient|1.1.0" />
     </element>
     <element id="Patient.meta.security">
       <path value="Patient.meta.security" />
@@ -121,7 +122,7 @@
       <sliceName value="pid" />
       <type>
         <code value="Identifier" />
-        <profile value="http://fhir.de/StructureDefinition/identifier-pid|0.9.13" />
+        <profile value="http://fhir.de/StructureDefinition/identifier-pid|1.3.2" />
       </type>
       <mustSupport value="true" />
     </element>
@@ -168,7 +169,7 @@
       <max value="1" />
       <type>
         <code value="Identifier" />
-        <profile value="http://fhir.de/StructureDefinition/identifier-pseudo-kvid|0.9.13" />
+        <profile value="http://fhir.de/StructureDefinition/identifier-pseudo-kvid|1.3.2" />
       </type>
       <mustSupport value="true" />
     </element>
@@ -219,7 +220,7 @@
       <max value="1" />
       <type>
         <code value="Identifier" />
-        <profile value="http://fhir.de/StructureDefinition/identifier-kvid-10|0.9.13" />
+        <profile value="http://fhir.de/StructureDefinition/identifier-kvid-10|1.3.2" />
       </type>
       <mustSupport value="true" />
     </element>
@@ -270,7 +271,7 @@
       <max value="1" />
       <type>
         <code value="Identifier" />
-        <profile value="http://fhir.de/StructureDefinition/identifier-pkv|0.9.13" />
+        <profile value="http://fhir.de/StructureDefinition/identifier-pkv|1.3.2" />
       </type>
       <mustSupport value="true" />
     </element>
@@ -309,10 +310,6 @@
     </element>
     <element id="Patient.identifier:versichertennummer_pkv.period">
       <path value="Patient.identifier.period" />
-      <max value="0" />
-    </element>
-    <element id="Patient.identifier:versichertennummer_pkv.assigner">
-      <path value="Patient.identifier.assigner" />
       <max value="0" />
     </element>
     <element id="Patient.identifier:reisepassnummer">
@@ -496,6 +493,67 @@
       <path value="Patient.identifier.assigner" />
       <max value="0" />
     </element>
+    <element id="Patient.identifier:versichertenId_PKV">
+      <path value="Patient.identifier" />
+      <sliceName value="versichertenId_PKV" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.identifier:versichertenId_PKV.type">
+      <path value="Patient.identifier.type" />
+      <min value="1" />
+    </element>
+    <element id="Patient.identifier:versichertenId_PKV.type.coding">
+      <path value="Patient.identifier.type.coding" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="Patient.identifier:versichertenId_PKV.type.coding.system">
+      <path value="Patient.identifier.type.coding.system" />
+      <min value="1" />
+      <fixedUri value="http://fhir.de/CodeSystem/identifier-type-de-basis" />
+    </element>
+    <element id="Patient.identifier:versichertenId_PKV.type.coding.version">
+      <path value="Patient.identifier.type.coding.version" />
+      <min value="1" />
+    </element>
+    <element id="Patient.identifier:versichertenId_PKV.type.coding.code">
+      <path value="Patient.identifier.type.coding.code" />
+      <min value="1" />
+      <fixedCode value="PKV" />
+    </element>
+    <element id="Patient.identifier:versichertenId_PKV.type.coding.display">
+      <path value="Patient.identifier.type.coding.display" />
+      <min value="1" />
+      <patternString value="Resource identifier" />
+    </element>
+    <element id="Patient.identifier:versichertenId_PKV.type.coding.userSelected">
+      <path value="Patient.identifier.type.coding.userSelected" />
+      <max value="0" />
+    </element>
+    <element id="Patient.identifier:versichertenId_PKV.type.text">
+      <path value="Patient.identifier.type.text" />
+      <max value="0" />
+    </element>
+    <element id="Patient.identifier:versichertenId_PKV.system">
+      <path value="Patient.identifier.system" />
+      <min value="1" />
+      <fixedUri value="http://fhir.de/sid/pkv/kvid-10" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.identifier:versichertenId_PKV.value">
+      <path value="Patient.identifier.value" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.identifier:versichertenId_PKV.period">
+      <path value="Patient.identifier.period" />
+      <max value="0" />
+    </element>
+    <element id="Patient.identifier:versichertenId_PKV.assigner">
+      <path value="Patient.identifier.assigner" />
+      <max value="0" />
+    </element>
     <element id="Patient.active">
       <path value="Patient.active" />
       <max value="0" />
@@ -517,7 +575,7 @@
       <max value="1" />
       <type>
         <code value="HumanName" />
-        <profile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_Base_Datatype_Name|1.2.1" />
+        <profile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_Base_Datatype_Name|1.3.0" />
       </type>
       <mustSupport value="true" />
     </element>
@@ -536,7 +594,7 @@
           <type value="value" />
           <path value="url" />
         </discriminator>
-        <rules value="open" />
+        <rules value="closed" />
       </slicing>
       <min value="1" />
       <mustSupport value="true" />
@@ -613,7 +671,6 @@
     </element>
     <element id="Patient.name:name.given">
       <path value="Patient.name.given" />
-      <min value="1" />
       <mustSupport value="true" />
     </element>
     <element id="Patient.name:name.prefix">
@@ -628,7 +685,7 @@
           <type value="value" />
           <path value="url" />
         </discriminator>
-        <rules value="open" />
+        <rules value="closed" />
       </slicing>
       <min value="1" />
       <mustSupport value="true" />
@@ -636,6 +693,18 @@
     <element id="Patient.name:name.prefix.extension:prefix-qualifier">
       <path value="Patient.name.prefix.extension" />
       <sliceName value="prefix-qualifier" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.name:name.prefix.extension:prefix-qualifier.value[x]">
+      <path value="Patient.name.prefix.extension.value[x]" />
+      <slicing>
+        <discriminator>
+          <type value="type" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="closed" />
+      </slicing>
       <min value="1" />
       <mustSupport value="true" />
     </element>
@@ -659,7 +728,7 @@
       <max value="1" />
       <type>
         <code value="HumanName" />
-        <profile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_Base_Datatype_Maiden_Name|1.2.1" />
+        <profile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_Base_Datatype_Maiden_Name|1.3.0" />
       </type>
       <mustSupport value="true" />
     </element>
@@ -678,7 +747,7 @@
           <type value="value" />
           <path value="url" />
         </discriminator>
-        <rules value="open" />
+        <rules value="closed" />
       </slicing>
       <min value="1" />
       <mustSupport value="true" />
@@ -765,62 +834,12 @@
       <path value="Patient.telecom" />
       <type>
         <code value="ContactPoint" />
-        <profile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_Base_Datatype_Contactpoint" />
+        <profile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_Base_Datatype_Contactpoint|1.3.0" />
       </type>
       <mustSupport value="true" />
     </element>
     <element id="Patient.telecom.system">
       <path value="Patient.telecom.system" />
-      <mustSupport value="true" />
-    </element>
-    <element id="Patient.telecom.system.extension">
-      <path value="Patient.telecom.system.extension" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="url" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-      <min value="1" />
-    </element>
-    <element id="Patient.telecom.system.extension:anzeigenameCode">
-      <path value="Patient.telecom.system.extension" />
-      <sliceName value="anzeigenameCode" />
-      <min value="1" />
-      <max value="1" />
-      <mustSupport value="true" />
-    </element>
-    <element id="Patient.telecom.system.extension:anzeigenameCode.extension">
-      <path value="Patient.telecom.system.extension.extension" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="url" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-      <min value="1" />
-    </element>
-    <element id="Patient.telecom.system.extension:anzeigenameCode.extension:content">
-      <path value="Patient.telecom.system.extension.extension" />
-      <sliceName value="content" />
-      <min value="1" />
-    </element>
-    <element id="Patient.telecom.system.extension:anzeigenameCode.extension:content.value[x]">
-      <path value="Patient.telecom.system.extension.extension.value[x]" />
-      <slicing>
-        <discriminator>
-          <type value="type" />
-          <path value="$this" />
-        </discriminator>
-        <rules value="closed" />
-      </slicing>
-      <mustSupport value="true" />
-    </element>
-    <element id="Patient.telecom.system.extension:anzeigenameCode.extension:content.value[x]:valueString">
-      <path value="Patient.telecom.system.extension.extension.value[x]" />
-      <sliceName value="valueString" />
       <mustSupport value="true" />
     </element>
     <element id="Patient.telecom.value">
@@ -851,7 +870,7 @@
           <type value="value" />
           <path value="url" />
         </discriminator>
-        <rules value="open" />
+        <rules value="closed" />
       </slicing>
     </element>
     <element id="Patient.gender.extension:other-amtlich">
@@ -860,36 +879,8 @@
       <max value="1" />
       <type>
         <code value="Extension" />
-        <profile value="http://fhir.de/StructureDefinition/gender-amtlich-de|0.9.13" />
+        <profile value="http://fhir.de/StructureDefinition/gender-amtlich-de|1.3.2" />
       </type>
-    </element>
-    <element id="Patient.gender.extension:anzeigenameCode">
-      <path value="Patient.gender.extension" />
-      <sliceName value="anzeigenameCode" />
-      <max value="1" />
-      <type>
-        <code value="Extension" />
-        <profile value="https://fhir.kbv.de/StructureDefinition/KBV_EX_Base_Terminology_German" />
-      </type>
-    </element>
-    <element id="Patient.gender.extension:anzeigenameCode.extension">
-      <path value="Patient.gender.extension.extension" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="url" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-    </element>
-    <element id="Patient.gender.extension:anzeigenameCode.extension:content">
-      <path value="Patient.gender.extension.extension" />
-      <sliceName value="content" />
-    </element>
-    <element id="Patient.gender.extension:anzeigenameCode.extension:content.value[x]:valueString">
-      <path value="Patient.gender.extension.extension.value[x]" />
-      <sliceName value="valueString" />
-      <definition value="In diesem Attribut sollen die entsprechende deutsche Bezeichnung des Loinc oder Snomed-Codes aus der Conceptmap https://fhir.kbv.de/ConceptMap/KBV_CM_Base_Gender_German eingetragen werden." />
     </element>
     <element id="Patient.birthDate">
       <path value="Patient.birthDate" />
@@ -913,10 +904,9 @@
     <element id="Patient.address:Strassenanschrift">
       <path value="Patient.address" />
       <sliceName value="Strassenanschrift" />
-      <max value="1" />
       <type>
         <code value="Address" />
-        <profile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_Base_Datatype_Street_Address" />
+        <profile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_Base_Datatype_Street_Address|1.3.0" />
       </type>
       <mustSupport value="true" />
     </element>
@@ -927,15 +917,31 @@
           <type value="value" />
           <path value="url" />
         </discriminator>
-        <rules value="open" />
+        <rules value="closed" />
       </slicing>
       <mustSupport value="true" />
     </element>
     <element id="Patient.address:Strassenanschrift.extension:Stadtteil">
       <path value="Patient.address.extension" />
       <sliceName value="Stadtteil" />
-      <min value="0" />
       <mustSupport value="true" />
+    </element>
+    <element id="Patient.address:Strassenanschrift.extension:Stadtteil.value[x]">
+      <path value="Patient.address.extension.value[x]" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.address:Strassenanschrift.extension:Stadtteil.value[x]:valueString">
+      <path value="Patient.address.extension.value[x]" />
+      <sliceName value="valueString" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.address:Strassenanschrift.use">
+      <path value="Patient.address.use" />
+      <max value="0" />
+    </element>
+    <element id="Patient.address:Strassenanschrift.text">
+      <path value="Patient.address.text" />
+      <max value="0" />
     </element>
     <element id="Patient.address:Strassenanschrift.line">
       <path value="Patient.address.line" />
@@ -948,7 +954,7 @@
           <type value="value" />
           <path value="url" />
         </discriminator>
-        <rules value="open" />
+        <rules value="closed" />
       </slicing>
       <min value="0" />
       <mustSupport value="true" />
@@ -1042,10 +1048,9 @@
     <element id="Patient.address:Postfach">
       <path value="Patient.address" />
       <sliceName value="Postfach" />
-      <max value="1" />
       <type>
         <code value="Address" />
-        <profile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_Base_Datatype_Post_Office_Box" />
+        <profile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_Base_Datatype_Post_Office_Box|1.3.0" />
       </type>
       <mustSupport value="true" />
     </element>
@@ -1056,7 +1061,7 @@
           <type value="value" />
           <path value="url" />
         </discriminator>
-        <rules value="open" />
+        <rules value="closed" />
       </slicing>
       <min value="0" />
       <mustSupport value="true" />
@@ -1074,7 +1079,7 @@
           <type value="type" />
           <path value="$this" />
         </discriminator>
-        <rules value="open" />
+        <rules value="closed" />
       </slicing>
       <mustSupport value="true" />
     </element>
@@ -1083,6 +1088,14 @@
       <sliceName value="valueString" />
       <min value="1" />
       <mustSupport value="true" />
+    </element>
+    <element id="Patient.address:Postfach.use">
+      <path value="Patient.address.use" />
+      <max value="0" />
+    </element>
+    <element id="Patient.address:Postfach.text">
+      <path value="Patient.address.text" />
+      <max value="0" />
     </element>
     <element id="Patient.address:Postfach.line">
       <path value="Patient.address.line" />
@@ -1096,15 +1109,13 @@
           <type value="value" />
           <path value="url" />
         </discriminator>
-        <rules value="open" />
+        <rules value="closed" />
       </slicing>
-      <min value="1" />
       <mustSupport value="true" />
     </element>
     <element id="Patient.address:Postfach.line.extension:Postfach">
       <path value="Patient.address.line.extension" />
       <sliceName value="Postfach" />
-      <min value="1" />
       <mustSupport value="true" />
     </element>
     <element id="Patient.address:Postfach.line.extension:Postfach.value[x]">
@@ -1162,11 +1173,11 @@
     <element id="Patient.contact.address.country">
       <path value="Patient.contact.address.country" />
       <short value="Staat" />
-      <definition value="Staat gemäß dem ValueSet https://fhir.kbv.de/ValueSet/KBV_VS_BASE_GemRS_Anlage_8" />
-      <comment value="Staat gemäß dem ValueSet https://fhir.kbv.de/ValueSet/KBV_VS_BASE_GemRS_Anlage_8" />
+      <definition value="Staat gemäß dem ValueSet https://fhir.kbv.de/ValueSet/KBV_VS_Base_Deuev_Anlage_8|1.3.0" />
+      <comment value="Staat gemäß dem ValueSet https://fhir.kbv.de/ValueSet/KBV_VS_Base_Deuev_Anlage_8|1.3.0" />
       <binding>
         <strength value="extensible" />
-        <valueSet value="https://fhir.kbv.de/ValueSet/KBV_VS_BASE_GemRS_Anlage_8" />
+        <valueSet value="https://fhir.kbv.de/ValueSet/KBV_VS_Base_Deuev_Anlage_8|1.3.0" />
       </binding>
     </element>
     <element id="Patient.communication">
@@ -1178,6 +1189,10 @@
     <element id="Patient.communication.language">
       <path value="Patient.communication.language" />
       <mustSupport value="true" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="https://fhir.kbv.de/ValueSet/KBV_VS_Base_CommonLanguages|1.3.0" />
+      </binding>
     </element>
     <element id="Patient.communication.language.coding">
       <path value="Patient.communication.language.coding" />

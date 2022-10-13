@@ -1,0 +1,25 @@
+<Provenance xmlns="http://hl7.org/fhir">
+  <id value="dca59e46-3179-11ec-8d3d-0242ac130003" />
+  <meta>
+    <versionId value="1"/>
+    <lastUpdated value="2015-02-07T13:28:17.239+02:00"/>
+    <profile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Provenance|1.1.0" />
+  </meta>
+  <target>
+    <reference value="urn:uuid:dca597e8-3179-11ec-8d3d-0242ac130003" />
+  </target>
+  <recorded value="2019-12-23T08:39:24+10:00" />
+  <agent>
+    <type>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/provenance-participant-type" />
+        <version value="4.0.1" />
+        <code value="author" />
+        <display value="Author" />
+      </coding>
+    </type>
+    <who>
+      <reference value="urn:uuid:dca59b4e-3179-11ec-8d3d-0242ac130003" />
+    </who>
+  </agent>
+</Provenance>

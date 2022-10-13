@@ -1,0 +1,76 @@
+<RelatedPerson xmlns="http://hl7.org/fhir">
+	<id value="dca5a206-3179-11ec-8d3d-0242ac130003" />
+	<meta>
+		<versionId value="1"/>
+		<lastUpdated value="2015-02-07T13:28:17.239+02:00"/>
+		<profile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_RelatedPerson|1.1.0" />
+	</meta>
+	<identifier>
+		<type>
+			<coding>
+				<system value="http://terminology.hl7.org/CodeSystem/v2-0203" />
+				<version value="2.9" />
+				<code value="RI" />
+				<display value="Resource identifier" />
+			</coding>
+		</type>
+		<system value="urn:ietf:rfc:3986" />
+		<value value="urn:uuid:dca579fc-3179-11ec-8d3d-0242ac130003" />
+	</identifier>
+	<patient>
+		<reference value="urn:uuid:e8610a8a-85dc-4a49-88be-ee8d3ab69f73" />
+	</patient>
+	<relationship>
+		<coding>
+			<system value="http://snomed.info/sct" />
+			<version value="http://snomed.info/sct/900000000000207008/version/20220331" />
+			<code value="54056000" />
+			<display value="Trustee (person)" />
+		</coding>
+	</relationship>
+	<name>
+		<use value="official" />
+		<text value="Ludger Königsstein Graf von Mangels" />
+		<family value="Königsstein">
+			<extension url="http://fhir.de/StructureDefinition/humanname-namenszusatz">
+				<valueString value="Graf" />
+			</extension>
+			<extension url="http://hl7.org/fhir/StructureDefinition/humanname-own-name">
+				<valueString value="Königsstein" />
+			</extension>
+			<extension url="http://hl7.org/fhir/StructureDefinition/humanname-own-prefix">
+				<valueString value="von" />
+			</extension>
+		</family>
+		<given value="Ludger" />
+	</name>
+
+	<telecom>
+		<system value="phone" />
+		<value value="012345678901"/>
+	</telecom>
+
+
+	<address>
+		<extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-precinct">
+			<valueString value="Mitte" />
+		</extension>
+		<type value="both" />
+		<line value="Musterweg 42">
+			<extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName">
+				<valueString value="Musterweg" />
+			</extension>
+			<extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber">
+				<valueString value="42" />
+			</extension>
+			<extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-additionalLocator">
+				<valueString value="Hinterhof" />
+			</extension>
+		</line>
+		<line value="Mitte" />
+		<city value="Berlin" />
+		<postalCode value="10787" />
+		<country value="D" />
+	</address>
+
+</RelatedPerson>

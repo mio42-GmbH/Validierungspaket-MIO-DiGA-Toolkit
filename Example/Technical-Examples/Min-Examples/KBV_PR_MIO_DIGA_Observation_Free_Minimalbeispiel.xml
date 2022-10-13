@@ -1,0 +1,12 @@
+<Observation xmlns="http://hl7.org/fhir">
+	<id value="dca5a2c4-3179-11ec-8d3d-0242ac130003" />
+	<meta>
+		<versionId value="1"/>
+		<lastUpdated value="2015-02-07T13:28:17.239+02:00"/>
+		<profile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Observation_Free|1.1.0" />
+	</meta>
+	<status value="final" />
+	<code>
+		<text value="Test" />
+	</code>
+</Observation>

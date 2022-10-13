@@ -1,0 +1,336 @@
+<ValueSet xmlns="http://hl7.org/fhir">
+    <id value="KBV-VS-MIO-DiGA-Functional-Assessment-Type"/>
+    <url value="https://fhir.kbv.de/ValueSet/KBV_VS_MIO_DIGA_Functional_Assessment_Type"/>
+    <version value="1.1.0"/>
+    <name value="KBV_VS_MIO_DIGA_Functional_Assessment_Type"/>
+    <title value="Funktionsbeurteilungstyp"/>
+    <status value="draft"/>
+    <experimental value="false"/>
+    <publisher value="Kassenärztliche Bundesvereinigung (KBV)"/>
+    <contact>
+        <telecom>
+            <system value="url"/>
+            <value value="https://mio.kbv.de"/>
+        </telecom>
+    </contact>
+    <description value="Dieses Valueset enthält die Codes zur Beschreibung von Funktionsbeurteilungstyp."/>
+    <immutable value="false"/>
+    <copyright value="Im folgenden Profil können Codes aus den Codesystemen Snomed, Loinc oder Ucum enthalten sein, die dem folgenden Urheberrecht unterliegen: This material includes SNOMED Clinical Terms® (SNOMED CT®) which is used by permission of SNOMED International. All rights reserved. SNOMED CT®, was originally created by The College of American Pathologists. SNOMED and SNOMED CT are registered trademarks of SNOMED International. Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license. This material contains content from LOINC (http://loinc.org). LOINC is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc. This product includes all or a portion of the UCUM table, UCUM codes, and UCUM definitions or is derived from it, subject to a license from Regenstrief Institute, Inc. and The UCUM Organization. Your use of the UCUM table, UCUM codes, UCUM definitions also is subject to this license, a copy of which is available at ​http://unitsofmeasure.org. The current complete UCUM table, UCUM Specification are available for download at http://unitsofmeasure.org. The UCUM table and UCUM codes are copyright © 1995-2009, Regenstrief Institute, Inc. and the Unified Codes for Units of Measures (UCUM) Organization. All rights reserved. THE UCUM TABLE (IN ALL FORMATS), UCUM DEFINITIONS, AND SPECIFICATION ARE PROVIDED &quot;AS IS.&quot; ANY EXPRESS OR IMPLIED WARRANTIES ARE DISCLAIMED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE."/>
+    <compose>
+        <include>
+            <system value="http://hl7.org/fhir/sid/icf-nl"/>
+            <concept>
+                <code value="b1"/>
+                <display value="Mentale Funktionen"/>
+            </concept>
+            <concept>
+                <code value="b140-b189"/>
+                <display value="Spezifische mentale Funktionen"/>
+            </concept>
+            <concept>
+                <code value="b110-b139"/>
+                <display value="Globale mentale Funktionen"/>
+            </concept>
+            <concept>
+                <code value="b2"/>
+                <display value="Sinnesfunktionen und Schmerz"/>
+            </concept>
+            <concept>
+                <code value="b210-b229"/>
+                <display value="Seh- und verwandte Funktionen"/>
+            </concept>
+            <concept>
+                <code value="b230-b249"/>
+                <display value="Hör- und Vestibularfunktionen"/>
+            </concept>
+            <concept>
+                <code value="b250-b279"/>
+                <display value="Weitere Sinnesfunktionen"/>
+            </concept>
+            <concept>
+                <code value="b280-b289"/>
+                <display value="Schmerz"/>
+            </concept>
+            <concept>
+                <code value="b3"/>
+                <display value="Stimm- und Sprechfunktionen"/>
+            </concept>
+            <concept>
+                <code value="b4"/>
+                <display value="Funktionen des kardiovaskulären, hämatologischen, Immun- und Atmungssystems"/>
+            </concept>
+            <concept>
+                <code value="b410-b429"/>
+                <display value="Funktionen des kardiovaskulären Systems"/>
+            </concept>
+            <concept>
+                <code value="b430-b439"/>
+                <display value="Funktionen des hämatologischen und des Immunsystems"/>
+            </concept>
+            <concept>
+                <code value="b450-b469"/>
+                <display value="Weitere Funktionen und Empfindungen, die das kardiovaskuläre und Atmungssystem betreffen"/>
+            </concept>
+            <concept>
+                <code value="b5"/>
+                <display value="Funktionen des Verdauungs-, des Stoffwechsel- und des endokrinen Systems"/>
+            </concept>
+            <concept>
+                <code value="b510-b539"/>
+                <display value="Funktionen im Zusammenhang mit dem Verdauungssystem"/>
+            </concept>
+            <concept>
+                <code value="b540-b559"/>
+                <display value="Funktionen im Zusammenhang mit dem Stoffwechsel- und dem endokrinen System"/>
+            </concept>
+            <concept>
+                <code value="b6"/>
+                <display value="Funktionen des Urogenital- und reproduktiven Systems"/>
+            </concept>
+            <concept>
+                <code value="b640-b679"/>
+                <display value="Genital- und reproduktive Funktionen"/>
+            </concept>
+            <concept>
+                <code value="b7"/>
+                <display value="Neuromuskuloskeletale und bewegungsbezogene Funktionen"/>
+            </concept>
+            <concept>
+                <code value="b710-b729"/>
+                <display value="Funktionen der Gelenke und Knochen"/>
+            </concept>
+            <concept>
+                <code value="b730-b749"/>
+                <display value="Funktionen der Muskeln"/>
+            </concept>
+            <concept>
+                <code value="b750"/>
+                <display value="Funktionen der motorischen Reflexe"/>
+            </concept>
+            <concept>
+                <code value="b8"/>
+                <display value="Funktionen der Haut und der Hautanhangsgebilde"/>
+            </concept>
+            <concept>
+                <code value="b810-b849"/>
+                <display value="Funktionen der Haut"/>
+            </concept>
+            <concept>
+                <code value="b850-b869"/>
+                <display value="Funktionen des Haars und der Nägel"/>
+            </concept>
+            <concept>
+                <code value="d410-d429"/>
+                <display value="Die Körperposition ändern und aufrecht erhalten"/>
+            </concept>
+            <concept>
+                <code value="d430-d449"/>
+                <display value="Gegenstände tragen, bewegen und handhaben"/>
+            </concept>
+            <concept>
+                <code value="d5"/>
+                <display value="Selbstversorgung"/>
+            </concept>
+            <concept>
+                <code value="d510"/>
+                <display value="Sich waschen"/>
+            </concept>
+            <concept>
+                <code value="d520"/>
+                <display value="Seine Körperteile pflegen"/>
+            </concept>
+            <concept>
+                <code value="d530"/>
+                <display value="Die Toilette benutzen"/>
+            </concept>
+            <concept>
+                <code value="d540"/>
+                <display value="Sich kleiden"/>
+            </concept>
+            <concept>
+                <code value="d550"/>
+                <display value="Essen"/>
+            </concept>
+            <concept>
+                <code value="d560"/>
+                <display value="Trinken"/>
+            </concept>
+        </include>
+    </compose>
+    <expansion>
+        <identifier value="a5f83837-2df7-11ed-93b1-005056adc104"/>
+        <timestamp value="2022-09-06T17:21:59+02:00"/>
+        <total value="34"/>
+        <offset value="0"/>
+        <contains>
+            <system value="http://hl7.org/fhir/sid/icf-nl"/>
+            <code value="b1"/>
+            <display value="Mentale Funktionen"/>
+        </contains>
+        <contains>
+            <system value="http://hl7.org/fhir/sid/icf-nl"/>
+            <code value="b140-b189"/>
+            <display value="Spezifische mentale Funktionen"/>
+        </contains>
+        <contains>
+            <system value="http://hl7.org/fhir/sid/icf-nl"/>
+            <code value="b110-b139"/>
+            <display value="Globale mentale Funktionen"/>
+        </contains>
+        <contains>
+            <system value="http://hl7.org/fhir/sid/icf-nl"/>
+            <code value="b2"/>
+            <display value="Sinnesfunktionen und Schmerz"/>
+        </contains>
+        <contains>
+            <system value="http://hl7.org/fhir/sid/icf-nl"/>
+            <code value="b210-b229"/>
+            <display value="Seh- und verwandte Funktionen"/>
+        </contains>
+        <contains>
+            <system value="http://hl7.org/fhir/sid/icf-nl"/>
+            <code value="b230-b249"/>
+            <display value="Hör- und Vestibularfunktionen"/>
+        </contains>
+        <contains>
+            <system value="http://hl7.org/fhir/sid/icf-nl"/>
+            <code value="b250-b279"/>
+            <display value="Weitere Sinnesfunktionen"/>
+        </contains>
+        <contains>
+            <system value="http://hl7.org/fhir/sid/icf-nl"/>
+            <code value="b280-b289"/>
+            <display value="Schmerz"/>
+        </contains>
+        <contains>
+            <system value="http://hl7.org/fhir/sid/icf-nl"/>
+            <code value="b3"/>
+            <display value="Stimm- und Sprechfunktionen"/>
+        </contains>
+        <contains>
+            <system value="http://hl7.org/fhir/sid/icf-nl"/>
+            <code value="b4"/>
+            <display value="Funktionen des kardiovaskulären, hämatologischen, Immun- und Atmungssystems"/>
+        </contains>
+        <contains>
+            <system value="http://hl7.org/fhir/sid/icf-nl"/>
+            <code value="b410-b429"/>
+            <display value="Funktionen des kardiovaskulären Systems"/>
+        </contains>
+        <contains>
+            <system value="http://hl7.org/fhir/sid/icf-nl"/>
+            <code value="b430-b439"/>
+            <display value="Funktionen des hämatologischen und des Immunsystems"/>
+        </contains>
+        <contains>
+            <system value="http://hl7.org/fhir/sid/icf-nl"/>
+            <code value="b450-b469"/>
+            <display value="Weitere Funktionen und Empfindungen, die das kardiovaskuläre und Atmungssystem betreffen"/>
+        </contains>
+        <contains>
+            <system value="http://hl7.org/fhir/sid/icf-nl"/>
+            <code value="b5"/>
+            <display value="Funktionen des Verdauungs-, des Stoffwechsel- und des endokrinen Systems"/>
+        </contains>
+        <contains>
+            <system value="http://hl7.org/fhir/sid/icf-nl"/>
+            <code value="b510-b539"/>
+            <display value="Funktionen im Zusammenhang mit dem Verdauungssystem"/>
+        </contains>
+        <contains>
+            <system value="http://hl7.org/fhir/sid/icf-nl"/>
+            <code value="b540-b559"/>
+            <display value="Funktionen im Zusammenhang mit dem Stoffwechsel- und dem endokrinen System"/>
+        </contains>
+        <contains>
+            <system value="http://hl7.org/fhir/sid/icf-nl"/>
+            <code value="b6"/>
+            <display value="Funktionen des Urogenital- und reproduktiven Systems"/>
+        </contains>
+        <contains>
+            <system value="http://hl7.org/fhir/sid/icf-nl"/>
+            <code value="b640-b679"/>
+            <display value="Genital- und reproduktive Funktionen"/>
+        </contains>
+        <contains>
+            <system value="http://hl7.org/fhir/sid/icf-nl"/>
+            <code value="b7"/>
+            <display value="Neuromuskuloskeletale und bewegungsbezogene Funktionen"/>
+        </contains>
+        <contains>
+            <system value="http://hl7.org/fhir/sid/icf-nl"/>
+            <code value="b710-b729"/>
+            <display value="Funktionen der Gelenke und Knochen"/>
+        </contains>
+        <contains>
+            <system value="http://hl7.org/fhir/sid/icf-nl"/>
+            <code value="b730-b749"/>
+            <display value="Funktionen der Muskeln"/>
+        </contains>
+        <contains>
+            <system value="http://hl7.org/fhir/sid/icf-nl"/>
+            <code value="b750"/>
+            <display value="Funktionen der motorischen Reflexe"/>
+        </contains>
+        <contains>
+            <system value="http://hl7.org/fhir/sid/icf-nl"/>
+            <code value="b8"/>
+            <display value="Funktionen der Haut und der Hautanhangsgebilde"/>
+        </contains>
+        <contains>
+            <system value="http://hl7.org/fhir/sid/icf-nl"/>
+            <code value="b810-b849"/>
+            <display value="Funktionen der Haut"/>
+        </contains>
+        <contains>
+            <system value="http://hl7.org/fhir/sid/icf-nl"/>
+            <code value="b850-b869"/>
+            <display value="Funktionen des Haars und der Nägel"/>
+        </contains>
+        <contains>
+            <system value="http://hl7.org/fhir/sid/icf-nl"/>
+            <code value="d410-d429"/>
+            <display value="Die Körperposition ändern und aufrecht erhalten"/>
+        </contains>
+        <contains>
+            <system value="http://hl7.org/fhir/sid/icf-nl"/>
+            <code value="d430-d449"/>
+            <display value="Gegenstände tragen, bewegen und handhaben"/>
+        </contains>
+        <contains>
+            <system value="http://hl7.org/fhir/sid/icf-nl"/>
+            <code value="d5"/>
+            <display value="Selbstversorgung"/>
+        </contains>
+        <contains>
+            <system value="http://hl7.org/fhir/sid/icf-nl"/>
+            <code value="d510"/>
+            <display value="Sich waschen"/>
+        </contains>
+        <contains>
+            <system value="http://hl7.org/fhir/sid/icf-nl"/>
+            <code value="d520"/>
+            <display value="Seine Körperteile pflegen"/>
+        </contains>
+        <contains>
+            <system value="http://hl7.org/fhir/sid/icf-nl"/>
+            <code value="d530"/>
+            <display value="Die Toilette benutzen"/>
+        </contains>
+        <contains>
+            <system value="http://hl7.org/fhir/sid/icf-nl"/>
+            <code value="d540"/>
+            <display value="Sich kleiden"/>
+        </contains>
+        <contains>
+            <system value="http://hl7.org/fhir/sid/icf-nl"/>
+            <code value="d550"/>
+            <display value="Essen"/>
+        </contains>
+        <contains>
+            <system value="http://hl7.org/fhir/sid/icf-nl"/>
+            <code value="d560"/>
+            <display value="Trinken"/>
+        </contains>
+    </expansion>
+</ValueSet>

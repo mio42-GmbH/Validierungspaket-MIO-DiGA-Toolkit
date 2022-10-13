@@ -1,0 +1,99 @@
+<AllergyIntolerance xmlns="http://hl7.org/fhir">
+  <id value="c3fd0113-9833-4333-bfd2-fff813222b64"/>
+  <meta>
+    <versionId value="1"/>
+    <lastUpdated value="2015-02-07T13:28:17.239+02:00"/>
+    <profile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_AllergyIntolerance|1.1.0"/>
+  </meta>
+  <extension url="https://fhir.kbv.de/StructureDefinition/KBV_EX_Base_Allergy_Intolerance_Abatement">
+    <valueDateTime value="2018-01-15T08:00:00+00:00"/>
+  </extension>
+  <extension url="https://fhir.kbv.de/StructureDefinition/KBV_EX_Base_Stage_Life">
+    <valueCodeableConcept>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <version value="http://snomed.info/sct/900000000000207008/version/20220331"/>
+        <code value="41847000"/>
+        <display value="Adulthood (qualifier value)"/>
+      </coding>
+    </valueCodeableConcept>
+  </extension>
+  <identifier>
+    <type>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+        <version value="2.9"/>
+        <code value="RI"/>
+        <display value="Resource identifier"/>
+      </coding>
+    </type>
+    <system value="urn:ietf:rfc:3986"/>
+    <value value="urn:uuid:dca576a0-3179-11ec-8d3d-0242ac130003"/>
+  </identifier>
+  <clinicalStatus>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical"/>
+      <version value="4.0.1"/>
+      <code value="active"/>
+      <display value="Active"/>
+    </coding>
+  </clinicalStatus>
+  <verificationStatus>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/allergyintolerance-verification"/>
+      <version value="4.0.1"/>
+      <code value="unconfirmed"/>
+      <display value="Unconfirmed"/>
+    </coding>
+  </verificationStatus>
+  <type value="allergy"/>
+  <category value="food"/>
+  <criticality value="low"/>
+  <code>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <version value="http://snomed.info/sct/900000000000207008/version/20220331"/>
+      <code value="227493005"/>
+      <display value="Cashew nuts"/>
+    </coding>
+    <coding>
+      <system value="http://fhir.de/CodeSystem/ask"/>
+      <version value="1.4.0"/>
+      <code value="207"/>
+      <display value="Natriumbenzoat"/>
+    </coding>
+    <text value="Natriumbenzoat" />
+  </code>
+  <patient>
+    <reference value="urn:uuid:e8610a8a-85dc-4a49-88be-ee8d3ab69f73"/>
+  </patient>
+  <onsetDateTime value="2020-02-20"/>
+  <recorder>
+    <reference value="urn:uuid:4b1c81d0-bce7-48bb-b7e4-9764dfb1283f"/>
+  </recorder>
+  <note>
+    <text value="Test"/>
+  </note>
+  <reaction>
+    <manifestation>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <version value="http://snomed.info/sct/900000000000207008/version/20220331"/>
+        <code value="91175000"/>
+        <display value="Seizure (finding)"/>
+      </coding>
+      <text value="Atemnot"/>
+    </manifestation>
+    <onset value="2020-05-20"/>
+    <severity value="mild"/>
+    <exposureRoute>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <version value="http://snomed.info/sct/900000000000207008/version/20220331"/>
+        <code value="372449004"/>
+        <display value="Dental route (qualifier value)"/>
+      </coding>
+      <text value="Haut"/>
+    </exposureRoute>
+  </reaction>
+</AllergyIntolerance>

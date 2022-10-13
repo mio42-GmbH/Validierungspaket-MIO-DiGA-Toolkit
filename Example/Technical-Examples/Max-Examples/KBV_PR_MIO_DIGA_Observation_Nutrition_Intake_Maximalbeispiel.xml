@@ -1,0 +1,74 @@
+<Observation xmlns="http://hl7.org/fhir">
+	<id value="dca5945a-3179-11ec-8d3d-0242ac130003" />
+	<meta>
+		<versionId value="1" />
+		<lastUpdated value="2015-02-07T13:28:17.239+02:00" />
+		<profile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Observation_Nutrition_Intake|1.1.0" />
+	</meta>
+	<identifier>
+		<type>
+			<coding>
+				<system value="http://terminology.hl7.org/CodeSystem/v2-0203" />
+				<version value="2.9" />
+				<code value="RI" />
+				<display value="Resource identifier" />
+			</coding>
+		</type>
+		<system value="urn:ietf:rfc:3986" />
+		<value value="urn:uuid:dca579fc-3179-11ec-8d3d-0242ac130003" />
+	</identifier>
+	<status value="final" />
+	<code>
+		<coding>
+			<system value="http://snomed.info/sct" />
+			<version value="http://snomed.info/sct/900000000000207008/version/20220331" />
+			<code value="255620007" />
+			<display value="Food (substance)" />
+		</coding>
+		<text value="Test" />
+	</code>
+	<subject>
+		<reference value="urn:uuid:e8610a8a-85dc-4a49-88be-ee8d3ab69f73" />
+	</subject>
+	<effectiveDateTime value="2020-02-02" />
+	<performer>
+		<reference value="urn:uuid:ebefcfca-7168-40e5-8918-7af38c7f10c9" />
+	</performer>
+	<note>
+		<text value="Test" />
+	</note>
+	<hasMember>
+		<reference value="urn:uuid:e8610a8a-85dc-4a49-88be-ee8d3ab69f73" />
+	</hasMember>
+	<component>
+		<extension url="https://fhir.kbv.de/StructureDefinition/KBV_EX_MIO_DIGA_Nutrition_Intake_Not_Consumed">
+			<valueBoolean value="true" />
+		</extension>
+		<extension url="https://fhir.kbv.de/StructureDefinition/KBV_EX_MIO_DIGA_Nutrition_Intake_Not_Consumed_Reason">
+			<valueCodeableConcept>
+				<coding>
+					<system value="http://snomed.info/sct" />
+					<version value="http://snomed.info/sct/900000000000207008/version/20220331" />
+					<code value="422587007" />
+					<display value="Nausea (finding)" />
+				</coding>
+				<text value="Test" />
+			</valueCodeableConcept>
+		</extension>
+		<code>
+			<coding>
+				<system value="http://snomed.info/sct" />
+				<version value="http://snomed.info/sct/900000000000207008/version/20220331" />
+				<code value="226575004" />
+				<display value="Naan bread (substance)" />
+			</coding>
+			<text value="Test" />
+		</code>
+		<valueQuantity>
+			<value value="200" />
+			<unit value="g" />
+			<system value="http://unitsofmeasure.org" />
+			<code value="g" />
+		</valueQuantity>
+	</component>
+</Observation>

@@ -1,0 +1,100 @@
+<CarePlan xmlns="http://hl7.org/fhir">
+  <id value="dca5a8dc-3179-11ec-8d3d-0242ac130003"/>
+  <meta>
+    <versionId value="1"/>
+    <lastUpdated value="2015-02-07T13:28:17.239+02:00"/>
+    <profile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_CarePlan|1.1.0"/>
+  </meta>
+  <identifier>
+    <type>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+        <version value="2.9"/>
+        <code value="RI"/>
+        <display value="Resource identifier"/>
+      </coding>
+    </type>
+    <system value="urn:ietf:rfc:3986"/>
+    <value value="urn:uuid:dca57b00-3179-11ec-8d3d-0242ac130003"/>
+  </identifier>
+  <replaces>
+    <reference value="urn:uuid:dca5bdb8-3179-11ec-8d3d-0242ac130003"/>
+  </replaces>
+  <status value="unknown"/>
+  <intent value="plan"/>
+  <title value="Plan"/>
+  <subject>
+    <reference value="urn:uuid:e8610a8a-85dc-4a49-88be-ee8d3ab69f73"/>
+  </subject>
+  <author>
+    <reference value="urn:uuid:e8610a8a-85dc-4a49-88be-ee8d3ab69f73"/>
+  </author>
+  <goal>
+    <reference value="urn:uuid:e8610a8a-85dc-4a49-88be-ee8d3ab69f73"/>
+  </goal>
+  <activity>
+    <outcomeCodeableConcept>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <version value="http://snomed.info/sct/900000000000207008/version/20220331"/>
+        <code value="397640006"/>
+        <display value="Healthcare knowledge finding (finding)"/>
+      </coding>
+      <text value="Test"/>
+    </outcomeCodeableConcept>
+    <detail>
+      <code>
+        <coding>
+          <system value="http://snomed.info/sct"/>
+          <version value="http://snomed.info/sct/900000000000207008/version/20220331"/>
+          <code value="91175000"/>
+          <display value="Seizure (finding)"/>
+        </coding>
+        <coding>
+          <system value="http://snomed.info/sct"/>
+          <version value="http://snomed.info/sct/900000000000207008/version/20220331"/>
+          <code value="286572006"/>
+          <display value="Activation of implant (procedure)"/>
+        </coding>
+        <text value="Test" />
+      </code>
+      <reasonCode>
+        <coding>
+          <system value="http://snomed.info/sct"/>
+          <version value="http://snomed.info/sct/900000000000207008/version/20220331"/>
+          <code value="404684003"/>
+          <display value="Clinical finding (finding)"/>
+        </coding>
+        <coding>
+          <system value="http://snomed.info/sct"/>
+          <version value="http://snomed.info/sct/900000000000207008/version/20220331"/>
+          <code value="281037003"/>
+          <display value="Child health observations (finding)"/>
+        </coding>
+        <text value="Test" />
+      </reasonCode>
+      <goal>
+        <reference value="urn:uuid:e8610a8a-85dc-4a49-88be-ee8d3ab69f73"/>
+      </goal>
+      <status value="completed"/>
+      <doNotPerform value="true"/>
+      <scheduledPeriod>
+        <start value="2020-09-12"/>
+        <end value="2020-09-15"/>
+      </scheduledPeriod>
+      <performer>
+        <reference value="urn:uuid:e8610a8a-85dc-4a49-88be-ee8d3ab69f73"/>
+      </performer>
+      <quantity>
+        <value value="1"/>
+        <unit value="1"/>
+        <system value="http://unitsofmeasure.org"/>
+        <code value="1"/>
+      </quantity>
+      <description value="Beschreibung"/>
+    </detail>
+  </activity>
+  <note>
+    <text value="Test"/>
+  </note>
+</CarePlan>

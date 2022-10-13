@@ -1,0 +1,88 @@
+<Observation xmlns="http://hl7.org/fhir">
+	<id value="dca58ae6-3179-11ec-8d3d-0242ac130003" />
+	<meta>
+		<versionId value="1"/>
+		<lastUpdated value="2015-02-07T13:28:17.239+02:00"/>
+		<profile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Observation_Assessment_Score|1.1.0" />
+	</meta>
+	<identifier>
+		<type>
+			<coding>
+				<system value="http://terminology.hl7.org/CodeSystem/v2-0203" />
+				<version value="2.9" />
+				<code value="RI" />
+				<display value="Resource identifier" />
+			</coding>
+		</type>
+		<system value="urn:ietf:rfc:3986" />
+		<value value="urn:uuid:dca579fc-3179-11ec-8d3d-0242ac130003" />
+	</identifier>
+	<status value="final" />
+	<code>
+		<coding>
+			<system value="http://snomed.info/sct" />
+			<version value="http://snomed.info/sct/900000000000207008/version/20220331" />
+			<code value="782487009" />
+			<display value="Assessment score (observable entity)" />
+		</coding>
+		<coding>
+			<system value="http://snomed.info/sct" />
+			<version value="http://snomed.info/sct/900000000000207008/version/20220331" />
+			<code value="782487009" />
+			<display value="Assessment score (observable entity)" />
+		</coding>
+		<text value="Test" />
+	</code>
+	<subject>
+		<reference value="urn:uuid:e8610a8a-85dc-4a49-88be-ee8d3ab69f73" />
+	</subject>
+	<effectiveDateTime value="2020-02-02" />
+	<performer>
+		<reference value="urn:uuid:ebefcfca-7168-40e5-8918-7af38c7f10c9" />
+	</performer>
+	<valueQuantity>
+		<value value="1" />
+		<unit value="score" />
+		<system value="http://unitsofmeasure.org" />
+		<code value="{score}" />
+	</valueQuantity>
+	<interpretation>
+		<coding>
+			<system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation" />
+			<version value="4.0.1" />
+			<code value="CAR" />
+			<display value="Carrier" />
+		</coding>
+	</interpretation>
+	<note>
+		<text value="Test" />
+	</note>
+	<device>
+		<reference value="urn:uuid:7d261218-8678-11eb-8dcd-0242ac130003"/>
+	</device>
+	<referenceRange>
+		<low>
+			<value value="1" />
+			<unit value="score" />
+			<system value="http://unitsofmeasure.org" />
+			<code value="{score}" />
+		</low>
+		<high>
+			<value value="1" />
+			<unit value="score" />
+			<system value="http://unitsofmeasure.org" />
+			<code value="{score}" />
+		</high>
+		<type>
+			<coding>
+				<system value="http://snomed.info/sct" />
+				<version value="http://snomed.info/sct/900000000000207008/version/20220331" />
+				<code value="278492000" />
+				<display value="Numerical range (qualifier value)" />
+			</coding>
+		</type>
+	</referenceRange>
+	<derivedFrom>
+		<reference value="urn:uuid:ebefcfca-7168-40e5-8918-7af38c7f10c9" />
+	</derivedFrom>
+</Observation>

@@ -1,9 +1,10 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="KBV-PR-MIO-DIGA-Observation-Assessment-Scale" />
   <url value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Observation_Assessment_Scale" />
-  <version value="1.0.0" />
+  <version value="1.1.0" />
   <name value="KBV_PR_MIO_DIGA_Observation_Assessment_Scale" />
   <title value="KBV_PR_MIO_DIGA_Observation_Assessment_Scale" />
-  <status value="active" />
+  <status value="draft" />
   <publisher value="Kassenärztliche Bundesvereinigung (KBV)" />
   <description value="Dieses Profil bildet eine Bewertungsskala ab." />
   <copyright value="Im folgenden Profil können Codes aus den Codesystemen Snomed, Loinc oder Ucum enthalten sein, die dem folgenden Urheberrecht unterliegen: This material includes SNOMED Clinical Terms® SNOMED CT® which is used by permission of SNOMED International. All rights reserved. SNOMED CT®, was originally created by The College of American Pathologists. SNOMED and SNOMED CT are registered trademarks of SNOMED International. Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license. This material contains content from Loinc http://loinc.org. Loinc is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes Loinc Committee and is available at no cost under the license at http://loinc.org/license. Loinc® is a registered United States trademark of Regenstrief Institute, Inc. This product includes all or a portion of the UCUM table, UCUM codes, and UCUM definitions or is derived from it, subject to a license from Regenstrief Institute, Inc. and The UCUM Organization. Your use of the UCUM table, UCUM codes, UCUM definitions also is subject to this license, a copy of which is available at ​http://unitsofmeasure.org. The current complete UCUM table, UCUM Specification are available for download at ​http://unitsofmeasure.org. The UCUM table and UCUM codes are copyright © 1995-2009, Regenstrief Institute, Inc. and the Unified Codes for Units of Measures UCUM Organization. All rights reserved. THE UCUM TABLE IN ALL FORMATS, UCUM DEFINITIONS, AND SPECIFICATION ARE PROVIDED &quot;AS IS.&quot; ANY EXPRESS OR IMPLIED WARRANTIES ARE DISCLAIMED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE." />
@@ -38,7 +39,7 @@
       <path value="Observation.meta.profile" />
       <min value="1" />
       <max value="1" />
-      <patternCanonical value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Observation_Assessment_Scale|1.0.0" />
+      <patternCanonical value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Observation_Assessment_Scale|1.1.0" />
     </element>
     <element id="Observation.meta.security">
       <path value="Observation.meta.security" />
@@ -144,10 +145,9 @@
     </element>
     <element id="Observation.partOf">
       <path value="Observation.partOf" />
-      <max value="1" />
       <type>
         <code value="Reference" />
-        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Procedure_Activity_Free|1.0.0" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Procedure_Activity|1.1.0" />
       </type>
       <mustSupport value="true" />
     </element>
@@ -174,6 +174,7 @@
     </element>
     <element id="Observation.category">
       <path value="Observation.category" />
+      <min value="1" />
       <max value="1" />
       <mustSupport value="true" />
     </element>
@@ -183,7 +184,7 @@
       <max value="1" />
       <patternCoding>
         <system value="http://snomed.info/sct" />
-        <version value="http://snomed.info/sct/900000000000207008/version/20220131" />
+        <version value="http://snomed.info/sct/900000000000207008/version/20220331" />
         <code value="782487009:370132008=30766002" />
         <display value="Assessment score (observable entity):Scale type (attribute)=Quantitative (qualifier value)" />
       </patternCoding>
@@ -204,61 +205,6 @@
     <element id="Observation.category.coding.display">
       <path value="Observation.category.coding.display" />
       <min value="1" />
-    </element>
-    <element id="Observation.category.coding.display.extension">
-      <path value="Observation.category.coding.display.extension" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="url" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-      <min value="1" />
-    </element>
-    <element id="Observation.category.coding.display.extension:anzeigenameCategory">
-      <path value="Observation.category.coding.display.extension" />
-      <sliceName value="anzeigenameCategory" />
-      <min value="1" />
-      <max value="1" />
-      <type>
-        <code value="Extension" />
-        <profile value="https://fhir.kbv.de/StructureDefinition/KBV_EX_Base_Terminology_German" />
-      </type>
-      <mustSupport value="true" />
-    </element>
-    <element id="Observation.category.coding.display.extension:anzeigenameCategory.extension">
-      <path value="Observation.category.coding.display.extension.extension" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="url" />
-        </discriminator>
-        <rules value="closed" />
-      </slicing>
-      <min value="1" />
-    </element>
-    <element id="Observation.category.coding.display.extension:anzeigenameCategory.extension:content">
-      <path value="Observation.category.coding.display.extension.extension" />
-      <sliceName value="content" />
-      <min value="1" />
-    </element>
-    <element id="Observation.category.coding.display.extension:anzeigenameCategory.extension:content.value[x]">
-      <path value="Observation.category.coding.display.extension.extension.value[x]" />
-      <slicing>
-        <discriminator>
-          <type value="type" />
-          <path value="$this" />
-        </discriminator>
-        <rules value="closed" />
-      </slicing>
-      <mustSupport value="true" />
-    </element>
-    <element id="Observation.category.coding.display.extension:anzeigenameCategory.extension:content.value[x]:valueString">
-      <path value="Observation.category.coding.display.extension.extension.valueString" />
-      <sliceName value="valueString" />
-      <fixedString value="Kardinalskala" />
-      <mustSupport value="true" />
     </element>
     <element id="Observation.category.coding.userSelected">
       <path value="Observation.category.coding.userSelected" />
@@ -305,7 +251,7 @@
       <min value="1" />
       <type>
         <code value="Reference" />
-        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Patient|1.0.0" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Patient|1.1.0" />
       </type>
       <mustSupport value="true" />
     </element>
@@ -367,10 +313,10 @@
       <max value="1" />
       <type>
         <code value="Reference" />
-        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Patient|1.0.0" />
-        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Practitioner|1.0.0" />
-        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_RelatedPerson|1.0.0" />
-        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_PractitionerRole|1.0.0" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Patient|1.1.0" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Practitioner|1.1.0" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_RelatedPerson|1.1.0" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_PractitionerRole|1.1.0" />
       </type>
       <mustSupport value="true" />
     </element>
@@ -400,6 +346,7 @@
         </discriminator>
         <rules value="closed" />
       </slicing>
+      <min value="1" />
       <type>
         <code value="Quantity" />
       </type>
@@ -434,6 +381,7 @@
     </element>
     <element id="Observation.value[x]:valueQuantity.system">
       <path value="Observation.value[x].system" />
+      <mustSupport value="true" />
     </element>
     <element id="Observation.value[x]:valueQuantity.code">
       <path value="Observation.value[x].code" />
@@ -449,7 +397,7 @@
       <mustSupport value="true" />
       <binding>
         <strength value="required" />
-        <valueSet value="https://fhir.kbv.de/ValueSet/KBV_VS_MIO_DIGA_Observation_Interpretation|1.0.0" />
+        <valueSet value="https://fhir.kbv.de/ValueSet/KBV_VS_MIO_DIGA_Observation_Interpretation|1.1.0" />
       </binding>
     </element>
     <element id="Observation.interpretation.coding">
@@ -473,61 +421,6 @@
       <path value="Observation.interpretation.coding.display" />
       <min value="1" />
     </element>
-    <element id="Observation.interpretation.coding.display.extension">
-      <path value="Observation.interpretation.coding.display.extension" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="url" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-      <min value="1" />
-    </element>
-    <element id="Observation.interpretation.coding.display.extension:anzeigenameCode">
-      <path value="Observation.interpretation.coding.display.extension" />
-      <sliceName value="anzeigenameCode" />
-      <min value="1" />
-      <max value="1" />
-      <type>
-        <code value="Extension" />
-        <profile value="https://fhir.kbv.de/StructureDefinition/KBV_EX_Base_Terminology_German" />
-      </type>
-      <mustSupport value="true" />
-    </element>
-    <element id="Observation.interpretation.coding.display.extension:anzeigenameCode.extension">
-      <path value="Observation.interpretation.coding.display.extension.extension" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="url" />
-        </discriminator>
-        <rules value="closed" />
-      </slicing>
-      <min value="1" />
-    </element>
-    <element id="Observation.interpretation.coding.display.extension:anzeigenameCode.extension:content">
-      <path value="Observation.interpretation.coding.display.extension.extension" />
-      <sliceName value="content" />
-      <min value="1" />
-    </element>
-    <element id="Observation.interpretation.coding.display.extension:anzeigenameCode.extension:content.value[x]">
-      <path value="Observation.interpretation.coding.display.extension.extension.value[x]" />
-      <slicing>
-        <discriminator>
-          <type value="type" />
-          <path value="$this" />
-        </discriminator>
-        <rules value="closed" />
-      </slicing>
-      <mustSupport value="true" />
-    </element>
-    <element id="Observation.interpretation.coding.display.extension:anzeigenameCode.extension:content.value[x]:valueString">
-      <path value="Observation.interpretation.coding.display.extension.extension.value[x]" />
-      <sliceName value="valueString" />
-      <definition value="In diesem Attribut sollen die entsprechende deutsche Bezeichnung des Loinc oder Snomed-Codes aus der Conceptmap eingetragen werden, also in diesem Fall den Displaynamen des Targetsystems aus  https://fhir.kbv.de/ConceptMap/KBV_CM_MIO_DIGA_Observation_Interpretation_German|1.0.0" />
-      <mustSupport value="true" />
-    </element>
     <element id="Observation.interpretation.coding.userSelected">
       <path value="Observation.interpretation.coding.userSelected" />
       <max value="0" />
@@ -546,10 +439,11 @@
     </element>
     <element id="Observation.method">
       <path value="Observation.method" />
+      <min value="1" />
       <mustSupport value="true" />
       <binding>
         <strength value="required" />
-        <valueSet value="https://fhir.kbv.de/ValueSet/KBV_VS_MIO_DIGA_Scale_Method|1.0.0" />
+        <valueSet value="https://fhir.kbv.de/ValueSet/KBV_VS_MIO_DIGA_Scale_Method|1.1.0" />
       </binding>
     </element>
     <element id="Observation.method.coding">
@@ -574,61 +468,6 @@
       <path value="Observation.method.coding.display" />
       <min value="1" />
     </element>
-    <element id="Observation.method.coding.display.extension">
-      <path value="Observation.method.coding.display.extension" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="url" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-      <min value="1" />
-    </element>
-    <element id="Observation.method.coding.display.extension:anzeigenameCode">
-      <path value="Observation.method.coding.display.extension" />
-      <sliceName value="anzeigenameCode" />
-      <min value="1" />
-      <max value="1" />
-      <type>
-        <code value="Extension" />
-        <profile value="https://fhir.kbv.de/StructureDefinition/KBV_EX_Base_Terminology_German" />
-      </type>
-      <mustSupport value="true" />
-    </element>
-    <element id="Observation.method.coding.display.extension:anzeigenameCode.extension">
-      <path value="Observation.method.coding.display.extension.extension" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="url" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-      <min value="1" />
-    </element>
-    <element id="Observation.method.coding.display.extension:anzeigenameCode.extension:content">
-      <path value="Observation.method.coding.display.extension.extension" />
-      <sliceName value="content" />
-      <min value="1" />
-    </element>
-    <element id="Observation.method.coding.display.extension:anzeigenameCode.extension:content.value[x]">
-      <path value="Observation.method.coding.display.extension.extension.value[x]" />
-      <slicing>
-        <discriminator>
-          <type value="type" />
-          <path value="$this" />
-        </discriminator>
-        <rules value="closed" />
-      </slicing>
-      <mustSupport value="true" />
-    </element>
-    <element id="Observation.method.coding.display.extension:anzeigenameCode.extension:content.value[x]:valueString">
-      <path value="Observation.method.coding.display.extension.extension.value[x]" />
-      <sliceName value="valueString" />
-      <definition value="In diesem Attribut sollen die entsprechende deutsche Bezeichnung des Loinc oder Snomed-Codes aus der Conceptmap eingetragen werden, also in diesem Fall den Displaynamen des Targetsystems aus  https://fhir.kbv.de/ConceptMap/KBV_CM_MIO_DIGA_Scale_Method_German|1.0.0" />
-      <mustSupport value="true" />
-    </element>
     <element id="Observation.method.coding.userSelected">
       <path value="Observation.method.coding.userSelected" />
       <max value="0" />
@@ -643,6 +482,28 @@
     </element>
     <element id="Observation.device">
       <path value="Observation.device" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Device|1.1.0" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Device_DIGA|1.1.0" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.device.reference">
+      <path value="Observation.device.reference" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.device.type">
+      <path value="Observation.device.type" />
+      <max value="0" />
+    </element>
+    <element id="Observation.device.identifier">
+      <path value="Observation.device.identifier" />
+      <max value="0" />
+    </element>
+    <element id="Observation.device.display">
+      <path value="Observation.device.display" />
       <max value="0" />
     </element>
     <element id="Observation.referenceRange">
@@ -665,6 +526,10 @@
       <path value="Observation.referenceRange.low.unit" />
       <mustSupport value="true" />
     </element>
+    <element id="Observation.referenceRange.low.system">
+      <path value="Observation.referenceRange.low.system" />
+      <mustSupport value="true" />
+    </element>
     <element id="Observation.referenceRange.low.code">
       <path value="Observation.referenceRange.low.code" />
       <mustSupport value="true" />
@@ -683,6 +548,10 @@
       <path value="Observation.referenceRange.high.unit" />
       <mustSupport value="true" />
     </element>
+    <element id="Observation.referenceRange.high.system">
+      <path value="Observation.referenceRange.high.system" />
+      <mustSupport value="true" />
+    </element>
     <element id="Observation.referenceRange.high.code">
       <path value="Observation.referenceRange.high.code" />
       <mustSupport value="true" />
@@ -698,7 +567,7 @@
       <max value="1" />
       <patternCoding>
         <system value="http://snomed.info/sct" />
-        <version value="http://snomed.info/sct/900000000000207008/version/20220131" />
+        <version value="http://snomed.info/sct/900000000000207008/version/20220331" />
         <code value="278492000" />
         <display value="Numerical range (qualifier value)" />
       </patternCoding>

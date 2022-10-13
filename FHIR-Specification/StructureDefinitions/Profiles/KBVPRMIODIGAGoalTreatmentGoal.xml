@@ -1,0 +1,471 @@
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="KBV-PR-MIO-DIGA-Goal-Treatment-Goal" />
+  <url value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Goal_Treatment_Goal" />
+  <version value="1.1.0" />
+  <name value="KBV_PR_MIO_DIGA_Goal_Treatment_Goal" />
+  <title value="KBV_PR_MIO_DIGA_Goal_Treatment_Goal" />
+  <status value="draft" />
+  <publisher value="Kassenärztliche Bundesvereinigung (KBV)"/>
+	<description value="Dieses Profil bildet das medikamentöse Behandlungsziel ab."/>
+	<copyright value="Im folgenden Profil können Codes aus den Codesystemen Snomed, Loinc oder Ucum enthalten sein, die dem folgenden Urheberrecht unterliegen: This material includes SNOMED Clinical Terms® SNOMED CT® which is used by permission of SNOMED International. All rights reserved. SNOMED CT®, was originally created by The College of American Pathologists. SNOMED and SNOMED CT are registered trademarks of SNOMED International. Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license. This material contains content from Loinc http://loinc.org. Loinc is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes Loinc Committee and is available at no cost under the license at http://loinc.org/license. Loinc® is a registered United States trademark of Regenstrief Institute, Inc. This product includes all or a portion of the UCUM table, UCUM codes, and UCUM definitions or is derived from it, subject to a license from Regenstrief Institute, Inc. and The UCUM Organization. Your use of the UCUM table, UCUM codes, UCUM definitions also is subject to this license, a copy of which is available at ​http://unitsofmeasure.org. The current complete UCUM table, UCUM Specification are available for download at ​http://unitsofmeasure.org. The UCUM table and UCUM codes are copyright © 1995-2009, Regenstrief Institute, Inc. and the Unified Codes for Units of Measures UCUM Organization. All rights reserved. THE UCUM TABLE IN ALL FORMATS, UCUM DEFINITIONS, AND SPECIFICATION ARE PROVIDED &quot;AS IS.&quot; ANY EXPRESS OR IMPLIED WARRANTIES ARE DISCLAIMED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE."/>
+  <fhirVersion value="4.0.1" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Goal" />
+  <baseDefinition value="https://fhir.kbv.de/StructureDefinition/KBV_PR_Base_Treatment_Goal" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Goal">
+			<path value="Goal"/>
+			<definition value="Dieses Profil bildet das medikamentöse Behandlungsziel ab."/>
+		</element>
+		<element id="Goal.meta">
+			<path value="Goal.meta"/>
+			<min value="1"/>
+		</element>
+		<element id="Goal.meta.versionId">
+			<path value="Goal.meta.versionId"/>
+			<min value="1"/>
+		</element>
+		<element id="Goal.meta.lastUpdated">
+			<path value="Goal.meta.lastUpdated"/>
+			<min value="1"/>
+		</element>
+		<element id="Goal.meta.source">
+			<path value="Goal.meta.source"/>
+			<max value="0"/>
+		</element>
+		<element id="Goal.meta.profile">
+			<path value="Goal.meta.profile"/>
+			<min value="1"/>
+			<max value="1"/>
+			<patternCanonical value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Goal_Treatment_Goal|1.1.0"/>
+		</element>
+		<element id="Goal.meta.security">
+			<path value="Goal.meta.security"/>
+			<max value="0"/>
+		</element>
+		<element id="Goal.meta.tag">
+			<path value="Goal.meta.tag"/>
+			<max value="0"/>
+		</element>
+		<element id="Goal.implicitRules">
+			<path value="Goal.implicitRules"/>
+			<max value="0"/>
+		</element>
+		<element id="Goal.language">
+			<path value="Goal.language"/>
+			<max value="0"/>
+		</element>
+		<element id="Goal.text">
+			<path value="Goal.text"/>
+			<definition value="In diesem Element können die, in der Instanz, enthaltenen Informationen in einer menschenlesbaren Form zusammengefasst werden. Dabei ist zu beachten, dass keine Informationen aufgenommen werden dürfen, die nicht in strukturierter Form an anderer Stelle in der Instanz enthalten sind."/>
+		</element>
+		<element id="Goal.text.status">
+			<path value="Goal.text.status"/>
+			<fixedCode value="extensions"/>
+		</element>
+		<element id="Goal.contained">
+			<path value="Goal.contained"/>
+			<max value="0"/>
+		</element>
+    <element id="Goal.extension">
+      <path value="Goal.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="closed" />
+      </slicing>
+      <mustSupport value="true" />
+    </element>
+    <element id="Goal.extension:endDatum">
+      <path value="Goal.extension" />
+      <sliceName value="endDatum" />
+      <min value="0" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Goal.identifier">
+			<path value="Goal.identifier"/>
+			<min value="1"/>
+			<max value="1"/>
+			<mustSupport value="true"/>
+		</element>
+		<element id="Goal.identifier.use">
+			<path value="Goal.identifier.use"/>
+			<max value="0"/>
+		</element>
+		<element id="Goal.identifier.type">
+			<path value="Goal.identifier.type"/>
+			<min value="1"/>
+			<patternCodeableConcept>
+				<coding>
+					<system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+					<version value="2.9"/>
+					<code value="RI"/>
+					<display value="Resource identifier"/>
+				</coding>
+			</patternCodeableConcept>
+		</element>
+		<element id="Goal.identifier.type.coding">
+			<path value="Goal.identifier.type.coding"/>
+			<min value="1"/>
+			<max value="1"/>
+		</element>
+		<element id="Goal.identifier.type.coding.system">
+			<path value="Goal.identifier.type.coding.system"/>
+			<min value="1"/>
+		</element>
+		<element id="Goal.identifier.type.coding.version">
+			<path value="Goal.identifier.type.coding.version"/>
+			<min value="1"/>
+		</element>
+		<element id="Goal.identifier.type.coding.code">
+			<path value="Goal.identifier.type.coding.code"/>
+			<min value="1"/>
+		</element>
+		<element id="Goal.identifier.type.coding.display">
+			<path value="Goal.identifier.type.coding.display"/>
+			<min value="1"/>
+		</element>
+		<element id="Goal.identifier.type.coding.userSelected">
+			<path value="Goal.identifier.type.coding.userSelected"/>
+			<max value="0"/>
+		</element>
+		<element id="Goal.identifier.type.text">
+			<path value="Goal.identifier.type.text"/>
+			<max value="0"/>
+		</element>
+		<element id="Goal.identifier.system">
+			<path value="Goal.identifier.system"/>
+			<min value="1"/>
+			<fixedUri value="urn:ietf:rfc:3986"/>
+			<mustSupport value="true"/>
+		</element>
+		<element id="Goal.identifier.value">
+			<path value="Goal.identifier.value"/>
+			<min value="1"/>
+			<mustSupport value="true"/>
+		</element>
+		<element id="Goal.identifier.period">
+			<path value="Goal.identifier.period"/>
+			<max value="0"/>
+		</element>
+		<element id="Goal.identifier.assigner">
+			<path value="Goal.identifier.assigner"/>
+			<max value="0"/>
+		</element>
+    <element id="Goal.lifecycleStatus">
+      <path value="Goal.lifecycleStatus" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Goal.achievementStatus">
+      <path value="Goal.achievementStatus" />
+      <max value="0" />
+    </element>
+    <element id="Goal.category">
+      <path value="Goal.category" />
+      <max value="0" />
+    </element>
+    <element id="Goal.priority">
+      <path value="Goal.priority" />
+      <max value="0" />
+    </element>
+    <element id="Goal.description">
+      <path value="Goal.description" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Goal.description.coding">
+      <path value="Goal.description.coding" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Goal.description.coding.version">
+      <path value="Goal.description.coding.version" />
+      <min value="1" />
+    </element>
+    <element id="Goal.description.coding.userSelected">
+      <path value="Goal.description.coding.userSelected" />
+      <max value="0" />
+    </element>
+    <element id="Goal.description.text">
+      <path value="Goal.description.text" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Goal.subject">
+      <path value="Goal.subject" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Patient|1.1.0" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Goal.start[x]">
+      <path value="Goal.start[x]" />
+      <slicing>
+				<discriminator>
+					<type value="type"/>
+					<path value="$this"/>
+				</discriminator>
+				<rules value="closed"/>
+			</slicing>
+      <type>
+				<code value="date"/>
+			</type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Goal.start[x]:startDate">
+      <path value="Goal.startDate" />
+      <sliceName value="startDate" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Goal.target">
+      <path value="Goal.target" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Goal.target.measure">
+      <path value="Goal.target.measure" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Goal.target.measure.coding">
+      <path value="Goal.target.measure.coding" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Goal.target.measure.coding.version">
+      <path value="Goal.target.measure.coding.version" />
+      <min value="1" />
+    </element>
+    <element id="Goal.target.measure.coding.userSelected">
+      <path value="Goal.target.measure.coding.userSelected" />
+      <max value="0" />
+    </element>
+    <element id="Goal.target.measure.text">
+      <path value="Goal.target.measure.text" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Goal.target.detail[x]">
+      <path value="Goal.target.detail[x]" />
+      <slicing>
+        <discriminator>
+          <type value="type" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="closed" />
+      </slicing>
+      <type>
+        <code value="Quantity" />
+      </type>
+      <type>
+        <code value="Range" />
+      </type>
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+      <type>
+        <code value="Ratio" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Goal.target.detail[x]:detailQuantity">
+      <path value="Goal.target.detailQuantity" />
+      <sliceName value="detailQuantity" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Goal.target.detail[x]:detailQuantity.value">
+      <path value="Goal.target.detailQuantity.value" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Goal.target.detail[x]:detailQuantity.comparator">
+      <path value="Goal.target.detailQuantity.comparator" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Goal.target.detail[x]:detailQuantity.unit">
+      <path value="Goal.target.detailQuantity.unit" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Goal.target.detail[x]:detailQuantity.system">
+      <path value="Goal.target.detailQuantity.system" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Goal.target.detail[x]:detailQuantity.code">
+      <path value="Goal.target.detailQuantity.code" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Goal.target.detail[x]:detailRange">
+      <path value="Goal.target.detailRange" />
+      <sliceName value="detailRange" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Goal.target.detail[x]:detailRange.low">
+      <path value="Goal.target.detailRange.low" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Goal.target.detail[x]:detailRange.low.value">
+      <path value="Goal.target.detailRange.low.value" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Goal.target.detail[x]:detailRange.low.unit">
+      <path value="Goal.target.detailRange.low.unit" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Goal.target.detail[x]:detailRange.low.system">
+      <path value="Goal.target.detailRange.low.system" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Goal.target.detail[x]:detailRange.low.code">
+      <path value="Goal.target.detailRange.low.code" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Goal.target.detail[x]:detailRange.high">
+      <path value="Goal.target.detailRange.high" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Goal.target.detail[x]:detailRange.high.value">
+      <path value="Goal.target.detailRange.high.value" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Goal.target.detail[x]:detailRange.high.unit">
+      <path value="Goal.target.detailRange.high.unit" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Goal.target.detail[x]:detailRange.high.system">
+      <path value="Goal.target.detailRange.high.system" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Goal.target.detail[x]:detailRange.high.code">
+      <path value="Goal.target.detailRange.high.code" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Goal.target.detail[x]:detailCodeableConcept">
+      <path value="Goal.target.detailCodeableConcept" />
+      <sliceName value="detailCodeableConcept" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Goal.target.detail[x]:detailCodeableConcept.coding">
+      <path value="Goal.target.detailCodeableConcept.coding" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Goal.target.detail[x]:detailCodeableConcept.coding.system">
+      <path value="Goal.target.detailCodeableConcept.coding.system" />
+      <min value="1" />
+    </element>
+    <element id="Goal.target.detail[x]:detailCodeableConcept.coding.version">
+      <path value="Goal.target.detailCodeableConcept.coding.version" />
+      <min value="1" />
+    </element>
+    <element id="Goal.target.detail[x]:detailCodeableConcept.coding.code">
+      <path value="Goal.target.detailCodeableConcept.coding.code" />
+      <min value="1" />
+    </element>
+    <element id="Goal.target.detail[x]:detailCodeableConcept.coding.display">
+      <path value="Goal.target.detailCodeableConcept.coding.display" />
+      <min value="1" />
+    </element>
+    <element id="Goal.target.detail[x]:detailCodeableConcept.coding.userSelected">
+      <path value="Goal.target.detailCodeableConcept.coding.userSelected" />
+      <max value="0" />
+    </element>
+    <element id="Goal.target.detail[x]:detailCodeableConcept.text">
+      <path value="Goal.target.detailCodeableConcept.text" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Goal.target.detail[x]:detailRatio">
+      <path value="Goal.target.detailRatio" />
+      <sliceName value="detailRatio" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Goal.target.detail[x]:detailRatio.numerator">
+      <path value="Goal.target.detailRatio.numerator" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Goal.target.detail[x]:detailRatio.numerator.value">
+      <path value="Goal.target.detailRatio.numerator.value" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Goal.target.detail[x]:detailRatio.numerator.comparator">
+      <path value="Goal.target.detailRatio.numerator.comparator" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Goal.target.detail[x]:detailRatio.numerator.unit">
+      <path value="Goal.target.detailRatio.numerator.unit" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Goal.target.detail[x]:detailRatio.numerator.system">
+      <path value="Goal.target.detailRatio.numerator.system" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Goal.target.detail[x]:detailRatio.numerator.code">
+      <path value="Goal.target.detailRatio.numerator.code" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Goal.target.detail[x]:detailRatio.denominator">
+      <path value="Goal.target.detailRatio.denominator" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Goal.target.detail[x]:detailRatio.denominator.value">
+      <path value="Goal.target.detailRatio.denominator.value" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Goal.target.detail[x]:detailRatio.denominator.comparator">
+      <path value="Goal.target.detailRatio.denominator.comparator" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Goal.target.detail[x]:detailRatio.denominator.unit">
+      <path value="Goal.target.detailRatio.denominator.unit" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Goal.target.detail[x]:detailRatio.denominator.system">
+      <path value="Goal.target.detailRatio.denominator.system" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Goal.target.detail[x]:detailRatio.denominator.code">
+      <path value="Goal.target.detailRatio.denominator.code" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Goal.target.due[x]">
+      <path value="Goal.target.due[x]" />
+      <max value="0" />
+    </element>
+    <element id="Goal.statusDate">
+      <path value="Goal.statusDate" />
+      <max value="0" />
+    </element>
+    <element id="Goal.statusReason">
+      <path value="Goal.statusReason" />
+      <max value="0" />
+    </element>
+    <element id="Goal.expressedBy">
+      <path value="Goal.expressedBy" />
+      <max value="0" />
+    </element>
+    <element id="Goal.addresses">
+      <path value="Goal.addresses" />
+      <max value="0" />
+    </element>
+    <element id="Goal.note">
+      <path value="Goal.note" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Goal.note.author[x]">
+      <path value="Goal.note.author[x]" />
+      <max value="0" />
+    </element>
+    <element id="Goal.note.time">
+      <path value="Goal.note.time" />
+      <max value="0" />
+    </element>
+    <element id="Goal.note.text">
+      <path value="Goal.note.text" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Goal.outcomeCode">
+      <path value="Goal.outcomeCode" />
+      <max value="0" />
+    </element>
+    <element id="Goal.outcomeReference">
+      <path value="Goal.outcomeReference" />
+      <max value="0" />
+    </element>
+  </differential>
+</StructureDefinition>

@@ -1,9 +1,10 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="KBV-PR-MIO-DIGA-Observation-Nutrition-Intake" />
   <url value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Observation_Nutrition_Intake" />
-  <version value="1.0.0" />
+  <version value="1.1.0" />
   <name value="KBV_PR_MIO_DIGA_Observation_Nutrition_Intake" />
   <title value="KBV_PR_MIO_DIGA_Observation_Nutrition_Intake" />
-  <status value="active" />
+  <status value="draft" />
   <publisher value="Kassenärztliche Bundesvereinigung (KBV)" />
   <description value="Dieses Profil bildet die Nahrungsmittelaufnahme ab." />
   <copyright value="Im folgenden Profil können Codes aus den Codesystemen Snomed, Loinc oder Ucum enthalten sein, die dem folgenden Urheberrecht unterliegen: This material includes SNOMED Clinical Terms® SNOMED CT® which is used by permission of SNOMED International. All rights reserved. SNOMED CT®, was originally created by The College of American Pathologists. SNOMED and SNOMED CT are registered trademarks of SNOMED International. Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license. This material contains content from Loinc http://loinc.org. Loinc is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes Loinc Committee and is available at no cost under the license at http://loinc.org/license. Loinc® is a registered United States trademark of Regenstrief Institute, Inc. This product includes all or a portion of the UCUM table, UCUM codes, and UCUM definitions or is derived from it, subject to a license from Regenstrief Institute, Inc. and The UCUM Organization. Your use of the UCUM table, UCUM codes, UCUM definitions also is subject to this license, a copy of which is available at ​http://unitsofmeasure.org. The current complete UCUM table, UCUM Specification are available for download at ​http://unitsofmeasure.org. The UCUM table and UCUM codes are copyright © 1995-2009, Regenstrief Institute, Inc. and the Unified Codes for Units of Measures UCUM Organization. All rights reserved. THE UCUM TABLE IN ALL FORMATS, UCUM DEFINITIONS, AND SPECIFICATION ARE PROVIDED &quot;AS IS.&quot; ANY EXPRESS OR IMPLIED WARRANTIES ARE DISCLAIMED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE." />
@@ -38,7 +39,7 @@
       <path value="Observation.meta.profile" />
       <min value="1" />
       <max value="1" />
-      <patternCanonical value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Observation_Nutrition_Intake|1.0.0" />
+      <patternCanonical value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Observation_Nutrition_Intake|1.1.0" />
     </element>
     <element id="Observation.meta.security">
       <path value="Observation.meta.security" />
@@ -203,7 +204,7 @@
       <min value="1" />
       <type>
         <code value="Reference" />
-        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Patient|1.0.0" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Patient|1.1.0" />
       </type>
       <mustSupport value="true" />
     </element>
@@ -283,10 +284,10 @@
       <max value="1" />
       <type>
         <code value="Reference" />
-        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Patient|1.0.0" />
-        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Practitioner|1.0.0" />
-        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_RelatedPerson|1.0.0" />
-        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_PractitionerRole|1.0.0" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Patient|1.1.0" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Practitioner|1.1.0" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_RelatedPerson|1.1.0" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_PractitionerRole|1.1.0" />
       </type>
       <mustSupport value="true" />
     </element>
@@ -321,7 +322,6 @@
     </element>
     <element id="Observation.note">
       <path value="Observation.note" />
-      <max value="1" />
       <mustSupport value="true" />
     </element>
     <element id="Observation.note.author[x]">
@@ -360,7 +360,7 @@
       <path value="Observation.hasMember" />
       <type>
         <code value="Reference" />
-        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Observation_Nutrition_Intake_Food_Composition_Types|1.0.0" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Observation_Nutrition_Intake_Food_Composition_Types|1.1.0" />
       </type>
       <mustSupport value="true" />
     </element>
@@ -396,77 +396,71 @@
           <type value="value" />
           <path value="url" />
         </discriminator>
-        <rules value="open" />
+        <rules value="closed" />
       </slicing>
       <min value="0" />
     </element>
-    <element id="Observation.component.extension:erfolgteEinnahme">
+    <element id="Observation.component.extension:nichtEingenommen">
       <path value="Observation.component.extension" />
-      <sliceName value="erfolgteEinnahme" />
+      <sliceName value="nichtEingenommen" />
       <min value="0" />
       <max value="1" />
       <type>
         <code value="Extension" />
-        <profile value="https://fhir.kbv.de/StructureDefinition/KBV_EX_MIO_DIGA_Nutrition_Intake_Taken" />
+        <profile value="https://fhir.kbv.de/StructureDefinition/KBV_EX_MIO_DIGA_Nutrition_Intake_Not_Consumed" />
       </type>
       <mustSupport value="true" />
     </element>
-    <element id="Observation.component.extension:erfolgteEinnahme.extension">
-      <path value="Observation.component.extension.extension" />
+    <element id="Observation.component.extension:nichtEingenommen.value[x]">
+      <path value="Observation.component.extension.value[x]" />
       <slicing>
         <discriminator>
-          <type value="value" />
-          <path value="url" />
+          <type value="type" />
+          <path value="$this" />
         </discriminator>
-        <rules value="open" />
+        <rules value="closed" />
       </slicing>
-      <min value="1" />
+      <mustSupport value="true" />
     </element>
-    <element id="Observation.component.extension:erfolgteEinnahme.extension:einnahmeErfolgt">
-      <path value="Observation.component.extension.extension" />
-      <sliceName value="einnahmeErfolgt" />
-      <min value="1" />
+    <element id="Observation.component.extension:nichtEingenommen.value[x]:valueBoolean">
+      <path value="Observation.component.extension.value[x]" />
+      <sliceName value="valueBoolean" />
+      <mustSupport value="true" />
     </element>
-    <element id="Observation.component.extension:erfolgteEinnahme.extension:einnahmeErfolgt.extension">
-      <path value="Observation.component.extension.extension.extension" />
+    <element id="Observation.component.extension:nichtEingenommenGrund">
+      <path value="Observation.component.extension" />
+      <sliceName value="nichtEingenommenGrund" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="https://fhir.kbv.de/StructureDefinition/KBV_EX_MIO_DIGA_Nutrition_Intake_Not_Consumed_Reason" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.component.extension:nichtEingenommenGrund.value[x]">
+      <path value="Observation.component.extension.value[x]" />
       <slicing>
         <discriminator>
-          <type value="value" />
-          <path value="url" />
+          <type value="type" />
+          <path value="$this" />
         </discriminator>
-        <rules value="open" />
+        <rules value="closed" />
       </slicing>
-      <min value="2" />
+      <mustSupport value="true" />
     </element>
-    <element id="Observation.component.extension:erfolgteEinnahme.extension:einnahmeErfolgt.extension:einnahmeErfolgtCode">
-      <path value="Observation.component.extension.extension.extension" />
-      <sliceName value="einnahmeErfolgtCode" />
-      <min value="1" />
-    </element>
-    <element id="Observation.component.extension:erfolgteEinnahme.extension:einnahmeErfolgt.extension:einnahmeErfolgtCode.value[x]:valueCodeableConcept">
-      <path value="Observation.component.extension.extension.extension.value[x]" />
+    <element id="Observation.component.extension:nichtEingenommenGrund.value[x]:valueCodeableConcept">
+      <path value="Observation.component.extension.value[x]" />
       <sliceName value="valueCodeableConcept" />
-      <min value="1" />
+      <mustSupport value="true" />
     </element>
-    <element id="Observation.component.extension:erfolgteEinnahme.extension:einnahmeErfolgt.extension:einnahmeErfolgtCode.value[x]:valueCodeableConcept.coding">
-      <path value="Observation.component.extension.extension.extension.value[x].coding" />
-      <min value="1" />
+    <element id="Observation.component.extension:nichtEingenommenGrund.value[x]:valueCodeableConcept.coding">
+      <path value="Observation.component.extension.value[x].coding" />
+      <mustSupport value="true" />
     </element>
-    <element id="Observation.component.extension:erfolgteEinnahme.extension:einnahmeErfolgt.extension:einnahmeErfolgtCode.value[x]:valueCodeableConcept.coding.system">
-      <path value="Observation.component.extension.extension.extension.value[x].coding.system" />
-      <min value="1" />
-    </element>
-    <element id="Observation.component.extension:erfolgteEinnahme.extension:einnahmeErfolgt.extension:einnahmeErfolgtCode.value[x]:valueCodeableConcept.coding.version">
-      <path value="Observation.component.extension.extension.extension.value[x].coding.version" />
-      <min value="1" />
-    </element>
-    <element id="Observation.component.extension:erfolgteEinnahme.extension:einnahmeErfolgt.extension:einnahmeErfolgtCode.value[x]:valueCodeableConcept.coding.code">
-      <path value="Observation.component.extension.extension.extension.value[x].coding.code" />
-      <min value="1" />
-    </element>
-    <element id="Observation.component.extension:erfolgteEinnahme.extension:einnahmeErfolgt.extension:einnahmeErfolgtCode.value[x]:valueCodeableConcept.coding.display">
-      <path value="Observation.component.extension.extension.extension.value[x].coding.display" />
-      <min value="1" />
+    <element id="Observation.component.extension:nichtEingenommenGrund.value[x]:valueCodeableConcept.text">
+      <path value="Observation.component.extension.value[x].text" />
+      <mustSupport value="true" />
     </element>
     <element id="Observation.component.code">
       <path value="Observation.component.code" />

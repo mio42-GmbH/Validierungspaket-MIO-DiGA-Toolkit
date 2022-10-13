@@ -1,9 +1,10 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="KBV-PR-MIO-DIGA-Observation-Nutrition-Intake-Food-Composition-Ty" />
   <url value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Observation_Nutrition_Intake_Food_Composition_Types" />
-  <version value="1.0.0" />
+  <version value="1.1.0" />
   <name value="KBV_PR_MIO_DIGA_Observation_Nutrition_Intake_Food_Composition_Types" />
   <title value="KBV_PR_MIO_DIGA_Observation_Nutrition_Intake_Food_Composition_Types" />
-  <status value="active" />
+  <status value="draft" />
   <publisher value="Kassenärztliche Bundesvereinigung (KBV)" />
   <description value="Dieses Profil bildet ein Detail über die Gesamtzusammensetzung einer Nahrungsmittelaufnahme ab." />
   <copyright value="Im folgenden Profil können Codes aus den Codesystemen Snomed, Loinc oder Ucum enthalten sein, die dem folgenden Urheberrecht unterliegen: This material includes SNOMED Clinical Terms® SNOMED CT® which is used by permission of SNOMED International. All rights reserved. SNOMED CT®, was originally created by The College of American Pathologists. SNOMED and SNOMED CT are registered trademarks of SNOMED International. Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license. This material contains content from Loinc http://loinc.org. Loinc is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes Loinc Committee and is available at no cost under the license at http://loinc.org/license. Loinc® is a registered United States trademark of Regenstrief Institute, Inc. This product includes all or a portion of the UCUM table, UCUM codes, and UCUM definitions or is derived from it, subject to a license from Regenstrief Institute, Inc. and The UCUM Organization. Your use of the UCUM table, UCUM codes, UCUM definitions also is subject to this license, a copy of which is available at ​http://unitsofmeasure.org. The current complete UCUM table, UCUM Specification are available for download at ​http://unitsofmeasure.org. The UCUM table and UCUM codes are copyright © 1995-2009, Regenstrief Institute, Inc. and the Unified Codes for Units of Measures UCUM Organization. All rights reserved. THE UCUM TABLE IN ALL FORMATS, UCUM DEFINITIONS, AND SPECIFICATION ARE PROVIDED &quot;AS IS.&quot; ANY EXPRESS OR IMPLIED WARRANTIES ARE DISCLAIMED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE." />
@@ -38,7 +39,7 @@
       <path value="Observation.meta.profile" />
       <min value="1" />
       <max value="1" />
-      <patternCanonical value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Observation_Nutrition_Intake_Food_Composition_Types|1.0.0" />
+      <patternCanonical value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Observation_Nutrition_Intake_Food_Composition_Types|1.1.0" />
     </element>
     <element id="Observation.meta.security">
       <path value="Observation.meta.security" />
@@ -67,6 +68,41 @@
     <element id="Observation.contained">
       <path value="Observation.contained" />
       <max value="0" />
+    </element>
+    <element id="Observation.extension">
+      <path value="Observation.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="closed" />
+      </slicing>
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.extension:teilVon">
+      <path value="Observation.extension" />
+      <sliceName value="teilVon" />
+      <type>
+        <code value="Extension" />
+        <profile value="https://fhir.kbv.de/StructureDefinition/KBV_EX_MIO_DIGA_Reference" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.extension:teilVon.value[x]">
+      <path value="Observation.extension.value[x]" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.extension:teilVon.value[x]:valueReference">
+      <path value="Observation.extension.valueReference" />
+      <sliceName value="valueReference" />
+      <min value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Observation_Nutrition_Intake|1.1.0" />
+      </type>
+      <mustSupport value="true" />
     </element>
     <element id="Observation.identifier">
       <path value="Observation.identifier" />
@@ -157,7 +193,7 @@
       <patternCodeableConcept>
         <coding>
           <system value="http://snomed.info/sct" />
-          <version value="http://snomed.info/sct/900000000000207008/version/20220131" />
+          <version value="http://snomed.info/sct/900000000000207008/version/20220331" />
           <code value="229957008" />
           <display value="Food composition types (substance)" />
         </coding>
@@ -185,55 +221,6 @@
     <element id="Observation.category.coding.display">
       <path value="Observation.category.coding.display" />
       <min value="1" />
-    </element>
-    <element id="Observation.category.coding.display.extension">
-      <path value="Observation.category.coding.display.extension" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="url" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-      <min value="1" />
-    </element>
-    <element id="Observation.category.coding.display.extension:anzeigenameCategory">
-      <path value="Observation.category.coding.display.extension" />
-      <sliceName value="anzeigenameCategory" />
-      <min value="1" />
-      <max value="1" />
-      <type>
-        <code value="Extension" />
-        <profile value="https://fhir.kbv.de/StructureDefinition/KBV_EX_Base_Terminology_German" />
-      </type>
-      <mustSupport value="true" />
-    </element>
-    <element id="Observation.category.coding.display.extension:anzeigenameCategory.extension">
-      <path value="Observation.category.coding.display.extension.extension" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="url" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-      <min value="1" />
-    </element>
-    <element id="Observation.category.coding.display.extension:anzeigenameCategory.extension:content">
-      <path value="Observation.category.coding.display.extension.extension" />
-      <sliceName value="content" />
-      <min value="1" />
-    </element>
-    <element id="Observation.category.coding.display.extension:anzeigenameCategory.extension:content.value[x]">
-      <path value="Observation.category.coding.display.extension.extension.value[x]" />
-      <mustSupport value="true" />
-    </element>
-    <element id="Observation.category.coding.display.extension:anzeigenameCategory.extension:content.value[x]:valueString">
-      <path value="Observation.category.coding.display.extension.extension.valueString" />
-      <sliceName value="valueString" />
-      <min value="1" />
-      <fixedString value="Detail über die Gesamtzusammensetzung" />
-      <mustSupport value="true" />
     </element>
     <element id="Observation.category.coding.userSelected">
       <path value="Observation.category.coding.userSelected" />
@@ -280,7 +267,7 @@
       <min value="1" />
       <type>
         <code value="Reference" />
-        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Patient|1.0.0" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Patient|1.1.0" />
       </type>
       <mustSupport value="true" />
     </element>
@@ -311,45 +298,7 @@
     </element>
     <element id="Observation.effective[x]">
       <path value="Observation.effective[x]" />
-      <slicing>
-        <discriminator>
-          <type value="type" />
-          <path value="$this" />
-        </discriminator>
-        <rules value="closed" />
-      </slicing>
-      <min value="1" />
-      <type>
-        <code value="dateTime" />
-      </type>
-      <type>
-        <code value="Period" />
-      </type>
-      <mustSupport value="true" />
-    </element>
-    <element id="Observation.effective[x]:effectiveDateTime">
-      <path value="Observation.effective[x]" />
-      <sliceName value="effectiveDateTime" />
-      <type>
-        <code value="dateTime" />
-      </type>
-      <mustSupport value="true" />
-    </element>
-    <element id="Observation.effective[x]:effectivePeriod">
-      <path value="Observation.effective[x]" />
-      <sliceName value="effectivePeriod" />
-      <type>
-        <code value="Period" />
-      </type>
-      <mustSupport value="true" />
-    </element>
-    <element id="Observation.effective[x]:effectivePeriod.start">
-      <path value="Observation.effective[x].start" />
-      <mustSupport value="true" />
-    </element>
-    <element id="Observation.effective[x]:effectivePeriod.end">
-      <path value="Observation.effective[x].end" />
-      <mustSupport value="true" />
+      <max value="0" />
     </element>
     <element id="Observation.issued">
       <path value="Observation.issued" />
@@ -360,10 +309,10 @@
       <max value="1" />
       <type>
         <code value="Reference" />
-        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Patient|1.0.0" />
-        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Practitioner|1.0.0" />
-        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_RelatedPerson|1.0.0" />
-        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_PractitionerRole|1.0.0" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Patient|1.1.0" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Practitioner|1.1.0" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_RelatedPerson|1.1.0" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_PractitionerRole|1.1.0" />
       </type>
       <mustSupport value="true" />
     </element>
@@ -391,7 +340,7 @@
           <type value="type" />
           <path value="$this" />
         </discriminator>
-        <rules value="open" />
+        <rules value="closed" />
       </slicing>
       <min value="1" />
       <type>

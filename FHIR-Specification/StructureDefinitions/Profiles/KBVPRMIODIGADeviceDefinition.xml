@@ -1,0 +1,307 @@
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="KBV-PR-MIO-DIGA-DeviceDefinition" />
+  <url value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_DeviceDefinition" />
+  <version value="1.1.0" />
+  <name value="KBV_PR_MIO_DIGA_DeviceDefinition" />
+  <title value="KBV_PR_MIO_DIGA_DeviceDefinition" />
+  <status value="draft" />
+  <publisher value="Kassenärztliche Bundesvereinigung (KBV)" />
+  <description value="Dieses Profil bildet die Definition eines beliebigen Gerätes ab." />
+  <copyright value="Im folgenden Profil können Codes aus den Codesystemen Snomed, Loinc oder Ucum enthalten sein, die dem folgenden Urheberrecht unterliegen: This material includes SNOMED Clinical Terms® SNOMED CT® which is used by permission of SNOMED International. All rights reserved. SNOMED CT®, was originally created by The College of American Pathologists. SNOMED and SNOMED CT are registered trademarks of SNOMED International. Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license. This material contains content from Loinc http://loinc.org. Loinc is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes Loinc Committee and is available at no cost under the license at http://loinc.org/license. Loinc® is a registered United States trademark of Regenstrief Institute, Inc. This product includes all or a portion of the UCUM table, UCUM codes, and UCUM definitions or is derived from it, subject to a license from Regenstrief Institute, Inc. and The UCUM Organization. Your use of the UCUM table, UCUM codes, UCUM definitions also is subject to this license, a copy of which is available at ​http://unitsofmeasure.org. The current complete UCUM table, UCUM Specification are available for download at ​http://unitsofmeasure.org. The UCUM table and UCUM codes are copyright © 1995-2009, Regenstrief Institute, Inc. and the Unified Codes for Units of Measures UCUM Organization. All rights reserved. THE UCUM TABLE IN ALL FORMATS, UCUM DEFINITIONS, AND SPECIFICATION ARE PROVIDED &quot;AS IS.&quot; ANY EXPRESS OR IMPLIED WARRANTIES ARE DISCLAIMED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE." />
+  <fhirVersion value="4.0.1" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="DeviceDefinition" />
+  <baseDefinition value="https://fhir.kbv.de/StructureDefinition/KBV_PR_Base_DeviceDefinition|1.3.0" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="DeviceDefinition">
+      <path value="DeviceDefinition" />
+      <definition value="Dieses Profil bildet die Definition eines beliebigen Gerätes ab." />
+    </element>
+    <element id="DeviceDefinition.meta">
+      <path value="DeviceDefinition.meta" />
+      <min value="1" />
+    </element>
+    <element id="DeviceDefinition.meta.versionId">
+      <path value="DeviceDefinition.meta.versionId" />
+      <min value="1" />
+    </element>
+    <element id="DeviceDefinition.meta.lastUpdated">
+      <path value="DeviceDefinition.meta.lastUpdated" />
+      <min value="1" />
+    </element>
+    <element id="DeviceDefinition.meta.source">
+      <path value="DeviceDefinition.meta.source" />
+      <max value="0" />
+    </element>
+    <element id="DeviceDefinition.meta.profile">
+      <path value="DeviceDefinition.meta.profile" />
+      <min value="1" />
+      <max value="1" />
+      <patternCanonical value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_DeviceDefinition|1.1.0" />
+    </element>
+    <element id="DeviceDefinition.meta.security">
+      <path value="DeviceDefinition.meta.security" />
+      <max value="0" />
+    </element>
+    <element id="DeviceDefinition.meta.tag">
+      <path value="DeviceDefinition.meta.tag" />
+      <max value="0" />
+    </element>
+    <element id="DeviceDefinition.implicitRules">
+      <path value="DeviceDefinition.implicitRules" />
+      <max value="0" />
+    </element>
+    <element id="DeviceDefinition.language">
+      <path value="DeviceDefinition.language" />
+      <max value="0" />
+    </element>
+    <element id="DeviceDefinition.text">
+      <path value="DeviceDefinition.text" />
+      <definition value="In diesem Element können die, in der Instanz, enthaltenen Informationen in einer menschenlesbaren Form zusammengefasst werden. Dabei ist zu beachten, dass keine Informationen aufgenommen werden dürfen, die nicht in strukturierter Form an anderer Stelle in der Instanz enthalten sind." />
+    </element>
+    <element id="DeviceDefinition.text.status">
+      <path value="DeviceDefinition.text.status" />
+      <fixedCode value="extensions" />
+    </element>
+    <element id="DeviceDefinition.contained">
+      <path value="DeviceDefinition.contained" />
+      <max value="0" />
+    </element>
+    <element id="DeviceDefinition.identifier">
+      <path value="DeviceDefinition.identifier" />
+      <min value="1" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="DeviceDefinition.identifier.use">
+      <path value="DeviceDefinition.identifier.use" />
+      <max value="0" />
+    </element>
+    <element id="DeviceDefinition.identifier.type">
+      <path value="DeviceDefinition.identifier.type" />
+      <min value="1" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://terminology.hl7.org/CodeSystem/v2-0203" />
+          <version value="2.9" />
+          <code value="RI" />
+          <display value="Resource identifier" />
+        </coding>
+      </patternCodeableConcept>
+    </element>
+    <element id="DeviceDefinition.identifier.type.coding">
+      <path value="DeviceDefinition.identifier.type.coding" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="DeviceDefinition.identifier.type.coding.system">
+      <path value="DeviceDefinition.identifier.type.coding.system" />
+      <min value="1" />
+    </element>
+    <element id="DeviceDefinition.identifier.type.coding.version">
+      <path value="DeviceDefinition.identifier.type.coding.version" />
+      <min value="1" />
+    </element>
+    <element id="DeviceDefinition.identifier.type.coding.code">
+      <path value="DeviceDefinition.identifier.type.coding.code" />
+      <min value="1" />
+    </element>
+    <element id="DeviceDefinition.identifier.type.coding.display">
+      <path value="DeviceDefinition.identifier.type.coding.display" />
+      <min value="1" />
+    </element>
+    <element id="DeviceDefinition.identifier.type.coding.userSelected">
+      <path value="DeviceDefinition.identifier.type.coding.userSelected" />
+      <max value="0" />
+    </element>
+    <element id="DeviceDefinition.identifier.type.text">
+      <path value="DeviceDefinition.identifier.type.text" />
+      <max value="0" />
+    </element>
+    <element id="DeviceDefinition.identifier.system">
+      <path value="DeviceDefinition.identifier.system" />
+      <min value="1" />
+      <fixedUri value="urn:ietf:rfc:3986" />
+      <mustSupport value="true" />
+    </element>
+    <element id="DeviceDefinition.identifier.value">
+      <path value="DeviceDefinition.identifier.value" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="DeviceDefinition.identifier.period">
+      <path value="DeviceDefinition.identifier.period" />
+      <max value="0" />
+    </element>
+    <element id="DeviceDefinition.identifier.assigner">
+      <path value="DeviceDefinition.identifier.assigner" />
+      <max value="0" />
+    </element>
+    <element id="DeviceDefinition.udiDeviceIdentifier">
+      <path value="DeviceDefinition.udiDeviceIdentifier" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="DeviceDefinition.manufacturer[x]">
+      <path value="DeviceDefinition.manufacturer[x]" />
+      <slicing>
+        <discriminator>
+          <type value="type" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="closed" />
+      </slicing>
+      <type>
+        <code value="Reference" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="DeviceDefinition.manufacturer[x]:manufacturerReference">
+      <path value="DeviceDefinition.manufacturer[x]" />
+      <sliceName value="manufacturerReference" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Organization_Manufacturer|1.1.0" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="DeviceDefinition.manufacturer[x]:manufacturerReference.reference">
+      <path value="DeviceDefinition.manufacturer[x].reference" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="DeviceDefinition.manufacturer[x]:manufacturerReference.type">
+      <path value="DeviceDefinition.manufacturer[x].type" />
+      <max value="0" />
+    </element>
+    <element id="DeviceDefinition.manufacturer[x]:manufacturerReference.identifier">
+      <path value="DeviceDefinition.manufacturer[x].identifier" />
+      <max value="0" />
+    </element>
+    <element id="DeviceDefinition.manufacturer[x]:manufacturerReference.display">
+      <path value="DeviceDefinition.manufacturer[x].display" />
+      <max value="0" />
+    </element>
+    <element id="DeviceDefinition.deviceName">
+      <path value="DeviceDefinition.deviceName" />
+      <mustSupport value="true" />
+    </element>
+    <element id="DeviceDefinition.deviceName.name">
+      <path value="DeviceDefinition.deviceName.name" />
+      <mustSupport value="true" />
+    </element>
+    <element id="DeviceDefinition.deviceName.type">
+      <path value="DeviceDefinition.deviceName.type" />
+      <mustSupport value="true" />
+    </element>
+    <element id="DeviceDefinition.modelNumber">
+      <path value="DeviceDefinition.modelNumber" />
+      <mustSupport value="true" />
+    </element>
+    <element id="DeviceDefinition.type">
+      <path value="DeviceDefinition.type" />
+      <mustSupport value="true" />
+    </element>
+    <element id="DeviceDefinition.type.coding">
+      <path value="DeviceDefinition.type.coding" />
+      <max value="1" />
+      <patternCoding>
+        <system value="http://snomed.info/sct" />
+        <version value="http://snomed.info/sct/900000000000207008/version/20220331" />
+        <code value="49062001" />
+        <display value="Device (physical object)" />
+      </patternCoding>
+      <mustSupport value="true" />
+    </element>
+    <element id="DeviceDefinition.type.coding.system">
+      <path value="DeviceDefinition.type.coding.system" />
+      <min value="1" />
+    </element>
+    <element id="DeviceDefinition.type.coding.version">
+      <path value="DeviceDefinition.type.coding.version" />
+      <min value="1" />
+    </element>
+    <element id="DeviceDefinition.type.coding.code">
+      <path value="DeviceDefinition.type.coding.code" />
+      <min value="1" />
+    </element>
+    <element id="DeviceDefinition.type.coding.display">
+      <path value="DeviceDefinition.type.coding.display" />
+      <min value="1" />
+    </element>
+    <element id="DeviceDefinition.type.coding.userSelected">
+      <path value="DeviceDefinition.type.coding.userSelected" />
+      <max value="0" />
+    </element>
+    <element id="DeviceDefinition.type.text">
+      <path value="DeviceDefinition.type.text" />
+      <mustSupport value="true" />
+    </element>
+    <element id="DeviceDefinition.specialization">
+      <path value="DeviceDefinition.specialization" />
+      <max value="0" />
+    </element>
+    <element id="DeviceDefinition.version">
+      <path value="DeviceDefinition.version" />
+      <mustSupport value="true" />
+    </element>
+    <element id="DeviceDefinition.safety">
+      <path value="DeviceDefinition.safety" />
+      <max value="0" />
+    </element>
+    <element id="DeviceDefinition.shelfLifeStorage">
+      <path value="DeviceDefinition.shelfLifeStorage" />
+      <max value="0" />
+    </element>
+    <element id="DeviceDefinition.physicalCharacteristics">
+      <path value="DeviceDefinition.physicalCharacteristics" />
+      <max value="0" />
+    </element>
+    <element id="DeviceDefinition.languageCode">
+      <path value="DeviceDefinition.languageCode" />
+      <max value="0" />
+    </element>
+    <element id="DeviceDefinition.capability">
+      <path value="DeviceDefinition.capability" />
+      <max value="0" />
+    </element>
+    <element id="DeviceDefinition.property">
+      <path value="DeviceDefinition.property" />
+      <max value="0" />
+    </element>
+    <element id="DeviceDefinition.owner">
+      <path value="DeviceDefinition.owner" />
+      <max value="0" />
+    </element>
+    <element id="DeviceDefinition.contact">
+      <path value="DeviceDefinition.contact" />
+      <max value="0" />
+    </element>
+    <element id="DeviceDefinition.url">
+      <path value="DeviceDefinition.url" />
+      <max value="0" />
+    </element>
+    <element id="DeviceDefinition.onlineInformation">
+      <path value="DeviceDefinition.onlineInformation" />
+      <max value="0" />
+    </element>
+    <element id="DeviceDefinition.note">
+      <path value="DeviceDefinition.note" />
+      <max value="0" />
+    </element>
+    <element id="DeviceDefinition.quantity">
+      <path value="DeviceDefinition.quantity" />
+      <max value="0" />
+    </element>
+    <element id="DeviceDefinition.parentDevice">
+      <path value="DeviceDefinition.parentDevice" />
+      <max value="0" />
+    </element>
+    <element id="DeviceDefinition.material">
+      <path value="DeviceDefinition.material" />
+      <max value="0" />
+    </element>
+  </differential>
+</StructureDefinition>

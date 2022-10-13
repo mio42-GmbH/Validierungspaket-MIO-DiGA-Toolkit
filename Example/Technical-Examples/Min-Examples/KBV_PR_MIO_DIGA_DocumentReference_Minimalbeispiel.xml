@@ -1,0 +1,30 @@
+<DocumentReference xmlns="http://hl7.org/fhir">
+	<id value="2858e601-8cdb-46a5-bb1f-51d327e3fa55"/>
+	<meta>
+		<versionId value="1"/>
+		<lastUpdated value="2015-02-07T13:28:17.239+02:00"/>
+		<profile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_DocumentReference|1.1.0"/>
+	</meta>
+	<identifier>
+		<type>
+			<coding>
+				<system value="http://terminology.hl7.org/CodeSystem/v2-0203" />
+				<version value="2.9" />
+				<code value="RI" />
+				<display value="Resource identifier" />
+			</coding>
+		</type>
+		<system value="urn:ietf:rfc:3986" />
+		<value value="urn:uuid:2858e601-8cdb-46a5-bb1f-51d327e3fa55" />
+	</identifier>
+	<status value="current" />
+	<subject>
+		<reference value="urn:uuid:6a15cff6-3cc1-4bf2-ab66-1cc6316e6777" />
+	</subject>
+	<content>
+		<attachment>
+			<url value="https://www.example.com/document" />
+			<title value="Test" />
+		</attachment>
+	</content>
+</DocumentReference>
