@@ -12,7 +12,7 @@
   <kind value="resource" />
   <abstract value="false" />
   <type value="Goal" />
-  <baseDefinition value="https://fhir.kbv.de/StructureDefinition/KBV_PR_Base_Treatment_Goal" />
+  <baseDefinition value="https://fhir.kbv.de/StructureDefinition/KBV_PR_Base_Treatment_Goal|1.3.0" />
   <derivation value="constraint" />
   <differential>
     <element id="Goal">
@@ -35,12 +35,24 @@
 			<path value="Goal.meta.source"/>
 			<max value="0"/>
 		</element>
-		<element id="Goal.meta.profile">
-			<path value="Goal.meta.profile"/>
-			<min value="1"/>
-			<max value="1"/>
-			<patternCanonical value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Goal_Treatment_Goal|1.1.0"/>
-		</element>
+    <element id="Goal.meta.profile">
+      <path value="Goal.meta.profile" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="1" />
+    </element>
+    <element id="Goal.meta.profile:mioProfile">
+      <path value="Goal.meta.profile" />
+      <sliceName value="mioProfile" />
+      <min value="1" />
+      <max value="1" />
+      <patternCanonical value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Goal_Treatment_Goal|1.1.0" />
+    </element>
 		<element id="Goal.meta.security">
 			<path value="Goal.meta.security"/>
 			<max value="0"/>
@@ -369,6 +381,21 @@
     <element id="Goal.target.detail[x]:detailCodeableConcept.text">
       <path value="Goal.target.detailCodeableConcept.text" />
       <mustSupport value="true" />
+    </element>
+    <element id="Goal.target.detail[x]:detailString">
+      <path value="Goal.target.detailString" />
+      <sliceName value="detailString" />
+      <max value="0" />
+    </element>
+    <element id="Goal.target.detail[x]:detailBoolean">
+      <path value="Goal.target.detailBoolean" />
+      <sliceName value="detailBoolean" />
+      <max value="0" />
+    </element>
+    <element id="Goal.target.detail[x]:detailInteger">
+      <path value="Goal.target.detailInteger" />
+      <sliceName value="detailInteger" />
+      <max value="0" />
     </element>
     <element id="Goal.target.detail[x]:detailRatio">
       <path value="Goal.target.detailRatio" />

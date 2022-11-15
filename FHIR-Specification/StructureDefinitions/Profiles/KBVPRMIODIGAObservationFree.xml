@@ -37,6 +37,18 @@
     </element>
     <element id="Observation.meta.profile">
       <path value="Observation.meta.profile" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="1" />
+    </element>
+    <element id="Observation.meta.profile:mioProfile">
+      <path value="Observation.meta.profile" />
+      <sliceName value="mioProfile" />
       <min value="1" />
       <max value="1" />
       <patternCanonical value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Observation_Free|1.1.0" />
@@ -110,8 +122,7 @@
         <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_MedicationAdministration_Medication_Intake|1.1.0" />
         <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Medication|1.1.0" />
         <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_MedicationStatement_Medication_Information|1.1.0" />
-        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Observation_Assessment_Scale|1.1.0" />
-        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Observation_Assessment_Score|1.1.0" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Observation_Score_or_Assessment_by_Scale|1.1.0" />
         <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Observation_Blood_Pressure|1.1.0" />
         <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Observation_Body_Height|1.1.0" />
         <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Observation_Body_Temperature|1.1.0" />
@@ -174,8 +185,7 @@
       <path value="Observation.hasMember" />
       <type>
         <code value="Reference" />
-        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Observation_Assessment_Scale|1.1.0" />
-        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Observation_Assessment_Score|1.1.0" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Observation_Score_or_Assessment_by_Scale|1.1.0" />
         <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Observation_Blood_Pressure|1.1.0" />
         <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Observation_Body_Height|1.1.0" />
         <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Observation_Body_Temperature|1.1.0" />
@@ -200,8 +210,7 @@
       <path value="Observation.derivedFrom" />
       <type>
         <code value="Reference" />
-        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Observation_Assessment_Scale|1.1.0" />
-        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Observation_Assessment_Score|1.1.0" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Observation_Score_or_Assessment_by_Scale|1.1.0" />
         <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Observation_Blood_Pressure|1.1.0" />
         <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Observation_Body_Height|1.1.0" />
         <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Observation_Body_Temperature|1.1.0" />

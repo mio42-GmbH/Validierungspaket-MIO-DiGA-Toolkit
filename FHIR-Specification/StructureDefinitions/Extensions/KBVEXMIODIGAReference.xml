@@ -25,6 +25,10 @@
   </context>
   <context>
     <type value="element" />
+    <expression value="MedicationStatement" />
+  </context>
+  <context>
+    <type value="element" />
     <expression value="Appointment" />
   </context>
   <context>
@@ -76,8 +80,7 @@
 				<targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_MedicationAdministration_Medication_Intake|1.1.0"/>
 				<targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Medication|1.1.0"/>
 				<targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_MedicationStatement_Medication_Information|1.1.0"/>
-				<targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Observation_Assessment_Scale|1.1.0"/>
-				<targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Observation_Assessment_Score|1.1.0"/>
+				<targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Observation_Score_or_Assessment_by_Scale|1.1.0"/>
 				<targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Observation_Blood_Pressure|1.1.0"/>
 				<targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Observation_Body_Height|1.1.0"/>
 				<targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Observation_Body_Temperature|1.1.0"/>

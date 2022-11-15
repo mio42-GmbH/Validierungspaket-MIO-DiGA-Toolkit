@@ -69,6 +69,18 @@
     </element>
     <element id="Patient.meta.profile">
       <path value="Patient.meta.profile" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="1" />
+    </element>
+    <element id="Patient.meta.profile:mioProfile">
+      <path value="Patient.meta.profile" />
+      <sliceName value="mioProfile" />
       <min value="1" />
       <max value="1" />
       <patternCanonical value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Patient|1.1.0" />
@@ -1169,16 +1181,6 @@
     <element id="Patient.contact">
       <path value="Patient.contact" />
       <max value="0" />
-    </element>
-    <element id="Patient.contact.address.country">
-      <path value="Patient.contact.address.country" />
-      <short value="Staat" />
-      <definition value="Staat gemäß dem ValueSet https://fhir.kbv.de/ValueSet/KBV_VS_Base_Deuev_Anlage_8|1.3.0" />
-      <comment value="Staat gemäß dem ValueSet https://fhir.kbv.de/ValueSet/KBV_VS_Base_Deuev_Anlage_8|1.3.0" />
-      <binding>
-        <strength value="extensible" />
-        <valueSet value="https://fhir.kbv.de/ValueSet/KBV_VS_Base_Deuev_Anlage_8|1.3.0" />
-      </binding>
     </element>
     <element id="Patient.communication">
       <path value="Patient.communication" />

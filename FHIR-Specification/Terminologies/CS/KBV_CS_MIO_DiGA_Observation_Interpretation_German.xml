@@ -1,8 +1,8 @@
 <CodeSystem xmlns="http://hl7.org/fhir">
     <id value="KBV-CS-MIO-DiGA-Observation-Interpretation-German"/>
-    <url value="https://fhir.kbv.de/CodeSystem/KBV_CS_MIO_DIGA_Observation_Interpretation_German"/>
+    <url value="https://fhir.kbv.de/CodeSystem/KBV_CS_MIO_DiGA_Observation_Interpretation_Score_And_Scale_German"/>
     <version value="1.1.0"/>
-    <name value="KBV_CS_MIO_DIGA_Observation_Interpretation_German"/>
+    <name value="KBV_CS_MIO_DiGA_Observation_Interpretation_Score_And_Scale_German"/>
     <title value="ObservationInterpretationCodes"/>
     <status value="draft"/>
     <experimental value="false"/>
@@ -24,10 +24,6 @@
     <concept>
         <code value="Besser"/>
         <display value="Besser"/>
-    </concept>
-    <concept>
-        <code value="Anlagetraeger"/>
-        <display value="Anlageträger"/>
     </concept>
     <concept>
         <code value="Nachgewiesen"/>
@@ -98,10 +94,6 @@
         <display value="Negativ"/>
     </concept>
     <concept>
-        <code value="Nichtreaktiv"/>
-        <display value="Nicht reaktiv"/>
-    </concept>
-    <concept>
         <code value="Feststellungsinterpretation"/>
         <display value="Feststellungsinterpretation"/>
     </concept>
@@ -114,14 +106,6 @@
         <display value="Positiv"/>
     </concept>
     <concept>
-        <code value="Reaktiv"/>
-        <display value="Reaktiv"/>
-    </concept>
-    <concept>
-        <code value="Reaktivitaetsinterpretation"/>
-        <display value="Reaktivitätsinterpretation"/>
-    </concept>
-    <concept>
         <code value="Unerwartet"/>
         <display value="Unerwartet"/>
     </concept>
@@ -130,35 +114,15 @@
         <display value="Signifikanter Anstieg"/>
     </concept>
     <concept>
-        <code value="Schwachreaktiv"/>
-        <display value="Schwach reaktiv"/>
-    </concept>
-    <concept>
         <code value="Schlechter"/>
         <display value="Schlechter"/>
-    </concept>
-    <concept>
-        <code value="InterpretationdergenetischenAnalyse"/>
-        <display value="Interpretation der genetischen Analyse"/>
     </concept>
     <concept>
         <code value="Aenderungsverlauf"/>
         <display value="Änderungsverlauf"/>
     </concept>
     <concept>
-        <code value="Ausnahmewertinterpretation"/>
-        <display value="Ausnahmewertinterpretation"/>
-    </concept>
-    <concept>
         <code value="Normalitaetsinterpretation"/>
         <display value="Normalitätsinterpretation"/>
-    </concept>
-    <concept>
-        <code value="OberhalbderanalytischenGrenze"/>
-        <display value="Oberhalb der analytischen Grenze"/>
-    </concept>
-    <concept>
-        <code value="UnterhalbderanalytischenGrenze"/>
-        <display value="Unterhalb der analytischen Grenze"/>
     </concept>
 </CodeSystem>

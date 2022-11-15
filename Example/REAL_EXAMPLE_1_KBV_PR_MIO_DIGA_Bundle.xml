@@ -22,127 +22,131 @@
     <entry>
         <fullUrl value="urn:uuid:8e17ccc0-9d1a-11eb-a8b3-0242ac130003"/>
         <resource>
-            <Composition>
-                <id value="8e17ccc0-9d1a-11eb-a8b3-0242ac130003"/>
-                <meta>
-                    <versionId value="1"/>
-                    <lastUpdated value="2021-10-27T13:28:17.239+02:00"/>
-                    <profile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Composition|1.1.0"/>
-                </meta>
-                <extension url="https://fhir.kbv.de/StructureDefinition/KBV_EX_MIO_DIGA_Betrachtungszeitraum">
-                    <valuePeriod>
-                        <start value="2021-10-01T13:28:17.239+02:00"/>
-                        <end value="2021-10-27T13:28:17.239+02:00"/>
-                    </valuePeriod>
-                </extension>
-                <status value="final"/>
-                <type>
+          <Composition xmlns="http://hl7.org/fhir">
+            <id value="8e17ccc0-9d1a-11eb-a8b3-0242ac130003" />
+            <meta>
+               <versionId value="1"/>
+          <lastUpdated value="2021-10-27T13:28:17.239+02:00"/>
+                <profile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Composition|1.1.0" />
+            </meta>
+            <extension url="https://fhir.kbv.de/StructureDefinition/KBV_EX_MIO_DIGA_Betrachtungszeitraum">
+                <valuePeriod>
+                    <start value="2021-10-01T13:28:17.239+02:00" />
+                    <end value="2021-10-27T13:28:17.239+02:00" />
+                </valuePeriod>
+            </extension>
+            <status value="final" />
+            <type>
+                <coding>
+                    <system value="http://loinc.org" />
+                    <version value="2.72" />
+                    <code value="53576-5" />
+                    <display value="Personal health monitoring report Document" />
+                </coding>
+            </type>
+            <subject>
+                <reference value="urn:uuid:dca59b4e-3179-11ec-8d3d-0242ac130003" />
+            </subject>
+            <date value="2021-07-20" />
+            <author>
+                <reference value="urn:uuid:7d261218-8678-11eb-8dcd-0242ac130003" />
+            </author>
+            <title value="DiGA-Export" />
+            <section>
+                <title value="Aktivitäten"/>
+                <code>
                     <coding>
-                        <system value="http://loinc.org"/>
-                        <version value="2.72"/>
-                        <code value="53576-5"/>
-                        <display value="Personal health monitoring report Document"/>
+                        <system value="https://fhir.kbv.de/CodeSystem/KBV_CS_MIO_DIGA_Section_Codes" />
+                        <version value="1.1.0" />
+                        <code value="SectionAktivitaeten" />
+                        <display value="Bereich Aktivitäten" />
                     </coding>
-                </type>
-                <subject>
-                    <reference value="urn:uuid:dca59b4e-3179-11ec-8d3d-0242ac130003"/>
-                </subject>
-                <date value="2021-07-20"/>
-                <author>
-                    <reference value="urn:uuid:7d261218-8678-11eb-8dcd-0242ac130003"/>
-                </author>
-                <title value="DiGA-Export"/>
-                <section>
-                    <title value="Aktivitäten"/>
-                    <code>
-                        <coding>
-                            <system value="http://snomed.info/sct"/>
-                            <version value="http://snomed.info/sct/900000000000207008/version/20220331"/>
-                            <code value="257733005"/>
-                            <display value="Activity (observable entity)"/>
-                        </coding>
-                    </code>
-                    <entry>
-                        <reference value="urn:uuid:dca59d88-3179-11ec-8d3d-0242ac130003"/>
-                    </entry>
-                </section>
-                <section>
-                    <title value="Lebensstilfaktoren"/>
-                    <code>
-                        <coding>
-                            <system value="http://snomed.info/sct"/>
-                            <version value="http://snomed.info/sct/900000000000207008/version/20220331"/>
-                            <code value="228272008"/>
-                            <display value="Health-related behavior (observable entity)"/>
-                        </coding>
-                    </code>
-                    <entry>
-                        <reference value="urn:uuid:dca5939c-3179-11ec-8d3d-0242ac130003"/>
-                    </entry>
-                </section>
-                <section>
-                    <title value="Probleme"/>
-                    <code>
-                        <coding>
-                            <system value="http://loinc.org"/>
-                            <version value="2.72"/>
-                            <code value="11450-4"/>
-                            <display value="Problem list - Reported"/>
-                        </coding>
-                    </code>
-                    <entry>
-                        <reference value="urn:uuid:d00ab21d-5d9f-4055-9c54-7055aad5bee0"/>
-                    </entry>
-                </section>
-                <section>
-                    <title value="Umweltfaktoren"/>
-                    <code>
-                        <coding>
-                            <system value="http://snomed.info/sct"/>
-                            <version value="http://snomed.info/sct/900000000000207008/version/20220331"/>
-                            <code value="102487004"/>
-                            <display value="Environmental risk factor (observable entity)"/>
-                        </coding>
-                    </code>
-                    <entry>
-                        <reference value="urn:uuid:a519c7a8-ed18-4bdf-9977-54c15e58ffc1"/>
-                    </entry>
-                </section>
-                <section>
-                    <title value="Medikation"/>
-                    <code>
-                        <coding>
-                            <system value="http://snomed.info/sct"/>
-                            <version value="http://snomed.info/sct/900000000000207008/version/20220331"/>
-                            <code value="1003606003"/>
-                            <display value="Medication history section (record artifact)"/>
-                        </coding>
-                    </code>
-                    <entry>
-                        <reference value="urn:uuid:326fec3e-37fe-11ec-8d3d-0242ac130003"/>
-                    </entry>
-                    <entry>
-                        <reference value="urn:uuid:519d7a9e-37ff-11ec-8d3d-0242ac130003"/>
-                    </entry>
-                    <entry>
-                        <reference value="urn:uuid:5d0d871a-3800-11ec-8d3d-0242ac130003"/>
-                    </entry>
-                </section>
-                <section>
-                    <title value="Patientenberichte"/>
-                    <code>
-                        <coding>
-                            <system value="http://snomed.info/sct"/>
-                            <version value="http://snomed.info/sct/900000000000207008/version/20220331"/>
-                            <code value="408403008"/>
-                            <display value="Patient held record (record artifact)"/>
-                        </coding>
-                    </code>
-                    <entry>
-                        <reference value="urn:uuid:dca59162-3179-11ec-8d3d-0242ac130003"/>
-                    </entry>
-                </section>
-            </Composition>
+                </code>
+                <entry>
+                    <reference value="urn:uuid:dca59d88-3179-11ec-8d3d-0242ac130003" />
+                </entry>
+                
+            </section>
+          <section>
+                <title value="Lebensstilfaktoren"/>
+                <code>
+                    <coding>
+                        <system value="https://fhir.kbv.de/CodeSystem/KBV_CS_MIO_DIGA_Section_Codes" />
+                        <version value="1.1.0" />
+                        <code value="SectionLebensstilfaktoren" />
+                        <display value="Bereich Lebensstilfaktoren" />
+                    </coding>
+                </code>
+                <entry>
+                    <reference value="urn:uuid:dca5939c-3179-11ec-8d3d-0242ac130003" />
+                </entry>
+                
+            </section>
+          <section>
+                <title value="Probleme"/>
+                <code>
+                    <coding>
+                        <system value="http://loinc.org" />
+                        <version value="2.72" />
+                        <code value="11450-4" />
+                        <display value="Problem list - Reported" />
+                    </coding>
+                </code>
+                <entry>
+                    <reference value="urn:uuid:d00ab21d-5d9f-4055-9c54-7055aad5bee0" />
+                </entry>
+                
+            </section>
+          <section>
+                <title value="Umweltfaktoren"/>
+                <code>
+                    <coding>
+                      <system value="https://fhir.kbv.de/CodeSystem/KBV_CS_MIO_DIGA_Section_Codes" />
+                      <version value="1.1.0" />
+                      <code value="SectionUmweltfaktoren" />
+                      <display value="Bereich Umweltfaktoren" />
+                    </coding>
+                </code>
+                <entry>
+                    <reference value="urn:uuid:a519c7a8-ed18-4bdf-9977-54c15e58ffc1" />
+                </entry>
+                
+            </section>
+          <section>
+                <title value="Medikation"/>
+                <code>
+                    <coding>
+                      <system value="http://snomed.info/sct"/>
+                      <version value="http://snomed.info/sct/900000000000207008/version/20220331"/>
+                      <code value="721912009" />
+                      <display value="Medication summary document (record artifact)" />
+                    </coding>
+                </code>
+                <entry>
+                    <reference value="urn:uuid:326fec3e-37fe-11ec-8d3d-0242ac130003" />
+                </entry>
+                 <entry>
+                    <reference value="urn:uuid:519d7a9e-37ff-11ec-8d3d-0242ac130003" />
+                </entry>
+             <entry>
+                    <reference value="urn:uuid:5d0d871a-3800-11ec-8d3d-0242ac130003" />
+                </entry>
+            </section>
+          <section>
+                <title value="Patientenberichte"/>
+                <code>
+                    <coding>
+                      <system value="https://fhir.kbv.de/CodeSystem/KBV_CS_MIO_DIGA_Section_Codes" />
+                      <version value="1.1.0" />
+                      <code value="SectionPatientenberichte" />
+                      <display value="Bereich Patientenberichte" />
+                    </coding>
+                </code>
+                <entry>
+                    <reference value="urn:uuid:dca59162-3179-11ec-8d3d-0242ac130003" />
+                </entry>
+            </section>
+        </Composition>
         </resource>
     </entry>
     <entry>
@@ -315,7 +319,7 @@
                 <status value="completed"/>
                 <category>
                     <coding>
-                        <system value="http://hl7.org/fhir/sid/icf-nl"/>
+                        <system value="http://hl7.org/fhir/sid/icf"/>
                         <code value="d920"/>
                         <display value="Erholung und Freizeit"/>
                     </coding>
@@ -640,7 +644,7 @@
                 <status value="final"/>
                 <category>
                     <coding>
-                        <system value="http://hl7.org/fhir/sid/icf-nl"/>
+                        <system value="http://hl7.org/fhir/sid/icf"/>
                         <code value="e225"/>
                         <display value="Klima"/>
                     </coding>
@@ -725,7 +729,7 @@
                 <meta>
                     <versionId value="1"/>
                     <lastUpdated value="2021-10-27T13:28:17.239+02:00"/>
-                    <profile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Observation_Assessment_Scale|1.1.0"/>
+                    <profile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Observation_Score_or_Assessment_by_Scale|1.1.0"/>
                 </meta>
                 <identifier>
                     <type>
@@ -784,14 +788,6 @@
                     <high>
                         <value value="10"/>
                     </high>
-                    <type>
-                        <coding>
-                            <system value="http://snomed.info/sct"/>
-                            <version value="http://snomed.info/sct/900000000000207008/version/20220331"/>
-                            <code value="278492000"/>
-                            <display value="Numerical range (qualifier value)"/>
-                        </coding>
-                    </type>
                 </referenceRange>
             </Observation>
         </resource>
@@ -946,14 +942,9 @@
                 </reasonCode>
                 <dosage>
                     <timing>
-                        <code>
-                            <coding>
-                                <system value="http://snomed.info/sct"/>
-                                <version value="http://snomed.info/sct/900000000000207008/version/20220331"/>
-                                <code value="3157002"/>
-                                <display value="Evening (qualifier value)"/>
-                            </coding>
-                        </code>
+                        <repeat>
+                            <when value="EVE" />
+                        </repeat>
                     </timing>
                     <doseAndRate>
                         <doseQuantity>

@@ -20,7 +20,7 @@
 	<status value="final" />
 	<category>
 		<coding>
-			<system value="http://hl7.org/fhir/sid/icf-nl" />
+			<system value="http://hl7.org/fhir/sid/icf" />
 			<code value="e1" />
 			<display value="Produkte und Technologien" />
 		</coding>

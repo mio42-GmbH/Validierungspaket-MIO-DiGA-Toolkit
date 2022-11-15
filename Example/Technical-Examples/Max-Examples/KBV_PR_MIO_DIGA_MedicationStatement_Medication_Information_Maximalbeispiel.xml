@@ -55,9 +55,6 @@
 		</coding>
 		<text value="Nasenbluten"/>
 	</reasonCode>
-	<reasonReference>
-		<reference value="dca5efa4-3179-11ec-8d3d-0242ac130003"/>
-	</reasonReference>
 	<note>
 		<text value="Test" />
 	</note>

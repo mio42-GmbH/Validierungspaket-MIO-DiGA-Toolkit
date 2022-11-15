@@ -52,6 +52,18 @@
     </element>
     <element id="RelatedPerson.meta.profile">
       <path value="RelatedPerson.meta.profile" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="1" />
+    </element>
+    <element id="RelatedPerson.meta.profile:mioProfile">
+      <path value="RelatedPerson.meta.profile" />
+      <sliceName value="mioProfile" />
       <min value="1" />
       <max value="1" />
       <patternCanonical value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_RelatedPerson|1.1.0" />

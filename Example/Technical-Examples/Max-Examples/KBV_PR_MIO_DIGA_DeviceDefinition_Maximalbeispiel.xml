@@ -39,6 +39,6 @@
     </coding>
     <text value="Device"/>
   </type>
-  <version value="1.0.0" />
-  <version value="1.2.0" />
+  <version value="1.0" />
+  <version value="1.2" />
 </DeviceDefinition>

@@ -18,7 +18,7 @@
     <copyright value="Im folgenden Profil können Codes aus den Codesystemen Snomed, Loinc oder Ucum enthalten sein, die dem folgenden Urheberrecht unterliegen: This material includes SNOMED Clinical Terms® (SNOMED CT®) which is used by permission of SNOMED International. All rights reserved. SNOMED CT®, was originally created by The College of American Pathologists. SNOMED and SNOMED CT are registered trademarks of SNOMED International. Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license. This material contains content from LOINC (http://loinc.org). LOINC is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc. This product includes all or a portion of the UCUM table, UCUM codes, and UCUM definitions or is derived from it, subject to a license from Regenstrief Institute, Inc. and The UCUM Organization. Your use of the UCUM table, UCUM codes, UCUM definitions also is subject to this license, a copy of which is available at ​http://unitsofmeasure.org. The current complete UCUM table, UCUM Specification are available for download at http://unitsofmeasure.org. The UCUM table and UCUM codes are copyright © 1995-2009, Regenstrief Institute, Inc. and the Unified Codes for Units of Measures (UCUM) Organization. All rights reserved. THE UCUM TABLE (IN ALL FORMATS), UCUM DEFINITIONS, AND SPECIFICATION ARE PROVIDED &quot;AS IS.&quot; ANY EXPRESS OR IMPLIED WARRANTIES ARE DISCLAIMED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE."/>
     <compose>
         <include>
-            <system value="http://hl7.org/fhir/sid/icf-nl"/>
+            <system value="http://hl7.org/fhir/sid/icf"/>
             <concept>
                 <code value="e1"/>
                 <display value="Produkte und Technologien"/>
@@ -86,87 +86,87 @@
         </include>
     </compose>
     <expansion>
-        <identifier value="a90876da-2df7-11ed-93b1-005056adc104"/>
-        <timestamp value="2022-09-06T17:22:03+02:00"/>
+        <identifier value="ceeb5128-59fb-11ed-be32-005056adc104"/>
+        <timestamp value="2022-11-01T16:42:36+01:00"/>
         <total value="16"/>
         <offset value="0"/>
         <contains>
-            <system value="http://hl7.org/fhir/sid/icf-nl"/>
+            <system value="http://hl7.org/fhir/sid/icf"/>
             <code value="e1"/>
             <display value="Produkte und Technologien"/>
         </contains>
         <contains>
-            <system value="http://hl7.org/fhir/sid/icf-nl"/>
+            <system value="http://hl7.org/fhir/sid/icf"/>
             <code value="e2"/>
             <display value="Natürliche und vom Menschen veränderte Umwelt"/>
         </contains>
         <contains>
-            <system value="http://hl7.org/fhir/sid/icf-nl"/>
+            <system value="http://hl7.org/fhir/sid/icf"/>
             <code value="e210"/>
             <display value="Physikalische Geographie"/>
         </contains>
         <contains>
-            <system value="http://hl7.org/fhir/sid/icf-nl"/>
+            <system value="http://hl7.org/fhir/sid/icf"/>
             <code value="e215"/>
             <display value="Bevölkerung"/>
         </contains>
         <contains>
-            <system value="http://hl7.org/fhir/sid/icf-nl"/>
+            <system value="http://hl7.org/fhir/sid/icf"/>
             <code value="e220"/>
             <display value="Flora und Fauna"/>
         </contains>
         <contains>
-            <system value="http://hl7.org/fhir/sid/icf-nl"/>
+            <system value="http://hl7.org/fhir/sid/icf"/>
             <code value="e225"/>
             <display value="Klima"/>
         </contains>
         <contains>
-            <system value="http://hl7.org/fhir/sid/icf-nl"/>
+            <system value="http://hl7.org/fhir/sid/icf"/>
             <code value="e230"/>
             <display value="Natürliche Ereignisse"/>
         </contains>
         <contains>
-            <system value="http://hl7.org/fhir/sid/icf-nl"/>
+            <system value="http://hl7.org/fhir/sid/icf"/>
             <code value="e235"/>
             <display value="Vom Menschen verursachte Ereignisse"/>
         </contains>
         <contains>
-            <system value="http://hl7.org/fhir/sid/icf-nl"/>
+            <system value="http://hl7.org/fhir/sid/icf"/>
             <code value="e240"/>
             <display value="Licht"/>
         </contains>
         <contains>
-            <system value="http://hl7.org/fhir/sid/icf-nl"/>
+            <system value="http://hl7.org/fhir/sid/icf"/>
             <code value="e245"/>
             <display value="Zeitbezogene Veränderungen"/>
         </contains>
         <contains>
-            <system value="http://hl7.org/fhir/sid/icf-nl"/>
+            <system value="http://hl7.org/fhir/sid/icf"/>
             <code value="e250"/>
             <display value="Laute und Geräusche"/>
         </contains>
         <contains>
-            <system value="http://hl7.org/fhir/sid/icf-nl"/>
+            <system value="http://hl7.org/fhir/sid/icf"/>
             <code value="e255"/>
             <display value="Schwingung"/>
         </contains>
         <contains>
-            <system value="http://hl7.org/fhir/sid/icf-nl"/>
+            <system value="http://hl7.org/fhir/sid/icf"/>
             <code value="e260"/>
             <display value="Luftqualität"/>
         </contains>
         <contains>
-            <system value="http://hl7.org/fhir/sid/icf-nl"/>
+            <system value="http://hl7.org/fhir/sid/icf"/>
             <code value="e3"/>
             <display value="Unterstützung und Beziehungen"/>
         </contains>
         <contains>
-            <system value="http://hl7.org/fhir/sid/icf-nl"/>
+            <system value="http://hl7.org/fhir/sid/icf"/>
             <code value="e4"/>
             <display value="Einstellungen"/>
         </contains>
         <contains>
-            <system value="http://hl7.org/fhir/sid/icf-nl"/>
+            <system value="http://hl7.org/fhir/sid/icf"/>
             <code value="e5"/>
             <display value="Dienste, Systeme und Handlungsgrundsätze"/>
         </contains>

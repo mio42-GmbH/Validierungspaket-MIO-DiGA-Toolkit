@@ -35,12 +35,24 @@
 			<path value="MedicationAdministration.meta.source"/>
 			<max value="0"/>
 		</element>
-		<element id="MedicationAdministration.meta.profile">
-			<path value="MedicationAdministration.meta.profile"/>
-			<min value="1"/>
-			<max value="1"/>
-			<patternCanonical value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_MedicationAdministration_Medication_Intake|1.1.0"/>
-		</element>
+    <element id="MedicationAdministration.meta.profile">
+      <path value="MedicationAdministration.meta.profile" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="1" />
+    </element>
+    <element id="MedicationAdministration.meta.profile:mioProfile">
+      <path value="MedicationAdministration.meta.profile" />
+      <sliceName value="mioProfile" />
+      <min value="1" />
+      <max value="1" />
+      <patternCanonical value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_MedicationAdministration_Medication_Intake|1.1.0" />
+    </element>
 		<element id="MedicationAdministration.meta.security">
 			<path value="MedicationAdministration.meta.security"/>
 			<max value="0"/>
@@ -414,23 +426,6 @@
 		</element>
 		<element id="MedicationAdministration.request">
 			<path value="MedicationAdministration.request"/>
-			<max value="0"/>
-		</element>
-		<element id="MedicationAdministration.request.reference">
-			<path value="MedicationAdministration.request.reference"/>
-			<min value="1"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="MedicationAdministration.request.type">
-			<path value="MedicationAdministration.request.type"/>
-			<max value="0"/>
-		</element>
-		<element id="MedicationAdministration.request.identifier">
-			<path value="MedicationAdministration.request.identifier"/>
-			<max value="0"/>
-		</element>
-		<element id="MedicationAdministration.request.display">
-			<path value="MedicationAdministration.request.display"/>
 			<max value="0"/>
 		</element>
 		<element id="MedicationAdministration.device">

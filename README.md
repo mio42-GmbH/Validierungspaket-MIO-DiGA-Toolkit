@@ -1,4 +1,4 @@
-# Validationpackage MIO DiGA Toolkit Version 1.1.0 Commenting Phase
+# Validationpackage MIO DiGA Toolkit Version 1.1.0 Benehmensherstellung
 
 Disclaimer:
 This service is intended to help with the validation process. However, please note there is no claim to completeness, correctness or reliability. 
@@ -9,7 +9,7 @@ This archive is supposed to be a guidance for developers in the implementation p
 Alternatively, the dependencies can also be found here:
 - de.basisprofil.r4 1.3.2: https://simplifier.net/packages/de.basisprofil.r4/1.3.2
 - kbv.basis 1.3.0: https://simplifier.net/packages/kbv.basis/1.3.0
-- kbv.mio.diga 1.1.0-kommentierung: https://simplifier.net/packages/kbv.mio.diga/1.1.0-kommentierung
+- kbv.mio.diga 1.1.0-benehmensherstellung: https://simplifier.net/packages/kbv.mio.diga/1.1.0-benehmensherstellung
 
 The version of the validator, which was used by the mio42 GmbH, is included. If the version provided should cause any problems, you may also use the most recent one. All releases can be found here:
 - https://github.com/hapifhir/org.hl7.fhir.core/releases
@@ -37,7 +37,7 @@ java -jar validator_cli.jar .\Example\REAL_EXAMPLE_3_KBV_PR_MIO_DIGA_Bundle.xml 
 Please note that a current version of Java is required (we would recommend the most recent one).
 
 
-# Validierungspaket MIO DiGA Toolkit Version 1.1.0 Kommentierungsphase
+# Validierungspaket MIO DiGA Toolkit Version 1.1.0 Benehmensherstellung
 
 Disclaimer: 
 Der Service zur Validierung erhebt keinen Anspruch auf Vollständigkeit, Korrektheit sowie Verbindlichkeit.
@@ -51,7 +51,7 @@ Die Dependencies finden Sie alternativ unter folgenden links:
 
 - de.basisprofil.r4 1.3.2: https://simplifier.net/packages/de.basisprofil.r4/1.3.2
 - kbv.basis 1.3.0: https://simplifier.net/packages/kbv.basis/1.3.0
-- kbv.mio.diga 1.1.0-kommentierung: https://simplifier.net/packages/kbv.mio.diga/1.1.0-kommentierung
+- kbv.mio.diga 1.1.0-benehmensherstellung: https://simplifier.net/packages/kbv.mio.diga/1.1.0-benehmensherstellung
 
 Die Version des Validators, welche von der mio42 GmbH für die Validierung verwendet wurde, ist enthalten. Sollte diese zu Prolemen führen, können Sie auch die aktuelle  Version des Validators nutzen. Alle Releases finden Sie unter: 
 - https://github.com/hapifhir/org.hl7.fhir.core/releases

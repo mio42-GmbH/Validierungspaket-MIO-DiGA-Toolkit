@@ -22,6 +22,22 @@
         <display value="Bereich Fragebögen"/>
     </concept>
     <concept>
+        <code value="SectionAktivitaeten"/>
+        <display value="Bereich Aktivitäten"/>
+    </concept>
+    <concept>
+        <code value="SectionNahrung"/>
+        <display value="Bereich Nahrung"/>
+    </concept>
+    <concept>
+        <code value="SectionLebensstilfaktoren"/>
+        <display value="Bereich Lebensstilfaktoren"/>
+    </concept>
+    <concept>
+        <code value="SectionUmweltfaktoren"/>
+        <display value="Bereich Umweltfaktoren"/>
+    </concept>
+    <concept>
         <code value="SectionZiele"/>
         <display value="Bereich Ziele"/>
     </concept>
@@ -30,31 +46,15 @@
         <display value="Bereich Kontakte"/>
     </concept>
     <concept>
+        <code value="SectionTermineBegegnungen"/>
+        <display value="Bereich Termine und Begegnungen"/>
+    </concept>
+    <concept>
+        <code value="SectionPatientenberichte"/>
+        <display value="Bereich Patientenberichte"/>
+    </concept>
+    <concept>
         <code value="SectionAnhhaenge"/>
         <display value="Bereich Anhänge"/>
-    </concept>
-    <concept>
-        <code value="SectionAktivitaeten"/>
-        <display value="Bereich Aktivitäten"/>
-    </concept>
-    <concept>
-        <code value="SectionNahrung" />
-        <display value="Bereich Nahrung" />
-    </concept>
-    <concept>
-        <code value="SectionLebensstilfaktoren" />
-        <display value="Bereich Lebensstilfaktoren" />
-    </concept>
-    <concept>
-        <code value="SectionUmweltfaktoren" />
-        <display value="Bereich Umweltfaktoren" />
-    </concept>
-    <concept>
-        <code value="SectionTermineBegegnungen" />
-        <display value="Bereich Termine und Begegnungen" />
-    </concept>
-    <concept>
-        <code value="SectionPatientenberichte" />
-        <display value="Bereich Patientenberichte" />
     </concept>
 </CodeSystem>

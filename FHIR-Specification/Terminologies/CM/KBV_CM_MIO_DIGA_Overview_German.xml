@@ -184,149 +184,227 @@
         </element>
     </group>
     <group>
-        <source value="http://terminology.hl7.org/CodeSystem/condition-clinical" />
-        <sourceVersion value="4.0.1" />
-        <target value="https://fhir.kbv.de/CodeSystem/KBV_CS_MIO_DIGA_ConditionClinicalStatusCodes_German" />
-        <targetVersion value="1.1.0" />
-        <element>
-            <code value="active" />
-            <display value="Active" />
-            <target>
-                <code value="Aktiv" />
-                <display value="Aktiv" />
-                <equivalence value="equivalent" />
-            </target>
-        </element>
-        <element>
-            <code value="inactive" />
-            <display value="Inactive" />
-            <target>
-                <code value="Inaktiv" />
-                <display value="Inaktiv" />
-                <equivalence value="equivalent" />
-            </target>
-        </element>
-        <element>
-            <code value="recurrence" />
-            <display value="Recurrence" />
-            <target>
-                <code value="Wiederauftreten" />
-                <display value="Wiederauftreten" />
-                <equivalence value="equivalent" />
-            </target>
-        </element>
-        <element>
-            <code value="relapse" />
-            <display value="Relapse" />
-            <target>
-                <code value="Rezidiv" />
-                <display value="Rezidiv" />
-                <equivalence value="equivalent" />
-            </target>
-        </element>
-        <element>
-            <code value="resolved" />
-            <display value="Resolved" />
-            <target>
-                <code value="Behoben" />
-                <display value="Behoben" />
-                <equivalence value="equivalent" />
-            </target>
-        </element>
-    </group>
-    <group>
-        <source value="http://terminology.hl7.org/CodeSystem/condition-ver-status" />
-        <sourceVersion value="4.0.1" />
-        <target value="https://fhir.kbv.de/CodeSystem/KBV_CS_MIO_DIGA_ConditionVerificationStatus_German" />
-        <targetVersion value="1.1.0" />
-        <element>
-            <code value="confirmed" />
-            <display value="Confirmed" />
-            <target>
-                <code value="Bestaetigt"/>
-                <display value="Bestätigt"/>
-                <equivalence value="equivalent" />
-            </target>
-        </element>
-        <element>
-            <code value="differential" />
-            <display value="Differential" />
-            <target>
-                <code value="Differenzial"/>
-                <display value="Differenzial"/>
-                <equivalence value="equivalent" />
-            </target>
-        </element>
-        <element>
-            <code value="entered-in-error" />
-            <display value="Entered in Error" />
-            <target>
-                <code value="IrrtuemlicheEingabe"/>
-                <display value="Irrtümliche Eingabe"/>
-                <equivalence value="equivalent" />
-            </target>
-        </element>
-        <element>
-            <code value="provisional" />
-            <display value="Provisional" />
-            <target>
-                <code value="Vorlaeufig"/>
-                <display value="Vorläufig"/>
-                <equivalence value="equivalent" />
-            </target>
-        </element>
-        <element>
-            <code value="refuted" />
-            <display value="Refuted" />
-            <target>
-                <code value="Widerlegt"/>
-                <display value="Widerlegt"/>
-                <equivalence value="equivalent" />
-            </target>
-        </element>
-        <element>
-            <code value="unconfirmed" />
-            <display value="Unconfirmed" />
-            <target>
-                <code value="Unbestaetigt"/>
-                <display value="Unbestätigt"/>
-                <equivalence value="equivalent" />
-            </target>
-        </element>
-    </group>
-    <group>
-        <source value="http://snomed.info/sct" />
-        <sourceVersion value="http://snomed.info/sct/900000000000207008/version/20220331" />
-        <target value="https://fhir.kbv.de/CodeSystem/KBV_CS_MIO_DIGA_Condition_DiagnosisSeverity_German" />
-        <targetVersion value="1.1.0" />
-        <element>
-            <code value="24484000" />
-            <display value="Severe (severity modifier) (qualifier value)" />
-            <target>
-                <code value="schwer" />
-                <display value="schwer" />
-                <equivalence value="equivalent" />
-            </target>
-        </element>
-        <element>
-            <code value="255604002" />
-            <display value="Mild (qualifier value)" />
-            <target>
-                <code value="leicht" />
-                <display value="leicht" />
-                <equivalence value="equivalent" />
-            </target>
-        </element>
-        <element>
-            <code value="6736007" />
-            <display value="Moderate (severity modifier) (qualifier value)" />
-            <target>
-                <code value="mittelschwer" />
-                <display value="mittelschwer" />
-                <equivalence value="equivalent" />
-            </target>
-        </element>
-    </group>
+      <source value="http://terminology.hl7.org/CodeSystem/condition-clinical" />
+      <sourceVersion value="4.0.1" />
+      <target value="https://fhir.kbv.de/CodeSystem/KBV_CS_MIO_DIGA_ConditionClinicalStatusCodes_German" />
+      <targetVersion value="1.1.0" />
+      <element>
+          <code value="active" />
+          <display value="Active" />
+          <target>
+              <code value="Aktiv" />
+              <display value="Aktiv" />
+              <equivalence value="equivalent" />
+          </target>
+      </element>
+      <element>
+          <code value="inactive" />
+          <display value="Inactive" />
+          <target>
+              <code value="Inaktiv" />
+              <display value="Inaktiv" />
+              <equivalence value="equivalent" />
+          </target>
+      </element>
+      <element>
+          <code value="recurrence" />
+          <display value="Recurrence" />
+          <target>
+              <code value="Wiederauftreten" />
+              <display value="Wiederauftreten" />
+              <equivalence value="equivalent" />
+          </target>
+      </element>
+      <element>
+          <code value="relapse" />
+          <display value="Relapse" />
+          <target>
+              <code value="Rezidiv" />
+              <display value="Rezidiv" />
+              <equivalence value="equivalent" />
+          </target>
+      </element>
+      <element>
+          <code value="resolved" />
+          <display value="Resolved" />
+          <target>
+              <code value="Behoben" />
+              <display value="Behoben" />
+              <equivalence value="equivalent" />
+          </target>
+      </element>
+  </group>
+  <group>
+      <source value="http://terminology.hl7.org/CodeSystem/condition-ver-status" />
+      <sourceVersion value="4.0.1" />
+      <target value="https://fhir.kbv.de/CodeSystem/KBV_CS_MIO_DIGA_ConditionVerificationStatus_German" />
+      <targetVersion value="1.1.0" />
+      <element>
+          <code value="confirmed" />
+          <display value="Confirmed" />
+          <target>
+              <code value="Bestaetigt"/>
+              <display value="Bestätigt"/>
+              <equivalence value="equivalent" />
+          </target>
+      </element>
+      <element>
+          <code value="differential" />
+          <display value="Differential" />
+          <target>
+              <code value="Differenzial"/>
+              <display value="Differenzial"/>
+              <equivalence value="equivalent" />
+          </target>
+      </element>
+      <element>
+          <code value="entered-in-error" />
+          <display value="Entered in Error" />
+          <target>
+              <code value="IrrtuemlicheEingabe"/>
+              <display value="Irrtümliche Eingabe"/>
+              <equivalence value="equivalent" />
+          </target>
+      </element>
+      <element>
+          <code value="provisional" />
+          <display value="Provisional" />
+          <target>
+              <code value="Vorlaeufig"/>
+              <display value="Vorläufig"/>
+              <equivalence value="equivalent" />
+          </target>
+      </element>
+      <element>
+          <code value="refuted" />
+          <display value="Refuted" />
+          <target>
+              <code value="Widerlegt"/>
+              <display value="Widerlegt"/>
+              <equivalence value="equivalent" />
+          </target>
+      </element>
+      <element>
+          <code value="unconfirmed" />
+          <display value="Unconfirmed" />
+          <target>
+              <code value="Unbestaetigt"/>
+              <display value="Unbestätigt"/>
+              <equivalence value="equivalent" />
+          </target>
+      </element>
+  </group>
+  <group>
+      <source value="http://snomed.info/sct" />
+      <sourceVersion value="http://snomed.info/sct/900000000000207008/version/20220331" />
+      <target value="https://fhir.kbv.de/CodeSystem/KBV_CS_MIO_DIGA_Condition_DiagnosisSeverity_German" />
+      <targetVersion value="1.1.0" />
+      <element>
+          <code value="24484000" />
+          <display value="Severe (severity modifier) (qualifier value)" />
+          <target>
+              <code value="schwer" />
+              <display value="schwer" />
+              <equivalence value="equivalent" />
+          </target>
+      </element>
+      <element>
+          <code value="255604002" />
+          <display value="Mild (qualifier value)" />
+          <target>
+              <code value="leicht" />
+              <display value="leicht" />
+              <equivalence value="equivalent" />
+          </target>
+      </element>
+      <element>
+          <code value="6736007" />
+          <display value="Moderate (severity modifier) (qualifier value)" />
+          <target>
+              <code value="mittelschwer" />
+              <display value="mittelschwer" />
+              <equivalence value="equivalent" />
+          </target>
+      </element>
+  </group>
+  <group>
+    <source value="http://terminology.hl7.org/CodeSystem/device-status-reason" />
+    <sourceVersion value="4.0.1" />
+    <target value="https://fhir.kbv.de/CodeSystem/KBV_CS_MIO_DIGA_Device_Status_Reason_German" />
+    <targetVersion value="1.1.0" />
+    <element>
+      <code value="online" />
+      <display value="Online" />
+      <target>
+          <code value="Online" />
+          <display value="Online" />
+          <equivalence value="equivalent" />
+      </target>
+  </element>
+    <element>
+      <code value="paused" />
+      <display value="Paused" />
+      <target>
+          <code value="Pausiert" />
+          <display value="Pausiert" />
+          <equivalence value="equivalent" />
+      </target>
+  </element>
+  <element>
+      <code value="standby" />
+      <display value="Standby" />
+      <target>
+          <code value="StandBy" />
+          <display value="Stand-By" />
+          <equivalence value="equivalent" />
+      </target>
+  </element>
+  <element>
+      <code value="offline" />
+      <display value="Offline" />
+      <target>
+          <code value="Offline" />
+          <display value="Offline" />
+          <equivalence value="equivalent" />
+      </target>
+  </element>
+  <element>
+    <code value="not-ready" />
+    <display value="Not Ready" />
+    <target>
+      <code value="Nichtbereit" />
+      <display value="Nicht bereit" />
+      <equivalence value="equivalent" />
+    </target>
+  </element>
+  <element>
+      <code value="transduc-discon" />
+      <display value="Transducer Disconnected" />
+      <target>
+          <code value="Signalgebernichtverbunden" />
+          <display value="Signalgeber nicht verbunden" />
+          <equivalence value="equivalent" />
+      </target>
+  </element>
+    <element>
+        <code value="hw-discon" />
+        <display value="Hardware Disconnected" />
+        <target>
+            <code value="Hardwarenichtverbunden" />
+            <display value="Hardware nicht verbunden" />
+            <equivalence value="equivalent" />
+        </target>
+    </element>
+    <element>
+        <code value="off" />
+        <display value="Off" />
+        <target>
+            <code value="Aus" />
+            <display value="Aus" />
+            <equivalence value="equivalent" />
+        </target>
+    </element>
+</group>
     <group>
         <source value="http://hl7.org/fhir/device-nametype"/>
         <sourceVersion value="4.0.1"/>
@@ -388,47 +466,47 @@
         </element>
     </group>
     <group>
-        <source value="http://hl7.org/fhir/device-status" />
-        <sourceVersion value="4.0.1" />
-        <target value="https://fhir.kbv.de/CodeSystem/KBV_CS_Base_Device_Status_German" />
-        <targetVersion value="1.3.0" />
-        <element>
-            <code value="active" />
-            <display value="Active" />
-            <target>
-                <code value="Aktiv" />
-                <display value="Aktiv" />
-                <equivalence value="equivalent" />
-            </target>
-        </element>
-        <element>
-            <code value="entered-in-error" />
-            <display value="Entered in Error" />
-            <target>
-                <code value="IrrtuemlicheEingabe" />
-                <display value="Irrt&#252;mliche Eingabe" />
-                <equivalence value="equivalent" />
-            </target>
-        </element>
-        <element>
-            <code value="inactive" />
-            <display value="Inactive" />
-            <target>
-                <code value="Inaktiv" />
-                <display value="Inaktiv" />
-                <equivalence value="equivalent" />
-            </target>
-        </element>
-        <element>
-            <code value="unknown" />
-            <display value="Unknown" />
-            <target>
-                <code value="Unbekannt" />
-                <display value="Unbekannt" />
-                <equivalence value="equivalent" />
-            </target>
-        </element>
-    </group>
+      <source value="http://hl7.org/fhir/device-status" />
+      <sourceVersion value="4.0.1" />
+      <target value="https://fhir.kbv.de/CodeSystem/KBV_CS_Base_Device_Status_German" />
+      <targetVersion value="1.3.0" />
+      <element>
+          <code value="active" />
+          <display value="Active" />
+          <target>
+              <code value="Aktiv" />
+              <display value="Aktiv" />
+              <equivalence value="equivalent" />
+          </target>
+      </element>
+      <element>
+          <code value="entered-in-error" />
+          <display value="Entered in Error" />
+          <target>
+              <code value="IrrtuemlicheEingabe" />
+              <display value="Irrt&#252;mliche Eingabe" />
+              <equivalence value="equivalent" />
+          </target>
+      </element>
+      <element>
+          <code value="inactive" />
+          <display value="Inactive" />
+          <target>
+              <code value="Inaktiv" />
+              <display value="Inaktiv" />
+              <equivalence value="equivalent" />
+          </target>
+      </element>
+      <element>
+          <code value="unknown" />
+          <display value="Unknown" />
+          <target>
+              <code value="Unbekannt" />
+              <display value="Unbekannt" />
+              <equivalence value="equivalent" />
+          </target>
+      </element>
+  </group>
     <group>
         <source value="http://terminology.hl7.org/CodeSystem/device-status-reason"/>
         <sourceVersion value="4.0.1"/>
@@ -610,1070 +688,1070 @@
         </element>
     </group>
     <group>
-        <source value="http://terminology.hl7.org/CodeSystem/v2-0131" />
-        <sourceVersion value="2.9" />
-        <target value="https://fhir.kbv.de/CodeSystem/KBV_CS_Base_PatientRelationshipType_German" />
-        <targetVersion value="1.3.0" />
-        <element>
-            <code value="C" />
-            <display value="Emergency Contact" />
-            <target>
-                <code value="AnsprechpartnerIninNotfaellen" />
-                <display value="AnsprechpartnerIn in Notf&#228;llen" />
-                <equivalence value="equivalent" />
-            </target>
-        </element>
-        <element>
-            <code value="E" />
-            <display value="Employer" />
-            <target>
-                <code value="ArbeitgeberIn" />
-                <display value="ArbeitgeberIn" />
-                <equivalence value="equivalent" />
-            </target>
-        </element>
-        <element>
-            <code value="F" />
-            <display value="Federal Agency" />
-            <target>
-                <code value="Bundesbehoerde" />
-                <display value="Bundesbeh&#246;rde" />
-                <equivalence value="equivalent" />
-            </target>
-        </element>
-        <element>
-            <code value="I" />
-            <display value="Insurance Company" />
-            <target>
-                <code value="Versicherung" />
-                <display value="Versicherung" />
-                <equivalence value="equivalent" />
-            </target>
-        </element>
-        <element>
-            <code value="N" />
-            <display value="Next-of-Kin" />
-            <target>
-                <code value="Kontaktperson" />
-                <display value="Kontaktperson" />
-                <equivalence value="equivalent" />
-            </target>
-        </element>
-        <element>
-            <code value="O" />
-            <display value="Other" />
-            <target>
-                <code value="Andere" />
-                <display value="Andere" />
-                <equivalence value="equivalent" />
-            </target>
-        </element>
-        <element>
-            <code value="S" />
-            <display value="State Agency" />
-            <target>
-                <code value="Landesbehoerde" />
-                <display value="Landesbeh&#246;rde" />
-                <equivalence value="equivalent" />
-            </target>
-        </element>
-        <element>
-            <code value="U" />
-            <display value="Unknown" />
-            <target>
-                <code value="Unbekannt" />
-                <display value="Unbekannt" />
-                <equivalence value="equivalent" />
-            </target>
-        </element>
-    </group>
-    <group>
-        <source value="http://terminology.hl7.org/CodeSystem/v3-RoleCode" />
-        <sourceVersion value="2018-08-12" />
-        <target value="https://fhir.kbv.de/CodeSystem/KBV_CS_Base_PatientRelationshipType_German" />
-        <targetVersion value="1.3.0" />
-        <element>
-            <code value="ADOPTF" />
-            <display value="adoptive father" />
-            <target>
-                <code value="Adoptivvater" />
-                <display value="Adoptivvater" />
-                <equivalence value="equivalent" />
-            </target>
-        </element>
-        <element>
-            <code value="ADOPTM" />
-            <display value="adoptive mother" />
-            <target>
-                <code value="Adoptivmutter" />
-                <display value="Adoptivmutter" />
-                <equivalence value="equivalent" />
-            </target>
-        </element>
-        <element>
-            <code value="ADOPTP" />
-            <display value="adoptive parent" />
-            <target>
-                <code value="Adoptivelternteil" />
-                <display value="Adoptivelternteil" />
-                <equivalence value="equivalent" />
-            </target>
-        </element>
-        <element>
-            <code value="AUNT" />
-            <display value="aunt" />
-            <target>
-                <code value="Tante" />
-                <display value="Tante" />
-                <equivalence value="equivalent" />
-            </target>
-        </element>
-        <element>
-            <code value="BRO" />
-            <display value="brother" />
-            <target>
-                <code value="Bruder" />
-                <display value="Bruder" />
-                <equivalence value="equivalent" />
-            </target>
-        </element>
-        <element>
-            <code value="BROINLAW" />
-            <display value="brother-in-law" />
-            <target>
-                <code value="Schwager" />
-                <display value="Schwager" />
-                <equivalence value="equivalent" />
-            </target>
-        </element>
-        <element>
-            <code value="CHILD" />
-            <display value="child" />
-            <target>
-                <code value="Kind" />
-                <display value="Kind" />
-                <equivalence value="equivalent" />
-            </target>
-        </element>
-        <element>
-            <code value="CHLDADOPT" />
-            <display value="adopted child" />
-            <target>
-                <code value="Adoptivkind" />
-                <display value="Adoptivkind" />
-                <equivalence value="equivalent" />
-            </target>
-        </element>
-        <element>
-            <code value="CHLDFOST" />
-            <display value="foster child" />
-            <target>
-                <code value="Pflegekind" />
-                <display value="Pflegekind" />
-                <equivalence value="equivalent" />
-            </target>
-        </element>
-        <element>
-            <code value="CHLDINLAW" />
-            <display value="child-in-law" />
-            <target>
-                <code value="Schwiegersohn" />
-                <display value="Schwiegersohn" />
-                <equivalence value="equivalent" />
-            </target>
-        </element>
-        <element>
-            <code value="COUSN" />
-            <display value="cousin" />
-            <target>
-                <code value="Cousine" />
-                <display value="Cousine" />
-                <equivalence value="equivalent" />
-            </target>
-        </element>
-        <element>
-            <code value="DAU" />
-            <display value="natural daughter" />
-            <target>
-                <code value="LeiblicheTochter" />
-                <display value="Leibliche Tochter" />
-                <equivalence value="equivalent" />
-            </target>
-        </element>
-        <element>
-            <code value="DAUADOPT" />
-            <display value="adopted daughter" />
-            <target>
-                <code value="Adoptivtochter" />
-                <display value="Adoptivtochter" />
-                <equivalence value="equivalent" />
-            </target>
-        </element>
-        <element>
-            <code value="DAUC" />
-            <display value="daughter" />
-            <target>
-                <code value="Tochter" />
-                <display value="Tochter" />
-                <equivalence value="equivalent" />
-            </target>
-        </element>
-        <element>
-            <code value="DAUFOST" />
-            <display value="foster daughter" />
-            <target>
-                <code value="Pflegetochter" />
-                <display value="Pflegetochter" />
-                <equivalence value="equivalent" />
-            </target>
-        </element>
-        <element>
-            <code value="DAUINLAW" />
-            <display value="daughter in-law" />
-            <target>
-                <code value="Schwiegertochter" />
-                <display value="Schwiegertochter" />
-                <equivalence value="equivalent" />
-            </target>
-        </element>
-        <element>
-            <code value="DOMPART" />
-            <display value="domestic partner" />
-            <target>
-                <code value="Lebenspartnerin" />
-                <display value="Lebenspartner/-in" />
-                <equivalence value="equivalent" />
-            </target>
-        </element>
-        <element>
-            <code value="EXT" />
-            <display value="extended family member" />
-            <target>
-                <code value="ErweitertesFamilienmitglied" />
-                <display value="Erweitertes Familienmitglied" />
-                <equivalence value="equivalent" />
-            </target>
-        </element>
-        <element>
-            <code value="FAMMEMB" />
-            <display value="family member" />
-            <target>
-                <code value="Familienmitglied" />
-                <display value="Familienmitglied" />
-                <equivalence value="equivalent" />
-            </target>
-        </element>
-        <element>
-            <code value="FMRSPS" />
-            <display value="former spouse" />
-            <target>
-                <code value="EhemaligerEhepartnerIn" />
-                <display value="Ehemalige(r) EhepartnerIn" />
-                <equivalence value="equivalent" />
-            </target>
-        </element>
-        <element>
-            <code value="FRND" />
-            <display value="unrelated friend" />
-            <target>
-                <code value="NichtverwandterFreund" />
-                <display value="Nicht verwandter Freund" />
-                <equivalence value="equivalent" />
-            </target>
-        </element>
-        <element>
-            <code value="FTH" />
-            <display value="father" />
-            <target>
-                <code value="Vater" />
-                <display value="Vater" />
-                <equivalence value="equivalent" />
-            </target>
-        </element>
-        <element>
-            <code value="FTHFOST" />
-            <display value="foster father" />
-            <target>
-                <code value="Ziehvater" />
-                <display value="Ziehvater" />
-                <equivalence value="equivalent" />
-            </target>
-        </element>
-        <element>
-            <code value="FTHINLAW" />
-            <display value="father-in-law" />
-            <target>
-                <code value="Schwiegervater" />
-                <display value="Schwiegervater" />
-                <equivalence value="equivalent" />
-            </target>
-        </element>
-        <element>
-            <code value="FTWIN" />
-            <display value="fraternal twin" />
-            <target>
-                <code value="ZweieiigerZwilling" />
-                <display value="Zweieiiger Zwilling" />
-                <equivalence value="equivalent" />
-            </target>
-        </element>
-        <element>
-            <code value="FTWINBRO" />
-            <display value="fraternal twin brother" />
-            <target>
-                <code value="zweieiigerZwillingsbruder" />
-                <display value="zweieiiger Zwillingsbruder" />
-                <equivalence value="equivalent" />
-            </target>
-        </element>
-        <element>
-            <code value="FTWINSIS" />
-            <display value="fraternal twin sister" />
-            <target>
-                <code value="ZweieiigeZwillingsschwester" />
-                <display value="Zweieiige Zwillingsschwester" />
-                <equivalence value="equivalent" />
-            </target>
-        </element>
-        <element>
-            <code value="GESTM" />
-            <display value="gestational mother" />
-            <target>
-                <code value="werdendeMutter" />
-                <display value="werdende Mutter" />
-                <equivalence value="equivalent" />
-            </target>
-        </element>
-        <element>
-            <code value="GGRFTH" />
-            <display value="great grandfather" />
-            <target>
-                <code value="Urgrossvater" />
-                <display value="Urgroßvater" />
-                <equivalence value="equivalent" />
-            </target>
-        </element>
-        <element>
-            <code value="GGRMTH" />
-            <display value="great grandmother" />
-            <target>
-                <code value="Urgrossmutter" />
-                <display value="Urgroßmutter" />
-                <equivalence value="equivalent" />
-            </target>
-        </element>
-        <element>
-            <code value="GGRPRN" />
-            <display value="great grandparent" />
-            <target>
-                <code value="Urgrosseltern" />
-                <display value="Urgroßeltern" />
-                <equivalence value="equivalent" />
-            </target>
-        </element>
-        <element>
-            <code value="GRFTH" />
-            <display value="grandfather" />
-            <target>
-                <code value="Grossvater" />
-                <display value="Großvater" />
-                <equivalence value="equivalent" />
-            </target>
-        </element>
-        <element>
-            <code value="GRMTH" />
-            <display value="grandmother" />
-            <target>
-                <code value="Grossmutter" />
-                <display value="Großmutter" />
-                <equivalence value="equivalent" />
-            </target>
-        </element>
-        <element>
-            <code value="GRNDCHILD" />
-            <display value="grandchild" />
-            <target>
-                <code value="Enkelkind" />
-                <display value="Enkelkind" />
-                <equivalence value="equivalent" />
-            </target>
-        </element>
-        <element>
-            <code value="GRNDDAU" />
-            <display value="granddaughter" />
-            <target>
-                <code value="Enkeltochter" />
-                <display value="Enkeltochter" />
-                <equivalence value="equivalent" />
-            </target>
-        </element>
-        <element>
-            <code value="GRNDSON" />
-            <display value="grandson" />
-            <target>
-                <code value="Enkelsohn" />
-                <display value="Enkelsohn" />
-                <equivalence value="equivalent" />
-            </target>
-        </element>
-        <element>
-            <code value="GRPRN" />
-            <display value="grandparent" />
-            <target>
-                <code value="Grosseltern" />
-                <display value="Großeltern" />
-                <equivalence value="equivalent" />
-            </target>
-        </element>
-        <element>
-            <code value="HBRO" />
-            <display value="half-brother" />
-            <target>
-                <code value="Halbbruder" />
-                <display value="Halbbruder" />
-                <equivalence value="equivalent" />
-            </target>
-        </element>
-        <element>
-            <code value="HSIB" />
-            <display value="half-sibling" />
-            <target>
-                <code value="Halbgeschwister" />
-                <display value="Halbgeschwister" />
-                <equivalence value="equivalent" />
-            </target>
-        </element>
-        <element>
-            <code value="HSIS" />
-            <display value="half-sister" />
-            <target>
-                <code value="Halbschwester" />
-                <display value="Halbschwester" />
-                <equivalence value="equivalent" />
-            </target>
-        </element>
-        <element>
-            <code value="HUSB" />
-            <display value="husband" />
-            <target>
-                <code value="Ehemann" />
-                <display value="Ehemann" />
-                <equivalence value="equivalent" />
-            </target>
-        </element>
-        <element>
-            <code value="INLAW" />
-            <display value="inlaw" />
-            <target>
-                <code value="Schwiegerkind" />
-                <display value="Schwiegerkind" />
-                <equivalence value="equivalent" />
-            </target>
-        </element>
-        <element>
-            <code value="ITWIN" />
-            <display value="identical twin" />
-            <target>
-                <code value="EineiigerZwilling" />
-                <display value="Eineiiger Zwilling" />
-                <equivalence value="equivalent" />
-            </target>
-        </element>
-        <element>
-            <code value="ITWINBRO" />
-            <display value="identical twin brother" />
-            <target>
-                <code value="EineiigerZwillingsbruder" />
-                <display value="Eineiiger Zwillingsbruder" />
-                <equivalence value="equivalent" />
-            </target>
-        </element>
-        <element>
-            <code value="ITWINSIS" />
-            <display value="identical twin sister" />
-            <target>
-                <code value="EineiigeZwillingsschwester" />
-                <display value="Eineiige Zwillingsschwester" />
-                <equivalence value="equivalent" />
-            </target>
-        </element>
-        <element>
-            <code value="MAUNT" />
-            <display value="maternal aunt" />
-            <target>
-                <code value="Tantemuetterlicherseits" />
-                <display value="Tante mütterlicherseits" />
-                <equivalence value="equivalent" />
-            </target>
-        </element>
-        <element>
-            <code value="MCOUSN" />
-            <display value="maternal cousin" />
-            <target>
-                <code value="Cousinmuetterlicherseits" />
-                <display value="Cousin mütterlicherseits" />
-                <equivalence value="equivalent" />
-            </target>
-        </element>
-        <element>
-            <code value="MGGRFTH" />
-            <display value="maternal great-grandfather" />
-            <target>
-                <code value="Urgrossvatermuetterlicherseits" />
-                <display value="Urgroßvater mütterlicherseits" />
-                <equivalence value="equivalent" />
-            </target>
-        </element>
-        <element>
-            <code value="MGGRMTH" />
-            <display value="maternal great-grandmother" />
-            <target>
-                <code value="Urgrossmuttermuetterlicherseits" />
-                <display value="Urgroßmutter mütterlicherseits" />
-                <equivalence value="equivalent" />
-            </target>
-        </element>
-        <element>
-            <code value="MGGRPRN" />
-            <display value="maternal great-grandparent" />
-            <target>
-                <code value="Urgrosselternmuetterlicherseits" />
-                <display value="Urgroßeltern mütterlicherseits" />
-                <equivalence value="equivalent" />
-            </target>
-        </element>
-        <element>
-            <code value="MGRFTH" />
-            <display value="maternal grandfather" />
-            <target>
-                <code value="Grossvatermuetterlicherseits" />
-                <display value="Großvater mütterlicherseits" />
-                <equivalence value="equivalent" />
-            </target>
-        </element>
-        <element>
-            <code value="MGRMTH" />
-            <display value="maternal grandmother" />
-            <target>
-                <code value="Grossmuttermuetterlicherseits" />
-                <display value="Großmutter mütterlicherseits" />
-                <equivalence value="equivalent" />
-            </target>
-        </element>
-        <element>
-            <code value="MGRPRN" />
-            <display value="maternal grandparent" />
-            <target>
-                <code value="Grosselternmuetterlicherseits" />
-                <display value="Großeltern mütterlicherseits" />
-                <equivalence value="equivalent" />
-            </target>
-        </element>
-        <element>
-            <code value="MTH" />
-            <display value="mother" />
-            <target>
-                <code value="Mutter" />
-                <display value="Mutter" />
-                <equivalence value="equivalent" />
-            </target>
-        </element>
-        <element>
-            <code value="MTHFOST" />
-            <display value="foster mother" />
-            <target>
-                <code value="Pflegemutter" />
-                <display value="Pflegemutter" />
-                <equivalence value="equivalent" />
-            </target>
-        </element>
-        <element>
-            <code value="MTHINLAW" />
-            <display value="mother-in-law" />
-            <target>
-                <code value="Schwiegermutter" />
-                <display value="Schwiegermutter" />
-                <equivalence value="equivalent" />
-            </target>
-        </element>
-        <element>
-            <code value="MUNCLE" />
-            <display value="maternal uncle" />
-            <target>
-                <code value="Onkelmuetterlicherseits" />
-                <display value="Onkel mütterlicherseits" />
-                <equivalence value="equivalent" />
-            </target>
-        </element>
-        <element>
-            <code value="NBOR" />
-            <display value="neighbor" />
-            <target>
-                <code value="Nachbar" />
-                <display value="Nachbar" />
-                <equivalence value="equivalent" />
-            </target>
-        </element>
-        <element>
-            <code value="NBRO" />
-            <display value="natural brother" />
-            <target>
-                <code value="LeiblicherBruder" />
-                <display value="Leiblicher Bruder" />
-                <equivalence value="equivalent" />
-            </target>
-        </element>
-        <element>
-            <code value="NCHILD" />
-            <display value="natural child" />
-            <target>
-                <code value="LeiblichesKind" />
-                <display value="Leibliches Kind" />
-                <equivalence value="equivalent" />
-            </target>
-        </element>
-        <element>
-            <code value="NEPHEW" />
-            <display value="nephew" />
-            <target>
-                <code value="Neffe" />
-                <display value="Neffe" />
-                <equivalence value="equivalent" />
-            </target>
-        </element>
-        <element>
-            <code value="NFTH" />
-            <display value="natural father" />
-            <target>
-                <code value="LeiblicherVater" />
-                <display value="Leiblicher Vater" />
-                <equivalence value="equivalent" />
-            </target>
-        </element>
-        <element>
-            <code value="NFTHF" />
-            <display value="natural father of fetus" />
-            <target>
-                <code value="LeiblicherVaterdesFoetus" />
-                <display value="Leiblicher Vater des Fötus" />
-                <equivalence value="equivalent" />
-            </target>
-        </element>
-        <element>
-            <code value="NIECE" />
-            <display value="niece" />
-            <target>
-                <code value="Nichte" />
-                <display value="Nichte" />
-                <equivalence value="equivalent" />
-            </target>
-        </element>
-        <element>
-            <code value="NIENEPH" />
-            <display value="niece/nephew" />
-            <target>
-                <code value="NichteNeffe" />
-                <display value="Nichte/Neffe" />
-                <equivalence value="equivalent" />
-            </target>
-        </element>
-        <element>
-            <code value="NMTH" />
-            <display value="natural mother" />
-            <target>
-                <code value="LeiblicheMutter" />
-                <display value="Leibliche Mutter" />
-                <equivalence value="equivalent" />
-            </target>
-        </element>
-        <element>
-            <code value="NMTHF" />
-            <display value="natural mother of fetus" />
-            <target>
-                <code value="LeiblicheMutterdesFoetus" />
-                <display value="Leibliche Mutter des Fötus" />
-                <equivalence value="equivalent" />
-            </target>
-        </element>
-        <element>
-            <code value="NPRN" />
-            <display value="natural parent" />
-            <target>
-                <code value="LeiblicherElternteil" />
-                <display value="Leiblicher Elternteil" />
-                <equivalence value="equivalent" />
-            </target>
-        </element>
-        <element>
-            <code value="NSIB" />
-            <display value="natural sibling" />
-            <target>
-                <code value="LeiblichesGeschwisterkind" />
-                <display value="Leibliches Geschwisterkind" />
-                <equivalence value="equivalent" />
-            </target>
-        </element>
-        <element>
-            <code value="NSIS" />
-            <display value="natural sister" />
-            <target>
-                <code value="LeiblicheSchwester" />
-                <display value="Leibliche Schwester" />
-                <equivalence value="equivalent" />
-            </target>
-        </element>
-        <element>
-            <code value="ONESELF" />
-            <display value="self" />
-            <target>
-                <code value="Selbst" />
-                <display value="Selbst" />
-                <equivalence value="equivalent" />
-            </target>
-        </element>
-        <element>
-            <code value="PAUNT" />
-            <display value="paternal aunt" />
-            <target>
-                <code value="Tantevaeterlicherseits" />
-                <display value="Tante väterlicherseits" />
-                <equivalence value="equivalent" />
-            </target>
-        </element>
-        <element>
-            <code value="PCOUSN" />
-            <display value="paternal cousin" />
-            <target>
-                <code value="Cousinvaeterlicherseits" />
-                <display value="Cousin väterlicherseits" />
-                <equivalence value="equivalent" />
-            </target>
-        </element>
-        <element>
-            <code value="PGGRFTH" />
-            <display value="paternal great-grandfather" />
-            <target>
-                <code value="Urgrossvatervaeterlicherseits" />
-                <display value="Urgroßvater väterlicherseits" />
-                <equivalence value="equivalent" />
-            </target>
-        </element>
-        <element>
-            <code value="PGGRMTH" />
-            <display value="paternal great-grandmother" />
-            <target>
-                <code value="Urgrossmuttervaeterlicherseits" />
-                <display value="Urgroßmutter väterlicherseits" />
-                <equivalence value="equivalent" />
-            </target>
-        </element>
-        <element>
-            <code value="PGGRPRN" />
-            <display value="paternal great-grandparent" />
-            <target>
-                <code value="Urgrosselternvaeterlicherseits" />
-                <display value="Urgroßeltern väterlicherseits" />
-                <equivalence value="equivalent" />
-            </target>
-        </element>
-        <element>
-            <code value="PGRFTH" />
-            <display value="paternal grandfather" />
-            <target>
-                <code value="Grossvatervaeterlicherseits" />
-                <display value="Großvater väterlicherseits" />
-                <equivalence value="equivalent" />
-            </target>
-        </element>
-        <element>
-            <code value="PGRMTH" />
-            <display value="paternal grandmother" />
-            <target>
-                <code value="Grossmuttervaeterlicherseits" />
-                <display value="Großmutter väterlicherseits" />
-                <equivalence value="equivalent" />
-            </target>
-        </element>
-        <element>
-            <code value="PGRPRN" />
-            <display value="paternal grandparent" />
-            <target>
-                <code value="Grosselternvaeterlicherseits" />
-                <display value="Großeltern väterlicherseits" />
-                <equivalence value="equivalent" />
-            </target>
-        </element>
-        <element>
-            <code value="PRN" />
-            <display value="parent" />
-            <target>
-                <code value="Elternteil" />
-                <display value="Elternteil" />
-                <equivalence value="equivalent" />
-            </target>
-        </element>
-        <element>
-            <code value="PRNFOST" />
-            <display value="foster parent" />
-            <target>
-                <code value="Pflegemutter" />
-                <display value="Pflegemutter" />
-                <equivalence value="equivalent" />
-            </target>
-        </element>
-        <element>
-            <code value="PRNINLAW" />
-            <display value="parent in-law" />
-            <target>
-                <code value="Schwiegereltern" />
-                <display value="Schwiegereltern" />
-                <equivalence value="equivalent" />
-            </target>
-        </element>
-        <element>
-            <code value="PUNCLE" />
-            <display value="paternal uncle" />
-            <target>
-                <code value="Onkelvaeterlicherseits" />
-                <display value="Onkel väterlicherseits" />
-                <equivalence value="equivalent" />
-            </target>
-        </element>
-        <element>
-            <code value="ROOM" />
-            <display value="Roommate" />
-            <target>
-                <code value="MitbewohnerIn" />
-                <display value="MitbewohnerIn" />
-                <equivalence value="equivalent" />
-            </target>
-        </element>
-        <element>
-            <code value="SIB" />
-            <display value="sibling" />
-            <target>
-                <code value="Geschwisterteil" />
-                <display value="Geschwisterteil" />
-                <equivalence value="equivalent" />
-            </target>
-        </element>
-        <element>
-            <code value="SIBINLAW" />
-            <display value="sibling in-law" />
-            <target>
-                <code value="Schwiegergeschwister" />
-                <display value="Schwiegergeschwister" />
-                <equivalence value="equivalent" />
-            </target>
-        </element>
-        <element>
-            <code value="SIGOTHR" />
-            <display value="significant other" />
-            <target>
-                <code value="Lebensgefaehrtein" />
-                <display value="Lebensgefährte/-in" />
-                <equivalence value="equivalent" />
-            </target>
-        </element>
-        <element>
-            <code value="SIS" />
-            <display value="sister" />
-            <target>
-                <code value="Schwester" />
-                <display value="Schwester" />
-                <equivalence value="equivalent" />
-            </target>
-        </element>
-        <element>
-            <code value="SISINLAW" />
-            <display value="sister-in-law" />
-            <target>
-                <code value="Schwaegerin" />
-                <display value="Schwägerin" />
-                <equivalence value="equivalent" />
-            </target>
-        </element>
-        <element>
-            <code value="SON" />
-            <display value="natural son" />
-            <target>
-                <code value="LeiblicherSohn" />
-                <display value="Leiblicher Sohn" />
-                <equivalence value="equivalent" />
-            </target>
-        </element>
-        <element>
-            <code value="SONADOPT" />
-            <display value="adopted son" />
-            <target>
-                <code value="Adoptivsohn" />
-                <display value="Adoptivsohn" />
-                <equivalence value="equivalent" />
-            </target>
-        </element>
-        <element>
-            <code value="SONC" />
-            <display value="son" />
-            <target>
-                <code value="Sohn" />
-                <display value="Sohn" />
-                <equivalence value="equivalent" />
-            </target>
-        </element>
-        <element>
-            <code value="SONFOST" />
-            <display value="foster son" />
-            <target>
-                <code value="Pflegesohn" />
-                <display value="Pflegesohn" />
-                <equivalence value="equivalent" />
-            </target>
-        </element>
-        <element>
-            <code value="SONINLAW" />
-            <display value="son in-law" />
-            <target>
-                <code value="Schwiegersohn" />
-                <display value="Schwiegersohn" />
-                <equivalence value="equivalent" />
-            </target>
-        </element>
-        <element>
-            <code value="SPS" />
-            <display value="spouse" />
-            <target>
-                <code value="EhepartnerIn" />
-                <display value="EhepartnerIn" />
-                <equivalence value="equivalent" />
-            </target>
-        </element>
-        <element>
-            <code value="STPBRO" />
-            <display value="stepbrother" />
-            <target>
-                <code value="Stiefbruder" />
-                <display value="Stiefbruder" />
-                <equivalence value="equivalent" />
-            </target>
-        </element>
-        <element>
-            <code value="STPCHLD" />
-            <display value="step child" />
-            <target>
-                <code value="Stiefkind" />
-                <display value="Stiefkind" />
-                <equivalence value="equivalent" />
-            </target>
-        </element>
-        <element>
-            <code value="STPDAU" />
-            <display value="stepdaughter" />
-            <target>
-                <code value="Stieftochter" />
-                <display value="Stieftochter" />
-                <equivalence value="equivalent" />
-            </target>
-        </element>
-        <element>
-            <code value="STPFTH" />
-            <display value="stepfather" />
-            <target>
-                <code value="Stiefvater" />
-                <display value="Stiefvater" />
-                <equivalence value="equivalent" />
-            </target>
-        </element>
-        <element>
-            <code value="STPMTH" />
-            <display value="stepmother" />
-            <target>
-                <code value="Stiefmutter" />
-                <display value="Stiefmutter" />
-                <equivalence value="equivalent" />
-            </target>
-        </element>
-        <element>
-            <code value="STPPRN" />
-            <display value="step parent" />
-            <target>
-                <code value="Stiefelternteil" />
-                <display value="Stiefelternteil" />
-                <equivalence value="equivalent" />
-            </target>
-        </element>
-        <element>
-            <code value="STPSIB" />
-            <display value="step sibling" />
-            <target>
-                <code value="Stiefgeschwister" />
-                <display value="Stiefgeschwister" />
-                <equivalence value="equivalent" />
-            </target>
-        </element>
-        <element>
-            <code value="STPSIS" />
-            <display value="stepsister" />
-            <target>
-                <code value="Stiefschwester" />
-                <display value="Stiefschwester" />
-                <equivalence value="equivalent" />
-            </target>
-        </element>
-        <element>
-            <code value="STPSON" />
-            <display value="stepson" />
-            <target>
-                <code value="Stiefsohn" />
-                <display value="Stiefsohn" />
-                <equivalence value="equivalent" />
-            </target>
-        </element>
-        <element>
-            <code value="TWIN" />
-            <display value="twin" />
-            <target>
-                <code value="Zwilling" />
-                <display value="Zwilling" />
-                <equivalence value="equivalent" />
-            </target>
-        </element>
-        <element>
-            <code value="TWINBRO" />
-            <display value="twin brother" />
-            <target>
-                <code value="Zwillingsbruder" />
-                <display value="Zwillingsbruder" />
-                <equivalence value="equivalent" />
-            </target>
-        </element>
-        <element>
-            <code value="TWINSIS" />
-            <display value="twin sister" />
-            <target>
-                <code value="Zwillingsschwester" />
-                <display value="Zwillingsschwester" />
-                <equivalence value="equivalent" />
-            </target>
-        </element>
-        <element>
-            <code value="UNCLE" />
-            <display value="uncle" />
-            <target>
-                <code value="Onkel" />
-                <display value="Onkel" />
-                <equivalence value="equivalent" />
-            </target>
-        </element>
-        <element>
-            <code value="WIFE" />
-            <display value="wife" />
-            <target>
-                <code value="Ehefrau" />
-                <display value="Ehefrau" />
-                <equivalence value="equivalent" />
-            </target>
-        </element>
-    </group>
+      <source value="http://terminology.hl7.org/CodeSystem/v2-0131" />
+      <sourceVersion value="2.9" />
+      <target value="https://fhir.kbv.de/CodeSystem/KBV_CS_Base_PatientRelationshipType_German" />
+      <targetVersion value="1.3.0" />
+      <element>
+          <code value="C" />
+          <display value="Emergency Contact" />
+          <target>
+              <code value="AnsprechpartnerIninNotfaellen" />
+              <display value="AnsprechpartnerIn in Notf&#228;llen" />
+              <equivalence value="equivalent" />
+          </target>
+      </element>
+      <element>
+          <code value="E" />
+          <display value="Employer" />
+          <target>
+              <code value="ArbeitgeberIn" />
+              <display value="ArbeitgeberIn" />
+              <equivalence value="equivalent" />
+          </target>
+      </element>
+      <element>
+          <code value="F" />
+          <display value="Federal Agency" />
+          <target>
+              <code value="Bundesbehoerde" />
+              <display value="Bundesbeh&#246;rde" />
+              <equivalence value="equivalent" />
+          </target>
+      </element>
+      <element>
+          <code value="I" />
+          <display value="Insurance Company" />
+          <target>
+              <code value="Versicherung" />
+              <display value="Versicherung" />
+              <equivalence value="equivalent" />
+          </target>
+      </element>
+      <element>
+          <code value="N" />
+          <display value="Next-of-Kin" />
+          <target>
+              <code value="Kontaktperson" />
+              <display value="Kontaktperson" />
+              <equivalence value="equivalent" />
+          </target>
+      </element>
+      <element>
+          <code value="O" />
+          <display value="Other" />
+          <target>
+              <code value="Andere" />
+              <display value="Andere" />
+              <equivalence value="equivalent" />
+          </target>
+      </element>
+      <element>
+          <code value="S" />
+          <display value="State Agency" />
+          <target>
+              <code value="Landesbehoerde" />
+              <display value="Landesbeh&#246;rde" />
+              <equivalence value="equivalent" />
+          </target>
+      </element>
+      <element>
+          <code value="U" />
+          <display value="Unknown" />
+          <target>
+              <code value="Unbekannt" />
+              <display value="Unbekannt" />
+              <equivalence value="equivalent" />
+          </target>
+      </element>
+  </group>
+  <group>
+      <source value="http://terminology.hl7.org/CodeSystem/v3-RoleCode" />
+      <sourceVersion value="2018-08-12" />
+      <target value="https://fhir.kbv.de/CodeSystem/KBV_CS_Base_PatientRelationshipType_German" />
+      <targetVersion value="1.3.0" />
+      <element>
+          <code value="ADOPTF" />
+          <display value="adoptive father" />
+          <target>
+              <code value="Adoptivvater" />
+              <display value="Adoptivvater" />
+              <equivalence value="equivalent" />
+          </target>
+      </element>
+      <element>
+          <code value="ADOPTM" />
+          <display value="adoptive mother" />
+          <target>
+              <code value="Adoptivmutter" />
+              <display value="Adoptivmutter" />
+              <equivalence value="equivalent" />
+          </target>
+      </element>
+      <element>
+          <code value="ADOPTP" />
+          <display value="adoptive parent" />
+          <target>
+              <code value="Adoptivelternteil" />
+              <display value="Adoptivelternteil" />
+              <equivalence value="equivalent" />
+          </target>
+      </element>
+      <element>
+          <code value="AUNT" />
+          <display value="aunt" />
+          <target>
+              <code value="Tante" />
+              <display value="Tante" />
+              <equivalence value="equivalent" />
+          </target>
+      </element>
+      <element>
+          <code value="BRO" />
+          <display value="brother" />
+          <target>
+              <code value="Bruder" />
+              <display value="Bruder" />
+              <equivalence value="equivalent" />
+          </target>
+      </element>
+      <element>
+          <code value="BROINLAW" />
+          <display value="brother-in-law" />
+          <target>
+              <code value="Schwager" />
+              <display value="Schwager" />
+              <equivalence value="equivalent" />
+          </target>
+      </element>
+      <element>
+          <code value="CHILD" />
+          <display value="child" />
+          <target>
+              <code value="Kind" />
+              <display value="Kind" />
+              <equivalence value="equivalent" />
+          </target>
+      </element>
+      <element>
+          <code value="CHLDADOPT" />
+          <display value="adopted child" />
+          <target>
+              <code value="Adoptivkind" />
+              <display value="Adoptivkind" />
+              <equivalence value="equivalent" />
+          </target>
+      </element>
+      <element>
+          <code value="CHLDFOST" />
+          <display value="foster child" />
+          <target>
+              <code value="Pflegekind" />
+              <display value="Pflegekind" />
+              <equivalence value="equivalent" />
+          </target>
+      </element>
+      <element>
+          <code value="CHLDINLAW" />
+          <display value="child-in-law" />
+          <target>
+              <code value="Schwiegersohn" />
+              <display value="Schwiegersohn" />
+              <equivalence value="equivalent" />
+          </target>
+      </element>
+      <element>
+          <code value="COUSN" />
+          <display value="cousin" />
+          <target>
+              <code value="Cousine" />
+              <display value="Cousine" />
+              <equivalence value="equivalent" />
+          </target>
+      </element>
+      <element>
+          <code value="DAU" />
+          <display value="natural daughter" />
+          <target>
+              <code value="LeiblicheTochter" />
+              <display value="Leibliche Tochter" />
+              <equivalence value="equivalent" />
+          </target>
+      </element>
+      <element>
+          <code value="DAUADOPT" />
+          <display value="adopted daughter" />
+          <target>
+              <code value="Adoptivtochter" />
+              <display value="Adoptivtochter" />
+              <equivalence value="equivalent" />
+          </target>
+      </element>
+      <element>
+          <code value="DAUC" />
+          <display value="daughter" />
+          <target>
+              <code value="Tochter" />
+              <display value="Tochter" />
+              <equivalence value="equivalent" />
+          </target>
+      </element>
+      <element>
+          <code value="DAUFOST" />
+          <display value="foster daughter" />
+          <target>
+              <code value="Pflegetochter" />
+              <display value="Pflegetochter" />
+              <equivalence value="equivalent" />
+          </target>
+      </element>
+      <element>
+          <code value="DAUINLAW" />
+          <display value="daughter in-law" />
+          <target>
+              <code value="Schwiegertochter" />
+              <display value="Schwiegertochter" />
+              <equivalence value="equivalent" />
+          </target>
+      </element>
+      <element>
+          <code value="DOMPART" />
+          <display value="domestic partner" />
+          <target>
+              <code value="Lebenspartnerin" />
+              <display value="Lebenspartner/-in" />
+              <equivalence value="equivalent" />
+          </target>
+      </element>
+      <element>
+          <code value="EXT" />
+          <display value="extended family member" />
+          <target>
+              <code value="ErweitertesFamilienmitglied" />
+              <display value="Erweitertes Familienmitglied" />
+              <equivalence value="equivalent" />
+          </target>
+      </element>
+      <element>
+          <code value="FAMMEMB" />
+          <display value="family member" />
+          <target>
+              <code value="Familienmitglied" />
+              <display value="Familienmitglied" />
+              <equivalence value="equivalent" />
+          </target>
+      </element>
+      <element>
+          <code value="FMRSPS" />
+          <display value="former spouse" />
+          <target>
+              <code value="EhemaligerEhepartnerIn" />
+              <display value="Ehemalige(r) EhepartnerIn" />
+              <equivalence value="equivalent" />
+          </target>
+      </element>
+      <element>
+          <code value="FRND" />
+          <display value="unrelated friend" />
+          <target>
+              <code value="NichtverwandterFreund" />
+              <display value="Nicht verwandter Freund" />
+              <equivalence value="equivalent" />
+          </target>
+      </element>
+      <element>
+          <code value="FTH" />
+          <display value="father" />
+          <target>
+              <code value="Vater" />
+              <display value="Vater" />
+              <equivalence value="equivalent" />
+          </target>
+      </element>
+      <element>
+          <code value="FTHFOST" />
+          <display value="foster father" />
+          <target>
+              <code value="Ziehvater" />
+              <display value="Ziehvater" />
+              <equivalence value="equivalent" />
+          </target>
+      </element>
+      <element>
+          <code value="FTHINLAW" />
+          <display value="father-in-law" />
+          <target>
+              <code value="Schwiegervater" />
+              <display value="Schwiegervater" />
+              <equivalence value="equivalent" />
+          </target>
+      </element>
+      <element>
+          <code value="FTWIN" />
+          <display value="fraternal twin" />
+          <target>
+              <code value="ZweieiigerZwilling" />
+              <display value="Zweieiiger Zwilling" />
+              <equivalence value="equivalent" />
+          </target>
+      </element>
+      <element>
+          <code value="FTWINBRO" />
+          <display value="fraternal twin brother" />
+          <target>
+              <code value="zweieiigerZwillingsbruder" />
+              <display value="zweieiiger Zwillingsbruder" />
+              <equivalence value="equivalent" />
+          </target>
+      </element>
+      <element>
+          <code value="FTWINSIS" />
+          <display value="fraternal twin sister" />
+          <target>
+              <code value="ZweieiigeZwillingsschwester" />
+              <display value="Zweieiige Zwillingsschwester" />
+              <equivalence value="equivalent" />
+          </target>
+      </element>
+      <element>
+          <code value="GESTM" />
+          <display value="gestational mother" />
+          <target>
+              <code value="werdendeMutter" />
+              <display value="werdende Mutter" />
+              <equivalence value="equivalent" />
+          </target>
+      </element>
+      <element>
+          <code value="GGRFTH" />
+          <display value="great grandfather" />
+          <target>
+              <code value="Urgrossvater" />
+              <display value="Urgroßvater" />
+              <equivalence value="equivalent" />
+          </target>
+      </element>
+      <element>
+          <code value="GGRMTH" />
+          <display value="great grandmother" />
+          <target>
+              <code value="Urgrossmutter" />
+              <display value="Urgroßmutter" />
+              <equivalence value="equivalent" />
+          </target>
+      </element>
+      <element>
+          <code value="GGRPRN" />
+          <display value="great grandparent" />
+          <target>
+              <code value="Urgrosseltern" />
+              <display value="Urgroßeltern" />
+              <equivalence value="equivalent" />
+          </target>
+      </element>
+      <element>
+          <code value="GRFTH" />
+          <display value="grandfather" />
+          <target>
+              <code value="Grossvater" />
+              <display value="Großvater" />
+              <equivalence value="equivalent" />
+          </target>
+      </element>
+      <element>
+          <code value="GRMTH" />
+          <display value="grandmother" />
+          <target>
+              <code value="Grossmutter" />
+              <display value="Großmutter" />
+              <equivalence value="equivalent" />
+          </target>
+      </element>
+      <element>
+          <code value="GRNDCHILD" />
+          <display value="grandchild" />
+          <target>
+              <code value="Enkelkind" />
+              <display value="Enkelkind" />
+              <equivalence value="equivalent" />
+          </target>
+      </element>
+      <element>
+          <code value="GRNDDAU" />
+          <display value="granddaughter" />
+          <target>
+              <code value="Enkeltochter" />
+              <display value="Enkeltochter" />
+              <equivalence value="equivalent" />
+          </target>
+      </element>
+      <element>
+          <code value="GRNDSON" />
+          <display value="grandson" />
+          <target>
+              <code value="Enkelsohn" />
+              <display value="Enkelsohn" />
+              <equivalence value="equivalent" />
+          </target>
+      </element>
+      <element>
+          <code value="GRPRN" />
+          <display value="grandparent" />
+          <target>
+              <code value="Grosseltern" />
+              <display value="Großeltern" />
+              <equivalence value="equivalent" />
+          </target>
+      </element>
+      <element>
+          <code value="HBRO" />
+          <display value="half-brother" />
+          <target>
+              <code value="Halbbruder" />
+              <display value="Halbbruder" />
+              <equivalence value="equivalent" />
+          </target>
+      </element>
+      <element>
+          <code value="HSIB" />
+          <display value="half-sibling" />
+          <target>
+              <code value="Halbgeschwister" />
+              <display value="Halbgeschwister" />
+              <equivalence value="equivalent" />
+          </target>
+      </element>
+      <element>
+          <code value="HSIS" />
+          <display value="half-sister" />
+          <target>
+              <code value="Halbschwester" />
+              <display value="Halbschwester" />
+              <equivalence value="equivalent" />
+          </target>
+      </element>
+      <element>
+          <code value="HUSB" />
+          <display value="husband" />
+          <target>
+              <code value="Ehemann" />
+              <display value="Ehemann" />
+              <equivalence value="equivalent" />
+          </target>
+      </element>
+      <element>
+          <code value="INLAW" />
+          <display value="inlaw" />
+          <target>
+              <code value="Schwiegerkind" />
+              <display value="Schwiegerkind" />
+              <equivalence value="equivalent" />
+          </target>
+      </element>
+      <element>
+          <code value="ITWIN" />
+          <display value="identical twin" />
+          <target>
+              <code value="EineiigerZwilling" />
+              <display value="Eineiiger Zwilling" />
+              <equivalence value="equivalent" />
+          </target>
+      </element>
+      <element>
+          <code value="ITWINBRO" />
+          <display value="identical twin brother" />
+          <target>
+              <code value="EineiigerZwillingsbruder" />
+              <display value="Eineiiger Zwillingsbruder" />
+              <equivalence value="equivalent" />
+          </target>
+      </element>
+      <element>
+          <code value="ITWINSIS" />
+          <display value="identical twin sister" />
+          <target>
+              <code value="EineiigeZwillingsschwester" />
+              <display value="Eineiige Zwillingsschwester" />
+              <equivalence value="equivalent" />
+          </target>
+      </element>
+      <element>
+          <code value="MAUNT" />
+          <display value="maternal aunt" />
+          <target>
+              <code value="Tantemuetterlicherseits" />
+              <display value="Tante mütterlicherseits" />
+              <equivalence value="equivalent" />
+          </target>
+      </element>
+      <element>
+          <code value="MCOUSN" />
+          <display value="maternal cousin" />
+          <target>
+              <code value="Cousinmuetterlicherseits" />
+              <display value="Cousin mütterlicherseits" />
+              <equivalence value="equivalent" />
+          </target>
+      </element>
+      <element>
+          <code value="MGGRFTH" />
+          <display value="maternal great-grandfather" />
+          <target>
+              <code value="Urgrossvatermuetterlicherseits" />
+              <display value="Urgroßvater mütterlicherseits" />
+              <equivalence value="equivalent" />
+          </target>
+      </element>
+      <element>
+          <code value="MGGRMTH" />
+          <display value="maternal great-grandmother" />
+          <target>
+              <code value="Urgrossmuttermuetterlicherseits" />
+              <display value="Urgroßmutter mütterlicherseits" />
+              <equivalence value="equivalent" />
+          </target>
+      </element>
+      <element>
+          <code value="MGGRPRN" />
+          <display value="maternal great-grandparent" />
+          <target>
+              <code value="Urgrosselternmuetterlicherseits" />
+              <display value="Urgroßeltern mütterlicherseits" />
+              <equivalence value="equivalent" />
+          </target>
+      </element>
+      <element>
+          <code value="MGRFTH" />
+          <display value="maternal grandfather" />
+          <target>
+              <code value="Grossvatermuetterlicherseits" />
+              <display value="Großvater mütterlicherseits" />
+              <equivalence value="equivalent" />
+          </target>
+      </element>
+      <element>
+          <code value="MGRMTH" />
+          <display value="maternal grandmother" />
+          <target>
+              <code value="Grossmuttermuetterlicherseits" />
+              <display value="Großmutter mütterlicherseits" />
+              <equivalence value="equivalent" />
+          </target>
+      </element>
+      <element>
+          <code value="MGRPRN" />
+          <display value="maternal grandparent" />
+          <target>
+              <code value="Grosselternmuetterlicherseits" />
+              <display value="Großeltern mütterlicherseits" />
+              <equivalence value="equivalent" />
+          </target>
+      </element>
+      <element>
+          <code value="MTH" />
+          <display value="mother" />
+          <target>
+              <code value="Mutter" />
+              <display value="Mutter" />
+              <equivalence value="equivalent" />
+          </target>
+      </element>
+      <element>
+          <code value="MTHFOST" />
+          <display value="foster mother" />
+          <target>
+              <code value="Pflegemutter" />
+              <display value="Pflegemutter" />
+              <equivalence value="equivalent" />
+          </target>
+      </element>
+      <element>
+          <code value="MTHINLAW" />
+          <display value="mother-in-law" />
+          <target>
+              <code value="Schwiegermutter" />
+              <display value="Schwiegermutter" />
+              <equivalence value="equivalent" />
+          </target>
+      </element>
+      <element>
+          <code value="MUNCLE" />
+          <display value="maternal uncle" />
+          <target>
+              <code value="Onkelmuetterlicherseits" />
+              <display value="Onkel mütterlicherseits" />
+              <equivalence value="equivalent" />
+          </target>
+      </element>
+      <element>
+          <code value="NBOR" />
+          <display value="neighbor" />
+          <target>
+              <code value="Nachbar" />
+              <display value="Nachbar" />
+              <equivalence value="equivalent" />
+          </target>
+      </element>
+      <element>
+          <code value="NBRO" />
+          <display value="natural brother" />
+          <target>
+              <code value="LeiblicherBruder" />
+              <display value="Leiblicher Bruder" />
+              <equivalence value="equivalent" />
+          </target>
+      </element>
+      <element>
+          <code value="NCHILD" />
+          <display value="natural child" />
+          <target>
+              <code value="LeiblichesKind" />
+              <display value="Leibliches Kind" />
+              <equivalence value="equivalent" />
+          </target>
+      </element>
+      <element>
+          <code value="NEPHEW" />
+          <display value="nephew" />
+          <target>
+              <code value="Neffe" />
+              <display value="Neffe" />
+              <equivalence value="equivalent" />
+          </target>
+      </element>
+      <element>
+          <code value="NFTH" />
+          <display value="natural father" />
+          <target>
+              <code value="LeiblicherVater" />
+              <display value="Leiblicher Vater" />
+              <equivalence value="equivalent" />
+          </target>
+      </element>
+      <element>
+          <code value="NFTHF" />
+          <display value="natural father of fetus" />
+          <target>
+              <code value="LeiblicherVaterdesFoetus" />
+              <display value="Leiblicher Vater des Fötus" />
+              <equivalence value="equivalent" />
+          </target>
+      </element>
+      <element>
+          <code value="NIECE" />
+          <display value="niece" />
+          <target>
+              <code value="Nichte" />
+              <display value="Nichte" />
+              <equivalence value="equivalent" />
+          </target>
+      </element>
+      <element>
+          <code value="NIENEPH" />
+          <display value="niece/nephew" />
+          <target>
+              <code value="NichteNeffe" />
+              <display value="Nichte/Neffe" />
+              <equivalence value="equivalent" />
+          </target>
+      </element>
+      <element>
+          <code value="NMTH" />
+          <display value="natural mother" />
+          <target>
+              <code value="LeiblicheMutter" />
+              <display value="Leibliche Mutter" />
+              <equivalence value="equivalent" />
+          </target>
+      </element>
+      <element>
+          <code value="NMTHF" />
+          <display value="natural mother of fetus" />
+          <target>
+              <code value="LeiblicheMutterdesFoetus" />
+              <display value="Leibliche Mutter des Fötus" />
+              <equivalence value="equivalent" />
+          </target>
+      </element>
+      <element>
+          <code value="NPRN" />
+          <display value="natural parent" />
+          <target>
+              <code value="LeiblicherElternteil" />
+              <display value="Leiblicher Elternteil" />
+              <equivalence value="equivalent" />
+          </target>
+      </element>
+      <element>
+          <code value="NSIB" />
+          <display value="natural sibling" />
+          <target>
+              <code value="LeiblichesGeschwisterkind" />
+              <display value="Leibliches Geschwisterkind" />
+              <equivalence value="equivalent" />
+          </target>
+      </element>
+      <element>
+          <code value="NSIS" />
+          <display value="natural sister" />
+          <target>
+              <code value="LeiblicheSchwester" />
+              <display value="Leibliche Schwester" />
+              <equivalence value="equivalent" />
+          </target>
+      </element>
+      <element>
+          <code value="ONESELF" />
+          <display value="self" />
+          <target>
+              <code value="Selbst" />
+              <display value="Selbst" />
+              <equivalence value="equivalent" />
+          </target>
+      </element>
+      <element>
+          <code value="PAUNT" />
+          <display value="paternal aunt" />
+          <target>
+              <code value="Tantevaeterlicherseits" />
+              <display value="Tante väterlicherseits" />
+              <equivalence value="equivalent" />
+          </target>
+      </element>
+      <element>
+          <code value="PCOUSN" />
+          <display value="paternal cousin" />
+          <target>
+              <code value="Cousinvaeterlicherseits" />
+              <display value="Cousin väterlicherseits" />
+              <equivalence value="equivalent" />
+          </target>
+      </element>
+      <element>
+          <code value="PGGRFTH" />
+          <display value="paternal great-grandfather" />
+          <target>
+              <code value="Urgrossvatervaeterlicherseits" />
+              <display value="Urgroßvater väterlicherseits" />
+              <equivalence value="equivalent" />
+          </target>
+      </element>
+      <element>
+          <code value="PGGRMTH" />
+          <display value="paternal great-grandmother" />
+          <target>
+              <code value="Urgrossmuttervaeterlicherseits" />
+              <display value="Urgroßmutter väterlicherseits" />
+              <equivalence value="equivalent" />
+          </target>
+      </element>
+      <element>
+          <code value="PGGRPRN" />
+          <display value="paternal great-grandparent" />
+          <target>
+              <code value="Urgrosselternvaeterlicherseits" />
+              <display value="Urgroßeltern väterlicherseits" />
+              <equivalence value="equivalent" />
+          </target>
+      </element>
+      <element>
+          <code value="PGRFTH" />
+          <display value="paternal grandfather" />
+          <target>
+              <code value="Grossvatervaeterlicherseits" />
+              <display value="Großvater väterlicherseits" />
+              <equivalence value="equivalent" />
+          </target>
+      </element>
+      <element>
+          <code value="PGRMTH" />
+          <display value="paternal grandmother" />
+          <target>
+              <code value="Grossmuttervaeterlicherseits" />
+              <display value="Großmutter väterlicherseits" />
+              <equivalence value="equivalent" />
+          </target>
+      </element>
+      <element>
+          <code value="PGRPRN" />
+          <display value="paternal grandparent" />
+          <target>
+              <code value="Grosselternvaeterlicherseits" />
+              <display value="Großeltern väterlicherseits" />
+              <equivalence value="equivalent" />
+          </target>
+      </element>
+      <element>
+          <code value="PRN" />
+          <display value="parent" />
+          <target>
+              <code value="Elternteil" />
+              <display value="Elternteil" />
+              <equivalence value="equivalent" />
+          </target>
+      </element>
+      <element>
+          <code value="PRNFOST" />
+          <display value="foster parent" />
+          <target>
+              <code value="Pflegemutter" />
+              <display value="Pflegemutter" />
+              <equivalence value="equivalent" />
+          </target>
+      </element>
+      <element>
+          <code value="PRNINLAW" />
+          <display value="parent in-law" />
+          <target>
+              <code value="Schwiegereltern" />
+              <display value="Schwiegereltern" />
+              <equivalence value="equivalent" />
+          </target>
+      </element>
+      <element>
+          <code value="PUNCLE" />
+          <display value="paternal uncle" />
+          <target>
+              <code value="Onkelvaeterlicherseits" />
+              <display value="Onkel väterlicherseits" />
+              <equivalence value="equivalent" />
+          </target>
+      </element>
+      <element>
+          <code value="ROOM" />
+          <display value="Roommate" />
+          <target>
+              <code value="MitbewohnerIn" />
+              <display value="MitbewohnerIn" />
+              <equivalence value="equivalent" />
+          </target>
+      </element>
+      <element>
+          <code value="SIB" />
+          <display value="sibling" />
+          <target>
+              <code value="Geschwisterteil" />
+              <display value="Geschwisterteil" />
+              <equivalence value="equivalent" />
+          </target>
+      </element>
+      <element>
+          <code value="SIBINLAW" />
+          <display value="sibling in-law" />
+          <target>
+              <code value="Schwiegergeschwister" />
+              <display value="Schwiegergeschwister" />
+              <equivalence value="equivalent" />
+          </target>
+      </element>
+      <element>
+          <code value="SIGOTHR" />
+          <display value="significant other" />
+          <target>
+              <code value="Lebensgefaehrtein" />
+              <display value="Lebensgefährte/-in" />
+              <equivalence value="equivalent" />
+          </target>
+      </element>
+      <element>
+          <code value="SIS" />
+          <display value="sister" />
+          <target>
+              <code value="Schwester" />
+              <display value="Schwester" />
+              <equivalence value="equivalent" />
+          </target>
+      </element>
+      <element>
+          <code value="SISINLAW" />
+          <display value="sister-in-law" />
+          <target>
+              <code value="Schwaegerin" />
+              <display value="Schwägerin" />
+              <equivalence value="equivalent" />
+          </target>
+      </element>
+      <element>
+          <code value="SON" />
+          <display value="natural son" />
+          <target>
+              <code value="LeiblicherSohn" />
+              <display value="Leiblicher Sohn" />
+              <equivalence value="equivalent" />
+          </target>
+      </element>
+      <element>
+          <code value="SONADOPT" />
+          <display value="adopted son" />
+          <target>
+              <code value="Adoptivsohn" />
+              <display value="Adoptivsohn" />
+              <equivalence value="equivalent" />
+          </target>
+      </element>
+      <element>
+          <code value="SONC" />
+          <display value="son" />
+          <target>
+              <code value="Sohn" />
+              <display value="Sohn" />
+              <equivalence value="equivalent" />
+          </target>
+      </element>
+      <element>
+          <code value="SONFOST" />
+          <display value="foster son" />
+          <target>
+              <code value="Pflegesohn" />
+              <display value="Pflegesohn" />
+              <equivalence value="equivalent" />
+          </target>
+      </element>
+      <element>
+          <code value="SONINLAW" />
+          <display value="son in-law" />
+          <target>
+              <code value="Schwiegersohn" />
+              <display value="Schwiegersohn" />
+              <equivalence value="equivalent" />
+          </target>
+      </element>
+      <element>
+          <code value="SPS" />
+          <display value="spouse" />
+          <target>
+              <code value="EhepartnerIn" />
+              <display value="EhepartnerIn" />
+              <equivalence value="equivalent" />
+          </target>
+      </element>
+      <element>
+          <code value="STPBRO" />
+          <display value="stepbrother" />
+          <target>
+              <code value="Stiefbruder" />
+              <display value="Stiefbruder" />
+              <equivalence value="equivalent" />
+          </target>
+      </element>
+      <element>
+          <code value="STPCHLD" />
+          <display value="step child" />
+          <target>
+              <code value="Stiefkind" />
+              <display value="Stiefkind" />
+              <equivalence value="equivalent" />
+          </target>
+      </element>
+      <element>
+          <code value="STPDAU" />
+          <display value="stepdaughter" />
+          <target>
+              <code value="Stieftochter" />
+              <display value="Stieftochter" />
+              <equivalence value="equivalent" />
+          </target>
+      </element>
+      <element>
+          <code value="STPFTH" />
+          <display value="stepfather" />
+          <target>
+              <code value="Stiefvater" />
+              <display value="Stiefvater" />
+              <equivalence value="equivalent" />
+          </target>
+      </element>
+      <element>
+          <code value="STPMTH" />
+          <display value="stepmother" />
+          <target>
+              <code value="Stiefmutter" />
+              <display value="Stiefmutter" />
+              <equivalence value="equivalent" />
+          </target>
+      </element>
+      <element>
+          <code value="STPPRN" />
+          <display value="step parent" />
+          <target>
+              <code value="Stiefelternteil" />
+              <display value="Stiefelternteil" />
+              <equivalence value="equivalent" />
+          </target>
+      </element>
+      <element>
+          <code value="STPSIB" />
+          <display value="step sibling" />
+          <target>
+              <code value="Stiefgeschwister" />
+              <display value="Stiefgeschwister" />
+              <equivalence value="equivalent" />
+          </target>
+      </element>
+      <element>
+          <code value="STPSIS" />
+          <display value="stepsister" />
+          <target>
+              <code value="Stiefschwester" />
+              <display value="Stiefschwester" />
+              <equivalence value="equivalent" />
+          </target>
+      </element>
+      <element>
+          <code value="STPSON" />
+          <display value="stepson" />
+          <target>
+              <code value="Stiefsohn" />
+              <display value="Stiefsohn" />
+              <equivalence value="equivalent" />
+          </target>
+      </element>
+      <element>
+          <code value="TWIN" />
+          <display value="twin" />
+          <target>
+              <code value="Zwilling" />
+              <display value="Zwilling" />
+              <equivalence value="equivalent" />
+          </target>
+      </element>
+      <element>
+          <code value="TWINBRO" />
+          <display value="twin brother" />
+          <target>
+              <code value="Zwillingsbruder" />
+              <display value="Zwillingsbruder" />
+              <equivalence value="equivalent" />
+          </target>
+      </element>
+      <element>
+          <code value="TWINSIS" />
+          <display value="twin sister" />
+          <target>
+              <code value="Zwillingsschwester" />
+              <display value="Zwillingsschwester" />
+              <equivalence value="equivalent" />
+          </target>
+      </element>
+      <element>
+          <code value="UNCLE" />
+          <display value="uncle" />
+          <target>
+              <code value="Onkel" />
+              <display value="Onkel" />
+              <equivalence value="equivalent" />
+          </target>
+      </element>
+      <element>
+          <code value="WIFE" />
+          <display value="wife" />
+          <target>
+              <code value="Ehefrau" />
+              <display value="Ehefrau" />
+              <equivalence value="equivalent" />
+          </target>
+      </element>
+  </group>
     <group>
         <source value="http://terminology.hl7.org/CodeSystem/participant-type"/>
         <sourceVersion value="4.0.1"/>
@@ -1996,9 +2074,60 @@
         </element>
     </group>
     <group>
+        <source value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+        <sourceVersion value="4.0.1"/>
+        <target value="https://fhir.kbv.de/CodeSystem/KBV_CS_MIO_DIGA_Observation_Category_Codes_Score_And_Scale_German"/>
+        <targetVersion value="1.1.0"/>
+        <element>
+            <code value="activity"/>
+            <display value="Activity"/>
+            <target>
+                <code value="Aktivitaet"/>
+                <display value="Aktivität"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="exam"/>
+            <display value="Exam"/>
+            <target>
+                <code value="Untersuchung"/>
+                <display value="Untersuchung"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="social-history"/>
+            <display value="Social History"/>
+            <target>
+                <code value="Sozialanamnese"/>
+                <display value="Sozialanamnese"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="survey"/>
+            <display value="Survey"/>
+            <target>
+                <code value="UmfrageBewertung"/>
+                <display value="Umfrage / Bewertung"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+        <element>
+            <code value="therapy"/>
+            <display value="Therapy"/>
+            <target>
+                <code value="Therapie"/>
+                <display value="Therapie"/>
+                <equivalence value="equivalent"/>
+            </target>
+        </element>
+    </group>
+    <group>
         <source value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"/>
         <sourceVersion value="2018-08-12"/>
-        <target value="https://fhir.kbv.de/CodeSystem/KBV_CS_MIO_DIGA_Observation_Interpretation_German"/>
+        <target value="https://fhir.kbv.de/CodeSystem/KBV_CS_MIO_DiGA_Observation_Interpretation_Score_And_Scale_German"/>
         <targetVersion value="1.1.0"/>
         <element>
             <code value="AA"/>
@@ -2015,15 +2144,6 @@
             <target>
                 <code value="Besser"/>
                 <display value="Besser"/>
-                <equivalence value="equivalent"/>
-            </target>
-        </element>
-        <element>
-            <code value="CAR"/>
-            <display value="Carrier"/>
-            <target>
-                <code value="Anlagetraeger"/>
-                <display value="Anlageträger"/>
                 <equivalence value="equivalent"/>
             </target>
         </element>
@@ -2181,15 +2301,6 @@
             </target>
         </element>
         <element>
-            <code value="NR"/>
-            <display value="Non-reactive"/>
-            <target>
-                <code value="Nichtreaktiv"/>
-                <display value="Nicht reaktiv"/>
-                <equivalence value="equivalent"/>
-            </target>
-        </element>
-        <element>
             <code value="ObservationInterpretationDetection"/>
             <display value="ObservationInterpretationDetection"/>
             <target>
@@ -2213,24 +2324,6 @@
             <target>
                 <code value="Positiv"/>
                 <display value="Positiv"/>
-                <equivalence value="equivalent"/>
-            </target>
-        </element>
-        <element>
-            <code value="RR"/>
-            <display value="Reactive"/>
-            <target>
-                <code value="Reaktiv"/>
-                <display value="Reaktiv"/>
-                <equivalence value="equivalent"/>
-            </target>
-        </element>
-        <element>
-            <code value="ReactivityObservationInterpretation"/>
-            <display value="ReactivityObservationInterpretation"/>
-            <target>
-                <code value="Reaktivitaetsinterpretation"/>
-                <display value="Reaktivitätsinterpretation"/>
                 <equivalence value="equivalent"/>
             </target>
         </element>
@@ -2262,24 +2355,6 @@
             </target>
         </element>
         <element>
-            <code value="WR"/>
-            <display value="Weakly reactive"/>
-            <target>
-                <code value="Schwachreaktiv"/>
-                <display value="Schwach reaktiv"/>
-                <equivalence value="equivalent"/>
-            </target>
-        </element>
-        <element>
-            <code value="_GeneticObservationInterpretation"/>
-            <display value="GeneticObservationInterpretation"/>
-            <target>
-                <code value="InterpretationdergenetischenAnalyse"/>
-                <display value="Interpretation der genetischen Analyse"/>
-                <equivalence value="equivalent"/>
-            </target>
-        </element>
-        <element>
             <code value="_ObservationInterpretationChange"/>
             <display value="ObservationInterpretationChange"/>
             <target>
@@ -2289,38 +2364,11 @@
             </target>
         </element>
         <element>
-            <code value="_ObservationInterpretationExceptions"/>
-            <display value="ObservationInterpretationExceptions"/>
-            <target>
-                <code value="Ausnahmewertinterpretation"/>
-                <display value="Ausnahmewertinterpretation"/>
-                <equivalence value="equivalent"/>
-            </target>
-        </element>
-        <element>
             <code value="_ObservationInterpretationNormality"/>
             <display value="ObservationInterpretationNormality"/>
             <target>
                 <code value="Normalitaetsinterpretation"/>
                 <display value="Normalitätsinterpretation"/>
-                <equivalence value="equivalent"/>
-            </target>
-        </element>
-        <element>
-            <code value="&gt;"/>
-            <display value="Off scale high"/>
-            <target>
-                <code value="OberhalbderanalytischenGrenze"/>
-                <display value="Oberhalb der analytischen Grenze"/>
-                <equivalence value="equivalent"/>
-            </target>
-        </element>
-        <element>
-            <code value="&lt;"/>
-            <display value="Off scale low"/>
-            <target>
-                <code value="UnterhalbderanalytischenGrenze"/>
-                <display value="Unterhalb der analytischen Grenze"/>
                 <equivalence value="equivalent"/>
             </target>
         </element>
@@ -2364,54 +2412,6 @@
             <target>
                 <code value="Diagnose"/>
                 <display value="Diagnose"/>
-                <equivalence value="equivalent"/>
-            </target>
-        </element>
-    </group>
-    <group>
-        <source value="http://snomed.info/sct"/>
-        <sourceVersion value="http://snomed.info/sct/900000000000207008/version/20220331"/>
-        <target value="https://fhir.kbv.de/CodeSystem/KBV_CS_MIO_DIGA_Scale_Method_German"/>
-        <targetVersion value="1.1.0"/>
-        <element>
-            <code value="1172399009"/>
-            <display value="Numeric rating scale score (observable entity)"/>
-            <target>
-                <code value="NumerischeRatingSkala"/>
-                <display value="Numerische Rating-Skala"/>
-                <equivalence value="equivalent"/>
-            </target>
-        </element>
-        <element>
-            <code value="446661009"/>
-            <display value="Visual analog scale score (observable entity)"/>
-            <target>
-                <code value="VisuelleAnalogskala"/>
-                <display value="Visuelle Analogskala"/>
-                <equivalence value="equivalent"/>
-            </target>
-        </element>
-        <element>
-            <code value="716575007"/>
-            <display value="Verbal Rating Scale score (observable entity)"/>
-            <target>
-                <code value="VerbaleRatingSkala"/>
-                <display value="Verbale Rating-Skala"/>
-                <equivalence value="equivalent"/>
-            </target>
-        </element>
-    </group>
-    <group>
-        <source value="http://snomed.info/sct"/>
-        <sourceVersion value="http://snomed.info/sct/900000000000207008/version/20220331"/>
-        <target value="https://fhir.kbv.de/CodeSystem/KBV_CS_MIO_DIGA_Scale_Type_German"/>
-        <targetVersion value="1.1.0"/>
-        <element>
-            <code value="782487009:370132008=30766002"/>
-            <display value="Assessment score (observable entity):Scale type (attribute)=Quantitative (qualifier value)"/>
-            <target>
-                <code value="Kardinalskala"/>
-                <display value="Kardinalskala"/>
                 <equivalence value="equivalent"/>
             </target>
         </element>

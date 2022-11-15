@@ -56,10 +56,10 @@
                     <title value="Fragebögen"/>
                     <code>
                         <coding>
-                            <system value="http://loinc.org"/>
-                            <version value="2.72"/>
-                            <code value="74468-0"/>
-                            <display value="Questionnaire form definition Document"/>
+                          <system value="https://fhir.kbv.de/CodeSystem/KBV_CS_MIO_DIGA_Section_Codes" />
+                          <version value="1.1.0" />
+                          <code value="SectionFrageboegen" />
+                          <display value="Bereich Fragebögen" />
                         </coding>
                     </code>
                     <entry>
@@ -1301,7 +1301,7 @@
                 <meta>
                     <versionId value="1"/>
                     <lastUpdated value="2021-03-01T13:28:17.239+02:00"/>
-                    <profile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Observation_Assessment_Score|1.1.0"/>
+                    <profile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Observation_Score_or_Assessment_by_Scale|1.1.0"/>
                 </meta>
                 <identifier>
                     <type>
@@ -1346,7 +1346,7 @@
                 <meta>
                     <versionId value="1"/>
                     <lastUpdated value="2021-03-01T13:28:17.239+02:00"/>
-                    <profile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Observation_Assessment_Score|1.1.0"/>
+                    <profile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Observation_Score_or_Assessment_by_Scale|1.1.0"/>
                 </meta>
                 <identifier>
                     <type>
@@ -1391,7 +1391,7 @@
                 <meta>
                     <versionId value="1"/>
                     <lastUpdated value="2021-03-01T13:28:17.239+02:00"/>
-                    <profile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Observation_Assessment_Score|1.1.0"/>
+                    <profile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Observation_Score_or_Assessment_by_Scale|1.1.0"/>
                 </meta>
                 <identifier>
                     <type>

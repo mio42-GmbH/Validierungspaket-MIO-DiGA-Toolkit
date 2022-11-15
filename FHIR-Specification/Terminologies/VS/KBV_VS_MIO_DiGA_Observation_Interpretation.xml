@@ -1,8 +1,8 @@
 <ValueSet xmlns="http://hl7.org/fhir">
     <id value="KBV-VS-MIO-DiGA-Observation-Interpretation"/>
-    <url value="https://fhir.kbv.de/ValueSet/KBV_VS_MIO_DIGA_Observation_Interpretation"/>
+    <url value="https://fhir.kbv.de/ValueSet/KBV_VS_MIO_DiGA_Observation_Interpretation_Score_And_Scale"/>
     <version value="1.1.0"/>
-    <name value="KBV_VS_MIO_DIGA_Observation_Interpretation"/>
+    <name value="KBV_VS_MIO_DiGA_Observation_Interpretation_Score_And_Scale"/>
     <title value="ObservationInterpretationCodes"/>
     <status value="draft"/>
     <experimental value="false"/>
@@ -20,14 +20,6 @@
         <include>
             <system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"/>
             <version value="2018-08-12"/>
-            <concept>
-                <code value="_GeneticObservationInterpretation"/>
-                <display value="GeneticObservationInterpretation"/>
-            </concept>
-            <concept>
-                <code value="CAR"/>
-                <display value="Carrier"/>
-            </concept>
             <concept>
                 <code value="_ObservationInterpretationChange"/>
                 <display value="ObservationInterpretationChange"/>
@@ -47,18 +39,6 @@
             <concept>
                 <code value="W"/>
                 <display value="Worse"/>
-            </concept>
-            <concept>
-                <code value="_ObservationInterpretationExceptions"/>
-                <display value="ObservationInterpretationExceptions"/>
-            </concept>
-            <concept>
-                <code value="&lt;"/>
-                <display value="Off scale low"/>
-            </concept>
-            <concept>
-                <code value="&gt;"/>
-                <display value="Off scale high"/>
             </concept>
             <concept>
                 <code value="IE"/>
@@ -156,41 +136,13 @@
                 <code value="UNE"/>
                 <display value="Unexpected"/>
             </concept>
-            <concept>
-                <code value="ReactivityObservationInterpretation"/>
-                <display value="ReactivityObservationInterpretation"/>
-            </concept>
-            <concept>
-                <code value="NR"/>
-                <display value="Non-reactive"/>
-            </concept>
-            <concept>
-                <code value="RR"/>
-                <display value="Reactive"/>
-            </concept>
-            <concept>
-                <code value="WR"/>
-                <display value="Weakly reactive"/>
-            </concept>
         </include>
     </compose>
     <expansion>
-        <identifier value="a5f83835-2df7-11ed-93b1-005056adc104"/>
-        <timestamp value="2022-09-06T17:21:58+02:00"/>
-        <total value="38"/>
+        <identifier value="ceeb5125-59fb-11ed-be32-005056adc104"/>
+        <timestamp value="2022-11-01T16:42:36+01:00"/>
+        <total value="29"/>
         <offset value="0"/>
-        <contains>
-            <system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"/>
-            <version value="2018-08-12"/>
-            <code value="_GeneticObservationInterpretation"/>
-            <display value="GeneticObservationInterpretation"/>
-        </contains>
-        <contains>
-            <system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"/>
-            <version value="2018-08-12"/>
-            <code value="CAR"/>
-            <display value="Carrier"/>
-        </contains>
         <contains>
             <system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"/>
             <version value="2018-08-12"/>
@@ -220,24 +172,6 @@
             <version value="2018-08-12"/>
             <code value="W"/>
             <display value="Worse"/>
-        </contains>
-        <contains>
-            <system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"/>
-            <version value="2018-08-12"/>
-            <code value="_ObservationInterpretationExceptions"/>
-            <display value="ObservationInterpretationExceptions"/>
-        </contains>
-        <contains>
-            <system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"/>
-            <version value="2018-08-12"/>
-            <code value="&lt;"/>
-            <display value="Off scale low"/>
-        </contains>
-        <contains>
-            <system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"/>
-            <version value="2018-08-12"/>
-            <code value="&gt;"/>
-            <display value="Off scale high"/>
         </contains>
         <contains>
             <system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"/>
@@ -382,30 +316,6 @@
             <version value="2018-08-12"/>
             <code value="UNE"/>
             <display value="Unexpected"/>
-        </contains>
-        <contains>
-            <system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"/>
-            <version value="2018-08-12"/>
-            <code value="ReactivityObservationInterpretation"/>
-            <display value="ReactivityObservationInterpretation"/>
-        </contains>
-        <contains>
-            <system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"/>
-            <version value="2018-08-12"/>
-            <code value="NR"/>
-            <display value="Non-reactive"/>
-        </contains>
-        <contains>
-            <system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"/>
-            <version value="2018-08-12"/>
-            <code value="RR"/>
-            <display value="Reactive"/>
-        </contains>
-        <contains>
-            <system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"/>
-            <version value="2018-08-12"/>
-            <code value="WR"/>
-            <display value="Weakly reactive"/>
         </contains>
     </expansion>
 </ValueSet>

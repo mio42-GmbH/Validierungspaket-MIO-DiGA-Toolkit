@@ -1,12 +1,12 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="KBV-PR-MIO-DIGA-Observation-Assessment-Score" />
-  <url value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Observation_Assessment_Score" />
+  <id value="KBV-PR-MIO-DIGA-Observation-Score-or-Assessment-by-Scale" />
+  <url value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Observation_Score_or_Assessment_by_Scale" />
   <version value="1.1.0" />
-  <name value="KBV_PR_MIO_DIGA_Observation_Assessment_Score" />
-  <title value="KBV_PR_MIO_DIGA_Observation_Assessment_Score" />
+  <name value="KBV_PR_MIO_DIGA_Observation_Score_or_Assessment_by_Scale" />
+  <title value="KBV_PR_MIO_DIGA_Observation_Score_or_Assessment_by_Scale" />
   <status value="draft" />
   <publisher value="Kassenärztliche Bundesvereinigung (KBV)" />
-  <description value="Dieses Profil bildet einen Score ab." />
+  <description value="Dieses Profil bildet Bewertungsskalen und Scores ab." />
   <copyright value="Im folgenden Profil können Codes aus den Codesystemen Snomed, Loinc oder Ucum enthalten sein, die dem folgenden Urheberrecht unterliegen: This material includes SNOMED Clinical Terms® SNOMED CT® which is used by permission of SNOMED International. All rights reserved. SNOMED CT®, was originally created by The College of American Pathologists. SNOMED and SNOMED CT are registered trademarks of SNOMED International. Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license. This material contains content from Loinc http://loinc.org. Loinc is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes Loinc Committee and is available at no cost under the license at http://loinc.org/license. Loinc® is a registered United States trademark of Regenstrief Institute, Inc. This product includes all or a portion of the UCUM table, UCUM codes, and UCUM definitions or is derived from it, subject to a license from Regenstrief Institute, Inc. and The UCUM Organization. Your use of the UCUM table, UCUM codes, UCUM definitions also is subject to this license, a copy of which is available at ​http://unitsofmeasure.org. The current complete UCUM table, UCUM Specification are available for download at ​http://unitsofmeasure.org. The UCUM table and UCUM codes are copyright © 1995-2009, Regenstrief Institute, Inc. and the Unified Codes for Units of Measures UCUM Organization. All rights reserved. THE UCUM TABLE IN ALL FORMATS, UCUM DEFINITIONS, AND SPECIFICATION ARE PROVIDED &quot;AS IS.&quot; ANY EXPRESS OR IMPLIED WARRANTIES ARE DISCLAIMED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE." />
   <fhirVersion value="4.0.1" />
   <kind value="resource" />
@@ -17,7 +17,7 @@
   <differential>
     <element id="Observation">
       <path value="Observation" />
-      <definition value="Dieses Profil bildet einen Score ab." />
+      <definition value="Dieses Profil bildet Bewertungsskalen und Scores ab." />
     </element>
     <element id="Observation.meta">
       <path value="Observation.meta" />
@@ -37,9 +37,21 @@
     </element>
     <element id="Observation.meta.profile">
       <path value="Observation.meta.profile" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="1" />
+    </element>
+    <element id="Observation.meta.profile:mioProfile">
+      <path value="Observation.meta.profile" />
+      <sliceName value="mioProfile" />
       <min value="1" />
       <max value="1" />
-      <patternCanonical value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Observation_Assessment_Score|1.1.0" />
+      <patternCanonical value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Observation_Score_or_Assessment_by_Scale|1.1.0" />
     </element>
     <element id="Observation.meta.security">
       <path value="Observation.meta.security" />
@@ -145,6 +157,27 @@
     </element>
     <element id="Observation.partOf">
       <path value="Observation.partOf" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Procedure_Activity|1.1.0" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.partOf.reference">
+      <path value="Observation.partOf.reference" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.partOf.type">
+      <path value="Observation.partOf.type" />
+      <max value="0" />
+    </element>
+    <element id="Observation.partOf.identifier">
+      <path value="Observation.partOf.identifier" />
+      <max value="0" />
+    </element>
+    <element id="Observation.partOf.display">
+      <path value="Observation.partOf.display" />
       <max value="0" />
     </element>
     <element id="Observation.status">
@@ -153,7 +186,39 @@
     </element>
     <element id="Observation.category">
       <path value="Observation.category" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.category.coding">
+      <path value="Observation.category.coding" />
+      <mustSupport value="true" />
+      <binding>
+        <strength value="extensible" />
+        <valueSet value="https://fhir.kbv.de/ValueSet/KBV_VS_MIO_DIGA_Observation_Category_Codes_Score_And_Scale|1.1.0" />
+      </binding>
+    </element>
+    <element id="Observation.category.coding.system">
+      <path value="Observation.category.coding.system" />
+      <min value="1" />
+    </element>
+    <element id="Observation.category.coding.version">
+      <path value="Observation.category.coding.version" />
+      <min value="1" />
+    </element>
+    <element id="Observation.category.coding.code">
+      <path value="Observation.category.coding.code" />
+      <min value="1" />
+    </element>
+    <element id="Observation.category.coding.display">
+      <path value="Observation.category.coding.display" />
+      <min value="1" />
+    </element>
+    <element id="Observation.category.coding.userSelected">
+      <path value="Observation.category.coding.userSelected" />
       <max value="0" />
+    </element>
+    <element id="Observation.category.text">
+      <path value="Observation.category.text" />
+      <mustSupport value="true" />
     </element>
     <element id="Observation.code">
       <path value="Observation.code" />
@@ -285,6 +350,7 @@
         </discriminator>
         <rules value="closed" />
       </slicing>
+      <min value="1" />
       <type>
         <code value="Quantity" />
       </type>
@@ -299,16 +365,12 @@
       <type>
         <code value="Quantity" />
       </type>
-      <patternQuantity>
-        <unit value="score" />
-        <system value="http://unitsofmeasure.org" />
-        <code value="{score}" />
-      </patternQuantity>
       <mustSupport value="true" />
     </element>
     <element id="Observation.value[x]:valueQuantity.value">
       <path value="Observation.value[x].value" />
       <min value="1" />
+      <mustSupport value="true" />
     </element>
     <element id="Observation.value[x]:valueQuantity.comparator">
       <path value="Observation.value[x].comparator" />
@@ -316,15 +378,18 @@
     </element>
     <element id="Observation.value[x]:valueQuantity.unit">
       <path value="Observation.value[x].unit" />
-      <min value="1" />
+      <min value="0" />
+      <mustSupport value="true" />
     </element>
     <element id="Observation.value[x]:valueQuantity.system">
       <path value="Observation.value[x].system" />
-      <min value="1" />
+      <min value="0" />
+      <mustSupport value="true" />
     </element>
     <element id="Observation.value[x]:valueQuantity.code">
       <path value="Observation.value[x].code" />
-      <min value="1" />
+      <min value="0" />
+      <mustSupport value="true" />
     </element>
     <element id="Observation.value[x]:valueCodeableConcept">
       <path value="Observation.value[x]" />
@@ -336,7 +401,6 @@
     </element>
     <element id="Observation.value[x]:valueCodeableConcept.coding">
       <path value="Observation.value[x].coding" />
-      <min value="1" />
       <mustSupport value="true" />
     </element>
     <element id="Observation.value[x]:valueCodeableConcept.coding.system">
@@ -369,16 +433,14 @@
     </element>
     <element id="Observation.interpretation">
       <path value="Observation.interpretation" />
-      <max value="1" />
       <mustSupport value="true" />
       <binding>
-        <strength value="required" />
-        <valueSet value="https://fhir.kbv.de/ValueSet/KBV_VS_MIO_DIGA_Observation_Interpretation|1.1.0" />
+        <strength value="extensible" />
+        <valueSet value="https://fhir.kbv.de/ValueSet/KBV_VS_MIO_DiGA_Observation_Interpretation_Score_And_Scale|1.1.0" />
       </binding>
     </element>
     <element id="Observation.interpretation.coding">
       <path value="Observation.interpretation.coding" />
-      <max value="1" />
       <mustSupport value="true" />
     </element>
     <element id="Observation.interpretation.coding.system">
@@ -403,7 +465,7 @@
     </element>
     <element id="Observation.interpretation.text">
       <path value="Observation.interpretation.text" />
-      <max value="0" />
+      <mustSupport value="true" />
     </element>
     <element id="Observation.note">
       <path value="Observation.note" />
@@ -423,15 +485,71 @@
     </element>
     <element id="Observation.bodySite">
       <path value="Observation.bodySite" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.bodySite.coding">
+      <path value="Observation.bodySite.coding" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.bodySite.coding.system">
+      <path value="Observation.bodySite.coding.system" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.bodySite.coding.version">
+      <path value="Observation.bodySite.coding.version" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.bodySite.coding.code">
+      <path value="Observation.bodySite.coding.code" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.bodySite.coding.display">
+      <path value="Observation.bodySite.coding.display" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.bodySite.coding.userSelected">
+      <path value="Observation.bodySite.coding.userSelected" />
       <max value="0" />
+    </element>
+    <element id="Observation.bodySite.text">
+      <path value="Observation.bodySite.text" />
+      <mustSupport value="true" />
     </element>
     <element id="Observation.method">
       <path value="Observation.method" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.method.coding">
+      <path value="Observation.method.coding" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.method.coding.system">
+      <path value="Observation.method.coding.system" />
+      <min value="1" />
+    </element>
+    <element id="Observation.method.coding.version">
+      <path value="Observation.method.coding.version" />
+      <min value="1" />
+    </element>
+    <element id="Observation.method.coding.code">
+      <path value="Observation.method.coding.code" />
+      <min value="1" />
+    </element>
+    <element id="Observation.method.coding.display">
+      <path value="Observation.method.coding.display" />
+      <min value="1" />
+    </element>
+    <element id="Observation.method.coding.userSelected">
+      <path value="Observation.method.coding.userSelected" />
       <max value="0" />
     </element>
     <element id="Observation.method.text">
       <path value="Observation.method.text" />
-      <max value="0" />
+      <mustSupport value="true" />
     </element>
     <element id="Observation.specimen">
       <path value="Observation.specimen" />
@@ -465,17 +583,11 @@
     </element>
     <element id="Observation.referenceRange">
       <path value="Observation.referenceRange" />
-      <max value="1" />
       <mustSupport value="true" />
     </element>
     <element id="Observation.referenceRange.low">
       <path value="Observation.referenceRange.low" />
       <min value="1" />
-      <patternQuantity>
-        <unit value="score" />
-        <system value="http://unitsofmeasure.org" />
-        <code value="{score}" />
-      </patternQuantity>
       <mustSupport value="true" />
     </element>
     <element id="Observation.referenceRange.low.value">
@@ -498,11 +610,6 @@
     <element id="Observation.referenceRange.high">
       <path value="Observation.referenceRange.high" />
       <min value="1" />
-      <patternQuantity>
-        <unit value="score" />
-        <system value="http://unitsofmeasure.org" />
-        <code value="{score}" />
-      </patternQuantity>
       <mustSupport value="true" />
     </element>
     <element id="Observation.referenceRange.high.value">
@@ -524,36 +631,31 @@
     </element>
     <element id="Observation.referenceRange.type">
       <path value="Observation.referenceRange.type" />
-      <min value="1" />
       <mustSupport value="true" />
     </element>
     <element id="Observation.referenceRange.type.coding">
       <path value="Observation.referenceRange.type.coding" />
-      <min value="1" />
-      <max value="1" />
-      <patternCoding>
-        <system value="http://snomed.info/sct" />
-        <version value="http://snomed.info/sct/900000000000207008/version/20220331" />
-        <code value="278492000" />
-        <display value="Numerical range (qualifier value)" />
-      </patternCoding>
       <mustSupport value="true" />
     </element>
     <element id="Observation.referenceRange.type.coding.system">
       <path value="Observation.referenceRange.type.coding.system" />
       <min value="1" />
+      <mustSupport value="true" />
     </element>
     <element id="Observation.referenceRange.type.coding.version">
       <path value="Observation.referenceRange.type.coding.version" />
       <min value="1" />
+      <mustSupport value="true" />
     </element>
     <element id="Observation.referenceRange.type.coding.code">
       <path value="Observation.referenceRange.type.coding.code" />
       <min value="1" />
+      <mustSupport value="true" />
     </element>
     <element id="Observation.referenceRange.type.coding.display">
       <path value="Observation.referenceRange.type.coding.display" />
       <min value="1" />
+      <mustSupport value="true" />
     </element>
     <element id="Observation.referenceRange.type.coding.userSelected">
       <path value="Observation.referenceRange.type.coding.userSelected" />
@@ -561,7 +663,7 @@
     </element>
     <element id="Observation.referenceRange.type.text">
       <path value="Observation.referenceRange.type.text" />
-      <max value="0" />
+      <mustSupport value="true" />
     </element>
     <element id="Observation.referenceRange.appliesTo">
       <path value="Observation.referenceRange.appliesTo" />
@@ -606,6 +708,260 @@
     </element>
     <element id="Observation.component">
       <path value="Observation.component" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.component.code">
+      <path value="Observation.component.code" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.component.code.coding">
+      <path value="Observation.component.code.coding" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.component.code.coding.system">
+      <path value="Observation.component.code.coding.system" />
+      <min value="1" />
+    </element>
+    <element id="Observation.component.code.coding.version">
+      <path value="Observation.component.code.coding.version" />
+      <min value="1" />
+    </element>
+    <element id="Observation.component.code.coding.code">
+      <path value="Observation.component.code.coding.code" />
+      <min value="1" />
+    </element>
+    <element id="Observation.component.code.coding.display">
+      <path value="Observation.component.code.coding.display" />
+      <min value="1" />
+    </element>
+    <element id="Observation.component.code.coding.userSelected">
+      <path value="Observation.component.code.coding.userSelected" />
+      <max value="0" />
+    </element>
+    <element id="Observation.component.code.text">
+      <path value="Observation.component.code.text" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.component.value[x]">
+      <path value="Observation.component.value[x]" />
+      <slicing>
+        <discriminator>
+          <type value="type" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="closed" />
+      </slicing>
+      <min value="1" />
+      <type>
+        <code value="Quantity" />
+      </type>
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.component.value[x]:valueQuantity">
+      <path value="Observation.component.value[x]" />
+      <sliceName value="valueQuantity" />
+      <type>
+        <code value="Quantity" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.component.value[x]:valueQuantity.value">
+      <path value="Observation.component.value[x].value" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.component.value[x]:valueQuantity.comparator">
+      <path value="Observation.component.value[x].comparator" />
+      <max value="0" />
+    </element>
+    <element id="Observation.component.value[x]:valueQuantity.unit">
+      <path value="Observation.component.value[x].unit" />
+      <min value="0" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.component.value[x]:valueQuantity.system">
+      <path value="Observation.component.value[x].system" />
+      <min value="0" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.component.value[x]:valueQuantity.code">
+      <path value="Observation.component.value[x].code" />
+      <min value="0" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.component.value[x]:valueCodeableConcept">
+      <path value="Observation.component.value[x]" />
+      <sliceName value="valueCodeableConcept" />
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.component.value[x]:valueCodeableConcept.coding">
+      <path value="Observation.component.value[x].coding" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.component.value[x]:valueCodeableConcept.coding.system">
+      <path value="Observation.component.value[x].coding.system" />
+      <min value="1" />
+    </element>
+    <element id="Observation.component.value[x]:valueCodeableConcept.coding.version">
+      <path value="Observation.component.value[x].coding.version" />
+      <min value="1" />
+    </element>
+    <element id="Observation.component.value[x]:valueCodeableConcept.coding.code">
+      <path value="Observation.component.value[x].coding.code" />
+      <min value="1" />
+    </element>
+    <element id="Observation.component.value[x]:valueCodeableConcept.coding.display">
+      <path value="Observation.component.value[x].coding.display" />
+      <min value="1" />
+    </element>
+    <element id="Observation.component.value[x]:valueCodeableConcept.coding.userSelected">
+      <path value="Observation.component.value[x].coding.userSelected" />
+      <max value="0" />
+    </element>
+    <element id="Observation.component.value[x]:valueCodeableConcept.text">
+      <path value="Observation.component.value[x].text" />
+      <max value="0" />
+    </element>
+    <element id="Observation.component.dataAbsentReason">
+      <path value="Observation.component.dataAbsentReason" />
+      <max value="0" />
+    </element>
+    <element id="Observation.component.interpretation">
+      <path value="Observation.component.interpretation" />
+      <mustSupport value="true" />
+      <binding>
+        <strength value="extensible" />
+        <valueSet value="https://fhir.kbv.de/ValueSet/KBV_VS_MIO_DiGA_Observation_Interpretation_Score_And_Scale|1.1.0" />
+      </binding>
+    </element>
+    <element id="Observation.component.interpretation.coding">
+      <path value="Observation.component.interpretation.coding" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.component.interpretation.coding.system">
+      <path value="Observation.component.interpretation.coding.system" />
+      <min value="1" />
+    </element>
+    <element id="Observation.component.interpretation.coding.version">
+      <path value="Observation.component.interpretation.coding.version" />
+      <min value="1" />
+    </element>
+    <element id="Observation.component.interpretation.coding.code">
+      <path value="Observation.component.interpretation.coding.code" />
+      <min value="1" />
+    </element>
+    <element id="Observation.component.interpretation.coding.display">
+      <path value="Observation.component.interpretation.coding.display" />
+      <min value="1" />
+    </element>
+    <element id="Observation.component.interpretation.coding.userSelected">
+      <path value="Observation.component.interpretation.coding.userSelected" />
+      <max value="0" />
+    </element>
+    <element id="Observation.component.interpretation.text">
+      <path value="Observation.component.interpretation.text" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.component.referenceRange">
+      <path value="Observation.component.referenceRange" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.component.referenceRange.low">
+      <path value="Observation.component.referenceRange.low" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.component.referenceRange.low.value">
+      <path value="Observation.component.referenceRange.low.value" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.component.referenceRange.low.unit">
+      <path value="Observation.component.referenceRange.low.unit" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.component.referenceRange.low.system">
+      <path value="Observation.component.referenceRange.low.system" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.component.referenceRange.low.code">
+      <path value="Observation.component.referenceRange.low.code" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.component.referenceRange.high">
+      <path value="Observation.component.referenceRange.high" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.component.referenceRange.high.value">
+      <path value="Observation.component.referenceRange.high.value" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.component.referenceRange.high.unit">
+      <path value="Observation.component.referenceRange.high.unit" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.component.referenceRange.high.system">
+      <path value="Observation.component.referenceRange.high.system" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.component.referenceRange.high.code">
+      <path value="Observation.component.referenceRange.high.code" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.component.referenceRange.type">
+      <path value="Observation.component.referenceRange.type" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.component.referenceRange.type.coding">
+      <path value="Observation.component.referenceRange.type.coding" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.component.referenceRange.type.coding.system">
+      <path value="Observation.component.referenceRange.type.coding.system" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.component.referenceRange.type.coding.version">
+      <path value="Observation.component.referenceRange.type.coding.version" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.component.referenceRange.type.coding.code">
+      <path value="Observation.component.referenceRange.type.coding.code" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.component.referenceRange.type.coding.display">
+      <path value="Observation.component.referenceRange.type.coding.display" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.component.referenceRange.type.coding.userSelected">
+      <path value="Observation.component.referenceRange.type.coding.userSelected" />
+      <max value="0" />
+    </element>
+    <element id="Observation.component.referenceRange.type.text">
+      <path value="Observation.component.referenceRange.type.text" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.component.referenceRange.appliesTo">
+      <path value="Observation.component.referenceRange.appliesTo" />
+      <max value="0" />
+    </element>
+    <element id="Observation.component.referenceRange.age">
+      <path value="Observation.component.referenceRange.age" />
+      <max value="0" />
+    </element>
+    <element id="Observation.component.referenceRange.text">
+      <path value="Observation.component.referenceRange.text" />
       <max value="0" />
     </element>
   </differential>

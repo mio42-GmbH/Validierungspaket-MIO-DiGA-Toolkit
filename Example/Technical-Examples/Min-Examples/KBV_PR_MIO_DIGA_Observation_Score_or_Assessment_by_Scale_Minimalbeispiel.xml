@@ -1,9 +1,9 @@
 <Observation xmlns="http://hl7.org/fhir">
-	<id value="dca58ae6-3179-11ec-8d3d-0242ac130003" />
+	<id value="dca58974-3179-11ec-8d3d-0242ac130003" />
 	<meta>
 		<versionId value="1"/>
 		<lastUpdated value="2015-02-07T13:28:17.239+02:00"/>
-		<profile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Observation_Assessment_Score|1.1.0" />
+		<profile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Observation_Score_or_Assessment_by_Scale|1.1.0" />
 	</meta>
 	<identifier>
 		<type>
@@ -24,4 +24,10 @@
 	<subject>
 		<reference value="urn:uuid:e8610a8a-85dc-4a49-88be-ee8d3ab69f73" />
 	</subject>
+	<valueQuantity>
+		<value value="1" />
+		<unit value="1" />
+		<system value="http://unitsofmeasure.org" />
+		<code value="1" />
+	</valueQuantity>
 </Observation>

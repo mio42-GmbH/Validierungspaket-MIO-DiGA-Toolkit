@@ -35,12 +35,24 @@
 			<path value="Observation.meta.source"/>
 			<max value="0"/>
 		</element>
-		<element id="Observation.meta.profile">
-			<path value="Observation.meta.profile"/>
-			<min value="1"/>
-			<max value="1"/>
-			<patternCanonical value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Observation_Glucose_Concentration|1.1.0"/>
-		</element>
+    <element id="Observation.meta.profile">
+      <path value="Observation.meta.profile" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="1" />
+    </element>
+    <element id="Observation.meta.profile:mioProfile">
+      <path value="Observation.meta.profile" />
+      <sliceName value="mioProfile" />
+      <min value="1" />
+      <max value="1" />
+      <patternCanonical value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Observation_Glucose_Concentration|1.1.0" />
+    </element>
 		<element id="Observation.meta.security">
 			<path value="Observation.meta.security"/>
 			<max value="0"/>
@@ -431,7 +443,11 @@
 		<element id="Observation.method.coding:codeSnomed">
 			<path value="Observation.method.coding" />
 			<sliceName value="codeSnomed" />
-			<mustSupport value="true"/>
+      <patternCoding>
+        <system value="http://snomed.info/sct"/>
+        <version value="http://snomed.info/sct/900000000000207008/version/20220331"/>
+      </patternCoding>
+      <mustSupport value="true"/>
 		</element>
 		<element id="Observation.method.coding:codeSnomed.system">
 			<path value="Observation.method.coding.system"/>

@@ -44,6 +44,18 @@
     </element>
     <element id="Composition.meta.profile">
       <path value="Composition.meta.profile" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="1" />
+    </element>
+    <element id="Composition.meta.profile:mioProfile">
+      <path value="Composition.meta.profile" />
+      <sliceName value="mioProfile" />
       <min value="1" />
       <max value="1" />
       <patternCanonical value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Composition|1.1.0" />
@@ -1150,18 +1162,20 @@
     <element id="Composition.section:medikation.code">
       <path value="Composition.section.code" />
       <min value="1" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://snomed.info/sct"/>
+          <version value="http://snomed.info/sct/900000000000207008/version/20220331"/>
+          <code value="721912009" />
+          <display value="Medication summary document (record artifact)" />
+        </coding>
+      </patternCodeableConcept>
       <mustSupport value="true" />
     </element>
     <element id="Composition.section:medikation.code.coding">
       <path value="Composition.section.code.coding" />
       <min value="1" />
       <max value="1" />
-      <patternCoding>
-				<system value="http://snomed.info/sct"/>
-			  <version value="http://snomed.info/sct/900000000000207008/version/20220331"/>
-				<code value="721912009" />
-				<display value="Medication summary document (record artifact)" />
-			</patternCoding>
 			<mustSupport value="true" />
 		</element>
     <element id="Composition.section:medikation.code.coding.system">
@@ -1322,7 +1336,7 @@
       <type>
         <code value="Reference" />
         <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Observation_Functional_Assessment|1.1.0" />
-        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Observation_Assessment_Score|1.1.0" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Observation_Score_or_Assessment_by_Scale|1.1.0" />
       </type>
       <mustSupport value="true" />
     </element>

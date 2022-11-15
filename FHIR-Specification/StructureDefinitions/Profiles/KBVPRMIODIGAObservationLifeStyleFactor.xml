@@ -67,6 +67,18 @@
     </element>
     <element id="Observation.meta.profile">
       <path value="Observation.meta.profile" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="1" />
+    </element>
+    <element id="Observation.meta.profile:mioProfile">
+      <path value="Observation.meta.profile" />
+      <sliceName value="mioProfile" />
       <min value="1" />
       <max value="1" />
       <patternCanonical value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Observation_Life_Style_Factor|1.1.0" />
@@ -414,7 +426,7 @@
       <type>
         <code value="Reference" />
         <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Observation_Free|1.1.0" />
-        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Observation_Assessment_Scale|1.1.0" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Observation_Score_or_Assessment_by_Scale|1.1.0" />
 				<targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Observation_Head_Circumference|1.1.0"/>
 				<targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Observation_Body_Weight|1.1.0"/>
 				<targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_DIGA_Observation_Body_Height|1.1.0"/>
