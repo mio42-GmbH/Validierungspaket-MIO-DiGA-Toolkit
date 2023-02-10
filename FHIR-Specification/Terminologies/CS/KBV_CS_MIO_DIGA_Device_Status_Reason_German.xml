@@ -3,7 +3,7 @@
   <version value="1.1.0" />
   <name value="KBV_CS_MIO_DIGA_Device_Status_Reason_German" />
   <title value="Ger&#228;te Status Grund" />
-  <status value="draft" />
+  <status value="active" />
   <experimental value="false" />
   <publisher value="Kassen&#228;rztliche Bundesvereinigung (KBV)" />
   <contact>
